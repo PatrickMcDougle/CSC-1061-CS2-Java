@@ -80,6 +80,8 @@
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
+This project has all the code that I use for my course. I tweak it as I go and make updates where I see fit.
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### Built With

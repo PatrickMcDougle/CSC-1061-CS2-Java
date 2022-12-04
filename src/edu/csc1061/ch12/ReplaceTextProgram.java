@@ -4,9 +4,6 @@ import java.io.File;
 import java.io.PrintWriter;
 import java.util.Scanner;
 
-//import java.io.*;
-//import java.util.*;
-
 public class ReplaceTextProgram {
 
   public static void main(String[] args) throws Exception {
