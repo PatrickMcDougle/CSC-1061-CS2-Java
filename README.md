@@ -33,18 +33,17 @@
     <img src="resources/images/ACC_Pumas_logo.png" alt="Logo" width="371" height="145">
   </a>
 
-<h3 align="center">CSC 1061 - Computer Science 2 - Java</h3>
+  <h3 align="center">CSC 1061 - Computer Science 2 - Java</h3>
 
   <p align="center">
     This repository of code is the code I use for my Arapahoe Community College's CSC 1061 course.  This course uses Java to teach teh concepts that are covered in the course.
     <br />
     <a href="https://github.com/PatrickMcDougle/CSC-1061-CS2-Java"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
-    <a href="https://github.com/PatrickMcDougle/CSC-1061-CS2-Java">View Demo</a>
-    ·
-    <a href="https://github.com/PatrickMcDougle/CSC-1061-CS2-Java/issues">Report Bug</a>
-    ·
+  </p>
+
+  <p align="center">
+    <a href="https://github.com/PatrickMcDougle/CSC-1061-CS2-Java">View Demo</a> ·
+    <a href="https://github.com/PatrickMcDougle/CSC-1061-CS2-Java/issues">Report Bug</a> ·
     <a href="https://github.com/PatrickMcDougle/CSC-1061-CS2-Java/issues">Request Feature</a>
   </p>
 </div>
@@ -86,13 +85,7 @@
 ### Built With
 
 -   [![Java SDK][java-badge]][java-sdk-url]
--   [![React][react.js]][react-url]
--   [![Vue][vue.js]][vue-url]
--   [![Angular][angular.io]][angular-url]
--   [![Svelte][svelte.dev]][svelte-url]
--   [![Laravel][laravel.com]][laravel-url]
--   [![Bootstrap][bootstrap.com]][bootstrap-url]
--   [![JQuery][jquery.com]][jquery-url]
+-   [![JavaFX][javafx-badge]][javafx-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -100,33 +93,42 @@
 
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+This Java project was setup to be used with Visual Studio Code.
 
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
+None at this time!
 
--   npm
-    ```sh
-    npm install npm@latest -g
-    ```
+### Installations
 
-### Installation
+Firstly we need to install software onto your computer.
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
+-   [Java SDK][java-sdk-url] - Version 17+
+-   [JavaFX][javafx-url] - 17.0.05+
+-   [Visual Studio Code][vscode-url] - 1.73.1+
+
+### Getting the Repository
+
+-   Clone the repo
+
     ```sh
     git clone https://github.com/PatrickMcDougle/CSC-1061-CS2-Java.git
     ```
-3. Install NPM packages
-    ```sh
-    npm install
+
+    If you are taking my course, cloning the repository will allow you to get updates to the code as the semester goes on.
+
+-   Download the repo
+
+    ```menu
+    <> Code
+    Download ZIP
     ```
-4. Enter your API in `config.js`
-    ```js
-    const API_KEY = "ENTER YOUR API";
-    ```
+
+    Download the repository by clicking on the green "<> Code" button at the top of this page and selecting "Download ZIP". This will download the whole repository for you.
+
+    Or just click this link!
+
+    [![Download ZIP][download-repo-badge]][download-repo-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -134,39 +136,34 @@ This is an example of how to list things you need to use the software and how to
 
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+Here are some online resources that will help get you started in using Visual Studion Code, Java, JavaFX, and style guides.
 
-_For more examples, please refer to the [Documentation](https://example.com)_
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- ROADMAP -->
-
-## Roadmap
-
--   [ ] Feature 1
--   [ ] Feature 2
--   [ ] Feature 3
-    -   [ ] Nested Feature
-
-See the [open issues](https://github.com/PatrickMcDougle/CSC-1061-CS2-Java/issues) for a full list of proposed features (and known issues).
+-   [Getting Started with JavaFX](https://openjfx.io/openjfx-docs/)
+-   [Install Java](https://openjfx.io/openjfx-docs/#install-java)
+-   [Install JavaFX](https://openjfx.io/openjfx-docs/#install-javafx)
+-   [JavaFX and Visual Studio Code](https://openjfx.io/openjfx-docs/#IDE-VSCode) - Follow the Non-modular projects instructions
+-   [Setting up VS Code for Java development](https://code.visualstudio.com/docs/java/java-tutorial)
+    -   [Running and debugging Java](https://code.visualstudio.com/docs/java/java-debugging)
+-   [Google Java Style Guide](https://google.github.io/styleguide/javaguide.html)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- CONTRIBUTING -->
+## Folder Structure
 
-## Contributing
+The workspace contains two folders of importance, where:
 
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+-   `src`: the folder that contains the Java examples for each class/chapter
+-   `resources`: the folder that contains resources needed for some of the examples
 
-If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
-Don't forget to give the project a star! Thanks again!
+Meanwhile, the compiled output files will be generated in the `bin` folder by default.
 
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## Dependency Management
+
+The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -182,7 +179,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 ## Contact
 
-Your Name - [@clandestineman](https://twitter.com/clandestineman) - Patrick.McDougle@gmail.com
+Your Name - [@ClandestineMan](https://twitter.com/clandestineman) - Patrick.McDougle@gmail.com
 
 Project Link: [https://github.com/PatrickMcDougle/CSC-1061-CS2-Java](https://github.com/PatrickMcDougle/CSC-1061-CS2-Java)
 
@@ -192,9 +189,9 @@ Project Link: [https://github.com/PatrickMcDougle/CSC-1061-CS2-Java](https://git
 
 ## Acknowledgments
 
--   []()
--   []()
--   []()
+-   [TBD](https://github.com/PatrickMcDougle/CSC-1061-CS2-Java)
+-   [TBD](https://github.com/PatrickMcDougle/CSC-1061-CS2-Java)
+-   [TBD](https://github.com/PatrickMcDougle/CSC-1061-CS2-Java)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -214,6 +211,10 @@ Project Link: [https://github.com/PatrickMcDougle/CSC-1061-CS2-Java](https://git
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/patrickmcdougle
 [product-screenshot]: resources/images/VSC_screen_shot.png
-[jquery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
-[java-badge]: https://img.shields.io/badge/Java-0769AD?style=for-the-badge&logo=java&logoColor=white
+[java-badge]: https://img.shields.io/badge/Java-AD6907?style=for-the-badge&logoColor=white
 [java-sdk-url]: https://www.oracle.com/java/technologies/downloads/
+[javafx-badge]: https://img.shields.io/badge/JavaFX-0769AD?style=for-the-badge&logoColor=white
+[javafx-url]: https://openjfx.io/
+[vscode-url]: https://code.visualstudio.com/download
+[download-repo-badge]: https://img.shields.io/badge/Download%20Repository-07AD69?style=for-the-badge&logoColor=white
+[download-repo-url]: https://github.com/PatrickMcDougle/CSC-1061-CS2-Java/archive/refs/heads/main.zip
