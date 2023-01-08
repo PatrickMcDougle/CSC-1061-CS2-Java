@@ -14,85 +14,101 @@ import javafx.scene.shape.Polygon;
 import javafx.stage.Stage;
 
 public class Program18_009 extends Application {
-	@Override // Override the start method in the Application class
-	public void start(Stage primaryStage) {
-		SierpinskiTrianglePane pane = new SierpinskiTrianglePane();
-		TextField tfOrder = new TextField();
-		tfOrder.setOnAction(e -> pane.setOrder(Integer.parseInt(tfOrder.getText())));
-		tfOrder.setPrefColumnCount(4);
-		tfOrder.setAlignment(Pos.BOTTOM_RIGHT);
 
-		// Pane to hold label, text field, and a button
-		HBox hBox = new HBox(10);
-		hBox.getChildren().addAll(new Label("Enter an order: "), tfOrder);
-		hBox.setAlignment(Pos.CENTER);
+  @Override // Override the start method in the Application class
+  public void start(Stage primaryStage) {
+    SierpinskiTrianglePane pane = new SierpinskiTrianglePane();
+    TextField tfOrder = new TextField();
+    tfOrder.setOnAction(
+      e -> pane.setOrder(Integer.parseInt(tfOrder.getText()))
+    );
+    tfOrder.setPrefColumnCount(4);
+    tfOrder.setAlignment(Pos.BOTTOM_RIGHT);
 
-		BorderPane borderPane = new BorderPane();
-		borderPane.setCenter(pane);
-		borderPane.setBottom(hBox);
+    // Pane to hold label, text field, and a button
+    HBox hBox = new HBox(10);
+    hBox.getChildren().addAll(new Label("Enter an order: "), tfOrder);
+    hBox.setAlignment(Pos.CENTER);
 
-		// Create a scene and place it in the stage
-		Scene scene = new Scene(borderPane, 200, 210);
-		primaryStage.setTitle("SierpinskiTriangle"); // Set the stage title
-		primaryStage.setScene(scene); // Place the scene in the stage
-		primaryStage.show(); // Display the stage
+    BorderPane borderPane = new BorderPane();
+    borderPane.setCenter(pane);
+    borderPane.setBottom(hBox);
 
-		pane.widthProperty().addListener(ov -> pane.paint());
-		pane.heightProperty().addListener(ov -> pane.paint());
-	}
+    // Create a scene and place it in the stage
+    Scene scene = new Scene(borderPane, 200, 210);
+    primaryStage.setTitle("SierpinskiTriangle"); // Set the stage title
+    primaryStage.setScene(scene); // Place the scene in the stage
+    primaryStage.show(); // Display the stage
 
-	/** Pane for displaying triangles */
-	static class SierpinskiTrianglePane extends Pane {
-		private int order = 0;
+    pane.widthProperty().addListener(ov -> pane.paint());
+    pane.heightProperty().addListener(ov -> pane.paint());
+  }
 
-		/** Set a new order */
-		public void setOrder(int order) {
-			this.order = order;
-			paint();
-		}
+  /** Pane for displaying triangles */
+  static class SierpinskiTrianglePane extends Pane {
+    private int order = 0;
 
-		SierpinskiTrianglePane() {}
+    /** Set a new order */
+    public void setOrder(int order) {
+      this.order = order;
+      paint();
+    }
 
-		protected void paint() {
-			// Select three points in proportion to the panel size
-			Point2D p1 = new Point2D(getWidth() / 2, 10);
-			Point2D p2 = new Point2D(10, getHeight() - 10);
-			Point2D p3 = new Point2D(getWidth() - 10, getHeight() - 10);
+    SierpinskiTrianglePane() {}
 
-			this.getChildren().clear(); // Clear the pane before redisplay
+    protected void paint() {
+      // Select three points in proportion to the panel size
+      Point2D p1 = new Point2D(getWidth() / 2, 10);
+      Point2D p2 = new Point2D(10, getHeight() - 10);
+      Point2D p3 = new Point2D(getWidth() - 10, getHeight() - 10);
 
-			displayTriangles(order, p1, p2, p3);
-		}
+      this.getChildren().clear(); // Clear the pane before redisplay
 
-		private void displayTriangles(int order, Point2D p1, Point2D p2, Point2D p3) {
-			if (order == 0) {
-				// Draw a triangle to connect three points
-				Polygon triangle = new Polygon();
-				triangle.getPoints().addAll(p1.getX(), p1.getY(), p2.getX(), p2.getY(), p3.getX(),
-						p3.getY());
-				triangle.setStroke(Color.BLACK);
-				triangle.setFill(Color.WHITE);
+      displayTriangles(order, p1, p2, p3);
+    }
 
-				this.getChildren().add(triangle);
-			} else {
-				// Get the midpoint on each edge in the triangle
-				Point2D p12 = p1.midpoint(p2);
-				Point2D p23 = p2.midpoint(p3);
-				Point2D p31 = p3.midpoint(p1);
+    private void displayTriangles(
+      int order,
+      Point2D p1,
+      Point2D p2,
+      Point2D p3
+    ) {
+      if (order == 0) {
+        // Draw a triangle to connect three points
+        Polygon triangle = new Polygon();
+        triangle
+          .getPoints()
+          .addAll(
+            p1.getX(),
+            p1.getY(),
+            p2.getX(),
+            p2.getY(),
+            p3.getX(),
+            p3.getY()
+          );
+        triangle.setStroke(Color.BLACK);
+        triangle.setFill(Color.WHITE);
 
-				// Recursively display three triangles
-				displayTriangles(order - 1, p1, p12, p31);
-				displayTriangles(order - 1, p12, p2, p23);
-				displayTriangles(order - 1, p31, p23, p3);
-			}
-		}
-	}
+        this.getChildren().add(triangle);
+      } else {
+        // Get the midpoint on each edge in the triangle
+        Point2D p12 = p1.midpoint(p2);
+        Point2D p23 = p2.midpoint(p3);
+        Point2D p31 = p3.midpoint(p1);
 
-	/**
-	 * The main method is only needed for the IDE with limited JavaFX support. Not needed for
-	 * running from the command line.
-	 */
-	public static void main(String[] args) {
-		launch(args);
-	}
+        // Recursively display three triangles
+        displayTriangles(order - 1, p1, p12, p31);
+        displayTriangles(order - 1, p12, p2, p23);
+        displayTriangles(order - 1, p31, p23, p3);
+      }
+    }
+  }
+
+  /**
+   * The main method is only needed for the IDE with limited JavaFX support. Not needed for
+   * running from the command line.
+   */
+  public static void main(String[] args) {
+    launch(args);
+  }
 }

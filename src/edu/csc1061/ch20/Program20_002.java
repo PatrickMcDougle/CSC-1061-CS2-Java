@@ -13,64 +13,63 @@ import java.util.ListIterator;
 // Finally, the example traverses the list forward and backward.
 
 public class Program20_002 {
-	public static void main(String[] args) {
-		List<Integer> arrayList = new ArrayList<>();
-		arrayList.add(1); // 1 is autoboxed to an Integer object
-		arrayList.add(2);
-		arrayList.add(3);
-		arrayList.add(1);
-		arrayList.add(4);
-		arrayList.add(0, 10);
-		arrayList.add(3, 30);
 
-		System.out.println("\n ========== ========== ========== ");
-		WhileVersion(arrayList);
-		System.out.println("\n ---------- ---------- ---------- ");
-		ForEachVersion(arrayList);
-		System.out.println("\n ========== ========== ========== ");
-	}
+  public static void main(String[] args) {
+    List<Integer> arrayList = new ArrayList<>();
+    arrayList.add(1); // 1 is autoboxed to an Integer object
+    arrayList.add(2);
+    arrayList.add(3);
+    arrayList.add(1);
+    arrayList.add(4);
+    arrayList.add(0, 10);
+    arrayList.add(3, 30);
 
-	private static void WhileVersion(List<Integer> arrayList) {
+    System.out.println("\n ========== ========== ========== ");
+    WhileVersion(arrayList);
+    System.out.println("\n ---------- ---------- ---------- ");
+    ForEachVersion(arrayList);
+    System.out.println("\n ========== ========== ========== ");
+  }
 
-		System.out.print("A list of integers in the array list: ");
-		System.out.println(arrayList);
+  private static void WhileVersion(List<Integer> arrayList) {
+    System.out.print("A list of integers in the array list: ");
+    System.out.println(arrayList);
 
-		LinkedList<Object> linkedList = new LinkedList<>(arrayList);
-		linkedList.add(1, "red");
-		linkedList.removeLast();
-		linkedList.addFirst("green");
+    LinkedList<Object> linkedList = new LinkedList<>(arrayList);
+    linkedList.add(1, "red");
+    linkedList.removeLast();
+    linkedList.addFirst("green");
 
-		System.out.print("Display the linked list forward     : ");
-		ListIterator<Object> listIterator = linkedList.listIterator();
-		while (listIterator.hasNext()) {
-			System.out.print(listIterator.next() + " ");
-		}
-		System.out.println();
+    System.out.print("Display the linked list forward     : ");
+    ListIterator<Object> listIterator = linkedList.listIterator();
+    while (listIterator.hasNext()) {
+      System.out.print(listIterator.next() + " ");
+    }
+    System.out.println();
 
-		System.out.print("Display the linked list backward    : ");
-		listIterator = linkedList.listIterator(linkedList.size());
-		while (listIterator.hasPrevious()) {
-			System.out.print(listIterator.previous() + " ");
-		}
-	}
+    System.out.print("Display the linked list backward    : ");
+    listIterator = linkedList.listIterator(linkedList.size());
+    while (listIterator.hasPrevious()) {
+      System.out.print(listIterator.previous() + " ");
+    }
+  }
 
-	// https://www.w3schools.com/java/java_lambda.asp
-	private static void ForEachVersion(List<Integer> arrayList) {
+  // https://www.w3schools.com/java/java_lambda.asp
+  private static void ForEachVersion(List<Integer> arrayList) {
+    System.out.print("A list of integers in the array list: ");
+    System.out.println(arrayList);
 
-		System.out.print("A list of integers in the array list: ");
-		System.out.println(arrayList);
+    LinkedList<Object> linkedList = new LinkedList<>(arrayList);
+    linkedList.add(1, "red");
+    linkedList.removeLast();
+    linkedList.addFirst("green");
 
-		LinkedList<Object> linkedList = new LinkedList<>(arrayList);
-		linkedList.add(1, "red");
-		linkedList.removeLast();
-		linkedList.addFirst("green");
+    System.out.print("Display the linked list forward     : ");
+    linkedList.forEach(x -> System.out.print(x + " "));
+    System.out.println();
 
-		System.out.print("Display the linked list forward     : ");
-		linkedList.forEach(x -> System.out.print(x + " "));
-		System.out.println();
-
-		System.out.print("Display the linked list backward    : ");
-		Collections.reverse(linkedList);
-		linkedList.forEach(x -> System.out.print(x + " "));
-	}
+    System.out.print("Display the linked list backward    : ");
+    Collections.reverse(linkedList);
+    linkedList.forEach(x -> System.out.print(x + " "));
+  }
 }

@@ -8,7 +8,7 @@ import java.util.Scanner;
 // D:\Drives\OneDrive - Colorado Community College System\CSC 1061 - Computer Science 2 - Java\Code-Examples
 
 // Directory Size
-public class Program18_007 {
+public class DirectorySize {
 
   /** Main method */
   public static void main(String[] args) {

@@ -6,6 +6,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Program18_007",
+            "request": "launch",
+            "mainClass": "edu.csc1061.ch18.Program18_007",
+            "projectName": "CSC-1061-CS2-Java_e2b4a59b"
+        },
+        {
+            "type": "java",
+            "name": "Launch Program20_005",
+            "request": "launch",
+            "mainClass": "edu.csc1061.ch20.Program20_005",
+            "vmArgs": ["--module-path", "${env:PATH_TO_FX}", "--add-modules", "javafx.controls,javafx.fxml"]
+        },
+        {
+            "type": "java",
+            "name": "Launch Program18_009",
+            "request": "launch",
+            "mainClass": "edu.csc1061.ch18.Program18_009",
+            "vmArgs": ["--module-path", "${env:PATH_TO_FX}", "--add-modules", "javafx.controls,javafx.fxml"]
+        },
+        {
+            "type": "java",
             "request": "launch",
             "name": "Launch Current File Java",
             "mainClass": "${file}"
