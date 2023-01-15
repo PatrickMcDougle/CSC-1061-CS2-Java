@@ -61,37 +61,52 @@ public abstract class MyList<E> implements Collection<E> {
 
   @Override
   public boolean containsAll(Collection<?> c) {
-    // Left as an exercise
+    for (Object e : c) {
+      if (!this.contains(e)) {
+        return false;
+      }
+    }
     return true;
   }
 
+  /** Adds the elements in otherList to this list.
+   * Returns true if this list changed as a result of the call */
   @Override
   public boolean addAll(Collection<? extends E> c) {
     // Left as an exercise
+    // WRITE YOUR CODE HERE
     return true;
   }
 
+  /** Removes all the elements in otherList from this list
+   * Returns true if this list changed as a result of the call */
   @Override
   public boolean removeAll(Collection<?> c) {
     // Left as an exercise
+    // WRITE YOUR CODE HERE
     return true;
   }
 
+  /** Retains the elements in this list that are also in otherList
+   * Returns true if this list changed as a result of the call */
   @Override
   public boolean retainAll(Collection<?> c) {
     // Left as an exercise
+    // WRITE YOUR CODE HERE
     return true;
   }
 
   @Override
   public Object[] toArray() {
     // Left as an exercise
+    // WRITE YOUR CODE HERE
     return null;
   }
 
   @Override
   public <T> T[] toArray(T[] array) {
     // Left as an exercise
+    // WRITE YOUR CODE HERE
     return null;
   }
 }

@@ -180,14 +180,16 @@ public class MyLinkedList<E> extends MyList<E> {
   /** Return true if this list contains the element e */
   @Override
   public boolean contains(Object e) {
-    // Left as an exercise ---------- ---------- ----------
+    // Left as an exercise
+    // WRITE YOUR CODE HERE
     return false;
   }
 
   /** Return the element at the specified index */
   @Override
   public E get(int index) {
-    // Left as an exercise ---------- ---------- ----------
+    // Left as an exercise
+    // WRITE YOUR CODE HERE
     return null;
   }
 
@@ -196,7 +198,8 @@ public class MyLinkedList<E> extends MyList<E> {
    */
   @Override
   public int indexOf(Object e) {
-    // Left as an exercise ---------- ---------- ----------
+    // Left as an exercise
+    // WRITE YOUR CODE HERE
     return 0;
   }
 
@@ -205,7 +208,8 @@ public class MyLinkedList<E> extends MyList<E> {
    */
   @Override
   public int lastIndexOf(E e) {
-    // Left as an exercise ---------- ---------- ----------
+    // Left as an exercise
+    // WRITE YOUR CODE HERE
     return 0;
   }
 
@@ -214,44 +218,15 @@ public class MyLinkedList<E> extends MyList<E> {
    */
   @Override
   public E set(int index, E e) {
-    // Left as an exercise ---------- ---------- ----------
+    // Left as an exercise
+    // WRITE YOUR CODE HERE
     return null;
   }
 
   /** Override iterator() defined in Iterable */
   @Override
   public java.util.Iterator<E> iterator() {
-    return new LinkedListIterator();
-  }
-
-  private class LinkedListIterator implements java.util.Iterator<E> {
-    private Node<E> current = head; // Current index
-
-    @Override
-    public boolean hasNext() {
-      return (current != null);
-    }
-
-    @Override
-    public E next() {
-      E e = current.element;
-      current = current.next;
-      return e;
-    }
-
-    @Override
-    public void remove() {
-      // Left as an exercise ---------- ---------- ----------
-    }
-  }
-
-  protected static class Node<E> {
-    E element;
-    Node<E> next;
-
-    public Node(E element) {
-      this.element = element;
-    }
+    return new LinkedListIterator<>(head);
   }
 
   /** Return the number of elements in this list */
