@@ -30,8 +30,11 @@ public class CircleRadiusExceptionExample {
   /** Set a new radius */
   public void setRadius(double newRadius) throws InvalidRadiusException {
     assert false : "Hello World";
-    if (newRadius >= 0) radius =
-      newRadius; else throw new InvalidRadiusException(newRadius);
+    if (newRadius >= 0) {
+      radius = newRadius;
+    } else {
+      throw new InvalidRadiusException(newRadius);
+    }
   }
 
   /** Return numberOfObjects */

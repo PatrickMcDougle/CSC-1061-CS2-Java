@@ -15,12 +15,9 @@ public class Ch10Program10LargeFactorial {
 
   public static BigInteger factorial(long n) {
     BigInteger result = BigInteger.ONE; // Assign 1 to result
-    for (
-      int i = 1;
-      i <= n;
-      i++
-    ) result = result.multiply(new BigInteger(i + "")); // Multiply each i
-
+    for (int i = 1; i <= n; i++) {
+      result = result.multiply(new BigInteger(i + "")); // Multiply each i
+    }
     return result;
   }
 }
