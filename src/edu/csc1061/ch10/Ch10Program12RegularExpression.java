@@ -15,7 +15,9 @@ public class Ch10Program12RegularExpression {
     System.out.println();
 
     String[] tokens1 = "Java#HTML#Perl".split("#", 0);
-    for (int i = 0; i < tokens1.length; i++) System.out.print(tokens1[i] + " ");
+    for (int i = 0; i < tokens1.length; i++) {
+      System.out.print(tokens1[i] + " ");
+    }
     System.out.println();
 
     String j = STRING_JAVA;
@@ -43,7 +45,9 @@ public class Ch10Program12RegularExpression {
 
     String[] tokens2 = "Java,C?C#,C++".split("[.,:;?]");
 
-    for (int i = 0; i < tokens2.length; i++) System.out.println(tokens2[i]);
+    for (int i = 0; i < tokens2.length; i++) {
+      System.out.println(tokens2[i]);
+    }
     System.out.println();
 
     System.out.println("Java Java Java".replaceAll("v\\w", "wi"));
