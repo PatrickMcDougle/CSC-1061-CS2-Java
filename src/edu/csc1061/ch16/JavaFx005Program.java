@@ -9,31 +9,30 @@ import javafx.scene.layout.BorderPane;
 // show textfield
 public class JavaFx005Program extends JavaFx004Program {
 
-	@Override // Override the getPane() method in the super class
-	protected BorderPane getPane() {
+  @Override // Override the getPane() method in the super class
+  protected BorderPane getPane() {
+    BorderPane pane = super.getPane();
 
-		BorderPane pane = super.getPane();
+    BorderPane paneForTextField = new BorderPane();
+    paneForTextField.setPadding(new Insets(5, 5, 5, 5));
+    paneForTextField.setStyle("-fx-border-color: green");
+    paneForTextField.setLeft(new Label("Enter a new message: "));
 
-		BorderPane paneForTextField = new BorderPane();
-		paneForTextField.setPadding(new Insets(5, 5, 5, 5));
-		paneForTextField.setStyle("-fx-border-color: green");
-		paneForTextField.setLeft(new Label("Enter a new message: "));
+    TextField tf = new TextField();
+    tf.setAlignment(Pos.BOTTOM_RIGHT);
+    paneForTextField.setCenter(tf);
+    pane.setTop(paneForTextField);
 
-		TextField tf = new TextField();
-		tf.setAlignment(Pos.BOTTOM_RIGHT);
-		paneForTextField.setCenter(tf);
-		pane.setTop(paneForTextField);
+    tf.setOnAction(e -> text.setText(tf.getText()));
 
-		tf.setOnAction(e -> text.setText(tf.getText()));
+    return pane;
+  }
 
-		return pane;
-	}
-
-	/**
-	 * The main method is only needed for the IDE with limited
-	 * JavaFX support. Not needed for running from the command line.
-	 */
-	public static void main(String[] args) {
-		launch(args);
-	}
+  /**
+   * The main method is only needed for the IDE with limited
+   * JavaFX support. Not needed for running from the command line.
+   */
+  public static void main(String[] args) {
+    launch(args);
+  }
 }

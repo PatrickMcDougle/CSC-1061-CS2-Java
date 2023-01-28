@@ -8,23 +8,22 @@ import javafx.stage.Stage;
 // First Basic JavaFX Application
 public class JavaFx001Program extends Application {
 
-	@Override // Override the start method in the Application class
-	public void start(Stage primaryStage) {
+  @Override // Override the start method in the Application class
+  public void start(Stage primaryStage) {
+    // Create a button and place it in the scene
+    Button btOK = new Button("OK");
+    Scene scene = new Scene(btOK, 200, 250);
 
-		// Create a button and place it in the scene
-		Button btOK = new Button("OK");
-		Scene scene = new Scene(btOK, 200, 250);
+    primaryStage.setTitle("JavaFX 001 Program"); // Set the stage title
+    primaryStage.setScene(scene); // Place the scene in the stage
+    primaryStage.show(); // Display the stage
+  }
 
-		primaryStage.setTitle("JavaFX 001 Program"); // Set the stage title
-		primaryStage.setScene(scene); // Place the scene in the stage
-		primaryStage.show(); // Display the stage
-	}
-
-	/**
-	 * The main method is only needed for the IDE with limited
-	 * JavaFX support. Not needed for running from the command line.
-	 */
-	public static void main(String[] args) {
-		launch(args);
-	}
+  /**
+   * The main method is only needed for the IDE with limited
+   * JavaFX support. Not needed for running from the command line.
+   */
+  public static void main(String[] args) {
+    launch(args);
+  }
 }

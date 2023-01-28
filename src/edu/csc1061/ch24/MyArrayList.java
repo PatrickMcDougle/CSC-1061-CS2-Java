@@ -179,9 +179,7 @@ public class MyArrayList<E> extends MyList<E> {
 
     @Override // Remove the element returned by the last next()
     public void remove() {
-      if (
-        current == 0
-      ) throw new IllegalStateException(); // next() has not been called yet
+      if (current == 0) throw new IllegalStateException(); // next() has not been called yet
       MyArrayList.this.remove(--current);
     }
   }

@@ -1,52 +1,61 @@
 package edu.csc1061.ch09.circle;
 
 public class MyCircle5Program {
-	// Main method
-	public static void main(String[] args) {
-		// Declare circleArray
-		Circle3[] circleArray;
 
-		// Create circleArray
-		circleArray = createCircleArray();
+  // Main method
+  public static void main(String[] args) {
+    // Declare circleArray
+    Circle3[] circleArray;
 
-		// Print circleArray and total areas of the circles
-		printCircleArray(circleArray);
-	}
+    // Create circleArray
+    circleArray = createCircleArray();
 
-	// Create an array of Circle objects
-	public static Circle3[] createCircleArray() {
-		Circle3[] circleArray = new Circle3[5];
+    // Print circleArray and total areas of the circles
+    printCircleArray(circleArray);
+  }
 
-		for (int i = 0; i < circleArray.length; i++) {
-			circleArray[i] = new Circle3(Math.random() * 100);
-		}
+  // Create an array of Circle objects
+  public static Circle3[] createCircleArray() {
+    Circle3[] circleArray = new Circle3[5];
 
-		// Return Circle array
-		return circleArray;
-	}
+    for (int i = 0; i < circleArray.length; i++) {
+      circleArray[i] = new Circle3(Math.random() * 100);
+    }
 
-	// Print an array of circles and their total area
-	public static void printCircleArray(Circle3[] circleArray) {
-		System.out.printf("%-30s%-15s\n", "Radius", "Area");
-		for (int i = 0; i < circleArray.length; i++) {
-			System.out.printf("%-30f%-15f\n", circleArray[i].getRadius(), circleArray[i].getArea());
-		}
+    // Return Circle array
+    return circleArray;
+  }
 
-		System.out.println("-----------------------------------------");
+  // Print an array of circles and their total area
+  public static void printCircleArray(Circle3[] circleArray) {
+    System.out.printf("%-30s%-15s\n", "Radius", "Area");
+    for (int i = 0; i < circleArray.length; i++) {
+      System.out.printf(
+        "%-30f%-15f\n",
+        circleArray[i].getRadius(),
+        circleArray[i].getArea()
+      );
+    }
 
-		// Compute and display the result
-		System.out.printf("%-30s%-15f\n", "The total areas of circles is", sum(circleArray));
-	}
+    System.out.println("-----------------------------------------");
 
-	// Add circle areas
-	public static double sum(Circle3[] circleArray) {
-		// Initialize sum
-		double sum = 0;
+    // Compute and display the result
+    System.out.printf(
+      "%-30s%-15f\n",
+      "The total areas of circles is",
+      sum(circleArray)
+    );
+  }
 
-		// Add areas to sum
-		for (int i = 0; i < circleArray.length; i++)
-			sum += circleArray[i].getArea();
+  // Add circle areas
+  public static double sum(Circle3[] circleArray) {
+    // Initialize sum
+    double sum = 0;
 
-		return sum;
-	}
+    // Add areas to sum
+    for (int i = 0; i < circleArray.length; i++) sum +=
+      circleArray[i].getArea();
+
+    return sum;
+  }
 }

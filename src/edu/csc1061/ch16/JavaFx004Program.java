@@ -10,52 +10,59 @@ import javafx.scene.paint.Color;
 // radio button
 public class JavaFx004Program extends JavaFx003Program {
 
-	@Override // Override the getPane() method in the super class
-	protected BorderPane getPane() {
+  @Override // Override the getPane() method in the super class
+  protected BorderPane getPane() {
+    BorderPane pane = super.getPane();
 
-		BorderPane pane = super.getPane();
+    VBox paneForRadioButtons = new VBox(20);
+    paneForRadioButtons.setPadding(new Insets(5, 5, 5, 5));
+    paneForRadioButtons.setStyle(
+      "-fx-border-width: 2px; -fx-border-color: green"
+    );
 
-		VBox paneForRadioButtons = new VBox(20);
-		paneForRadioButtons.setPadding(new Insets(5, 5, 5, 5));
-		paneForRadioButtons.setStyle("-fx-border-width: 2px; -fx-border-color: green");
+    RadioButton rbRed = new RadioButton("Red");
+    RadioButton rbGreen = new RadioButton("Green");
+    RadioButton rbBlue = new RadioButton("Blue");
+    paneForRadioButtons.getChildren().addAll(rbRed, rbGreen, rbBlue);
+    pane.setLeft(paneForRadioButtons);
 
-		RadioButton rbRed = new RadioButton("Red");
-		RadioButton rbGreen = new RadioButton("Green");
-		RadioButton rbBlue = new RadioButton("Blue");
-		paneForRadioButtons.getChildren().addAll(rbRed, rbGreen, rbBlue);
-		pane.setLeft(paneForRadioButtons);
+    ToggleGroup group = new ToggleGroup();
+    rbRed.setToggleGroup(group);
+    rbGreen.setToggleGroup(group);
+    rbBlue.setToggleGroup(group);
 
-		ToggleGroup group = new ToggleGroup();
-		rbRed.setToggleGroup(group);
-		rbGreen.setToggleGroup(group);
-		rbBlue.setToggleGroup(group);
+    rbRed.setOnAction(
+      e -> {
+        if (rbRed.isSelected()) {
+          text.setFill(Color.RED);
+        }
+      }
+    );
 
-		rbRed.setOnAction(e -> {
-			if (rbRed.isSelected()) {
-				text.setFill(Color.RED);
-			}
-		});
+    rbGreen.setOnAction(
+      e -> {
+        if (rbGreen.isSelected()) {
+          text.setFill(Color.GREEN);
+        }
+      }
+    );
 
-		rbGreen.setOnAction(e -> {
-			if (rbGreen.isSelected()) {
-				text.setFill(Color.GREEN);
-			}
-		});
+    rbBlue.setOnAction(
+      e -> {
+        if (rbBlue.isSelected()) {
+          text.setFill(Color.BLUE);
+        }
+      }
+    );
 
-		rbBlue.setOnAction(e -> {
-			if (rbBlue.isSelected()) {
-				text.setFill(Color.BLUE);
-			}
-		});
+    return pane;
+  }
 
-		return pane;
-	}
-
-	/**
-	 * The main method is only needed for the IDE with limited
-	 * JavaFX support. Not needed for running from the command line.
-	 */
-	public static void main(String[] args) {
-		launch(args);
-	}
+  /**
+   * The main method is only needed for the IDE with limited
+   * JavaFX support. Not needed for running from the command line.
+   */
+  public static void main(String[] args) {
+    launch(args);
+  }
 }
