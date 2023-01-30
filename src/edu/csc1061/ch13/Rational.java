@@ -129,4 +129,12 @@ public class Rational extends Number implements Comparable<Rational> {
 
     return 0;
   }
+
+  @Override
+  public int hashCode() {
+    int hash = 7;
+    int prime = 31;
+    hash = prime * hash + (int) numerator + (int) denominator;
+    return hash;
+  }
 }

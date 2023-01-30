@@ -27,4 +27,22 @@ public class RectangleComparable
       "Width: " + getWidth() + " Height: " + getHeight() + " Area: " + getArea()
     );
   }
+
+  @Override
+  public boolean equals(Object obj) {
+    if (obj instanceof RectangleComparable) {
+      RectangleComparable rectangleComparable = (RectangleComparable) obj;
+      return (
+        rectangleComparable.getWidth() == this.getWidth() &&
+        rectangleComparable.getHeight() == this.getHeight()
+      );
+    }
+
+    return false;
+  }
+
+  @Override
+  public int hashCode() {
+    return super.hashCode();
+  }
 }

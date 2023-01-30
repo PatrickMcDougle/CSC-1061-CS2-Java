@@ -10,6 +10,7 @@ public class Ch13Program04 {
 
   public static void main(String[] args) {
     Object[] objects = { new Tiger(), new Chicken(), new Apple() };
+
     for (int i = 0; i < objects.length; i++) {
       if (objects[i] instanceof IEdible) System.out.println(
         ((IEdible) objects[i]).howToEat()

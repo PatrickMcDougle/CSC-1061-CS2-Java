@@ -53,4 +53,21 @@ public class House implements Cloneable, Comparable<House> {
 
     return 0;
   }
+
+  @Override
+  public boolean equals(Object obj) {
+    if (obj instanceof House) {
+      House other = (House) obj;
+      return this.id == other.id && this.area == other.area;
+    }
+    return false;
+  }
+
+  @Override
+  public int hashCode() {
+    int hash = 7;
+    int prime = 31;
+    hash = prime * hash + id + (int) area;
+    return hash;
+  }
 }
