@@ -11,7 +11,7 @@ public class JavaFx002Program extends Application {
   @Override // Override the start method in the Application class
   public void start(Stage primaryStage) {
     // Create a scene and place a button in the scene
-    Scene scene = new Scene(new Button("OK"), 200, 250);
+    Scene scene = new Scene(new Button("First Stage"), 200, 250);
 
     primaryStage.setTitle("JavaFx 002 Program - Primary Stage"); // Set the stage title
     primaryStage.setScene(scene); // Place the scene in the stage
@@ -21,7 +21,7 @@ public class JavaFx002Program extends Application {
 
     stage.setTitle("JavaFx 002 Program - Second Stage"); // Set the stage title
     // Set a scene with a button in the stage
-    stage.setScene(new Scene(new Button("New Stage"), 200, 250));
+    stage.setScene(new Scene(new Button("Second New Stage"), 200, 250));
     stage.show(); // Display the stage
   }
 

@@ -4,7 +4,9 @@ public class Rectangle extends GeometricObject {
   private double width;
   private double height;
 
-  public Rectangle() {}
+  public Rectangle() {
+    super("RED", true);
+  }
 
   public Rectangle(double width, double height) {
     this.width = width;
@@ -14,6 +16,7 @@ public class Rectangle extends GeometricObject {
   public Rectangle(double width, double height, String color, boolean filled) {
     this.width = width;
     this.height = height;
+
     setColor(color);
     setFilled(filled);
   }

@@ -1,11 +1,8 @@
 package edu.csc1061.ch14;
 
 import javafx.application.Application;
-import javafx.geometry.Insets;
 import javafx.scene.Scene;
-import javafx.scene.control.Label;
 import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
 // show border pane
@@ -36,15 +33,5 @@ public class JavaFx012Program extends Application {
    */
   public static void main(String[] args) {
     launch(args);
-  }
-}
-
-// Define a custom pane to hold a label in the center of the pane
-class CustomPane extends StackPane {
-
-  public CustomPane(String title) {
-    getChildren().add(new Label(title));
-    setStyle("-fx-border-color: red");
-    setPadding(new Insets(11.5, 12.5, 13.5, 14.5));
   }
 }

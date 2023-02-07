@@ -19,17 +19,17 @@ public class JavaFx018Program extends Application {
     arc1.setFill(Color.RED); // Set fill color
     arc1.setType(ArcType.ROUND); // Set arc type
 
-    Arc arc2 = new Arc(150, 100, 80, 80, 30 + 90, 35);
+    Arc arc2 = new Arc(150, 100, 80, 80, 30 + 90.0, 35);
     arc2.setFill(Color.WHITE);
     arc2.setType(ArcType.OPEN);
     arc2.setStroke(Color.BLACK);
 
-    Arc arc3 = new Arc(150, 100, 80, 80, 30 + 180, 35);
+    Arc arc3 = new Arc(150, 100, 80, 80, 30 + 180.0, 35);
     arc3.setFill(Color.WHITE);
     arc3.setType(ArcType.CHORD);
     arc3.setStroke(Color.BLACK);
 
-    Arc arc4 = new Arc(150, 100, 80, 80, 30 + 270, 35);
+    Arc arc4 = new Arc(150, 100, 80, 80, 30 + 270.0, 35);
     arc4.setFill(Color.GREEN);
     arc4.setType(ArcType.CHORD);
     arc4.setStroke(Color.BLACK);

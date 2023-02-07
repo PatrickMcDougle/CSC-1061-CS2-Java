@@ -37,9 +37,9 @@ public class JavaFx016Program extends Application {
         r3
       );
 
-    for (int i = 0; i < 4; i++) {
+    for (int i = 0; i < 8; i++) {
       Rectangle r = new Rectangle(100, 50, 100, 30);
-      r.setRotate(i * 360 / 8);
+      r.setRotate(i * 360 / 16.0);
       r.setStroke(Color.color(Math.random(), Math.random(), Math.random()));
       r.setFill(Color.WHITE);
       group.getChildren().add(r);

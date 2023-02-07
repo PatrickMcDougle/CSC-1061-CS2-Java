@@ -14,6 +14,7 @@ public class JavaFx009Program extends Application {
   @Override // Override the start method in the Application class
   public void start(Stage primaryStage) {
     System.out.println("Working dir:  " + System.getProperty("user.dir"));
+
     // Create a pane to hold the image views
     Pane pane = new HBox(10);
     pane.setPadding(new Insets(5, 5, 5, 5));
