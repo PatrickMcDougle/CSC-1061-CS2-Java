@@ -13,31 +13,32 @@ import javafx.stage.Stage;
 
 // checkbox example
 public class JavaFx003Program extends JavaFx002Program {
+  private static final String FONT_NAME = "Times New Roman";
 
   @Override // Override the getPane() method in the super class
   protected BorderPane getPane() {
     BorderPane pane = super.getPane();
 
     Font fontBoldItalic = Font.font(
-      "Times New Roman",
+      FONT_NAME,
       FontWeight.BOLD,
       FontPosture.ITALIC,
       20
     );
     Font fontBold = Font.font(
-      "Times New Roman",
+      FONT_NAME,
       FontWeight.BOLD,
       FontPosture.REGULAR,
       20
     );
     Font fontItalic = Font.font(
-      "Times New Roman",
+      FONT_NAME,
       FontWeight.NORMAL,
       FontPosture.ITALIC,
       20
     );
     Font fontNormal = Font.font(
-      "Times New Roman",
+      FONT_NAME,
       FontWeight.NORMAL,
       FontPosture.REGULAR,
       20
@@ -48,25 +49,30 @@ public class JavaFx003Program extends JavaFx002Program {
     VBox paneForCheckBoxes = new VBox(20);
     paneForCheckBoxes.setPadding(new Insets(5, 5, 5, 5));
     paneForCheckBoxes.setStyle("-fx-border-color: green");
-    CheckBox chkBold = new CheckBox("Bold");
-    CheckBox chkItalic = new CheckBox("Italic");
-    paneForCheckBoxes.getChildren().addAll(chkBold, chkItalic);
+
+    CheckBox checkboxBold = new CheckBox("Bold");
+    CheckBox checkboxItalic = new CheckBox("Italic");
+
+    paneForCheckBoxes.getChildren().addAll(checkboxBold, checkboxItalic);
     pane.setRight(paneForCheckBoxes);
 
+    // Lambda Expression:
+    // parameter -> expression
+    // https://www.w3schools.com/java/java_lambda.asp
     EventHandler<ActionEvent> handler = e -> {
-      if (chkBold.isSelected() && chkItalic.isSelected()) {
+      if (checkboxBold.isSelected() && checkboxItalic.isSelected()) {
         text.setFont(fontBoldItalic); // Both check boxes checked
-      } else if (chkBold.isSelected()) {
+      } else if (checkboxBold.isSelected()) {
         text.setFont(fontBold); // The Bold check box checked
-      } else if (chkItalic.isSelected()) {
+      } else if (checkboxItalic.isSelected()) {
         text.setFont(fontItalic); // The Italic check box checked
       } else {
         text.setFont(fontNormal); // Both check boxes unchecked
       }
     };
 
-    chkBold.setOnAction(handler);
-    chkItalic.setOnAction(handler);
+    checkboxBold.setOnAction(handler);
+    checkboxItalic.setOnAction(handler);
 
     return pane; // Return a new pane
   }

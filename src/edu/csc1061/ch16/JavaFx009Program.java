@@ -14,11 +14,11 @@ public class JavaFx009Program extends Application {
 
   @Override // Override the start method in the Application class
   public void start(Stage primaryStage) {
-    Text text = new Text(20, 20, "JavaFX Programming");
+    Text text = new Text(20, 20, "JavaFX Programming - CSC 1061");
 
-    ScrollBar sbHorizontal = new ScrollBar();
-    ScrollBar sbVertical = new ScrollBar();
-    sbVertical.setOrientation(Orientation.VERTICAL);
+    ScrollBar scrollBarHorizontal = new ScrollBar();
+    ScrollBar scrollBarVertical = new ScrollBar();
+    scrollBarVertical.setOrientation(Orientation.VERTICAL);
 
     // Create a text in a pane
     Pane paneForText = new Pane();
@@ -27,30 +27,34 @@ public class JavaFx009Program extends Application {
     // Create a border pane to hold text and scroll bars
     BorderPane pane = new BorderPane();
     pane.setCenter(paneForText);
-    pane.setBottom(sbHorizontal);
-    pane.setLeft(sbVertical);
+    pane.setBottom(scrollBarHorizontal);
+    pane.setLeft(scrollBarVertical);
+
+    // Lambda Expression:
+    // parameter -> expression
+    // https://www.w3schools.com/java/java_lambda.asp
 
     // Listener for horizontal scroll bar value change
-    sbHorizontal
+    scrollBarHorizontal
       .valueProperty()
       .addListener(
-        ov ->
+        observable ->
           text.setX(
-            sbHorizontal.getValue() *
+            scrollBarHorizontal.getValue() *
             paneForText.getWidth() /
-            sbHorizontal.getMax()
+            scrollBarHorizontal.getMax()
           )
       );
 
     // Listener for vertical scroll bar value change
-    sbVertical
+    scrollBarVertical
       .valueProperty()
       .addListener(
-        ov ->
+        observable ->
           text.setY(
-            sbVertical.getValue() *
+            scrollBarVertical.getValue() *
             paneForText.getHeight() /
-            sbVertical.getMax()
+            scrollBarVertical.getMax()
           )
       );
 

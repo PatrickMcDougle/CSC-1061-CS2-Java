@@ -20,37 +20,57 @@ public class JavaFx004Program extends JavaFx003Program {
       "-fx-border-width: 2px; -fx-border-color: green"
     );
 
-    RadioButton rbRed = new RadioButton("Red");
-    RadioButton rbGreen = new RadioButton("Green");
-    RadioButton rbBlue = new RadioButton("Blue");
-    paneForRadioButtons.getChildren().addAll(rbRed, rbGreen, rbBlue);
+    RadioButton radioButtonRed = new RadioButton("Red");
+    RadioButton radioButtonGreen = new RadioButton("Green");
+    RadioButton radioButtonBlue = new RadioButton("Blue");
+    RadioButton radioButtonBlack = new RadioButton("Black");
+    paneForRadioButtons
+      .getChildren()
+      .addAll(
+        radioButtonRed,
+        radioButtonGreen,
+        radioButtonBlue,
+        radioButtonBlack
+      );
     pane.setLeft(paneForRadioButtons);
 
-    ToggleGroup group = new ToggleGroup();
-    rbRed.setToggleGroup(group);
-    rbGreen.setToggleGroup(group);
-    rbBlue.setToggleGroup(group);
+    ToggleGroup toggleGroupColors = new ToggleGroup();
+    radioButtonRed.setToggleGroup(toggleGroupColors);
+    radioButtonGreen.setToggleGroup(toggleGroupColors);
+    radioButtonBlue.setToggleGroup(toggleGroupColors);
+    radioButtonBlack.setToggleGroup(toggleGroupColors);
 
-    rbRed.setOnAction(
+    // Lambda Expression:
+    // parameter -> expression
+    // https://www.w3schools.com/java/java_lambda.asp
+    radioButtonRed.setOnAction(
       e -> {
-        if (rbRed.isSelected()) {
+        if (radioButtonRed.isSelected()) {
           text.setFill(Color.RED);
         }
       }
     );
 
-    rbGreen.setOnAction(
+    radioButtonGreen.setOnAction(
       e -> {
-        if (rbGreen.isSelected()) {
+        if (radioButtonGreen.isSelected()) {
           text.setFill(Color.GREEN);
         }
       }
     );
 
-    rbBlue.setOnAction(
+    radioButtonBlue.setOnAction(
       e -> {
-        if (rbBlue.isSelected()) {
+        if (radioButtonBlue.isSelected()) {
           text.setFill(Color.BLUE);
+        }
+      }
+    );
+
+    radioButtonBlack.setOnAction(
+      e -> {
+        if (radioButtonBlack.isSelected()) {
+          text.setFill(Color.BLACK);
         }
       }
     );

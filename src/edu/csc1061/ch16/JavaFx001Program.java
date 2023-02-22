@@ -19,41 +19,43 @@ public class JavaFx001Program extends Application {
 
   @Override // Override the start method in the Application class
   public void start(Stage primaryStage) {
-    ImageView usFlag = new ImageView(
+    ImageView usFlagImageView = new ImageView(
       new Image("file:resources/images/flag1.gif")
     );
 
-    usFlag.setFitHeight(108);
-    usFlag.setFitWidth(206);
+    usFlagImageView.setFitHeight(108);
+    usFlagImageView.setFitWidth(206);
 
-    Label lb1 = new Label("US\nFlag", usFlag);
-    lb1.setStyle("-fx-border-color: green; -fx-border-width: 2");
-    lb1.setContentDisplay(ContentDisplay.BOTTOM);
-    lb1.setTextFill(Color.RED);
+    Label label1 = new Label("US\nFlag", usFlagImageView);
+    label1.setStyle("-fx-border-color: green; -fx-border-width: 2");
+    label1.setContentDisplay(ContentDisplay.BOTTOM);
+    label1.setTextFill(Color.RED);
 
-    Label lb2 = new Label("Circle", new Circle(50, 50, 25));
-    lb2.setContentDisplay(ContentDisplay.TOP);
-    lb2.setTextFill(Color.ORANGE);
+    Label label2 = new Label("Circle", new Circle(50, 50, 25));
+    label2.setContentDisplay(ContentDisplay.TOP);
+    label2.setTextFill(Color.ORANGE);
 
-    Label lb3 = new Label("Rectangle", new Rectangle(10, 10, 50, 25));
-    lb3.setContentDisplay(ContentDisplay.RIGHT);
+    Label label3 = new Label("Rectangle", new Rectangle(10, 10, 50, 25));
+    label3.setContentDisplay(ContentDisplay.RIGHT);
 
-    Label lb4 = new Label("Ellipse", new Ellipse(50, 50, 50, 25));
-    lb4.setContentDisplay(ContentDisplay.LEFT);
+    Label label4 = new Label("Ellipse", new Ellipse(50, 50, 50, 25));
+    label4.setContentDisplay(ContentDisplay.LEFT);
 
     Ellipse ellipse = new Ellipse(50, 50, 50, 25);
     ellipse.setStroke(Color.GREEN);
     ellipse.setFill(Color.WHITE);
+
     StackPane stackPane = new StackPane();
     stackPane.getChildren().addAll(ellipse, new Label("JavaFX"));
-    Label lb5 = new Label("A pane inside a label", stackPane);
-    lb5.setContentDisplay(ContentDisplay.BOTTOM);
+
+    Label label5 = new Label("A pane inside a label", stackPane);
+    label5.setContentDisplay(ContentDisplay.BOTTOM);
 
     HBox pane = new HBox(20);
-    pane.getChildren().addAll(lb1, lb2, lb3, lb4, lb5);
+    pane.getChildren().addAll(label1, label2, label3, label4, label5);
 
     // Create a scene and place it in the stage
-    Scene scene = new Scene(pane, 700, 250);
+    Scene scene = new Scene(pane, 700, 300);
     primaryStage.setTitle("LabelWithGraphic"); // Set the stage title
     primaryStage.setScene(scene); // Place the scene in the stage
     primaryStage.show(); // Display the stage

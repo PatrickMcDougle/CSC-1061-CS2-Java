@@ -30,7 +30,7 @@ public class JavaFx010Program extends Application {
     URI videoFileUri = videoFile.toURI();
     URL videoFileUrl = videoFileUri.toURL();
     Media media = new Media(videoFileUrl.toString());
-    // Media media = new Media(videoFile.toURI().toURL().toString());
+    // Media media = new Media(videoFile.toURI().toURL().toString())
 
     MediaPlayer mediaPlayer = new MediaPlayer(media);
     MediaView mediaView = new MediaView(mediaPlayer);
@@ -38,6 +38,10 @@ public class JavaFx010Program extends Application {
     mediaView.setFitHeight(400);
 
     Button playButton = new Button(">");
+
+    // Lambda Expression:
+    // parameter -> expression
+    // https://www.w3schools.com/java/java_lambda.asp
     playButton.setOnAction(
       e -> {
         if (playButton.getText().equals(">")) {

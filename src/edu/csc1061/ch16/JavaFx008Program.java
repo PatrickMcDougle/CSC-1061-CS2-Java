@@ -27,7 +27,7 @@ public class JavaFx008Program extends Application {
   };
 
   // Declare an ImageView array for the national flags of 9 countries
-  private ImageView[] ImageViews = {
+  private ImageView[] flagImages = {
     new ImageView("file:resources/images/ca.gif"),
     new ImageView("file:resources/images/china.gif"),
     new ImageView("file:resources/images/denmark.gif"),
@@ -41,26 +41,33 @@ public class JavaFx008Program extends Application {
 
   @Override // Override the start method in the Application class
   public void start(Stage primaryStage) {
-    ListView<String> lv = new ListView<>(
+    ListView<String> listViewOfFlags = new ListView<>(
       FXCollections.observableArrayList(flagTitles)
     );
-    lv.setPrefSize(140, 400);
-    lv.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
+    listViewOfFlags.setPrefSize(140, 400);
+    listViewOfFlags
+      .getSelectionModel()
+      .setSelectionMode(SelectionMode.MULTIPLE);
 
     // Create a pane to hold image views
     FlowPane imagePane = new FlowPane(10, 10);
     BorderPane pane = new BorderPane();
-    pane.setLeft(new ScrollPane(lv));
+    pane.setLeft(new ScrollPane(listViewOfFlags));
     pane.setCenter(imagePane);
 
-    lv
+    // Lambda Expression:
+    // parameter -> expression
+    // https://www.w3schools.com/java/java_lambda.asp
+    listViewOfFlags
       .getSelectionModel()
       .selectedItemProperty()
       .addListener(
-        ov -> {
+        observable -> {
           imagePane.getChildren().clear();
-          for (Integer i : lv.getSelectionModel().getSelectedIndices()) {
-            imagePane.getChildren().add(ImageViews[i]);
+          for (Integer i : listViewOfFlags
+            .getSelectionModel()
+            .getSelectedIndices()) {
+            imagePane.getChildren().add(flagImages[i]);
           }
         }
       );

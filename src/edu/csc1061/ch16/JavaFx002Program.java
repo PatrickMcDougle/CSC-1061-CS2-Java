@@ -13,19 +13,19 @@ import javafx.stage.Stage;
 
 // button demo
 public class JavaFx002Program extends Application {
-  protected Text text = new Text(50, 50, "JavaFX Programming");
+  protected Text text = new Text(50, 50, "JavaFX Programming - CSC 1061");
 
   protected BorderPane getPane() {
     HBox paneForButtons = new HBox(20);
-    Button btLeft = new Button(
+    Button buttonLeft = new Button(
       "Left",
       new ImageView("file:resources/images/left.gif")
     );
-    Button btRight = new Button(
+    Button buttonRight = new Button(
       "Right",
       new ImageView("file:resources/images/right.gif")
     );
-    paneForButtons.getChildren().addAll(btLeft, btRight);
+    paneForButtons.getChildren().addAll(buttonLeft, buttonRight);
     paneForButtons.setAlignment(Pos.CENTER);
     paneForButtons.setStyle("-fx-border-color: green");
 
@@ -36,8 +36,11 @@ public class JavaFx002Program extends Application {
     paneForText.getChildren().add(text);
     pane.setCenter(paneForText);
 
-    btLeft.setOnAction(e -> text.setX(text.getX() - 10));
-    btRight.setOnAction(e -> text.setX(text.getX() + 10));
+    // Lambda Expression:
+    // parameter -> expression
+    // https://www.w3schools.com/java/java_lambda.asp
+    buttonLeft.setOnAction(e -> text.setX(text.getX() - 10));
+    buttonRight.setOnAction(e -> text.setX(text.getX() + 10));
 
     return pane;
   }
@@ -45,7 +48,7 @@ public class JavaFx002Program extends Application {
   @Override // Override the start method in the Application class
   public void start(Stage primaryStage) {
     // Create a scene and place it in the stage
-    Scene scene = new Scene(getPane(), 450, 200);
+    Scene scene = new Scene(getPane(), 500, 300);
     primaryStage.setTitle("JavaFx 002 Program - ButtonDemo"); // Set the stage title
     primaryStage.setScene(scene); // Place the scene in the stage
     primaryStage.show(); // Display the stage

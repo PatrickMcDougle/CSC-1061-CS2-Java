@@ -26,7 +26,7 @@ public class JavaFx007Program extends Application {
   };
 
   // Declare an ImageView array for the national flags of 9 countries
-  private ImageView[] flagImage = {
+  private ImageView[] flagImages = {
     new ImageView("file:resources/images/ca.gif"),
     new ImageView("file:resources/images/china.gif"),
     new ImageView("file:resources/images/denmark.gif"),
@@ -45,20 +45,29 @@ public class JavaFx007Program extends Application {
   private JavaFx006DescriptionPane descriptionPane = new JavaFx006DescriptionPane();
 
   // Create a combo box for selecting countries
-  private ComboBox<String> cbo = new ComboBox<>(); // flagTitles
+  private ComboBox<String> comboBoxFlags = new ComboBox<>(); // flagTitles
 
   @Override // Override the start method in the Application class
   public void start(Stage primaryStage) {
     // Set text description
-    flagDescription[0] = "The Canadian national flag ...";
-    flagDescription[1] = "Description for China ... ";
-    flagDescription[2] = "Description for Denmark ... ";
-    flagDescription[3] = "Description for France ... ";
-    flagDescription[4] = "Description for Germany ... ";
-    flagDescription[5] = "Description for India ... ";
-    flagDescription[6] = "Description for Norway ... ";
-    flagDescription[7] = "Description for UK ... ";
-    flagDescription[8] = "Description for US ... ";
+    // flagDescription[0] = "The Canadian national flag ..."
+    // flagDescription[1] = "Description for China ... "
+    // flagDescription[2] = "Description for Denmark ... "
+    // flagDescription[3] = "Description for France ... "
+    // flagDescription[4] = "Description for Germany ... "
+    // flagDescription[5] = "Description for India ... "
+    // flagDescription[6] = "Description for Norway ... "
+    // flagDescription[7] = "Description for UK ... "
+    // flagDescription[8] = "Description for US ... "
+
+    // https://www.javatpoint.com/java-string-format
+    for (int i = 0; i < flagDescription.length && i < flagTitles.length; ++i) {
+      flagDescription[i] =
+        String.format(
+          "The %s national flag ...%nBlah blah blah",
+          flagTitles[i]
+        );
+    }
 
     // Set the first country (Canada) for display
     setDisplay(0);
@@ -68,19 +77,25 @@ public class JavaFx007Program extends Application {
 
     BorderPane paneForComboBox = new BorderPane();
     paneForComboBox.setLeft(new Label("Select a country: "));
-    paneForComboBox.setCenter(cbo);
+    paneForComboBox.setCenter(comboBoxFlags);
     pane.setTop(paneForComboBox);
-    cbo.setPrefWidth(400);
-    cbo.setValue("Canada");
+    comboBoxFlags.setPrefWidth(400);
+    comboBoxFlags.setValue("Canada");
 
     ObservableList<String> items = FXCollections.observableArrayList(
       flagTitles
     );
-    cbo.getItems().addAll(items); // Add items to combo box
+    comboBoxFlags.getItems().addAll(items); // Add items to combo box
     pane.setCenter(descriptionPane);
 
+    // Lambda Expression:
+    // parameter -> expression
+    // https://www.w3schools.com/java/java_lambda.asp
+
     // Display the selected country
-    cbo.setOnAction(e -> setDisplay(items.indexOf(cbo.getValue())));
+    comboBoxFlags.setOnAction(
+      e -> setDisplay(items.indexOf(comboBoxFlags.getValue()))
+    );
 
     // Create a scene and place it in the stage
     Scene scene = new Scene(pane, 450, 170);
@@ -92,7 +107,7 @@ public class JavaFx007Program extends Application {
   /** Set display information on the description pane */
   public void setDisplay(int index) {
     descriptionPane.setTitle(flagTitles[index]);
-    descriptionPane.setImageView(flagImage[index]);
+    descriptionPane.setImageView(flagImages[index]);
     descriptionPane.setDescription(flagDescription[index]);
   }
 

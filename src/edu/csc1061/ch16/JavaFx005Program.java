@@ -18,12 +18,12 @@ public class JavaFx005Program extends JavaFx004Program {
     paneForTextField.setStyle("-fx-border-color: green");
     paneForTextField.setLeft(new Label("Enter a new message: "));
 
-    TextField tf = new TextField();
-    tf.setAlignment(Pos.BOTTOM_RIGHT);
-    paneForTextField.setCenter(tf);
+    TextField textFieldWords = new TextField();
+    textFieldWords.setAlignment(Pos.BOTTOM_RIGHT);
+    paneForTextField.setCenter(textFieldWords);
     pane.setTop(paneForTextField);
 
-    tf.setOnAction(e -> text.setText(tf.getText()));
+    textFieldWords.setOnAction(e -> text.setText(textFieldWords.getText()));
 
     return pane;
   }
