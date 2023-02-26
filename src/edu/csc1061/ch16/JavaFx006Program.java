@@ -11,7 +11,7 @@ public class JavaFx006Program extends Application {
   @Override // Override the start method in the Application class
   public void start(Stage primaryStage) {
     // Declare and create a description pane
-    JavaFx006DescriptionPane descriptionPane = new JavaFx006DescriptionPane();
+    DescriptionPane descriptionPane = new DescriptionPane();
 
     // Set title, text and image in the description pane
     descriptionPane.setTitle("Canada");
@@ -27,8 +27,8 @@ public class JavaFx006Program extends Application {
   }
 
   /**
-   * The main method is only needed for the IDE with limited JavaFX support. Not needed for
-   * running from the command line.
+   * The main method is only needed for the IDE with limited JavaFX support. Not needed for running
+   * from the command line.
    */
   public static void main(String[] args) {
     launch(args);

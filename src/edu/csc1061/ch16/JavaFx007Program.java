@@ -13,36 +13,25 @@ import javafx.stage.Stage;
 // combo box
 public class JavaFx007Program extends Application {
   // Declare an array of Strings for flag titles
-  private String[] flagTitles = {
-    "Canada",
-    "China",
-    "Denmark",
-    "France",
-    "Germany",
-    "India",
-    "Norway",
-    "United Kingdom",
-    "United States of America",
-  };
+  private String[] flagTitles = {"Canada", "China", "Denmark", "France", "Germany", "India",
+      "Norway", "United Kingdom", "United States of America",};
 
   // Declare an ImageView array for the national flags of 9 countries
-  private ImageView[] flagImages = {
-    new ImageView("file:resources/images/ca.gif"),
-    new ImageView("file:resources/images/china.gif"),
-    new ImageView("file:resources/images/denmark.gif"),
-    new ImageView("file:resources/images/fr.gif"),
-    new ImageView("file:resources/images/germany.gif"),
-    new ImageView("file:resources/images/india.gif"),
-    new ImageView("file:resources/images/norway.gif"),
-    new ImageView("file:resources/images/uk.gif"),
-    new ImageView("file:resources/images/us.gif"),
-  };
+  private ImageView[] flagImages = {new ImageView("file:resources/images/ca.gif"),
+      new ImageView("file:resources/images/china.gif"),
+      new ImageView("file:resources/images/denmark.gif"),
+      new ImageView("file:resources/images/fr.gif"),
+      new ImageView("file:resources/images/germany.gif"),
+      new ImageView("file:resources/images/india.gif"),
+      new ImageView("file:resources/images/norway.gif"),
+      new ImageView("file:resources/images/uk.gif"),
+      new ImageView("file:resources/images/us.gif"),};
 
   // Declare an array of strings for flag descriptions
   private String[] flagDescription = new String[9];
 
   // Declare and create a description pane
-  private JavaFx006DescriptionPane descriptionPane = new JavaFx006DescriptionPane();
+  private DescriptionPane descriptionPane = new DescriptionPane();
 
   // Create a combo box for selecting countries
   private ComboBox<String> comboBoxFlags = new ComboBox<>(); // flagTitles
@@ -62,11 +51,7 @@ public class JavaFx007Program extends Application {
 
     // https://www.javatpoint.com/java-string-format
     for (int i = 0; i < flagDescription.length && i < flagTitles.length; ++i) {
-      flagDescription[i] =
-        String.format(
-          "The %s national flag ...%nBlah blah blah",
-          flagTitles[i]
-        );
+      flagDescription[i] = String.format("The %s national flag ...%nBlah blah blah", flagTitles[i]);
     }
 
     // Set the first country (Canada) for display
@@ -82,9 +67,7 @@ public class JavaFx007Program extends Application {
     comboBoxFlags.setPrefWidth(400);
     comboBoxFlags.setValue("Canada");
 
-    ObservableList<String> items = FXCollections.observableArrayList(
-      flagTitles
-    );
+    ObservableList<String> items = FXCollections.observableArrayList(flagTitles);
     comboBoxFlags.getItems().addAll(items); // Add items to combo box
     pane.setCenter(descriptionPane);
 
@@ -93,9 +76,7 @@ public class JavaFx007Program extends Application {
     // https://www.w3schools.com/java/java_lambda.asp
 
     // Display the selected country
-    comboBoxFlags.setOnAction(
-      e -> setDisplay(items.indexOf(comboBoxFlags.getValue()))
-    );
+    comboBoxFlags.setOnAction(e -> setDisplay(items.indexOf(comboBoxFlags.getValue())));
 
     // Create a scene and place it in the stage
     Scene scene = new Scene(pane, 450, 170);
@@ -112,8 +93,8 @@ public class JavaFx007Program extends Application {
   }
 
   /**
-   * The main method is only needed for the IDE with limited
-   * JavaFX support. Not needed for running from the command line.
+   * The main method is only needed for the IDE with limited JavaFX support. Not needed for running
+   * from the command line.
    */
   public static void main(String[] args) {
     launch(args);

@@ -10,14 +10,14 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.text.Font;
 
 // a description pane
-public class JavaFx006DescriptionPane extends BorderPane {
+public class DescriptionPane extends BorderPane {
   /** Label for displaying an image and a title */
   private Label labelImageTitle = new Label();
 
   /** Text area for displaying text */
   private TextArea textAreaDescription = new TextArea();
 
-  public JavaFx006DescriptionPane() {
+  public DescriptionPane() {
     // Center the icon and text and place the text under the icon
     labelImageTitle.setContentDisplay(ContentDisplay.TOP);
     labelImageTitle.setPrefSize(200, 100);
