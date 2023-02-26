@@ -1,6 +1,7 @@
 package edu.csc1061.ch18;
 
-public class Program18_006 {
+// Recursive Binary Search
+public class Ch18Program06 {
 
   public static int binarySearch(int[] list, int key) {
     int low = 0;
@@ -28,7 +29,7 @@ public class Program18_006 {
 
   /** Main method */
   public static void main(String[] args) {
-    int[] list = { 3, 5, 7, 8, 12, 17, 24, 29 };
+    int[] list = {3, 5, 7, 8, 12, 17, 24, 29};
     System.out.println(binarySearch(list, 7));
     System.out.println(binarySearch(list, 0));
     System.out.println(binarySearch(list, 6));

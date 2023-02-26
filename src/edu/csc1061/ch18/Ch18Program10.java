@@ -2,8 +2,8 @@ package edu.csc1061.ch18;
 
 import java.util.Scanner;
 
-// Compute Factorial non-tail recursive
-public class Program18_010 {
+// Compute Factorial Tail Recursion
+public class Ch18Program10 {
 
   /** Main method */
   public static void main(String[] args) {
@@ -19,8 +19,16 @@ public class Program18_010 {
 
   /** Return the factorial for a specified number */
   public static long factorial(int n) {
-    if (n == 0) return 1; // Base case
+    return factorial(n, 1); // Call auxiliary method
+  }
 
-    return n * factorial(n - 1); // Recursive call
+  /** Auxiliary tail-recursive method for factorial */
+  private static long factorial(int n, int result) {
+    // Base case
+    if (n == 0) {
+      return result;
+    }
+
+    return factorial(n - 1, n * result); // Recursive call
   }
 }

@@ -1,10 +1,11 @@
 package edu.csc1061.ch18;
 
 // Recursive Selection Sort
-public class Program18_005 {
+public class Ch18Program05 {
 
   public static void sort(double[] list) {
-    sort(list, 0, list.length - 1); // Sort the entire list
+    // Sort the entire list
+    sort(list, 0, list.length - 1);
   }
 
   private static void sort(double[] list, int low, int high) {
@@ -30,7 +31,7 @@ public class Program18_005 {
 
   /** Main method */
   public static void main(String[] args) {
-    double[] list = { 2, 1, 3, 1, 2, 5, 2, -1, 0 };
+    double[] list = {2, 1, 3, 1, 2, 5, 2, -1, 0};
     sort(list);
     for (int i = 0; i < list.length; i++) {
       System.out.print(list[i] + " ");

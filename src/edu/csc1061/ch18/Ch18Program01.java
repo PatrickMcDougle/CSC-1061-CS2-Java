@@ -3,7 +3,7 @@ package edu.csc1061.ch18;
 import java.util.Scanner;
 
 // Compute Factorial
-public class Program18_001 {
+public class Ch18Program01 {
 
   /** Main method */
   public static void main(String[] args) {
@@ -17,9 +17,18 @@ public class Program18_001 {
     }
   }
 
+  // Mathematic notation:
+  // n! = n * (n-1)!, n > 0
+  // 0! = 1
+
+  // Function:
+  // factorial(0) = 1
+  // factorial(n) = n * factorial(n-1) // where n > 0
+
   /** Return the factorial for a specified number */
   public static long factorial(int n) {
-    if (n == 0) { // Base case
+    // Base case
+    if (n == 0) {
       return 1;
     }
 
