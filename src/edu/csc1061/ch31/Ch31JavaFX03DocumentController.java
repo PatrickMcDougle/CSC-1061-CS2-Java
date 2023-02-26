@@ -7,7 +7,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 
-public class FXMLDocumentController implements Initializable {
+public class Ch31JavaFX03DocumentController implements Initializable {
   @FXML
   private Label label;
 

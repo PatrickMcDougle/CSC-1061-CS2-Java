@@ -1,8 +1,11 @@
-.plaincircle {
+/*
+ * Style based on class start with a .
+ */
+.circle-plain {
     -fx-fill: white;
     -fx-stroke: black;
 }
-.circleborder {
+.circle-border {
     -fx-stroke-width: 5;
     -fx-stroke-dash-array: 12 2 4 2;
 }
@@ -10,11 +13,15 @@
     -fx-border-color: black;
     -fx-border-width: 5;
 }
-#redcircle {
+
+/*
+ * Style based on ID start with a #
+ */
+#circle-red {
     -fx-fill: red;
     -fx-stroke: red;
 }
-#greencircle {
+#circle-green {
     -fx-fill: green;
     -fx-stroke: green;
 }

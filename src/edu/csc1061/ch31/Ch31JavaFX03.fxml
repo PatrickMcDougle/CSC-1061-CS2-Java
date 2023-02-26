@@ -5,7 +5,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <AnchorPane id="AnchorPane" prefHeight="200" prefWidth="320" xmlns:fx="http://javafx.com/fxml/1"
-    fx:controller="edu.csc1061.ch31.FXMLDocumentController">
+    fx:controller="edu.csc1061.ch31.Ch31JavaFX03DocumentController">
     <children>
         <Button layoutX="126" layoutY="90" text="Click Me!" onAction="#handleButtonAction"
             fx:id="button" />

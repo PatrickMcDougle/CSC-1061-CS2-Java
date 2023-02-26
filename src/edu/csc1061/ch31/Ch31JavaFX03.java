@@ -6,13 +6,11 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-public class JavaFX005Program extends Application {
+public class Ch31JavaFX03 extends Application {
 
   @Override
   public void start(Stage stage) throws Exception {
-    Parent root = FXMLLoader.load(
-      getClass().getResource("JavaFX005Program.fxml")
-    );
+    Parent root = FXMLLoader.load(getClass().getResource("Ch31JavaFX03.fxml"));
 
     Scene scene = new Scene(root);
     stage.setScene(scene);
@@ -24,6 +22,6 @@ public class JavaFX005Program extends Application {
    */
   public static void main(String[] args) {
     // launch(args); // one way to start this party.
-    Application.launch(JavaFX005Program.class, args);
+    Application.launch(Ch31JavaFX03.class, args);
   }
 }
