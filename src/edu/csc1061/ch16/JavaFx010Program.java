@@ -57,18 +57,18 @@ public class JavaFx010Program extends Application {
     Button rewindButton = new Button("<<");
     rewindButton.setOnAction(e -> mediaPlayer.seek(Duration.ZERO));
 
-    Slider slVolume = new Slider();
-    slVolume.setPrefWidth(150);
-    slVolume.setMaxWidth(Region.USE_PREF_SIZE);
-    slVolume.setMinWidth(30);
-    slVolume.setValue(50);
-    mediaPlayer.volumeProperty().bind(slVolume.valueProperty().divide(100));
+    Slider sliderVolume = new Slider();
+    sliderVolume.setPrefWidth(150);
+    sliderVolume.setMaxWidth(Region.USE_PREF_SIZE);
+    sliderVolume.setMinWidth(30);
+    sliderVolume.setValue(50);
+    mediaPlayer.volumeProperty().bind(sliderVolume.valueProperty().divide(100));
 
     HBox hBox = new HBox(10);
     hBox.setAlignment(Pos.CENTER);
     hBox
       .getChildren()
-      .addAll(playButton, rewindButton, new Label("Volume"), slVolume);
+      .addAll(playButton, rewindButton, new Label("Volume"), sliderVolume);
 
     BorderPane pane = new BorderPane();
     pane.setCenter(mediaView);
