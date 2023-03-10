@@ -25,16 +25,16 @@ public class Ch18Program07 {
   }
 
   public static long getSize(File file) {
-    // Store the total size of all files
-    long size = 0;
-
     // Base case
     if (!file.isDirectory()) {
-      size += file.length();
-      return size;
+      // It is a File
+      return file.length();
     }
 
     // assume if not a file then a directory
+
+    // Store the total size of all files
+    long size = 0;
 
     // Get all files and subdirectories
     File[] files = file.listFiles();

@@ -17,6 +17,12 @@ public class Ch31JavaFX03DocumentController implements Initializable {
     label.setText("Hello CSC 1061!");
   }
 
+  @FXML
+  private void handleButtonAction2(ActionEvent event) {
+    System.out.println("Why?!?!");
+    label.setText("I told you not to click me!");
+  }
+
   @Override
   public void initialize(URL url, ResourceBundle rb) {
     // TODO

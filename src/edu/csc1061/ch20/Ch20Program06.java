@@ -3,17 +3,17 @@ package edu.csc1061.ch20;
 import java.util.Collections;
 import java.util.PriorityQueue;
 
-public class Program20_006 {
+public class Ch20Program06 {
 
   public static void main(String[] args) {
     System.out.println("\n ========== ========== ========== ");
-    PriorityQueueUsingComparable();
+    priorityQueueUsingComparable();
     System.out.println("\n ---------- ---------- ---------- ");
-    PriorityQueueUsingComparator();
+    priorityQueueUsingComparator();
     System.out.println("\n ========== ========== ========== ");
   }
 
-  private static void PriorityQueueUsingComparable() {
+  private static void priorityQueueUsingComparable() {
     PriorityQueue<String> queue1 = new PriorityQueue<>();
     queue1.offer("Denver");
     queue1.offer("Boulder");
@@ -31,11 +31,8 @@ public class Program20_006 {
     }
   }
 
-  private static void PriorityQueueUsingComparator() {
-    PriorityQueue<String> queue2 = new PriorityQueue<>(
-      4,
-      Collections.reverseOrder()
-    );
+  private static void priorityQueueUsingComparator() {
+    PriorityQueue<String> queue2 = new PriorityQueue<>(4, Collections.reverseOrder());
     queue2.offer("Las Cruces");
     queue2.offer("Orlando");
     queue2.offer("Keene");
@@ -46,7 +43,7 @@ public class Program20_006 {
     queue2.offer("Rockwall");
     queue2.offer("New Orleans");
 
-    System.out.println("\nPriority queue using Comparator:");
+    System.out.println("Priority queue using Comparator:");
     while (!queue2.isEmpty()) {
       System.out.print(queue2.remove() + " | ");
     }

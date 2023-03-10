@@ -12,26 +12,26 @@ import java.util.ListIterator;
 // removes the elements from the list.
 // Finally, the example traverses the list forward and backward.
 
-public class Program20_002 {
+public class Ch20Program02 {
 
   public static void main(String[] args) {
     List<Integer> arrayList = new ArrayList<>();
-    arrayList.add(1); // 1 is autoboxed to an Integer object
-    arrayList.add(2);
-    arrayList.add(3);
+    for (int i = 1; i < 6; i++) {
+      arrayList.add(i);
+    }
     arrayList.add(1);
     arrayList.add(4);
     arrayList.add(0, 10);
     arrayList.add(3, 30);
 
-    System.out.println("\n ========== ========== ========== ");
-    WhileVersion(arrayList);
-    System.out.println("\n ---------- ---------- ---------- ");
-    ForEachVersion(arrayList);
-    System.out.println("\n ========== ========== ========== ");
+    System.out.println("\n ========== ========== ========== ==:");
+    whileVersion(arrayList);
+    System.out.println("\n ---------- ---------- ---------- --:");
+    forEachVersion(arrayList);
+    System.out.println("\n ========== ========== ========== ==:");
   }
 
-  private static void WhileVersion(List<Integer> arrayList) {
+  private static void whileVersion(List<Integer> arrayList) {
     System.out.print("A list of integers in the array list: ");
     System.out.println(arrayList);
 
@@ -55,7 +55,7 @@ public class Program20_002 {
   }
 
   // https://www.w3schools.com/java/java_lambda.asp
-  private static void ForEachVersion(List<Integer> arrayList) {
+  private static void forEachVersion(List<Integer> arrayList) {
     System.out.print("A list of integers in the array list: ");
     System.out.println(arrayList);
 

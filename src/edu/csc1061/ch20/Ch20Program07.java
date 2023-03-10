@@ -2,12 +2,12 @@ package edu.csc1061.ch20;
 
 import java.util.Stack;
 
-public class Program20_007 {
+public class Ch20Program07 {
   private static final String EXPRESSION_IS = "Expression is: ";
 
   public static void main(String[] args) {
     try {
-      Program20_007 seven = new Program20_007();
+      Ch20Program07 seven = new Ch20Program07();
 
       String expression = "51 + (54 * (3 + 2))";
       System.out.println(EXPRESSION_IS + expression);
@@ -28,10 +28,10 @@ public class Program20_007 {
   /** Evaluate an expression */
   public int evaluateExpression(String expression) {
     // Create operandStack to store operands
-    Stack<Integer> operandStack = new Stack<>();
+    var operandStack = new Stack<Integer>();
 
     // Create operatorStack to store operators
-    Stack<Character> operatorStack = new Stack<>();
+    var operatorStack = new Stack<Character>();
 
     // Insert blanks around (, ), +, -, /, and *
     expression = insertBlanks(expression);
@@ -57,15 +57,9 @@ public class Program20_007 {
         continue; // Back to the while loop to extract the next token
       } else if (token.charAt(0) == '+' || token.charAt(0) == '-') {
         // Process all +, -, *, / in the top of the operator stack
-        while (
-          !operatorStack.isEmpty() &&
-          (
-            operatorStack.peek() == '+' ||
-            operatorStack.peek() == '-' ||
-            operatorStack.peek() == '*' ||
-            operatorStack.peek() == '/'
-          )
-        ) {
+        while (!operatorStack.isEmpty()
+            && (operatorStack.peek() == '+' || operatorStack.peek() == '-'
+                || operatorStack.peek() == '*' || operatorStack.peek() == '/')) {
           processAnOperator(operandStack, operatorStack);
         }
 
@@ -73,10 +67,8 @@ public class Program20_007 {
         operatorStack.push(token.charAt(0));
       } else if (token.charAt(0) == '*' || token.charAt(0) == '/') {
         // Process all *, / in the top of the operator stack
-        while (
-          !operatorStack.isEmpty() &&
-          (operatorStack.peek() == '*' || operatorStack.peek() == '/')
-        ) {
+        while (!operatorStack.isEmpty()
+            && (operatorStack.peek() == '*' || operatorStack.peek() == '/')) {
           processAnOperator(operandStack, operatorStack);
         }
 
@@ -114,10 +106,7 @@ public class Program20_007 {
    * Process one operator: Take an operator from operatorStack and apply it on the operands in the
    * operandStack
    */
-  public void processAnOperator(
-    Stack<Integer> operandStack,
-    Stack<Character> operatorStack
-  ) {
+  public void processAnOperator(Stack<Integer> operandStack, Stack<Character> operatorStack) {
     char op = operatorStack.pop();
     int op1 = operandStack.pop();
     int op2 = operandStack.pop();
@@ -136,15 +125,11 @@ public class Program20_007 {
     StringBuilder result = new StringBuilder();
 
     for (int i = 0; i < s.length(); i++) {
-      if (
-        s.charAt(i) == '(' ||
-        s.charAt(i) == ')' ||
-        s.charAt(i) == '+' ||
-        s.charAt(i) == '-' ||
-        s.charAt(i) == '*' ||
-        s.charAt(i) == '/'
-      ) {
+      if (s.charAt(i) == '(' || s.charAt(i) == ')' || s.charAt(i) == '+' || s.charAt(i) == '-'
+          || s.charAt(i) == '*' || s.charAt(i) == '/') {
         result.append(" " + s.charAt(i) + " ");
+      } else if (s.charAt(i) == ' ') {
+        // ignore original blanks.
       } else {
         result.append(s.charAt(i));
       }

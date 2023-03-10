@@ -23,21 +23,9 @@ public class Ch13Program02 {
 
     // The following BigIntegers show that this code has a logic issue.
     // This code is from the book.
-    list.add(
-      new BigInteger(
-        "123456789012345678901234567890123456789012345678901234567895"
-      )
-    );
-    list.add(
-      new BigInteger(
-        "123456789012345678901234567890123456789012345678901234567890"
-      )
-    );
-    list.add(
-      new BigInteger(
-        "123456789012345678901234567890123456789012345678901234567896"
-      )
-    );
+    list.add(new BigInteger("123456789012345678901234567890123456789012345678901234567895"));
+    list.add(new BigInteger("123456789012345678901234567890123456789012345678901234567890"));
+    list.add(new BigInteger("123456789012345678901234567890123456789012345678901234567896"));
     // Add a BigDecimal
     list.add(new BigDecimal("2.0909090989091343433344343"));
 

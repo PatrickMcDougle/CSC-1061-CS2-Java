@@ -5,7 +5,7 @@ import java.util.Collection;
 import java.util.Iterator;
 
 // Testing Collection
-public class Program20_001 {
+public class Ch20Program01 {
 
   public static void main(String[] args) {
     ArrayList<String> citiesInColorado = new ArrayList<>();
@@ -18,19 +18,15 @@ public class Program20_001 {
     citiesInColorado.add("Fort Collins");
     citiesInColorado.add("Littleton");
     citiesInColorado.add("Castle Rock");
-    citiesInColorado.add("Avon"); // Add "Avon" to collection1
+    citiesInColorado.add("Avon"); // Add "Avon" to citiesInColorado
 
     System.out.println("A list of cities in Colorado:");
     System.out.println(citiesInColorado);
 
-    System.out.println(
-      "\nIs Loveland in Colorado? " + citiesInColorado.contains("Loveland")
-    );
+    System.out.println("\nIs Loveland in Colorado? " + citiesInColorado.contains("Loveland"));
 
     citiesInColorado.remove("Loveland");
-    System.out.println(
-      "\n" + citiesInColorado.size() + " cities are in Colorado now"
-    );
+    System.out.println("\n" + citiesInColorado.size() + " cities are in Colorado now");
 
     Collection<String> citiesLivedIn = new ArrayList<>();
     citiesLivedIn.add("Keene");

@@ -10,5 +10,8 @@
         <Button layoutX="126" layoutY="90" text="Click Me!" onAction="#handleButtonAction"
             fx:id="button" />
         <Label layoutX="126" layoutY="120" minHeight="16" minWidth="69" fx:id="label" />
+
+        <Button layoutX="126" layoutY="190" text="Don't click Me!" onAction="#handleButtonAction2"
+            fx:id="button" />
     </children>
 </AnchorPane>

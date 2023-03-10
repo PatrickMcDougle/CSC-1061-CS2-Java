@@ -31,7 +31,7 @@ public class Ch31JavaFX01 extends Application {
 
     Pane pane2 = new Pane();
     Circle circle4 = new Circle(100, 100, 30);
-    circle4.getStyleClass().addAll("circle-border", "plainCircle");
+    circle4.getStyleClass().addAll("circle-border", "circle-plain");
     circle4.setId("circle-green"); // Add a style class
     pane2.getChildren().add(circle4);
     pane2.getStyleClass().add("border");
