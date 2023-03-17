@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import edu.csc1061.mandelbrot.*?>
+<BorderPane prefHeight="940" prefWidth="900" xmlns:fx="http://javafx.com/fxml/1"
+    fx:controller="edu.csc1061.mandelbrot.MandelbrotDocumentController">
+    <bottom>
+        <HBox spacing="5">
+            <Button text="Repaint" onAction="#handleButtonActionRepaint" />
+            <Label minHeight="16" minWidth="69" fx:id="label"
+                Text="Information Goes Here" />
+        </HBox>
+    </bottom>
+    <center>
+        <DisplayPane pixelWidth="900" pixelHeight="900" fx:id="displayPane" />
+    </center>
+</BorderPane>
