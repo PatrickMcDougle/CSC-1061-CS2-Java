@@ -6,12 +6,12 @@ import java.util.Map;
 import java.util.TreeMap;
 
 /// Testing Maps
-public class Program21_006 {
+public class Ch21Program06 {
 
   public static void main(String[] args) {
-    Program21_006 program = new Program21_006();
+    Ch21Program06 program = new Ch21Program06();
 
-    Map<String, Integer> hashMap = program.GetHashMapOfPeoplesAges();
+    Map<String, Integer> hashMap = program.getHashMapOfPeoplesAges();
 
     System.out.println("Display entries in HashMap");
     System.out.println(hashMap);
@@ -24,15 +24,10 @@ public class Program21_006 {
     System.out.println();
 
     // Create a LinkedHashMap
-    Map<String, Integer> linkedHashMap = program.GetLinkedHashMapOfPeoplesAges(
-      1,
-      2.0f
-    );
+    Map<String, Integer> linkedHashMap = program.getLinkedHashMapOfPeoplesAges(1, 2.0f);
 
     // Display the age for Patrick
-    System.out.println(
-      "The age for Patrick is " + linkedHashMap.get("Patrick")
-    );
+    System.out.println("The age for Patrick is " + linkedHashMap.get("Patrick"));
 
     System.out.println("Display entries in LinkedHashMap");
     System.out.println(linkedHashMap);
@@ -40,9 +35,7 @@ public class Program21_006 {
 
     // Display each entry with name and age
     System.out.println("Names and ages are : ");
-    treeMap.forEach(
-      (name, age) -> System.out.printf(" %8s : %2d\n", name, age)
-    );
+    treeMap.forEach((name, age) -> System.out.printf(" %8s : %2d%n", name, age));
     System.out.println();
   }
 
@@ -51,7 +44,7 @@ public class Program21_006 {
    *
    * @return A bad life.
    */
-  public Map<String, Integer> GetHashMapOfPeoplesAges() {
+  public Map<String, Integer> getHashMapOfPeoplesAges() {
     // Create a HashMap
     Map<String, Integer> hashMap = new HashMap<>();
 
@@ -78,10 +71,9 @@ public class Program21_006 {
    * @param two is a float value that is expected to be between 0 and 1.
    * @return a map of the world
    */
-  public Map<String, Integer> GetLinkedHashMapOfPeoplesAges(
-    int one,
-    float two
-  ) {
+  public Map<String, Integer> getLinkedHashMapOfPeoplesAges(
+      int one,
+      float two) {
     // Create a HashMap
     Map<String, Integer> linkedHashMap = new LinkedHashMap<>();
 

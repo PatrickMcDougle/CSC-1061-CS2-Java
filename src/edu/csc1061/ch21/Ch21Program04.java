@@ -10,8 +10,10 @@ import java.util.List;
 import java.util.TreeSet;
 
 /// Testing Set List Performance!
-public class Program21_004 {
+public class Ch21Program04 {
   static final int N = 40_000;
+  static final String TEST_TIME = " - Member test time is   : ";
+  static final String ELEMENT_TIME = " - Remove element time is: ";
 
   public static void main(String[] args) {
     // Add numbers 0, 1, 2, ..., N - 1 to the array list
@@ -24,52 +26,32 @@ public class Program21_004 {
     // Create a hash set, and test its performance
     Collection<Integer> set1 = new HashSet<>(list);
     System.out.println("__HASH_SET__");
-    System.out.println(
-      " - Member test time is   : " + printTime(getTestTime(set1))
-    );
-    System.out.println(
-      " - Remove element time is: " + printTime(getRemoveTime(set1))
-    );
+    System.out.println(TEST_TIME + printTime(getTestTime(set1)));
+    System.out.println(ELEMENT_TIME + printTime(getRemoveTime(set1)));
 
     // Create a linked hash set, and test its performance
     Collection<Integer> set2 = new LinkedHashSet<>(list);
     System.out.println("__LINKED_HASH_SET__");
-    System.out.println(
-      " - Member test time is   : " + printTime(getTestTime(set2))
-    );
-    System.out.println(
-      " - Remove element time is: " + printTime(getRemoveTime(set2))
-    );
+    System.out.println(TEST_TIME + printTime(getTestTime(set2)));
+    System.out.println(ELEMENT_TIME + printTime(getRemoveTime(set2)));
 
     // Create a tree set, and test its performance
     Collection<Integer> set3 = new TreeSet<>(list);
     System.out.println("__TREE_SET__");
-    System.out.println(
-      " - Member test time is   : " + printTime(getTestTime(set3))
-    );
-    System.out.println(
-      " - Remove element time is: " + printTime(getRemoveTime(set3))
-    );
+    System.out.println(TEST_TIME + printTime(getTestTime(set3)));
+    System.out.println(ELEMENT_TIME + printTime(getRemoveTime(set3)));
 
     // Create an array list, and test its performance
     Collection<Integer> list1 = new ArrayList<>(list);
     System.out.println("__ARRAY_LIST__");
-    System.out.println(
-      " - Member test time is   : " + printTime(getTestTime(list1))
-    );
-    System.out.println(
-      " - Remove element time is: " + printTime(getRemoveTime(list1))
-    );
+    System.out.println(TEST_TIME + printTime(getTestTime(list1)));
+    System.out.println(ELEMENT_TIME + printTime(getRemoveTime(list1)));
 
     // Create a linked list, and test its performance
     Collection<Integer> list2 = new LinkedList<>(list);
     System.out.println("__LINKED_LIST__");
-    System.out.println(
-      " - Member test time is   : " + printTime(getTestTime(list2))
-    );
-    System.out.println(
-      " - Remove element time is: " + printTime(getRemoveTime(list2))
-    );
+    System.out.println(TEST_TIME + printTime(getTestTime(list2)));
+    System.out.println(ELEMENT_TIME + printTime(getRemoveTime(list2)));
 
     System.out.println("DONE");
   }

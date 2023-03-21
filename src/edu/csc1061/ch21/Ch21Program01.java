@@ -5,14 +5,14 @@ import java.util.LinkedHashSet;
 import java.util.Set;
 
 /// Testing Hash Sets
-public class Program21_001 {
+public class Ch21Program01 {
 
   public static void main(String[] args) {
-    Program21_001 program = new Program21_001();
+    Ch21Program01 program = new Ch21Program01();
 
     Set<String> set;
-    // set = program.GetHashSet();
-    set = program.GetLinkedHashSet();
+    // set = program.getHashSet()
+    set = program.getLinkedHashSet();
 
     System.out.print(set);
     System.out.println();
@@ -28,7 +28,7 @@ public class Program21_001 {
     System.out.println();
   }
 
-  public Set<String> GetHashSet() {
+  public Set<String> getHashSet() {
     // Create a hash set
     Set<String> set = new HashSet<>();
 
@@ -47,7 +47,7 @@ public class Program21_001 {
     return set;
   }
 
-  public Set<String> GetLinkedHashSet() {
+  public Set<String> getLinkedHashSet() {
     // Create a linked hash set
     Set<String> set = new LinkedHashSet<>();
 

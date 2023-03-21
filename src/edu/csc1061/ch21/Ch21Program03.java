@@ -4,13 +4,13 @@ import java.util.Set;
 import java.util.TreeSet;
 
 /// Testing Tree Set With Comparator
-public class Program21_003 {
+public class Ch21Program03 {
 
   public static void main(String[] args) {
-    Program21_001 program = new Program21_001();
+    Ch21Program01 program = new Ch21Program01();
 
     Set<String> set;
-    set = program.GetHashSet();
+    set = program.getHashSet();
 
     TreeSet<String> treeSet = new TreeSet<>(new CityNameComparator());
     treeSet.addAll(set);
