@@ -23,12 +23,15 @@ public class Ch22Program02 {
     long f1 = 1; // For fib(1)
     long f2 = 1; // For fib(2)
 
-    if (n == 0)
+    if (n == 0) {
       return f0;
-    if (n == 1)
+    }
+    if (n == 1) {
       return f1;
-    if (n == 2)
+    }
+    if (n == 2) {
       return f2;
+    }
 
     for (int i = 3; i <= n; i++) {
       f0 = f1;
