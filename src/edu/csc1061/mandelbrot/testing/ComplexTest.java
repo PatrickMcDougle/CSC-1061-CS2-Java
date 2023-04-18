@@ -2,6 +2,21 @@ package edu.csc1061.mandelbrot.testing;
 
 import edu.csc1061.mandelbrot.Complex;
 
+// % java Complex
+// a = 5.0 + 6.0i
+// b = -3.0 + 4.0i
+// Re(a) = 5.0
+// Im(a) = 6.0
+// b + a = 2.0 + 10.0i
+// a - b = 8.0 + 2.0i
+// a//b = -39.0 + 2.0i
+// b//a = -39.0 + 2.0i
+// a / b = 0.36 - 1.52i
+// (a / b) * b = 5.0 + 6.0i
+// conj(a) = 5.0 - 6.0i
+// |a| = 7.810249675906654
+// tan(a) = -6.685231390246571E-6 + 1.0000103108981198i
+
 public class ComplexTest {
 
     // sample client for testing

@@ -2,17 +2,20 @@ package edu.csc1061.ch25;
 
 import java.util.Collection;
 
+@SuppressWarnings("unchecked")
 public interface ITree<E> extends Collection<E> {
   /** Return true if the element is in the tree */
   public boolean search(E e);
 
   /**
-   * Insert element e into the binary tree Return true if the element is inserted successfully
+   * Insert element e into the binary tree Return true if the element is inserted
+   * successfully
    */
   public boolean insert(E e);
 
   /**
-   * Delete the specified element from the tree Return true if the element is deleted successfully
+   * Delete the specified element from the tree Return true if the element is
+   * deleted successfully
    */
   public boolean delete(E e);
 

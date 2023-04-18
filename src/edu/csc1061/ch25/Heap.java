@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Comparator;
 
 // heap from chapter 24!
+@SuppressWarnings("unchecked")
 public class Heap<E> {
   private ArrayList<E> list = new ArrayList<>();
   private Comparator<? super E> c;
@@ -66,10 +67,8 @@ public class Heap<E> {
         break; // The tree is a heap
       }
       int maxIndex = leftChildIndex;
-      if (
-        rightChildIndex < list.size() &&
-        c.compare(list.get(maxIndex), list.get(rightChildIndex)) < 0
-      ) {
+      if (rightChildIndex < list.size() &&
+          c.compare(list.get(maxIndex), list.get(rightChildIndex)) < 0) {
         maxIndex = rightChildIndex;
       }
 

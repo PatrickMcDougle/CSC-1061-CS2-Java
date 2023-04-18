@@ -3,6 +3,7 @@ package edu.csc1061.ch25;
 import java.util.ArrayList;
 import java.util.List;
 
+@SuppressWarnings("unchecked")
 public class BinarySearchTree<E> implements ITree<E> {
   protected TreeNode<E> root;
   protected int size = 0;
@@ -137,7 +138,7 @@ public class BinarySearchTree<E> implements ITree<E> {
     return sb.toString();
   }
 
-  @Override/** Get the number of nodes in the tree */
+  @Override /** Get the number of nodes in the tree */
   public int getSize() {
     return size;
   }

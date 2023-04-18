@@ -1,6 +1,6 @@
 package edu.csc1061.mandelbrot;
 
-public class Mandelbrot {
+public final class Mandelbrot {
 
     // no need to instantiate this class.
     private Mandelbrot() {
