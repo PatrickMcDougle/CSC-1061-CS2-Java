@@ -3,7 +3,7 @@ package edu.csc1061.ch22;
 import java.util.Scanner;
 
 // Prime Numbers
-public class Program22_004 {
+public class Ch22Program04 {
 
   public static void main(String[] args) {
     try (Scanner input = new Scanner(System.in)) {

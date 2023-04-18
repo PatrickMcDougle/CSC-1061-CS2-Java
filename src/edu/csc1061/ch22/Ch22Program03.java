@@ -1,10 +1,10 @@
 package edu.csc1061.ch22;
 
 // Prime Number
-public class Program22_003 {
+public class Ch22Program03 {
 
   public static void main(String[] args) {
-    final int NUMBER_OF_PRIMES = 500_000; // Number of primes to display
+    final int NUMBER_OF_PRIMES = 50_000; // Number of primes to display
     final int NUMBER_OF_PRIMES_PER_LINE = 10; // Display 10 per line
     int count = 0; // Count the number of prime numbers
     int number = 2; // A number to be tested for primeness
@@ -31,7 +31,8 @@ public class Program22_003 {
         if (count % NUMBER_OF_PRIMES_PER_LINE == 0) {
           // Print the number and advance to the new line
           System.out.println(number);
-        } else System.out.print(number + " ");
+        } else
+          System.out.print(number + " ");
       }
 
       // Check if the next number is prime

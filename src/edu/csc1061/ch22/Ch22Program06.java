@@ -3,7 +3,7 @@ package edu.csc1061.ch22;
 import java.util.Scanner;
 
 // Sieve Of Eratosthenes
-public class Program22_006 {
+public class Ch22Program06 {
 
   public static void main(String[] args) {
     try (Scanner input = new Scanner(System.in)) {

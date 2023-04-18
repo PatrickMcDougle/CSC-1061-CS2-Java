@@ -2,7 +2,7 @@ package edu.csc1061.ch22;
 
 import java.util.Scanner;
 
-public class Program22_002 {
+public class Ch22Program02 {
 
   /** Main method */
   public static void main(String[] args) {
@@ -13,8 +13,7 @@ public class Program22_002 {
 
       // Find and display the Fibonacci number
       System.out.println(
-        "Fibonacci number at index " + index + " is " + fib(index)
-      );
+          "Fibonacci number at index " + index + " is " + fib(index));
     }
   }
 
@@ -24,9 +23,12 @@ public class Program22_002 {
     long f1 = 1; // For fib(1)
     long f2 = 1; // For fib(2)
 
-    if (n == 0) return f0;
-    if (n == 1) return f1;
-    if (n == 2) return f2;
+    if (n == 0)
+      return f0;
+    if (n == 1)
+      return f1;
+    if (n == 2)
+      return f2;
 
     for (int i = 3; i <= n; i++) {
       f0 = f1;
@@ -36,11 +38,8 @@ public class Program22_002 {
 
     return f2;
   }
-  //
-  //
-  //
 
-  // Obviously, the complexity of this new algorithm is . This is a tremendous
+  // Obviously, the complexity of this new algorithm is???? This is a tremendous
   // improvement over the recursive algorithm.
 
   // O(n)

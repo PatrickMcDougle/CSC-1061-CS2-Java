@@ -10,10 +10,9 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 
 // Sort Large File
-public class Program23_006b {
+public class Ch23Program06b {
   public static final String FILE_NAME_INPUT = "ch23_large.no.track.data";
-  public static final String FILE_NAME_OUTPUT =
-    "ch23_sorted_file.no.track.data";
+  public static final String FILE_NAME_OUTPUT = "ch23_sorted_file.no.track.data";
   public static final int MAX_ARRAY_SIZE = 43;
   public static final int BUFFER_SIZE = 100_000;
 
@@ -31,42 +30,36 @@ public class Program23_006b {
 
   /** Sort data in source file and into target file */
   public static void sort(String sourceFile, String targetFile)
-    throws Exception {
+      throws Exception {
     // Implement Phase 1: Create initial segments
     int numberOfSegments = initializeSegments(
-      MAX_ARRAY_SIZE,
-      sourceFile,
-      "ch23_file1.no.track.data"
-    );
+        MAX_ARRAY_SIZE,
+        sourceFile,
+        "ch23_file1.no.track.data");
 
     // Implement Phase 2: Merge segments recursively
     merge(
-      numberOfSegments,
-      MAX_ARRAY_SIZE,
-      "ch23_file1.no.track.data",
-      "ch23_file2.no.track.data",
-      "ch23_file3.no.track.data",
-      targetFile
-    );
+        numberOfSegments,
+        MAX_ARRAY_SIZE,
+        "ch23_file1.no.track.data",
+        "ch23_file2.no.track.data",
+        "ch23_file3.no.track.data",
+        targetFile);
   }
 
   /** Sort original file into sorted segments */
   private static int initializeSegments(
-    int segmentSize,
-    String originalFile,
-    String file1
-  )
-    throws SecurityException, IOException {
+      int segmentSize,
+      String originalFile,
+      String file1)
+      throws SecurityException, IOException {
     int[] list = new int[segmentSize];
     int numberOfSegments = 0;
     try (
-      DataInputStream input = new DataInputStream(
-        new BufferedInputStream(new FileInputStream(originalFile))
-      );
-      DataOutputStream output = new DataOutputStream(
-        new BufferedOutputStream(new FileOutputStream(file1))
-      )
-    ) {
+        DataInputStream input = new DataInputStream(
+            new BufferedInputStream(new FileInputStream(originalFile)));
+        DataOutputStream output = new DataOutputStream(
+            new BufferedOutputStream(new FileOutputStream(file1)))) {
       while (input.available() > 0) {
         numberOfSegments++;
         int i = 0;
@@ -87,14 +80,13 @@ public class Program23_006b {
   }
 
   private static void merge(
-    int numberOfSegments,
-    int segmentSize,
-    String file1,
-    String file2,
-    String file3,
-    String targetFile
-  )
-    throws Exception {
+      int numberOfSegments,
+      int segmentSize,
+      String file1,
+      String file2,
+      String file3,
+      String targetFile)
+      throws Exception {
     if (numberOfSegments > 1) {
       mergeOneStep(numberOfSegments, segmentSize, file1, file2, file3);
 
@@ -112,55 +104,48 @@ public class Program23_006b {
   }
 
   private static void mergeOneStep(
-    int numberOfSegments,
-    int segmentSize,
-    String file1,
-    String file2,
-    String file3
-  )
-    throws SecurityException, IllegalArgumentException, IOException {
+      int numberOfSegments,
+      int segmentSize,
+      String file1,
+      String file2,
+      String file3)
+      throws SecurityException, IllegalArgumentException, IOException {
     try (
-      DataInputStream file1Input = new DataInputStream(
-        new BufferedInputStream(new FileInputStream(file1), BUFFER_SIZE)
-      )
-    ) {
+        DataInputStream file1Input = new DataInputStream(
+            new BufferedInputStream(new FileInputStream(file1), BUFFER_SIZE))) {
       try (
-        DataOutputStream file2Output = new DataOutputStream(
-          new BufferedOutputStream(new FileOutputStream(file2), BUFFER_SIZE)
-        )
-      ) {
+          DataOutputStream file2Output = new DataOutputStream(
+              new BufferedOutputStream(new FileOutputStream(file2), BUFFER_SIZE))) {
         // Copy half number of segments from file1.dat to file2.dat
         copyHalfToFile2(numberOfSegments, segmentSize, file1Input, file2Output);
       }
 
       // Merge remaining segments in file1 with segments in file2 into file3
       try (
-        DataInputStream file2Input = new DataInputStream(
-          new BufferedInputStream(new FileInputStream(file2), BUFFER_SIZE)
-        );
-        DataOutputStream file3Output = new DataOutputStream(
-          new BufferedOutputStream(new FileOutputStream(file3), BUFFER_SIZE)
-        )
-      ) {
+          DataInputStream file2Input = new DataInputStream(
+              new BufferedInputStream(new FileInputStream(file2), BUFFER_SIZE));
+          DataOutputStream file3Output = new DataOutputStream(
+              new BufferedOutputStream(new FileOutputStream(file3), BUFFER_SIZE))) {
         mergeSegments(
-          numberOfSegments / 2,
-          segmentSize,
-          file1Input,
-          file2Input,
-          file3Output
-        );
+            numberOfSegments / 2,
+            segmentSize,
+            file1Input,
+            file2Input,
+            file3Output);
       }
     }
   }
 
-  /** Copy first half number of segments from ch23_file1.no.track.data to ch23_file2.no.track.data */
+  /**
+   * Copy first half number of segments from ch23_file1.no.track.data to
+   * ch23_file2.no.track.data
+   */
   private static void copyHalfToFile2(
-    int numberOfSegments,
-    int segmentSize,
-    DataInputStream file1,
-    DataOutputStream file2
-  )
-    throws IOException {
+      int numberOfSegments,
+      int segmentSize,
+      DataInputStream file1,
+      DataOutputStream file2)
+      throws IOException {
     int toValue = (numberOfSegments * segmentSize) / 2;
     for (int i = 0; i < toValue; i++) {
       file2.writeInt(file1.readInt());
@@ -169,13 +154,12 @@ public class Program23_006b {
 
   /** Merge all segments */
   private static void mergeSegments(
-    int numberOfSegments,
-    int segmentSize,
-    DataInputStream file1,
-    DataInputStream file2,
-    DataOutputStream file3
-  )
-    throws IOException {
+      int numberOfSegments,
+      int segmentSize,
+      DataInputStream file1,
+      DataInputStream file2,
+      DataOutputStream file3)
+      throws IOException {
     for (int i = 0; i < numberOfSegments; i++) {
       mergeTwoSegments(segmentSize, file1, file2, file3);
     }
@@ -188,12 +172,11 @@ public class Program23_006b {
 
   /** Merges two segments */
   private static void mergeTwoSegments(
-    int segmentSize,
-    DataInputStream file1,
-    DataInputStream file2,
-    DataOutputStream file3
-  )
-    throws IOException {
+      int segmentSize,
+      DataInputStream file1,
+      DataInputStream file2,
+      DataOutputStream file3)
+      throws IOException {
     int intFromFile1 = file1.readInt();
     int intFromFile2 = file2.readInt();
     int file1Count = 1;
@@ -227,20 +210,21 @@ public class Program23_006b {
   }
 
   /**
-   * Updated code so that code that does the same stuff is written once in a method and called multiple times to get the job done.
-   * @param inputStream input stream where int values are read from.
+   * Updated code so that code that does the same stuff is written once in a
+   * method and called multiple times to get the job done.
+   *
+   * @param inputStream  input stream where int values are read from.
    * @param outputStream output stream where int values are written to.
-   * @param count The count so far of the ints read in from input stream
-   * @param segmentSize The Size of the segment we are working with.
+   * @param count        The count so far of the ints read in from input stream
+   * @param segmentSize  The Size of the segment we are working with.
    * @throws IOException
    */
   private static void readFromWriteTo(
-    DataInputStream inputStream,
-    DataOutputStream outputStream,
-    int count,
-    int segmentSize
-  )
-    throws IOException {
+      DataInputStream inputStream,
+      DataOutputStream outputStream,
+      int count,
+      int segmentSize)
+      throws IOException {
     while (inputStream.available() > 0 && count++ < segmentSize) {
       outputStream.writeInt(inputStream.readInt());
     }
@@ -249,9 +233,9 @@ public class Program23_006b {
   /** Display the first 100 numbers in the specified file */
   public static void displayFile(String filename) {
     try (
-      DataInputStream input = new DataInputStream(new FileInputStream(filename))
-    ) {
-      for (int i = 0; i < 100; i++) System.out.print(input.readInt() + " ");
+        DataInputStream input = new DataInputStream(new FileInputStream(filename))) {
+      for (int i = 0; i < 100; i++)
+        System.out.print(input.readInt() + " ");
     } catch (IOException ex) {
       ex.printStackTrace();
     }

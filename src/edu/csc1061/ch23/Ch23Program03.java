@@ -3,7 +3,7 @@ package edu.csc1061.ch23;
 import java.util.Random;
 
 // Merge Sort
-public class Program23_003 {
+public class Ch23Program03 {
 
   /** The method for sorting the numbers */
   public static void mergeSort(int[] list) {

@@ -5,6 +5,7 @@ import java.util.Collection;
 import java.util.Iterator;
 
 // Testing Collection
+@SuppressWarnings("unchecked")
 public class Ch20Program01 {
 
   public static void main(String[] args) {

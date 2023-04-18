@@ -3,7 +3,7 @@ package edu.csc1061.ch23;
 import java.util.Random;
 
 // Insertion Sort
-public class Program23_001 {
+public class Ch23Program01 {
 
   /** The method for sorting the numbers */
   public static void insertionSort(int[] list) {

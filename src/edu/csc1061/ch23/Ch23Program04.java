@@ -3,7 +3,7 @@ package edu.csc1061.ch23;
 import java.util.Random;
 
 // Quick Sort
-public class Program23_004 {
+public class Ch23Program04 {
 
   public static void quickSort(int[] list) {
     quickSort(list, 0, list.length - 1);

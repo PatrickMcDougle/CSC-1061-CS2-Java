@@ -1,7 +1,7 @@
 package edu.csc1061.ch22;
 
 // performance Test
-public class Program22_001 {
+public class Ch22Program01 {
 
   public static void main(String[] args) {
     getTime(1_000_000); // 11 milliseconds
@@ -19,12 +19,6 @@ public class Program22_001 {
       k = k + 5;
     }
     long endTime = System.currentTimeMillis();
-    System.out.println(
-      "Execution time for n = " +
-      n +
-      " is " +
-      (endTime - startTime) +
-      " milliseconds"
-    );
+    System.out.println("Execution time for n = " + n + " is " + (endTime - startTime) + " milliseconds");
   }
 }

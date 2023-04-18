@@ -4,7 +4,8 @@ import java.util.Comparator;
 import java.util.Random;
 
 // Heap Sort
-public class Program23_005 {
+@SuppressWarnings("unchecked")
+public class Ch23Program05 {
 
   /** Heap sort method */
   public static <E> void heapSort(E[] list) {

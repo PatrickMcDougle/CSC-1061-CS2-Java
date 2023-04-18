@@ -3,7 +3,7 @@ package edu.csc1061.ch23;
 import java.util.Random;
 
 // Bubble Sort
-public class Program23_002 {
+public class Ch23Program02 {
 
   /** Bubble sort method */
   public static void bubbleSort(int[] list) {

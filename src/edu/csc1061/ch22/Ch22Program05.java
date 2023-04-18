@@ -3,7 +3,7 @@ package edu.csc1061.ch22;
 import java.util.Scanner;
 
 // Efficient Prime Number
-public class Program22_005 {
+public class Ch22Program05 {
 
   public static void main(String[] args) {
     try (Scanner input = new Scanner(System.in)) {
@@ -25,7 +25,9 @@ public class Program22_005 {
         // Assume the number is prime
         boolean isPrime = true; // Is the current number prime?
 
-        if (squareRoot * squareRoot < number) squareRoot++;
+        if (squareRoot * squareRoot < number) {
+          squareRoot++;
+        }
 
         // Test whether number is prime
         for (int k = 0; k < list.size() && list.get(k) <= squareRoot; k++) {
@@ -41,9 +43,9 @@ public class Program22_005 {
           list.add(number); // Add a new prime to the list
           if (count % NUMBER_PER_LINE == 0) {
             // Print the number and advance to the new line
-            System.out.println(number);
+            System.out.printf("%7d%n", number);
           } else {
-            System.out.print(number + " ");
+            System.out.printf("%7d", number);
           }
         }
 
