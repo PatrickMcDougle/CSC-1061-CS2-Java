@@ -3,7 +3,7 @@ package edu.csc1061.ch24;
 import java.util.LinkedList;
 
 public class MyQueue<E> {
-  private LinkedList<E> list = new LinkedList<E>();
+  private LinkedList<E> list = new LinkedList<>();
 
   public void enqueue(E e) {
     list.addLast(e);

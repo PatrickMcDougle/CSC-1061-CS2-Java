@@ -1,11 +1,10 @@
 package edu.csc1061.ch24;
 
-public class Program24_002 {
+public class Ch24Program01 {
 
-  /** Main method */
   public static void main(String[] args) {
-    // Create a list for strings
-    MyLinkedList<String> list = new MyLinkedList<>();
+    // Create a list
+    MyList<String> list = new MyArrayList<>();
 
     // Add elements to the list
     list.add("Denver");
@@ -52,12 +51,7 @@ public class Program24_002 {
     System.out.println();
 
     System.out.print("(14) ");
-    list.forEach(x -> System.out.print(x.toUpperCase() + " "));
+    list.forEach(s -> System.out.print(s.toUpperCase() + " "));
     System.out.println();
-
-    list.clear();
-    System.out.println(
-      "\nAfter clearing the list, the list size is " + list.size()
-    );
   }
 }
