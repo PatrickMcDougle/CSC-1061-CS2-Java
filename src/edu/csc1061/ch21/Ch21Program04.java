@@ -9,6 +9,8 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.TreeSet;
 
+import edu.csc1061.utils.Timer;
+
 /// Testing Set List Performance!
 public class Ch21Program04 {
   static final int N = 40_000;
@@ -56,8 +58,8 @@ public class Ch21Program04 {
     System.out.println("DONE");
   }
 
-  public static long getTestTime(Collection<Integer> c) {
-    long startTime = System.currentTimeMillis();
+  public static int getTestTime(Collection<Integer> c) {
+    Timer.getTimer().start();
 
     // Test if a number is in the collection
     for (int i = 0; i < N; i++) {
@@ -65,17 +67,19 @@ public class Ch21Program04 {
       c.contains((int) (randomValue * 2 * N));
     }
 
-    return System.currentTimeMillis() - startTime;
+    Timer.getTimer().finish();
+    return Timer.getTimer().getElapsedTime();
   }
 
-  public static long getRemoveTime(Collection<Integer> c) {
-    long startTime = System.currentTimeMillis();
+  public static int getRemoveTime(Collection<Integer> c) {
+    Timer.getTimer().start();
 
     for (int i = 0; i < N; i++) {
       c.remove(i);
     }
 
-    return System.currentTimeMillis() - startTime;
+    Timer.getTimer().finish();
+    return Timer.getTimer().getElapsedTime();
   }
 
   public static String printTime(long timeInMilliseconds) {

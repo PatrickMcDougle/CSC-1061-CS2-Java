@@ -1,5 +1,7 @@
 package edu.csc1061.ch22;
 
+import edu.csc1061.utils.Timer;
+
 // performance Test
 public class Ch22Program01 {
 
@@ -13,12 +15,12 @@ public class Ch22Program01 {
   }
 
   public static void getTime(long n) {
-    long startTime = System.currentTimeMillis();
+    Timer.getTimer().start();
     long k = 0;
     for (long i = 1; i <= n; i++) {
       k = k + 5;
     }
-    long endTime = System.currentTimeMillis();
-    System.out.println("Execution time for n = " + n + " is " + (endTime - startTime) + " milliseconds");
+    Timer.getTimer().finish();
+    System.out.println("Execution time for n = " + n + " is " + Timer.getTimer().getElapsedTime() + " milliseconds");
   }
 }
