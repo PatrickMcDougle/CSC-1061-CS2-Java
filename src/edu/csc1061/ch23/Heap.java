@@ -16,13 +16,6 @@ public class Heap<E> {
   }
 
   /**
-   * Create a heap with a specified comparator
-   */
-  public Heap(Comparator<E> c) {
-    this.comparator = c;
-  }
-
-  /**
    * Create a heap from an array of objects
    */
   public Heap(E[] objects) {
@@ -30,6 +23,13 @@ public class Heap<E> {
     for (int i = 0; i < objects.length; i++) {
       add(objects[i]);
     }
+  }
+
+  /**
+   * Create a heap with a specified comparator
+   */
+  public Heap(Comparator<E> c) {
+    this.comparator = c;
   }
 
   /**
@@ -47,7 +47,7 @@ public class Heap<E> {
         list.set(currentIndex, list.get(parentIndex));
         list.set(parentIndex, temp);
       } else {
-        break; // the tree is a heap now
+        break; // The tree is a heap now
       }
 
       currentIndex = parentIndex;
