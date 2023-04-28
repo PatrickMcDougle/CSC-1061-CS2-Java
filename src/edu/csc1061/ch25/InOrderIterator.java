@@ -1,23 +1,74 @@
 package edu.csc1061.ch25;
 
-// Inner class InOrderIterator
+import java.util.NoSuchElementException;
+
 public class InOrderIterator<E> implements java.util.Iterator<E> {
   // Store the elements in a list
   private java.util.ArrayList<E> list = new java.util.ArrayList<>();
-  private int current = 0; // Point to the current element in list
-  private TreeNode<E> root;
+  private int currentIndex = 0; // Point to the current element in list
+  private BinarySearchTree<E> binarySearchTree;
 
-  public InOrderIterator(TreeNode<E> root) {
-    this.root = root;
+  // ////////// ////////// //
+  // Constructor
+  // ////////// ////////// //
+
+  public InOrderIterator(BinarySearchTree<E> bst) {
+    this.binarySearchTree = bst;
     inOrder(); // Traverse binary tree and store elements in list
   }
 
-  /** In-order traversal from the root */
-  private void inOrder() {
-    inOrder(root);
+  // ////////// ////////// //
+  // Public Override Methods
+  // ////////// ////////// //
+
+  /**
+   * More elements for traversing?
+   */
+  @Override
+  public boolean hasNext() {
+    return (currentIndex < list.size());
   }
 
-  /** In-order traversal from a subtree */
+  /**
+   * Get the current element and move to the next
+   */
+  @Override
+  public E next() {
+    try {
+      return list.get(currentIndex++);
+    } catch (Exception e) {
+      throw new NoSuchElementException("Next element had an issue.");
+    }
+  }
+
+  /**
+   * Remove the element returned by the last next()
+   */
+  @Override
+  public void remove() {
+    if (currentIndex == 0) { // next() has not been called yet
+      throw new IllegalStateException();
+    }
+
+    binarySearchTree.delete(list.get(--currentIndex));
+    list.clear(); // Clear the list
+    inOrder(); // Rebuild the list
+  }
+
+  // ////////// ////////// //
+  // Private Methods
+  // ////////// ////////// //
+
+  /**
+   * In-order traversal from the root
+   */
+  private void inOrder() {
+    inOrder(binarySearchTree.getRoot());
+  }
+
+  /**
+   * In-order traversal from a subtree
+   */
   private void inOrder(TreeNode<E> root) {
     if (root == null) {
       return;
@@ -25,29 +76,5 @@ public class InOrderIterator<E> implements java.util.Iterator<E> {
     inOrder(root.getLeft());
     list.add(root.getElement());
     inOrder(root.getRight());
-  }
-
-  /** More elements for traversing? */
-  @Override
-  public boolean hasNext() {
-    return (current < list.size());
-  }
-
-  /** Get the current element and move to the next */
-  @Override
-  public E next() {
-    return list.get(current++);
-  }
-
-  /** Remove the element returned by the last next() */
-  @Override
-  public void remove() {
-    if (current == 0) { // next() has not been called yet
-      throw new IllegalStateException();
-    }
-
-    delete(list.get(--current));
-    list.clear(); // Clear the list
-    inOrder(); // Rebuild the list
   }
 }

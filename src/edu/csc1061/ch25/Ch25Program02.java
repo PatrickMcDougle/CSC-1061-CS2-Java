@@ -1,6 +1,6 @@
 package edu.csc1061.ch25;
 
-public class Program25_002 {
+public class Ch25Program02 {
 
   public static void main(String[] args) {
     // Create a BST

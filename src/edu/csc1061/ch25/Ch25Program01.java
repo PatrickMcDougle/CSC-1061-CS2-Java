@@ -2,7 +2,7 @@ package edu.csc1061.ch25;
 
 import java.util.List;
 
-public class Program25_001 {
+public class Ch25Program01 {
   private static final String NAME_CHARLOTTE = "Charlotte";
 
   public static void main(String[] args) {
@@ -28,9 +28,7 @@ public class Program25_001 {
 
     // Search for an element
     System.out.println("Is Peter in the tree? " + tree.search("Peter"));
-    System.out.println(
-      "Is Charlotte in the tree? " + tree.search(NAME_CHARLOTTE)
-    );
+    System.out.println("Is Charlotte in the tree? " + tree.search(NAME_CHARLOTTE));
     System.out.println();
 
     // Get a path from the root to Peter

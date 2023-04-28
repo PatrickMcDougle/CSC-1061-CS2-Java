@@ -10,8 +10,20 @@ public class TreeNode<E> {
   private TreeNode<E> left;
   private TreeNode<E> right;
 
+  // ////////// ////////// //
+  // Constructor
+  // ////////// ////////// //
+
   public TreeNode(E e) {
     element = e;
+  }
+
+  // ////////// ////////// //
+  // Public Methods
+  // ////////// ////////// //
+
+  public E getElement() {
+    return element;
   }
 
   public TreeNode<E> getLeft() {
@@ -22,19 +34,15 @@ public class TreeNode<E> {
     return right;
   }
 
+  public void setElement(E e) {
+    element = e;
+  }
+
   public void setLeft(TreeNode<E> treeNode) {
     left = treeNode;
   }
 
   public void setRight(TreeNode<E> treeNode) {
     right = treeNode;
-  }
-
-  public E getElement() {
-    return element;
-  }
-
-  public void setElement(E e) {
-    element = e;
   }
 }
