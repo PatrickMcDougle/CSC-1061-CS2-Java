@@ -13,8 +13,8 @@ public class MyPriorityQueue<E extends Comparable<E>> {
     heap = new MyHeap<>(c);
   }
 
-  public void enqueue(E newObject) {
-    heap.add(newObject);
+  public void enqueue(E e) {
+    heap.add(e);
   }
 
   public E dequeue() {
@@ -23,5 +23,10 @@ public class MyPriorityQueue<E extends Comparable<E>> {
 
   public int getSize() {
     return heap.getSize();
+  }
+
+  @Override
+  public String toString() {
+    return "Priority Queue: " + heap.toString();
   }
 }

@@ -174,8 +174,10 @@ public class MyLinkedList<E> extends MyList<E> {
 
     Node<E> current = head;
     for (int i = 0; i < size; i++) {
-      sb.append(current.element);
-      current = current.next;
+      if (current != null) {
+        sb.append(current.element);
+        current = current.next;
+      }
       if (current != null) {
         sb.append(", "); // Separate two elements with a comma
       } else {

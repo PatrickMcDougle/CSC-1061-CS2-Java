@@ -1,9 +1,7 @@
 package edu.csc1061.ch24;
 
-import java.util.LinkedList;
-
 public class MyQueue<E> {
-  private LinkedList<E> list = new LinkedList<>();
+  private MyLinkedList<E> list = new MyLinkedList<>();
 
   public void enqueue(E e) {
     list.addLast(e);

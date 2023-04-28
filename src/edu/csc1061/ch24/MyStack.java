@@ -1,9 +1,7 @@
 package edu.csc1061.ch24;
 
-import java.util.ArrayList;
-
 public class MyStack<E> {
-  private ArrayList<E> list = new ArrayList<>();
+  private MyArrayList<E> list = new MyArrayList<>();
 
   public int getSize() {
     return list.size();

@@ -1,18 +1,16 @@
 package edu.csc1061.ch24;
 
-import java.util.ArrayList;
 import java.util.Comparator;
 
 // Heap is from Chapter 23.
 // Chapter 23 is all about sorting.
-// We will cover Chapter 23 in weeks 12 and 13.
 
 public class MyHeap<E extends Comparable<E>> {
-  private ArrayList<E> list = new ArrayList<>();
+  private MyArrayList<E> list = new MyArrayList<>();
   private Comparator<? super E> comparator;
 
   /**
-   * Create a default heap
+   * Create a default heap using a natural order for comparison
    */
   public MyHeap() {
     this.comparator = (e1, e2) -> ((Comparable<E>) e1).compareTo(e2);
@@ -22,6 +20,7 @@ public class MyHeap<E extends Comparable<E>> {
    * Create a heap from an array of objects
    */
   public MyHeap(E[] objects) {
+    this.comparator = (e1, e2) -> ((Comparable<E>) e1).compareTo(e2);
     for (int i = 0; i < objects.length; i++) {
       add(objects[i]);
     }
@@ -105,7 +104,9 @@ public class MyHeap<E extends Comparable<E>> {
     return list.size();
   }
 
-  /** Return true if heap is empty */
+  /**
+   * Return true if heap is empty
+   */
   public boolean isEmpty() {
     return list.isEmpty();
   }
