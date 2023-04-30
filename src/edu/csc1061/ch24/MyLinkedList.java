@@ -198,59 +198,6 @@ public class MyLinkedList<E> extends MyList<E> {
   }
 
   /**
-   * Return true if this list contains the element e
-   */
-  @Override
-  public boolean contains(Object e) {
-    // Left as an exercise
-    // WRITE YOUR CODE HERE
-    return false;
-  }
-
-  /**
-   * Return the element at the specified index
-   */
-  @Override
-  public E get(int index) {
-    // Left as an exercise
-    // WRITE YOUR CODE HERE
-    return null;
-  }
-
-  /**
-   * Return the index of the first matching element in this list. Return -1 if no
-   * match.
-   */
-  @Override
-  public int indexOf(Object e) {
-    // Left as an exercise
-    // WRITE YOUR CODE HERE
-    return 0;
-  }
-
-  /**
-   * Return the index of the last matching element in this list. Return -1 if no
-   * match.
-   */
-  @Override
-  public int lastIndexOf(E e) {
-    // Left as an exercise
-    // WRITE YOUR CODE HERE
-    return 0;
-  }
-
-  /**
-   * Replace the element at the specified position in this list with the specified
-   * element.
-   */
-  @Override
-  public E set(int index, E e) {
-    // Left as an exercise
-    // WRITE YOUR CODE HERE
-    return null;
-  }
-
-  /**
    * Override iterator() defined in Iterable
    */
   @Override
@@ -264,5 +211,62 @@ public class MyLinkedList<E> extends MyList<E> {
   @Override
   public int size() {
     return size;
+  }
+
+  /**
+   * HOMEWORK SECTION
+   */
+
+  /**
+   * Return true if this list contains the element e
+   */
+  @Override
+  public boolean contains(Object e) {
+    // Left out for HOMEWORK
+    // WRITE YOUR CODE HERE
+    return false;
+  }
+
+  /**
+   * Return the element at the specified index
+   */
+  @Override
+  public E get(int index) {
+    // Left out for HOMEWORK
+    // WRITE YOUR CODE HERE
+    return null;
+  }
+
+  /**
+   * Return the index of the first matching element in this list. Return -1 if no
+   * match.
+   */
+  @Override
+  public int indexOf(Object e) {
+    // Left out for HOMEWORK
+    // WRITE YOUR CODE HERE
+    return 0;
+  }
+
+  /**
+   * Return the index of the last matching element in this list. Return -1 if no
+   * match.
+   */
+  @Override
+  public int lastIndexOf(E e) {
+    // Left out for HOMEWORK
+    // WRITE YOUR CODE HERE
+    return 0;
+  }
+
+  /**
+   * Replace the element at the specified position in this list with the specified
+   * element.
+   */
+  @Override
+  public E set(int index, E e) {
+    // Left out for HOMEWORK
+    // WRITE YOUR CODE HERE
+    return null;
   }
 }
