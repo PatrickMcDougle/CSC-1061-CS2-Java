@@ -38,7 +38,9 @@ public class Course {
       }
     }
 
-    if (index == -1) return;
+    if (index == -1) {
+      return;
+    }
 
     // remove the student.
 
@@ -49,7 +51,9 @@ public class Course {
 
     for (int i = index; i < numberOfStudents; i++) {
       students[i] = students[i + 1];
-      if (students[i] == null) break;
+      if (students[i] == null) {
+        break;
+      }
     }
 
     students[numberOfStudents] = null;
