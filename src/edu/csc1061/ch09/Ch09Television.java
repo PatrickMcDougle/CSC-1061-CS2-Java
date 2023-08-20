@@ -1,11 +1,11 @@
-package edu.csc1061.ch09.tv;
+package edu.csc1061.ch09;
 
-public class Television {
+public class Ch09Television {
   int channel = 1; // Default channel is 1
   int volumeLevel = 1; // Default volume level is 1
   boolean on = false; // By default TV is off
 
-  public Television() {}
+  public Ch09Television() {}
 
   public void turnOn() {
     on = true;

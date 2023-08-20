@@ -1,9 +1,9 @@
-package edu.csc1061.ch09.point2d;
+package edu.csc1061.ch09;
 
 import java.util.Scanner;
 import javafx.geometry.Point2D;
 
-public class MyPoint2DProgram {
+public class Ch09MyPoint2DProgram {
 
   public static void main(String[] args) {
     Scanner input = new Scanner(System.in);
@@ -21,8 +21,7 @@ public class MyPoint2DProgram {
     System.out.println("p2 is " + p2.toString());
     System.out.println("The distance between p1 and p2 is " + p1.distance(p2));
     System.out.println(
-      "The midpoint between p1 and p2 is " + p1.midpoint(p2).toString()
-    );
+        "The midpoint between p1 and p2 is " + p1.midpoint(p2).toString());
 
     input.close();
   }

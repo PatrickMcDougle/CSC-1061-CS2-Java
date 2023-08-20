@@ -6,9 +6,30 @@
     "configurations": [
         {
             "type": "java",
-            "name": "Launch Program18_007",
+            "name": "Ch09MyDateProgram",
             "request": "launch",
-            "mainClass": "edu.csc1061.ch18.Program18_007",
+            "mainClass": "edu.csc1061.ch09.Ch09MyDateProgram",
+            "projectName": "CSC-1061-CS2-Java_e2b4a59b"
+        },
+        {
+            "type": "java",
+            "name": "Ch09MyCircle1Program",
+            "request": "launch",
+            "mainClass": "edu.csc1061.ch09.Ch09MyCircle1Program",
+            "projectName": "CSC-1061-CS2-Java_e2b4a59b"
+        },
+        {
+            "type": "java",
+            "name": "Ch25Program03",
+            "request": "launch",
+            "mainClass": "edu.csc1061.ch25.Ch25Program03",
+            "vmArgs": ["--module-path", "${env:PATH_TO_FX}", "--add-modules", "javafx.controls,javafx.fxml"]
+        },
+        {
+            "type": "java",
+            "name": "Ch25Program01",
+            "request": "launch",
+            "mainClass": "edu.csc1061.ch25.Ch25Program01",
             "projectName": "CSC-1061-CS2-Java_e2b4a59b"
         },
         {
