@@ -1,19 +1,19 @@
-package edu.csc1061.ch09.date;
+package edu.csc1061.ch09;
 
 import java.util.Date;
 import java.util.Random;
 
-public class MyDateProgram {
+public class Ch09MyDateProgram {
 
   public static void main(String[] args) {
     // DATE STUFF
     System.out.println(" -- DATE STUFF -- ");
-    java.util.Date date1 = new java.util.Date();
+    Date date1 = new Date();
     System.out.println(date1.toString());
     System.out.println(date1.getTime());
     System.out.println();
 
-    java.util.Date date2 = new java.util.Date(1_547_703_343_509L);
+    Date date2 = new Date(1_547_703_343_509L);
     System.out.println(date2.toString());
     System.out.println(date2.getTime());
     System.out.println();

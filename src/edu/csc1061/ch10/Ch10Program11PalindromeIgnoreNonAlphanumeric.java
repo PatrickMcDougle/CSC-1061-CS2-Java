@@ -14,12 +14,10 @@ public class Ch10Program11PalindromeIgnoreNonAlphanumeric {
     String s = input.nextLine();
 
     // Display result
-    System.out.println(
-      "Ignoring non-alphanumeric characters, \nis " +
-      s +
-      " a palindrome? " +
-      isPalindrome(s)
-    );
+    System.out.println("Ignoring non-alphanumeric characters, \nis " +
+        s +
+        " a palindrome? " +
+        isPalindrome(s));
 
     input.close();
   }

@@ -1,11 +1,11 @@
-package edu.csc1061.ch09.circle;
+package edu.csc1061.ch09;
 
-public class MyCircle4Program {
+public class Ch09MyCircle4Program {
 
   // Main method
   public static void main(String[] args) {
     // Create a Circle object with radius 1
-    Circle3 myCircle = new Circle3(1);
+    Ch09Circle3 myCircle = new Ch09Circle3(1);
 
     // Print areas for radius 1, 2, 3, 4, and 5.
     int n = 5;
@@ -18,7 +18,7 @@ public class MyCircle4Program {
   }
 
   // Print a table of areas for radius
-  public static void printAreas(Circle3 c, int times) {
+  public static void printAreas(Ch09Circle3 c, int times) {
     System.out.println("Radius \t\tArea");
     while (times >= 1) {
       System.out.println(c.getRadius() + "\t\t" + c.getArea());

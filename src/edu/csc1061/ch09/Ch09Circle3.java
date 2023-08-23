@@ -1,21 +1,21 @@
-package edu.csc1061.ch09.circle;
+package edu.csc1061.ch09;
 
-public class Circle2 {
+public class Ch09Circle3 {
   // the radius of this circle
-  public double radius; // instance variable
+  private double radius; // instance variable
 
   // static variables are shared by all the instances of the class.
   // the number of objects created
-  public static int numberOfObjects = 0;
+  private static int numberOfObjects = 0;
 
   // Construct a circle with radius 1
-  public Circle2() {
+  public Ch09Circle3() {
     radius = 1;
     numberOfObjects++;
   }
 
   // Construct a circle with a specified radius
-  public Circle2(double newRadius) {
+  public Ch09Circle3(double newRadius) {
     radius = newRadius;
     numberOfObjects++;
   }
@@ -33,7 +33,7 @@ public class Circle2 {
   // Return the area of this circle
   // PI * radius^2
   public double getArea() {
-    return radius * numberOfObjects * Math.PI;
+    return radius * radius * Math.PI;
   }
 
   // Return the perimeter (circumference) of this circle

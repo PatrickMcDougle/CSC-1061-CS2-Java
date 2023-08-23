@@ -1,21 +1,21 @@
-package edu.csc1061.ch09.student;
+package edu.csc1061.ch09;
 
-public class BirthDate1 {
+public class BirthDate {
   private int year;
   private int month;
   private int day;
 
-  public BirthDate1() {
+  public BirthDate() {
     // do nothing at this time.
     System.out.println("Default BirthDate constructor called!");
   }
 
-  public BirthDate1(int year) {
+  public BirthDate(int year) {
     this(); // Call BirthDate() constructor.
     this.year = year;
   }
 
-  public BirthDate1(int year, int month, int day) {
+  public BirthDate(int year, int month, int day) {
     this(year); // call BirthDate(year) constructor.
     this.month = month;
     this.day = day;

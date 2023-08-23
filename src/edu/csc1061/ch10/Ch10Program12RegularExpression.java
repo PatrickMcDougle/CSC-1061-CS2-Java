@@ -26,15 +26,9 @@ public class Ch10Program12RegularExpression {
     System.out.println("Java".equals(STRING_JAVA) ? "TRUE" : STRING_FALSE);
 
     // Regular Expressions (hover over for info)
-    System.out.println(
-      "Java is fun".matches(STRING_JAVA_STAR) ? "TRUE" : STRING_FALSE
-    );
-    System.out.println(
-      "Java is cool".matches(STRING_JAVA_STAR) ? "TRUE" : STRING_FALSE
-    );
-    System.out.println(
-      "Cool is Java".matches(STRING_JAVA_STAR) ? "TRUE" : STRING_FALSE
-    );
+    System.out.println("Java is fun".matches(STRING_JAVA_STAR) ? "TRUE" : STRING_FALSE);
+    System.out.println("Java is cool".matches(STRING_JAVA_STAR) ? "TRUE" : STRING_FALSE);
+    System.out.println("Cool is Java".matches(STRING_JAVA_STAR) ? "TRUE" : STRING_FALSE);
     System.out.println();
 
     String s = "a+b$#c".replaceAll("[$+#]", "NNN");
@@ -54,7 +48,9 @@ public class Ch10Program12RegularExpression {
     System.out.println("Java Java Java".replaceFirst("v\\w", "wi"));
 
     String[] tokens3 = "Java1HTML2Perl".split("\\d");
-    for (int i = 0; i < tokens3.length; i++) System.out.println(tokens3[i]);
+    for (int i = 0; i < tokens3.length; i++) {
+      System.out.println(tokens3[i]);
+    }
     System.out.println();
   }
 }

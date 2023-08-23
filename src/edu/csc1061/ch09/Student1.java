@@ -1,4 +1,4 @@
-package edu.csc1061.ch09.student;
+package edu.csc1061.ch09;
 
 public class Student1 {
   String name; // default value null

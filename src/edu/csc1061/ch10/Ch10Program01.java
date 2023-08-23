@@ -25,13 +25,9 @@ public class Ch10Program01 {
     Loan loan = new Loan(annualInterestRate, numberOfYears, loanAmount);
 
     // Display loan date, monthly payment, and total payment
-    System.out.printf(
-      "The loan was created on %s\n" +
-      "The monthly payment is %.2f\nThe total payment is %.2f\n",
-      loan.getLoanDate().toString(),
-      loan.getMonthlyPayment(),
-      loan.getTotalPayment()
-    );
+    System.out.printf("The loan was created on %s%n", loan.getLoanDate().toString());
+    System.out.printf("The monthly payment is %.2f%n", loan.getMonthlyPayment());
+    System.out.printf("The total payment is %.2f%n", loan.getTotalPayment());
 
     input.close();
   }
