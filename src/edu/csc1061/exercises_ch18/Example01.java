@@ -21,7 +21,6 @@ public class Example01 {
         if (n == 0) {
             return 1;
         }
-
         return n - recursive01(n - 1);
     }
 }

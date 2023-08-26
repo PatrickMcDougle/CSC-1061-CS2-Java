@@ -11,6 +11,7 @@ package edu.csc1061.exercises_ch10;
 
 public class programA2 {
 
+  // I don't like Inside Classes. I don't see why you would do this.
   public class InsiderClass {
     int value;
     int size;

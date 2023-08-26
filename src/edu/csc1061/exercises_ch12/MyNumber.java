@@ -9,7 +9,11 @@
  */
 package edu.csc1061.exercises_ch12;
 
-public class MyNumber {
+public static class MyNumber {
+
+  private MyNumber() {
+    // do not instantiate this class.
+  }
 
   public static int bin2Dec(String binaryString) throws NumberFormatException {
     int number = 0;
