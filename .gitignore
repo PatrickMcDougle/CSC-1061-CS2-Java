@@ -93,3 +93,4 @@ nb-configuration.xml
 ## OS X
 ##############################
 .DS_Store
+.vscode/launch-Skyfire-2208.json

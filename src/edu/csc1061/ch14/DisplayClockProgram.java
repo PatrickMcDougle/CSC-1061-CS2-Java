@@ -1,3 +1,12 @@
+/**
+ * Code for Class.
+ * <p>
+ * CSC 1061 - Computer Science II - Java
+ *
+ * @author  Patrick McDougle
+ * @version %I%, %G%
+ * @since   1.0
+ */
 package edu.csc1061.ch14;
 
 import javafx.application.Application;
@@ -13,8 +22,7 @@ public class DisplayClockProgram extends Application {
   public void start(Stage primaryStage) {
     // Create a clock and a label
     ClockPane clock = new ClockPane();
-    String timeString =
-      clock.getHour() + ":" + clock.getMinute() + ":" + clock.getSecond();
+    String timeString = clock.getHour() + ":" + clock.getMinute() + ":" + clock.getSecond();
     Label lblCurrentTime = new Label(timeString);
 
     // Place clock and label in border pane

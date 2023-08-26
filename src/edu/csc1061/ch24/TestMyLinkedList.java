@@ -1,3 +1,12 @@
+/**
+ * Code for Class.
+ * <p>
+ * CSC 1061 - Computer Science II - Java
+ *
+ * @author  Patrick McDougle
+ * @version %I%, %G%
+ * @since   1.0
+ */
 package edu.csc1061.ch24;
 
 import java.util.Scanner;
@@ -10,19 +19,19 @@ public class TestMyLinkedList {
 
   public TestMyLinkedList() {
     String[] names = {
-      "Tom",
-      "Susan",
-      "Kim",
-      "George",
-      "Peter",
-      "Jean",
-      "George",
-      "Jane",
-      "Denise",
-      "Jenny",
-      "Susan",
-      "Kathy",
-      "Jane",
+        "Tom",
+        "Susan",
+        "Kim",
+        "George",
+        "Peter",
+        "Jean",
+        "George",
+        "Jane",
+        "Denise",
+        "Jenny",
+        "Susan",
+        "Kathy",
+        "Jane",
     };
     MyList<String> list = new MyLinkedList<>(names);
 

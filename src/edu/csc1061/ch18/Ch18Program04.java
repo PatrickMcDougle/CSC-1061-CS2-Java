@@ -1,3 +1,12 @@
+/**
+ * Code for Class.
+ * <p>
+ * CSC 1061 - Computer Science II - Java
+ *
+ * @author  Patrick McDougle
+ * @version %I%, %G%
+ * @since   1.0
+ */
 package edu.csc1061.ch18;
 
 public class Ch18Program04 {
@@ -23,9 +32,8 @@ public class Ch18Program04 {
   public static void main(String[] args) {
 
     // Punctuation, capitalization, and spaces are usually ignored.
-    String[] wordList =
-        {"a", "aba", "ab", "kayak", "level", "madam", "radar", "cat", "taco", "tacocat", "tacoCat",
-            "TacOcaT", "was it a car or a cat i saw", "live on time emit no evil"};
+    String[] wordList = { "a", "aba", "ab", "kayak", "level", "madam", "radar", "cat", "taco", "tacocat", "tacoCat",
+        "TacOcaT", "was it a car or a cat i saw", "live on time emit no evil" };
 
     for (String word : wordList) {
       System.out.println("Is \"" + word + "\" a palindrome? " + isPalindrome(word));

@@ -1,3 +1,12 @@
+/**
+ * Code for Class.
+ * <p>
+ * CSC 1061 - Computer Science II - Java
+ *
+ * @author  Patrick McDougle
+ * @version %I%, %G%
+ * @since   1.0
+ */
 package edu.csc1061.ch21;
 
 import java.io.File;
@@ -35,7 +44,7 @@ public class Ch21Program05 {
   /**
    * This method will take in a file and read it to see if it contains any key
    * words in it.
-   * 
+   *
    * @param file - The file to search for key words.
    * @return the number of key words that were found in the file.
    * @throws NullPointerException

@@ -1,3 +1,12 @@
+/**
+ * Code for Class.
+ * <p>
+ * CSC 1061 - Computer Science II - Java
+ *
+ * @author  Patrick McDougle
+ * @version %I%, %G%
+ * @since   1.0
+ */
 package edu.csc1061.ch14;
 
 import javafx.application.Application;
@@ -22,8 +31,7 @@ public class JavaFx014Program extends Application {
 
     Text text1 = new Text(20, 20, "Programming is fun");
     text1.setFont(
-      Font.font("Courier", FontWeight.BOLD, FontPosture.ITALIC, 15)
-    );
+        Font.font("Courier", FontWeight.BOLD, FontPosture.ITALIC, 15));
     pane.getChildren().add(text1);
 
     Text text2 = new Text(60, 60, "Programming is fun\nDisplay text");

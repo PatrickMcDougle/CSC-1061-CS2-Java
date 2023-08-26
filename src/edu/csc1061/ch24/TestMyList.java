@@ -1,3 +1,12 @@
+/**
+ * Code for Class.
+ * <p>
+ * CSC 1061 - Computer Science II - Java
+ *
+ * @author  Patrick McDougle
+ * @version %I%, %G%
+ * @since   1.0
+ */
 package edu.csc1061.ch24;
 
 import java.util.Scanner;
@@ -59,16 +68,14 @@ public class TestMyList {
     System.out.println(LIST_TWO + list2);
     list1.retainAll(list2);
     System.out.println(
-      "list1 contains all list2? " + list1.containsAll(list2) + "\n"
-    );
+        "list1 contains all list2? " + list1.containsAll(list2) + "\n");
 
     list1 = new MyArrayList<>(name1);
     list2 = new MyArrayList<>(name3);
     System.out.println(LIST_ONE + list1);
     System.out.println(LIST_TWO + list2);
     System.out.println(
-      "list1 contains all list2? " + list1.containsAll(list2) + "\n"
-    );
+        "list1 contains all list2? " + list1.containsAll(list2) + "\n");
 
     Object[] name4 = list1.toArray();
     System.out.print("name4: ");

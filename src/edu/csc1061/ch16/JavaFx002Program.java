@@ -1,3 +1,12 @@
+/**
+ * Code for Class.
+ * <p>
+ * CSC 1061 - Computer Science II - Java
+ *
+ * @author  Patrick McDougle
+ * @version %I%, %G%
+ * @since   1.0
+ */
 package edu.csc1061.ch16;
 
 import javafx.application.Application;
@@ -18,13 +27,11 @@ public class JavaFx002Program extends Application {
   protected BorderPane getPane() {
     HBox paneForButtons = new HBox(20);
     Button buttonLeft = new Button(
-      "Left",
-      new ImageView("file:resources/images/left.gif")
-    );
+        "Left",
+        new ImageView("file:resources/images/left.gif"));
     Button buttonRight = new Button(
-      "Right",
-      new ImageView("file:resources/images/right.gif")
-    );
+        "Right",
+        new ImageView("file:resources/images/right.gif"));
     paneForButtons.getChildren().addAll(buttonLeft, buttonRight);
     paneForButtons.setAlignment(Pos.CENTER);
     paneForButtons.setStyle("-fx-border-color: green");

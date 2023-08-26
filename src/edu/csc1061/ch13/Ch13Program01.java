@@ -1,3 +1,12 @@
+/**
+ * Code for Class.
+ * <p>
+ * CSC 1061 - Computer Science II - Java
+ *
+ * @author  Patrick McDougle
+ * @version %I%, %G%
+ * @since   1.0
+ */
 package edu.csc1061.ch13;
 
 public class Ch13Program01 {
@@ -9,8 +18,7 @@ public class Ch13Program01 {
     GeometricObject geoObject2 = new Rectangle(5, 3);
 
     System.out.println(
-      "The two objects have the same area? " + equalArea(geoObject1, geoObject2)
-    );
+        "The two objects have the same area? " + equalArea(geoObject1, geoObject2));
 
     // Display circle
     displayGeometricObject(geoObject1);
@@ -21,9 +29,8 @@ public class Ch13Program01 {
 
   /** A method for comparing the areas of two geometric objects */
   public static boolean equalArea(
-    GeometricObject object1,
-    GeometricObject object2
-  ) {
+      GeometricObject object1,
+      GeometricObject object2) {
     return object1.getArea() == object2.getArea();
   }
 

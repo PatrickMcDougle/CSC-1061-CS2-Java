@@ -1,3 +1,12 @@
+/**
+ * Code for Class.
+ * <p>
+ * CSC 1061 - Computer Science II - Java
+ *
+ * @author  Patrick McDougle
+ * @version %I%, %G%
+ * @since   1.0
+ */
 package edu.csc1061.ch12;
 
 import java.util.Scanner;
@@ -15,7 +24,6 @@ public class DividedByZero01 {
     input.close();
 
     System.out.println(
-      number1 + " / " + number2 + " is " + (number1 / number2)
-    );
+        number1 + " / " + number2 + " is " + (number1 / number2));
   }
 }

@@ -1,3 +1,12 @@
+/**
+ * Code for Class.
+ * <p>
+ * CSC 1061 - Computer Science II - Java
+ *
+ * @author  Patrick McDougle
+ * @version %I%, %G%
+ * @since   1.0
+ */
 package edu.csc1061.ch13;
 
 public class Rational extends Number implements Comparable<Rational> {
@@ -49,22 +58,20 @@ public class Rational extends Number implements Comparable<Rational> {
 
   /** Add a rational number to this rational */
   public Rational add(Rational secondRational) {
-    long n =
-      numerator *
-      secondRational.getDenominator() +
-      denominator *
-      secondRational.getNumerator();
+    long n = numerator *
+        secondRational.getDenominator() +
+        denominator *
+            secondRational.getNumerator();
     long d = denominator * secondRational.getDenominator();
     return new Rational(n, d);
   }
 
   /** Subtract a rational number from this rational */
   public Rational subtract(Rational secondRational) {
-    long n =
-      numerator *
-      secondRational.getDenominator() -
-      denominator *
-      secondRational.getNumerator();
+    long n = numerator *
+        secondRational.getDenominator() -
+        denominator *
+            secondRational.getNumerator();
     long d = denominator * secondRational.getDenominator();
     return new Rational(n, d);
   }

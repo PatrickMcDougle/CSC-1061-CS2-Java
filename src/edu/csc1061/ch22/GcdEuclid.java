@@ -1,3 +1,12 @@
+/**
+ * Code for Class.
+ * <p>
+ * CSC 1061 - Computer Science II - Java
+ *
+ * @author  Patrick McDougle
+ * @version %I%, %G%
+ * @since   1.0
+ */
 package edu.csc1061.ch22;
 
 import java.util.Scanner;
@@ -26,7 +35,6 @@ public class GcdEuclid {
     input.close();
 
     System.out.println(
-      "The greatest common divisor for " + m + " and " + n + " is " + gcd(m, n)
-    );
+        "The greatest common divisor for " + m + " and " + n + " is " + gcd(m, n));
   }
 }

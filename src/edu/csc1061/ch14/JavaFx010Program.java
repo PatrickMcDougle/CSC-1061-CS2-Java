@@ -1,3 +1,12 @@
+/**
+ * Code for Class.
+ * <p>
+ * CSC 1061 - Computer Science II - Java
+ *
+ * @author  Patrick McDougle
+ * @version %I%, %G%
+ * @since   1.0
+ */
 package edu.csc1061.ch14;
 
 import javafx.application.Application;
@@ -22,8 +31,8 @@ public class JavaFx010Program extends Application {
 
     // Place nodes in the pane
     pane
-      .getChildren()
-      .addAll(new Label("First Name:"), new TextField(), new Label("MI:"));
+        .getChildren()
+        .addAll(new Label("First Name:"), new TextField(), new Label("MI:"));
     TextField tfMi = new TextField();
     tfMi.setPrefColumnCount(1);
     pane.getChildren().addAll(tfMi, new Label("Last Name:"), new TextField());

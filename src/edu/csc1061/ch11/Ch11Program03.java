@@ -1,3 +1,12 @@
+/**
+ * Code for Class.
+ * <p>
+ * CSC 1061 - Computer Science II - Java
+ *
+ * @author  Patrick McDougle
+ * @version %I%, %G%
+ * @since   1.0
+ */
 package edu.csc1061.ch11;
 
 /**
@@ -21,12 +30,10 @@ public class Ch11Program03 {
     if (object instanceof Circle) {
       System.out.println("The circle area is " + ((Circle) object).getArea());
       System.out.println(
-        "The circle diameter is " + ((Circle) object).getDiameter()
-      );
+          "The circle diameter is " + ((Circle) object).getDiameter());
     } else if (object instanceof Rectangle) {
       System.out.println(
-        "The rectangle area is " + ((Rectangle) object).getArea()
-      );
+          "The rectangle area is " + ((Rectangle) object).getArea());
     }
   }
 }

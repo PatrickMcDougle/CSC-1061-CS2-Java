@@ -1,3 +1,12 @@
+/**
+ * Code for Class.
+ * <p>
+ * CSC 1061 - Computer Science II - Java
+ *
+ * @author  Patrick McDougle
+ * @version %I%, %G%
+ * @since   1.0
+ */
 package edu.csc1061.ch12;
 
 import java.util.Scanner;
@@ -27,8 +36,7 @@ public class DividedByZero04WithException {
       System.out.println(number1 + " / " + number2 + " is " + result);
     } catch (ArithmeticException ex) {
       System.out.println(
-        "Exception: an integer " + "cannot be divided by zero "
-      );
+          "Exception: an integer " + "cannot be divided by zero ");
       System.out.println(ex);
       System.out.println(ex.getMessage());
     }

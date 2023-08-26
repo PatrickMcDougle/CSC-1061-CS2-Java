@@ -1,3 +1,12 @@
+/**
+ * Code for Class.
+ * <p>
+ * CSC 1061 - Computer Science II - Java
+ *
+ * @author  Patrick McDougle
+ * @version %I%, %G%
+ * @since   1.0
+ */
 package edu.csc1061.ch14;
 
 import javafx.application.Application;
@@ -37,17 +46,16 @@ public class JavaFx018Program extends Application {
     // Create a group and add nodes to the group
     Group group = new Group();
     group
-      .getChildren()
-      .addAll(
-        new Text(210, 40, "arc1: round"),
-        arc1,
-        new Text(20, 40, "arc2: open"),
-        arc2,
-        new Text(20, 170, "arc3: chord"),
-        arc3,
-        new Text(210, 170, "arc4: chord"),
-        arc4
-      );
+        .getChildren()
+        .addAll(
+            new Text(210, 40, "arc1: round"),
+            arc1,
+            new Text(20, 40, "arc2: open"),
+            arc2,
+            new Text(20, 170, "arc3: chord"),
+            arc3,
+            new Text(210, 170, "arc4: chord"),
+            arc4);
 
     // Create a scene and place it in the stage
     Scene scene = new Scene(new BorderPane(group), 300, 200);

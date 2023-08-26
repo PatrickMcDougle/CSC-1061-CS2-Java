@@ -1,3 +1,12 @@
+/**
+ * Code for Class.
+ * <p>
+ * CSC 1061 - Computer Science II - Java
+ *
+ * @author  Patrick McDougle
+ * @version %I%, %G%
+ * @since   1.0
+ */
 package edu.csc1061.ch14;
 
 import javafx.beans.property.DoubleProperty;
@@ -14,12 +23,10 @@ public class JavaFx006Program {
     d1.bind(d2); // Bind d1 with d2
 
     System.out.println(
-      "d1 is " + d1.getValue() + " and d2 is " + d2.getValue()
-    );
+        "d1 is " + d1.getValue() + " and d2 is " + d2.getValue());
     d2.setValue(70.2);
     System.out.println(
-      "d1 is " + d1.getValue() + " and d2 is " + d2.getValue()
-    );
+        "d1 is " + d1.getValue() + " and d2 is " + d2.getValue());
     // Can not setValue on d1. Exception will be thrown.
 
     // Bidirectional Binding
@@ -29,15 +36,12 @@ public class JavaFx006Program {
     d3.bindBidirectional(d4);
 
     System.out.println(
-      "d3 is " + d3.getValue() + " and d4 is " + d4.getValue()
-    );
+        "d3 is " + d3.getValue() + " and d4 is " + d4.getValue());
     d3.setValue(50.1);
     System.out.println(
-      "d3 is " + d3.getValue() + " and d4 is " + d4.getValue()
-    );
+        "d3 is " + d3.getValue() + " and d4 is " + d4.getValue());
     d4.setValue(70.2);
     System.out.println(
-      "d3 is " + d3.getValue() + " and d4 is " + d4.getValue()
-    );
+        "d3 is " + d3.getValue() + " and d4 is " + d4.getValue());
   }
 }

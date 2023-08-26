@@ -1,3 +1,12 @@
+/**
+ * Code for Class.
+ * <p>
+ * CSC 1061 - Computer Science II - Java
+ *
+ * @author  Patrick McDougle
+ * @version %I%, %G%
+ * @since   1.0
+ */
 package edu.csc1061.ch05;
 
 import java.util.Random;
@@ -19,8 +28,7 @@ public class RepeatAdditionQuiz {
 
     while (number1 + number2 != answer) {
       System.out.print(
-        "Wrong answer. Try again. What is " + number1 + " + " + number2 + "? "
-      );
+          "Wrong answer. Try again. What is " + number1 + " + " + number2 + "? ");
       answer = input.nextInt();
     }
 

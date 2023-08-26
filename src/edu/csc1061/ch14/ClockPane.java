@@ -1,3 +1,12 @@
+/**
+ * Code for Class.
+ * <p>
+ * CSC 1061 - Computer Science II - Java
+ *
+ * @author  Patrick McDougle
+ * @version %I%, %G%
+ * @since   1.0
+ */
 package edu.csc1061.ch14;
 
 import java.util.Calendar;
@@ -103,14 +112,12 @@ public class ClockPane extends Pane {
 
     // Draw hour hand
     double hLength = clockRadius * 0.5;
-    double hourX =
-      centerX +
-      hLength *
-      Math.sin((hour % 12 + minute / 60.0) * (2 * Math.PI / 12));
-    double hourY =
-      centerY -
-      hLength *
-      Math.cos((hour % 12 + minute / 60.0) * (2 * Math.PI / 12));
+    double hourX = centerX +
+        hLength *
+            Math.sin((hour % 12 + minute / 60.0) * (2 * Math.PI / 12));
+    double hourY = centerY -
+        hLength *
+            Math.cos((hour % 12 + minute / 60.0) * (2 * Math.PI / 12));
     Line hLine = new Line(centerX, centerY, hourX, hourY);
     hLine.setStroke(Color.GREEN);
 

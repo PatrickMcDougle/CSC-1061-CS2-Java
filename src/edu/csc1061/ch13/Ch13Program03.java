@@ -1,3 +1,12 @@
+/**
+ * Code for Class.
+ * <p>
+ * CSC 1061 - Computer Science II - Java
+ *
+ * @author  Patrick McDougle
+ * @version %I%, %G%
+ * @since   1.0
+ */
 package edu.csc1061.ch13;
 
 import java.util.Calendar;
@@ -22,25 +31,23 @@ public class Ch13Program03 {
     System.out.println("DAY_OF_MONTH: " + calendar.get(Calendar.DAY_OF_MONTH));
     System.out.println("DAY_OF_YEAR: " + calendar.get(Calendar.DAY_OF_YEAR));
     System.out.println(
-      "WEEK_OF_MONTH: " + calendar.get(Calendar.WEEK_OF_MONTH)
-    );
+        "WEEK_OF_MONTH: " + calendar.get(Calendar.WEEK_OF_MONTH));
     System.out.println("WEEK_OF_YEAR: " + calendar.get(Calendar.WEEK_OF_YEAR));
     System.out.println("AM_PM: " + calendar.get(Calendar.AM_PM));
 
     // Construct a calendar for December 25, 1997
     Calendar calendar1 = new GregorianCalendar(1997, 11, 25);
     String[] dayNameOfWeek = {
-      "Sunday",
-      "Monday",
-      "Tuesday",
-      "Wednesday",
-      "Thursday",
-      "Friday",
-      "Saturday",
+        "Sunday",
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
     };
     System.out.println(
-      "December 25, 1997 is a " +
-      dayNameOfWeek[calendar1.get(Calendar.DAY_OF_WEEK) - 1]
-    );
+        "December 25, 1997 is a " +
+            dayNameOfWeek[calendar1.get(Calendar.DAY_OF_WEEK) - 1]);
   }
 }

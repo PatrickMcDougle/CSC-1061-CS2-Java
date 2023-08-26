@@ -1,3 +1,12 @@
+/**
+ * Code for Class.
+ * <p>
+ * CSC 1061 - Computer Science II - Java
+ *
+ * @author  Patrick McDougle
+ * @version %I%, %G%
+ * @since   1.0
+ */
 package edu.csc1061.ch12;
 
 import java.net.MalformedURLException;
@@ -28,20 +37,15 @@ public class WebCrawler {
 
     System.out.println("----- Crawling URLs -----");
 
-    while (
-      !listOfPendingUrls.isEmpty() &&
-      listOfTraversedUrls.size() <= MAX_URL_LINKS
-    ) {
+    while (!listOfPendingUrls.isEmpty() &&
+        listOfTraversedUrls.size() <= MAX_URL_LINKS) {
       String urlString = listOfPendingUrls.remove(0);
       listOfTraversedUrls.add(urlString);
       System.out.println(
-        "C [" + String.format("%03d", counter++) + "]: " + urlString
-      );
+          "C [" + String.format("%03d", counter++) + "]: " + urlString);
 
       for (String s : getSubURLs(urlString)) {
-        if (
-          !listOfTraversedUrls.contains(s) && !listOfPendingUrls.contains(s)
-        ) {
+        if (!listOfTraversedUrls.contains(s) && !listOfPendingUrls.contains(s)) {
           listOfPendingUrls.add(s);
         }
       }
@@ -59,24 +63,23 @@ public class WebCrawler {
     System.out.println("----- Traversed URLs -----");
     for (String url : listOfTraversedUrls) {
       System.out.println(
-        "T [" + String.format("%04d", counter++) + "]: " + url
-      );
+          "T [" + String.format("%04d", counter++) + "]: " + url);
     }
     System.out.println();
     System.out.println("----- Pending URLs -----");
     for (String url : listOfPendingUrls) {
       System.out.println(
-        "P [" + String.format("%04d", counter++) + "]: " + url
-      );
+          "P [" + String.format("%04d", counter++) + "]: " + url);
     }
     System.out.println();
   }
 
   /**
    *
-   * @param line the string to search for URL.
+   * @param line      the string to search for URL.
    * @param fromIndex the index from which to start the search.
-   * @return the index of the first occurrence of a URL, starting at the specified index, or -1 if there is no such occurrence.
+   * @return the index of the first occurrence of a URL, starting at the specified
+   *         index, or -1 if there is no such occurrence.
    */
   private int doesStringHaveLink(String line, int fromIndex) {
     int exist = 0;
@@ -126,19 +129,17 @@ public class WebCrawler {
           if (endIndex > 0) { // Ensure that a correct URL is found, i.e. there is an end to the URL string
             String foundUrl = line.substring(current, endIndex);
 
-            if (
-              foundUrl.indexOf(".png") == -1 &&
-              foundUrl.indexOf(".gif") == -1 &&
-              foundUrl.indexOf(".jpg") == -1 &&
-              foundUrl.indexOf(".jpeg") == -1 &&
-              foundUrl.indexOf(".webp") == -1 &&
-              foundUrl.indexOf(".svg") == -1 &&
-              foundUrl.indexOf(".mp4") == -1 &&
-              foundUrl.indexOf(".css") == -1 &&
-              foundUrl.indexOf(".js") == -1 &&
-              foundUrl.indexOf("/js?") == -1 &&
-              foundUrl.length() > 10
-            ) {
+            if (foundUrl.indexOf(".png") == -1 &&
+                foundUrl.indexOf(".gif") == -1 &&
+                foundUrl.indexOf(".jpg") == -1 &&
+                foundUrl.indexOf(".jpeg") == -1 &&
+                foundUrl.indexOf(".webp") == -1 &&
+                foundUrl.indexOf(".svg") == -1 &&
+                foundUrl.indexOf(".mp4") == -1 &&
+                foundUrl.indexOf(".css") == -1 &&
+                foundUrl.indexOf(".js") == -1 &&
+                foundUrl.indexOf("/js?") == -1 &&
+                foundUrl.length() > 10) {
               // don't add files of types: js, css, images, and so on.
               // make sure URL is longer than "https://"
               list.add(foundUrl);

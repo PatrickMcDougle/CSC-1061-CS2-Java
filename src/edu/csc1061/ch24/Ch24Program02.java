@@ -1,3 +1,12 @@
+/**
+ * Code for Class.
+ * <p>
+ * CSC 1061 - Computer Science II - Java
+ *
+ * @author  Patrick McDougle
+ * @version %I%, %G%
+ * @since   1.0
+ */
 package edu.csc1061.ch24;
 
 public class Ch24Program02 {
@@ -57,7 +66,6 @@ public class Ch24Program02 {
 
     list.clear();
     System.out.println(
-      "\nAfter clearing the list, the list size is " + list.size()
-    );
+        "\nAfter clearing the list, the list size is " + list.size());
   }
 }

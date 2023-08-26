@@ -1,8 +1,17 @@
+/**
+ * Code for Class.
+ * <p>
+ * CSC 1061 - Computer Science II - Java
+ *
+ * @author  Patrick McDougle
+ * @version %I%, %G%
+ * @since   1.0
+ */
 package edu.csc1061.ch13;
 
 public class RectangleComparable
-  extends Rectangle
-  implements Comparable<RectangleComparable> {
+    extends Rectangle
+    implements Comparable<RectangleComparable> {
 
   /** Construct a ComparableRectangle with specified properties */
   public RectangleComparable(double width, double height) {
@@ -23,19 +32,15 @@ public class RectangleComparable
 
   @Override // Implement the toString method in GeometricObject
   public String toString() {
-    return (
-      "Width: " + getWidth() + " Height: " + getHeight() + " Area: " + getArea()
-    );
+    return ("Width: " + getWidth() + " Height: " + getHeight() + " Area: " + getArea());
   }
 
   @Override
   public boolean equals(Object obj) {
     if (obj instanceof RectangleComparable) {
       RectangleComparable rectangleComparable = (RectangleComparable) obj;
-      return (
-        rectangleComparable.getWidth() == this.getWidth() &&
-        rectangleComparable.getHeight() == this.getHeight()
-      );
+      return (rectangleComparable.getWidth() == this.getWidth() &&
+          rectangleComparable.getHeight() == this.getHeight());
     }
 
     return false;

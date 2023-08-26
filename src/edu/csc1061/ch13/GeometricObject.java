@@ -1,3 +1,12 @@
+/**
+ * Code for Class.
+ * <p>
+ * CSC 1061 - Computer Science II - Java
+ *
+ * @author  Patrick McDougle
+ * @version %I%, %G%
+ * @since   1.0
+ */
 package edu.csc1061.ch13;
 
 public abstract class GeometricObject {
@@ -47,14 +56,12 @@ public abstract class GeometricObject {
 
   @Override
   public String toString() {
-    return (
-      "created on " +
-      dateCreated +
-      "\ncolor: " +
-      color +
-      " and filled: " +
-      filled
-    );
+    return ("created on " +
+        dateCreated +
+        "\ncolor: " +
+        color +
+        " and filled: " +
+        filled);
   }
 
   /** Abstract method getArea */

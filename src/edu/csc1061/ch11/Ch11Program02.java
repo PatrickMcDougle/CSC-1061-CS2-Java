@@ -1,3 +1,12 @@
+/**
+ * Code for Class.
+ * <p>
+ * CSC 1061 - Computer Science II - Java
+ *
+ * @author  Patrick McDougle
+ * @version %I%, %G%
+ * @since   1.0
+ */
 package edu.csc1061.ch11;
 
 /**
@@ -15,11 +24,10 @@ public class Ch11Program02 {
   /** Display geometric object properties */
   public static void displayObject(GeometricObject object) {
     System.out.println(
-      "Created on " +
-      object.getDateCreated() +
-      ". Color is " +
-      object.getColor()
-    );
+        "Created on " +
+            object.getDateCreated() +
+            ". Color is " +
+            object.getColor());
     System.out.println(object.toString());
     System.out.println();
   }

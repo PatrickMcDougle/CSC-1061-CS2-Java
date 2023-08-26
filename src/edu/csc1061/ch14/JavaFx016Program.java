@@ -1,3 +1,12 @@
+/**
+ * Code for Class.
+ * <p>
+ * CSC 1061 - Computer Science II - Java
+ *
+ * @author  Patrick McDougle
+ * @version %I%, %G%
+ * @since   1.0
+ */
 package edu.csc1061.ch14;
 
 import javafx.application.Application;
@@ -27,15 +36,14 @@ public class JavaFx016Program extends Application {
     // Create a group and add nodes to the group
     Group group = new Group();
     group
-      .getChildren()
-      .addAll(
-        new Text(10, 27, "r1"),
-        r1,
-        new Text(10, 67, "r2"),
-        r2,
-        new Text(10, 107, "r3"),
-        r3
-      );
+        .getChildren()
+        .addAll(
+            new Text(10, 27, "r1"),
+            r1,
+            new Text(10, 67, "r2"),
+            r2,
+            new Text(10, 107, "r3"),
+            r3);
 
     for (int i = 0; i < 8; i++) {
       Rectangle r = new Rectangle(100, 50, 100, 30);

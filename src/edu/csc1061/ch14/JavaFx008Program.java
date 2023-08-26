@@ -1,3 +1,12 @@
+/**
+ * Code for Class.
+ * <p>
+ * CSC 1061 - Computer Science II - Java
+ *
+ * @author  Patrick McDougle
+ * @version %I%, %G%
+ * @since   1.0
+ */
 package edu.csc1061.ch14;
 
 import javafx.application.Application;
@@ -28,8 +37,7 @@ public class JavaFx008Program extends Application {
     Label label = new Label("JavaFX");
 
     label.setFont(
-      Font.font("Times New Roman", FontWeight.BOLD, FontPosture.ITALIC, 20)
-    );
+        Font.font("Times New Roman", FontWeight.BOLD, FontPosture.ITALIC, 20));
     pane.getChildren().add(label);
 
     // Create a scene and place it in the stage

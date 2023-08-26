@@ -1,3 +1,12 @@
+/**
+ * Code for Class.
+ * <p>
+ * CSC 1061 - Computer Science II - Java
+ *
+ * @author  Patrick McDougle
+ * @version %I%, %G%
+ * @since   1.0
+ */
 package edu.csc1061.ch20;
 
 import java.util.Arrays;
@@ -14,8 +23,8 @@ public class Ch20Program04 {
   }
 
   public static void sortStringByLength() {
-    String[] cities = {"Las Cruces", "Orlando", "Keene", "Trona", "Sandy", "Littleton", "Greeley",
-        "Rockwall", "New Orleans",};
+    String[] cities = { "Las Cruces", "Orlando", "Keene", "Trona", "Sandy", "Littleton", "Greeley",
+        "Rockwall", "New Orleans", };
 
     // using Comparator concrete class.
     Arrays.sort(cities, new LengthComparator());

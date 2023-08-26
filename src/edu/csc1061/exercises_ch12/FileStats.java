@@ -1,3 +1,12 @@
+/**
+ * Code for Class.
+ * <p>
+ * CSC 1061 - Computer Science II - Java
+ *
+ * @author  Patrick McDougle
+ * @version %I%, %G%
+ * @since   1.0
+ */
 package edu.csc1061.exercises_ch12;
 
 import java.io.File;
@@ -35,8 +44,7 @@ public class FileStats {
     } catch (FileNotFoundException ex) {
       // File was no found
       System.err.print(
-        "\nCharacter occurrence count method in FileStats class could not find the file! "
-      );
+          "\nCharacter occurrence count method in FileStats class could not find the file! ");
       System.err.println("[" + pTheFile + "]\n");
       ex.printStackTrace();
     }
@@ -61,8 +69,7 @@ public class FileStats {
     } catch (FileNotFoundException ex) {
       // File was no found
       System.err.print(
-        "\nLine count method in FileStats class could not find the file! "
-      );
+          "\nLine count method in FileStats class could not find the file! ");
       System.err.println("[" + pTheFile + "]\n");
       ex.printStackTrace();
     }
@@ -81,8 +88,7 @@ public class FileStats {
     } catch (FileNotFoundException ex) {
       // File was no found
       System.err.print(
-        "\nWord count method in FileStats class could not find the file! "
-      );
+          "\nWord count method in FileStats class could not find the file! ");
       System.err.println("[" + pTheFile + "]\n");
       ex.printStackTrace();
     }

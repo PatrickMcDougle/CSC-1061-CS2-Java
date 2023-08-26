@@ -1,3 +1,12 @@
+/**
+ * Code for Class.
+ * <p>
+ * CSC 1061 - Computer Science II - Java
+ *
+ * @author  Patrick McDougle
+ * @version %I%, %G%
+ * @since   1.0
+ */
 package edu.csc1061.ch13;
 
 /**
@@ -12,9 +21,9 @@ public class Ch13Program04 {
     Object[] objects = { new Tiger(), new Chicken(), new Apple() };
 
     for (int i = 0; i < objects.length; i++) {
-      if (objects[i] instanceof IEdible) System.out.println(
-        ((IEdible) objects[i]).howToEat()
-      );
+      if (objects[i] instanceof IEdible)
+        System.out.println(
+            ((IEdible) objects[i]).howToEat());
 
       if (objects[i] instanceof Animal) {
         System.out.println(((Animal) objects[i]).sound());

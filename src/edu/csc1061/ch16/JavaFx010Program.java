@@ -1,3 +1,12 @@
+/**
+ * Code for Class.
+ * <p>
+ * CSC 1061 - Computer Science II - Java
+ *
+ * @author  Patrick McDougle
+ * @version %I%, %G%
+ * @since   1.0
+ */
 package edu.csc1061.ch16;
 
 import java.io.File;
@@ -43,16 +52,15 @@ public class JavaFx010Program extends Application {
     // parameter -> expression
     // https://www.w3schools.com/java/java_lambda.asp
     playButton.setOnAction(
-      e -> {
-        if (playButton.getText().equals(">")) {
-          mediaPlayer.play();
-          playButton.setText("||");
-        } else {
-          mediaPlayer.pause();
-          playButton.setText(">");
-        }
-      }
-    );
+        e -> {
+          if (playButton.getText().equals(">")) {
+            mediaPlayer.play();
+            playButton.setText("||");
+          } else {
+            mediaPlayer.pause();
+            playButton.setText(">");
+          }
+        });
 
     Button rewindButton = new Button("<<");
     rewindButton.setOnAction(e -> mediaPlayer.seek(Duration.ZERO));
@@ -67,8 +75,8 @@ public class JavaFx010Program extends Application {
     HBox hBox = new HBox(10);
     hBox.setAlignment(Pos.CENTER);
     hBox
-      .getChildren()
-      .addAll(playButton, rewindButton, new Label("Volume"), sliderVolume);
+        .getChildren()
+        .addAll(playButton, rewindButton, new Label("Volume"), sliderVolume);
 
     BorderPane pane = new BorderPane();
     pane.setCenter(mediaView);
@@ -82,7 +90,8 @@ public class JavaFx010Program extends Application {
   }
 
   /**
-   * The main method is only needed for the IDE with limited JavaFX support. Not needed for
+   * The main method is only needed for the IDE with limited JavaFX support. Not
+   * needed for
    * running from the command line.
    */
   public static void main(String[] args) {

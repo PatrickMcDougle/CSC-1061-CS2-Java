@@ -1,9 +1,19 @@
+/**
+ * Code for Class.
+ * <p>
+ * CSC 1061 - Computer Science II - Java
+ *
+ * @author  Patrick McDougle
+ * @version %I%, %G%
+ * @since   1.0
+ */
 package edu.csc1061.ch20;
 
 public class Circle extends GeometricObject {
   private double radius;
 
-  public Circle() {}
+  public Circle() {
+  }
 
   public Circle(double x, double y, double radius) {
     super(x, y);

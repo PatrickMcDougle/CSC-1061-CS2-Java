@@ -1,3 +1,12 @@
+/**
+ * Code for Class.
+ * <p>
+ * CSC 1061 - Computer Science II - Java
+ *
+ * @author  Patrick McDougle
+ * @version %I%, %G%
+ * @since   1.0
+ */
 package edu.csc1061.exercises_ch10;
 
 public class MyInteger {
@@ -52,9 +61,11 @@ public class MyInteger {
   }
 
   public boolean equals(MyInteger myInteger) {
-    if (myInteger == null) return false;
+    if (myInteger == null)
+      return false;
     return value == myInteger.value;
-    // return myInteger.equals(value); // you can call the equals on myInteger to do its equals
+    // return myInteger.equals(value); // you can call the equals on myInteger to do
+    // its equals
     // testing.
   }
 }

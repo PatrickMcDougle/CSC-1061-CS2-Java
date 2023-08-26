@@ -1,3 +1,12 @@
+/**
+ * Code for Class.
+ * <p>
+ * CSC 1061 - Computer Science II - Java
+ *
+ * @author  Patrick McDougle
+ * @version %I%, %G%
+ * @since   1.0
+ */
 package edu.csc1061.ch18;
 
 import java.util.Scanner;
@@ -42,7 +51,8 @@ public class Ch18Program08 {
   }
 
   /**
-   * The method for finding the solution to move n disks from fromTower to toTower with auxTower
+   * The method for finding the solution to move n disks from fromTower to toTower
+   * with auxTower
    */
   public static void moveDisks(int n, char fromTower, char toTower, char auxTower) {
     if (n == 1) {

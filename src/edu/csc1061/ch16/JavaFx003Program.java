@@ -1,3 +1,12 @@
+/**
+ * Code for Class.
+ * <p>
+ * CSC 1061 - Computer Science II - Java
+ *
+ * @author  Patrick McDougle
+ * @version %I%, %G%
+ * @since   1.0
+ */
 package edu.csc1061.ch16;
 
 import javafx.event.ActionEvent;
@@ -20,29 +29,25 @@ public class JavaFx003Program extends JavaFx002Program {
     BorderPane pane = super.getPane();
 
     Font fontBoldItalic = Font.font(
-      FONT_NAME,
-      FontWeight.BOLD,
-      FontPosture.ITALIC,
-      20
-    );
+        FONT_NAME,
+        FontWeight.BOLD,
+        FontPosture.ITALIC,
+        20);
     Font fontBold = Font.font(
-      FONT_NAME,
-      FontWeight.BOLD,
-      FontPosture.REGULAR,
-      20
-    );
+        FONT_NAME,
+        FontWeight.BOLD,
+        FontPosture.REGULAR,
+        20);
     Font fontItalic = Font.font(
-      FONT_NAME,
-      FontWeight.NORMAL,
-      FontPosture.ITALIC,
-      20
-    );
+        FONT_NAME,
+        FontWeight.NORMAL,
+        FontPosture.ITALIC,
+        20);
     Font fontNormal = Font.font(
-      FONT_NAME,
-      FontWeight.NORMAL,
-      FontPosture.REGULAR,
-      20
-    );
+        FONT_NAME,
+        FontWeight.NORMAL,
+        FontPosture.REGULAR,
+        20);
 
     text.setFont(fontNormal);
 

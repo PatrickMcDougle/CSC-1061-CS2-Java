@@ -1,3 +1,12 @@
+/**
+ * Code for Class.
+ * <p>
+ * CSC 1061 - Computer Science II - Java
+ *
+ * @author  Patrick McDougle
+ * @version %I%, %G%
+ * @since   1.0
+ */
 package edu.csc1061.ch09;
 
 public class Ch09Television {
@@ -5,7 +14,8 @@ public class Ch09Television {
   int volumeLevel = 1; // Default volume level is 1
   boolean on = false; // By default TV is off
 
-  public Ch09Television() {}
+  public Ch09Television() {
+  }
 
   public void turnOn() {
     on = true;

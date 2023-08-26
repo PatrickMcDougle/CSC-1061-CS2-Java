@@ -1,3 +1,12 @@
+/**
+ * Code for Class.
+ * <p>
+ * CSC 1061 - Computer Science II - Java
+ *
+ * @author  Patrick McDougle
+ * @version %I%, %G%
+ * @since   1.0
+ */
 package edu.csc1061.ch07;
 
 public class Calculator {
@@ -33,7 +42,6 @@ public class Calculator {
 
     // Display the result
     System.out.println(
-      args[0] + ' ' + args[1] + ' ' + args[2] + " = " + result
-    );
+        args[0] + ' ' + args[1] + ' ' + args[2] + " = " + result);
   }
 }

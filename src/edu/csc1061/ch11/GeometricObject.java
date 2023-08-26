@@ -1,3 +1,12 @@
+/**
+ * Code for Class.
+ * <p>
+ * CSC 1061 - Computer Science II - Java
+ *
+ * @author  Patrick McDougle
+ * @version %I%, %G%
+ * @since   1.0
+ */
 package edu.csc1061.ch11;
 
 public class GeometricObject {
@@ -50,14 +59,12 @@ public class GeometricObject {
 
   /** Return a string representation of this object */
   public String toString() {
-    return (
-      "[created: " +
-      dateCreated +
-      "] [color: " +
-      color +
-      "] [filled: " +
-      filled +
-      "]"
-    );
+    return ("[created: " +
+        dateCreated +
+        "] [color: " +
+        color +
+        "] [filled: " +
+        filled +
+        "]");
   }
 }

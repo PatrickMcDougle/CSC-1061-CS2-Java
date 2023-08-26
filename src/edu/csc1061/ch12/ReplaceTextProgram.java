@@ -1,3 +1,12 @@
+/**
+ * Code for Class.
+ * <p>
+ * CSC 1061 - Computer Science II - Java
+ *
+ * @author  Patrick McDougle
+ * @version %I%, %G%
+ * @since   1.0
+ */
 package edu.csc1061.ch12;
 
 import java.io.File;
@@ -10,8 +19,7 @@ public class ReplaceTextProgram {
     // Check command line parameter usage
     if (args.length != 4) {
       System.out.println(
-        "Usage: java ReplaceText sourceFile targetFile oldStr newStr"
-      );
+          "Usage: java ReplaceText sourceFile targetFile oldStr newStr");
       System.exit(1);
     }
 
@@ -30,10 +38,9 @@ public class ReplaceTextProgram {
     }
 
     try (
-      // Create input and output files
-      Scanner input = new Scanner(sourceFile);
-      PrintWriter output = new PrintWriter(targetFile);
-    ) {
+        // Create input and output files
+        Scanner input = new Scanner(sourceFile);
+        PrintWriter output = new PrintWriter(targetFile);) {
       while (input.hasNext()) {
         String s1 = input.nextLine();
         String s2 = s1.replaceAll(args[2], args[3]);

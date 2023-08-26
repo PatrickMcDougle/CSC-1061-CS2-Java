@@ -1,3 +1,12 @@
+/**
+ * Code for Class.
+ * <p>
+ * CSC 1061 - Computer Science II - Java
+ *
+ * @author  Patrick McDougle
+ * @version %I%, %G%
+ * @since   1.0
+ */
 package edu.csc1061.ch16;
 
 import javafx.application.Application;
@@ -13,11 +22,11 @@ import javafx.stage.Stage;
 // combo box
 public class JavaFx007Program extends Application {
   // Declare an array of Strings for flag titles
-  private String[] flagTitles = {"Canada", "China", "Denmark", "France", "Germany", "India",
-      "Norway", "United Kingdom", "United States of America",};
+  private String[] flagTitles = { "Canada", "China", "Denmark", "France", "Germany", "India",
+      "Norway", "United Kingdom", "United States of America", };
 
   // Declare an ImageView array for the national flags of 9 countries
-  private ImageView[] flagImages = {new ImageView("file:resources/images/ca.gif"),
+  private ImageView[] flagImages = { new ImageView("file:resources/images/ca.gif"),
       new ImageView("file:resources/images/china.gif"),
       new ImageView("file:resources/images/denmark.gif"),
       new ImageView("file:resources/images/fr.gif"),
@@ -25,7 +34,7 @@ public class JavaFx007Program extends Application {
       new ImageView("file:resources/images/india.gif"),
       new ImageView("file:resources/images/norway.gif"),
       new ImageView("file:resources/images/uk.gif"),
-      new ImageView("file:resources/images/us.gif"),};
+      new ImageView("file:resources/images/us.gif"), };
 
   // Declare an array of strings for flag descriptions
   private String[] flagDescription = new String[9];
@@ -93,7 +102,8 @@ public class JavaFx007Program extends Application {
   }
 
   /**
-   * The main method is only needed for the IDE with limited JavaFX support. Not needed for running
+   * The main method is only needed for the IDE with limited JavaFX support. Not
+   * needed for running
    * from the command line.
    */
   public static void main(String[] args) {

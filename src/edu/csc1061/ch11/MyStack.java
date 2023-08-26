@@ -1,3 +1,12 @@
+/**
+ * Code for Class.
+ * <p>
+ * CSC 1061 - Computer Science II - Java
+ *
+ * @author  Patrick McDougle
+ * @version %I%, %G%
+ * @since   1.0
+ */
 package edu.csc1061.ch11;
 
 import java.util.ArrayList;
@@ -32,7 +41,8 @@ public class MyStack {
     list.add(o);
   }
 
-  // Returns the position of the first element in the stack from the top that matches the specified element.
+  // Returns the position of the first element in the stack from the top that
+  // matches the specified element.
   public Object search(Object o) {
     for (Object object : list) {
       if (object.equals(o)) {
@@ -42,7 +52,7 @@ public class MyStack {
     return null;
   }
 
-  @Override/** Override the toString in the Object class */
+  @Override /** Override the toString in the Object class */
   public String toString() {
     return "stack: " + list.toString();
   }

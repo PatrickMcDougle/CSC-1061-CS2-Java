@@ -1,3 +1,12 @@
+/**
+ * Code for Class.
+ * <p>
+ * CSC 1061 - Computer Science II - Java
+ *
+ * @author  Patrick McDougle
+ * @version %I%, %G%
+ * @since   1.0
+ */
 package edu.csc1061.ch12;
 
 import java.util.InputMismatchException;
@@ -25,8 +34,7 @@ public class InputMismatchExceptionProgram {
         // ////////// ////////// ////////// ////////// ////////// //////////
 
         System.out.println(
-          "Try again. (" + "Incorrect input: an integer is required)"
-        );
+            "Try again. (" + "Incorrect input: an integer is required)");
         input.nextLine(); // discard input
       }
     } while (continueInput);

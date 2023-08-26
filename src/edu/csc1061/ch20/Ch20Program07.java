@@ -1,3 +1,12 @@
+/**
+ * Code for Class.
+ * <p>
+ * CSC 1061 - Computer Science II - Java
+ *
+ * @author  Patrick McDougle
+ * @version %I%, %G%
+ * @since   1.0
+ */
 package edu.csc1061.ch20;
 
 import java.util.Stack;
@@ -103,7 +112,8 @@ public class Ch20Program07 {
   }
 
   /**
-   * Process one operator: Take an operator from operatorStack and apply it on the operands in the
+   * Process one operator: Take an operator from operatorStack and apply it on the
+   * operands in the
    * operandStack
    */
   public void processAnOperator(Stack<Integer> operandStack, Stack<Character> operatorStack) {
