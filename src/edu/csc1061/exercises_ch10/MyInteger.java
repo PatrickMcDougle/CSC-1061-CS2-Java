@@ -40,11 +40,10 @@ public class MyInteger {
   public static boolean isOdd(int value) {
     return (value & 1) == 1;
     // return value % 2 == 1; // another way to return the value.
+    // return !MyInteger.isEven(value); // another way to return the value.
   }
 
   public static boolean isPrime(int value) {
-    // if (value == 2) return true; // a check for if the value is 2 and prime.
-
     int halfValue = value / 2;
 
     for (int divisor = 2; divisor <= halfValue; ++divisor) {
@@ -56,16 +55,48 @@ public class MyInteger {
     return true;
   }
 
+  public static int parseInt(char[] charArray) {
+    // convert the char array to a single int value and return it.
+
+    if (charArray.length == 0) {
+      return -1;
+    }
+    return 0;
+  }
+
+  public static int parseInt(String str) {
+    // convert the string array to a single int value and return it.
+
+    if (str == null || str.trim().isEmpty()) {
+      return -1;
+    }
+    return 0;
+  }
+
   public boolean equals(int i) {
     return value == i;
   }
 
   public boolean equals(MyInteger myInteger) {
-    if (myInteger == null)
+    if (myInteger == null) {
       return false;
+    }
     return value == myInteger.value;
     // return myInteger.equals(value); // you can call the equals on myInteger to do
-    // its equals
-    // testing.
+    // its equals testing.
   }
+
+  @Override
+  public int hashCode() {
+    return value;
+  }
+
+  @Override
+  public boolean equals(Object o) {
+    if (!(o instanceof MyInteger)) {
+      return false;
+    }
+    return equals((MyInteger) o);
+  }
+
 }
