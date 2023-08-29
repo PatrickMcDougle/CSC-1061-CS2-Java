@@ -13,7 +13,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 /**
- * Arrays Vs
+ * Arrays Vs ArrayList
  */
 public class Ch11Program05 {
 

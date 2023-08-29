@@ -28,12 +28,12 @@ public class Ch11Program03 {
   /** A method for displaying an object */
   public static void displayObject(Object object) {
     if (object instanceof Circle) {
-      System.out.println("The circle area is " + ((Circle) object).getArea());
-      System.out.println(
-          "The circle diameter is " + ((Circle) object).getDiameter());
+      Circle c = (Circle) object;
+      System.out.println("The circle area is " + c.getArea());
+      System.out.println("The circle diameter is " + c.getDiameter());
     } else if (object instanceof Rectangle) {
-      System.out.println(
-          "The rectangle area is " + ((Rectangle) object).getArea());
+      Rectangle r = (Rectangle) object;
+      System.out.println("The rectangle area is " + r.getArea());
     }
   }
 }

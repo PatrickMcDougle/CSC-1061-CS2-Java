@@ -16,6 +16,7 @@ import java.util.ArrayList;
  */
 public class Ch11Program04 {
   private static final String STRING_MIAMI = "Miami";
+  private static final String STRING_DENVER = "Denver";
 
   public static void main(String[] args) {
     // Create a list to store cities
@@ -24,20 +25,20 @@ public class Ch11Program04 {
     // Add some cities in the list
     cityList.add("London");
     // cityList now contains [London]
-    cityList.add("Denver");
+    cityList.add(STRING_DENVER);
     // cityList now contains [London, Denver]
     cityList.add("Paris");
     // cityList now contains [London, Denver, Paris]
     cityList.add(STRING_MIAMI);
     // cityList now contains [London, Denver, Paris, Miami]
     cityList.add("Seoul");
-    // contains [London, Denver, Paris, Miami, Seoul]
+    // cityList now contains [London, Denver, Paris, Miami, Seoul]
     cityList.add("Tokyo");
-    // contains [London, Denver, Paris, Miami, Seoul, Tokyo]
+    // cityList now contains [London, Denver, Paris, Miami, Seoul, Tokyo]
 
     System.out.println("List size? " + cityList.size());
     System.out.println("Is Miami in the list? " + cityList.contains(STRING_MIAMI));
-    System.out.println("The location of Denver in the list? " + cityList.indexOf("Denver"));
+    System.out.println("The location of Denver in the list? " + cityList.indexOf(STRING_DENVER));
     System.out.println("Is the list empty? " + cityList.isEmpty()); // Print false
 
     // Insert a new city at index 2

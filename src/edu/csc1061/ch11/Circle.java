@@ -52,20 +52,15 @@ public class Circle extends GeometricObject {
 
   /* Print the circle info */
   public void printCircle() {
-    System.out.println(
-        "The circle is created " +
-            getDateCreated() +
-            " and the radius is " +
-            radius);
+    System.out.println("The circle is created " + getDateCreated() + " and the radius is " + radius);
   }
 
   @Override
   public boolean equals(Object o) {
     if (o instanceof Circle) {
       return radius == ((Circle) o).radius;
-    } else {
-      return false;
     }
+    return false;
   }
 
   @Override

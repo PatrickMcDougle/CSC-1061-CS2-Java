@@ -59,12 +59,6 @@ public class GeometricObject {
 
   /** Return a string representation of this object */
   public String toString() {
-    return ("[created: " +
-        dateCreated +
-        "] [color: " +
-        color +
-        "] [filled: " +
-        filled +
-        "]");
+    return ("[created: " + dateCreated + "] [color: " + color + "] [filled: " + filled + "]");
   }
 }

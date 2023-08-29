@@ -20,18 +20,16 @@ public class Ch11Program06 {
     MyStack myStack = new MyStack();
 
     // The constructor Integer(int) has been deprecated since version 9 and marked
-    // for removal
-    new Integer(1); // noncompliant - old deprecated version.
+    // for removal. But we show the old way to do this and the new way.
+    myStack.push(new Integer(1)); // noncompliant - old deprecated version.
+    myStack.push(Integer.valueOf(2)); // compliant - preferred way.
 
-    // Use this instead.
-    myStack.push(Integer.valueOf(1)); // compliant - preferred way.
+    myStack.push(Double.valueOf(3.0));
 
-    myStack.push(Double.valueOf(2.0));
+    myStack.push(Long.valueOf(4));
 
-    myStack.push(Long.valueOf(3));
-
-    myStack.push(new BigInteger("4")); // noncompliant - not the preferred way to do this.
-    myStack.push(BigInteger.valueOf(5)); // compliant - preferred way to do this.
+    myStack.push(new BigInteger("5")); // noncompliant - not the preferred way to do this.
+    myStack.push(BigInteger.valueOf(6)); // compliant - preferred way to do this. but does not accept strings.
 
     System.out.println(myStack.peek());
 
