@@ -9,6 +9,10 @@
  */
 package edu.csc1061.ch10;
 
+/**
+ * This class is called TestStackOfIntegers in the book.
+ * Listing 10.7
+ */
 public class Ch10Program04 {
 
   public static void main(String[] args) {

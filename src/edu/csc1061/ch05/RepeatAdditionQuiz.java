@@ -27,8 +27,7 @@ public class RepeatAdditionQuiz {
     int answer = input.nextInt();
 
     while (number1 + number2 != answer) {
-      System.out.print(
-          "Wrong answer. Try again. What is " + number1 + " + " + number2 + "? ");
+      System.out.print("Wrong answer. Try again. What is " + number1 + " + " + number2 + "? ");
       answer = input.nextInt();
     }
 

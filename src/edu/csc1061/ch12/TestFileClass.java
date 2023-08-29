@@ -12,8 +12,7 @@ package edu.csc1061.ch12;
 public class TestFileClass {
 
   public static void main(String[] args) {
-    java.io.File file = new java.io.File(
-        ".\\src\\edu\\csc1061\\ch12\\ReadProgram.java");
+    java.io.File file = new java.io.File(".\\src\\edu\\csc1061\\ch12\\ReadProgram.java");
     System.out.println("Does it exist? " + file.exists());
     System.out.println("The file has " + file.length() + " bytes");
     System.out.println("Can it be read? " + file.canRead());
@@ -23,7 +22,6 @@ public class TestFileClass {
     System.out.println("Is it absolute? " + file.isAbsolute());
     System.out.println("Is it hidden? " + file.isHidden());
     System.out.println("Absolute path is " + file.getAbsolutePath());
-    System.out.println(
-        "Last modified on " + new java.util.Date(file.lastModified()));
+    System.out.println("Last modified on " + new java.util.Date(file.lastModified()));
   }
 }

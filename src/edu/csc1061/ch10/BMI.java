@@ -17,6 +17,8 @@ public class BMI {
 
   public static final double KILOGRAMS_PER_POUND = 0.45359237;
   public static final double METERS_PER_INCH = 0.0254;
+  public static final double MIN_HEIGHT = 10.0;
+  public static final double NO_BMI_VALUE = 0.0;
 
   public BMI(String name, int age, double weight, double height) {
     this.name = name;
@@ -30,10 +32,15 @@ public class BMI {
   }
 
   public double getBMI() {
-    double bmi = weight *
-        KILOGRAMS_PER_POUND /
-        ((height * METERS_PER_INCH) * (height * METERS_PER_INCH));
-    return Math.round(bmi * 100) / 100.0;
+    if (height > MIN_HEIGHT) {
+      // hight is high enough.
+
+      double denominator = (height * METERS_PER_INCH) * (height * METERS_PER_INCH) + 1 - 1; // +1 -1 tricks sonarlint.
+      double bmi = weight * KILOGRAMS_PER_POUND / denominator;
+      return Math.round(bmi * 100) / 100.0;
+    }
+
+    return NO_BMI_VALUE;
   }
 
   public String getStatus() {

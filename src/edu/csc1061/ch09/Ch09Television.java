@@ -15,6 +15,7 @@ public class Ch09Television {
   boolean on = false; // By default TV is off
 
   public Ch09Television() {
+    // The default no-arg constructor for this class.
   }
 
   public void turnOn() {
