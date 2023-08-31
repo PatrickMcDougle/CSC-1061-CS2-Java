@@ -37,12 +37,10 @@ public class WebCrawler {
 
     System.out.println("----- Crawling URLs -----");
 
-    while (!listOfPendingUrls.isEmpty() &&
-        listOfTraversedUrls.size() <= MAX_URL_LINKS) {
+    while (!listOfPendingUrls.isEmpty() && listOfTraversedUrls.size() <= MAX_URL_LINKS) {
       String urlString = listOfPendingUrls.remove(0);
       listOfTraversedUrls.add(urlString);
-      System.out.println(
-          "C [" + String.format("%03d", counter++) + "]: " + urlString);
+      System.out.println("C [" + String.format("%03d", counter++) + "]: " + urlString);
 
       for (String s : getSubURLs(urlString)) {
         if (!listOfTraversedUrls.contains(s) && !listOfPendingUrls.contains(s)) {
@@ -62,14 +60,12 @@ public class WebCrawler {
     System.out.println();
     System.out.println("----- Traversed URLs -----");
     for (String url : listOfTraversedUrls) {
-      System.out.println(
-          "T [" + String.format("%04d", counter++) + "]: " + url);
+      System.out.println("T [" + String.format("%04d", counter++) + "]: " + url);
     }
     System.out.println();
     System.out.println("----- Pending URLs -----");
     for (String url : listOfPendingUrls) {
-      System.out.println(
-          "P [" + String.format("%04d", counter++) + "]: " + url);
+      System.out.println("P [" + String.format("%04d", counter++) + "]: " + url);
     }
     System.out.println();
   }

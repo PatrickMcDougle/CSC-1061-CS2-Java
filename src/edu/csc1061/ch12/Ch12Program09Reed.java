@@ -11,7 +11,10 @@ package edu.csc1061.ch12;
 
 import java.util.Scanner;
 
-public class ReadProgram {
+/**
+ * Read from a file
+ */
+public class Ch12Program09Reed {
 
   public static void main(String[] args) throws Exception {
     // Create a File instance

@@ -11,7 +11,10 @@ package edu.csc1061.ch12;
 
 import java.util.Scanner;
 
-public class ReadFileFromUrlProgram {
+/**
+ * Read a file from a URL
+ */
+public class Ch12Program13Rfu {
 
   public static void main(String[] args) {
     System.out.print("Enter a URL: ");

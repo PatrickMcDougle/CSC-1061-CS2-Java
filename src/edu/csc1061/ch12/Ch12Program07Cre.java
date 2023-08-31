@@ -9,21 +9,22 @@
  */
 package edu.csc1061.ch12;
 
-public class CircleRadiusExceptionExampleProgram {
+/**
+ * Circle Radius Exception
+ */
+public class Ch12Program07Cre {
 
   /** Main method */
   public static void main(String[] args) {
     try {
-      CircleRadiusExceptionExample c1 = new CircleRadiusExceptionExample(5);
+      CircleExceptionExample02 c1 = new CircleExceptionExample02(5);
       c1.setRadius(-5);
-      CircleRadiusExceptionExample c3 = new CircleRadiusExceptionExample(0);
+      CircleExceptionExample02 c3 = new CircleExceptionExample02(0);
       c3.setRadius(10);
     } catch (InvalidRadiusException ex) {
       System.out.println(ex);
     }
 
-    System.out.println(
-        "Number of objects created: " +
-            CircleRadiusExceptionExample.getNumberOfObjects());
+    System.out.println("Number of objects created: " + CircleExceptionExample02.getNumberOfObjects());
   }
 }

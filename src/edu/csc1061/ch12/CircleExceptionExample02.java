@@ -9,7 +9,7 @@
  */
 package edu.csc1061.ch12;
 
-public class CircleRadiusExceptionExample {
+public class CircleExceptionExample02 {
   /** The radius of the circle */
   private double radius;
 
@@ -17,12 +17,12 @@ public class CircleRadiusExceptionExample {
   private static int numberOfObjects = 0;
 
   /** Construct a circle with radius 1 */
-  public CircleRadiusExceptionExample() {
+  public CircleExceptionExample02() {
     this(1.0);
   }
 
   /** Construct a circle with a specified radius */
-  public CircleRadiusExceptionExample(double newRadius) {
+  public CircleExceptionExample02(double newRadius) {
     try {
       setRadius(newRadius);
       numberOfObjects++;
@@ -53,6 +53,6 @@ public class CircleRadiusExceptionExample {
 
   /** Return the area of this circle */
   public double findArea() {
-    return radius * radius * 3.14159;
+    return radius * radius * Math.PI;
   }
 }

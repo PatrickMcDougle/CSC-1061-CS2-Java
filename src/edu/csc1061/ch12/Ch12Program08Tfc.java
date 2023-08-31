@@ -9,10 +9,13 @@
  */
 package edu.csc1061.ch12;
 
-public class TestFileClass {
+/**
+ * Testing the File Class
+ */
+public class Ch12Program08Tfc {
 
   public static void main(String[] args) {
-    java.io.File file = new java.io.File(".\\src\\edu\\csc1061\\ch12\\ReadProgram.java");
+    java.io.File file = new java.io.File(".\\src\\edu\\csc1061\\ch12\\Ch12Program08Tfc.java");
     System.out.println("Does it exist? " + file.exists());
     System.out.println("The file has " + file.length() + " bytes");
     System.out.println("Can it be read? " + file.canRead());

@@ -13,13 +13,15 @@ import java.io.File;
 import java.io.PrintWriter;
 import java.util.Scanner;
 
-public class ReplaceTextProgram {
+/**
+ * Replace text in a file
+ */
+public class Ch12Program12Rt {
 
   public static void main(String[] args) throws Exception {
     // Check command line parameter usage
     if (args.length != 4) {
-      System.out.println(
-          "Usage: java ReplaceText sourceFile targetFile oldStr newStr");
+      System.out.println("Usage: java ReplaceText sourceFile targetFile oldStr newStr");
       System.exit(1);
     }
 

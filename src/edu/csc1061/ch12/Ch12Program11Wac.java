@@ -9,7 +9,10 @@
  */
 package edu.csc1061.ch12;
 
-public class WriteAutoCloseProgram {
+/**
+ * Write Auto Close File
+ */
+public class Ch12Program11Wac {
 
   public static void main(String[] args) throws Exception {
     java.io.File file = new java.io.File("scores2.no.track.txt");
