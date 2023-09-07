@@ -9,16 +9,15 @@
  */
 package edu.csc1061.ch13;
 
-public class RectangleComparable
-    extends Rectangle
-    implements Comparable<RectangleComparable> {
+public class RectangleComparable extends Rectangle implements Comparable<RectangleComparable> {
 
   /** Construct a ComparableRectangle with specified properties */
   public RectangleComparable(double width, double height) {
     super(width, height);
   }
 
-  @Override // Implement the compareTo method defined in Comparable
+  // Implement the compareTo method defined in Comparable
+  @Override
   public int compareTo(RectangleComparable o) {
     if (getArea() > o.getArea()) {
       return 1;
@@ -30,7 +29,8 @@ public class RectangleComparable
     return 0;
   }
 
-  @Override // Implement the toString method in GeometricObject
+  // Implement the toString method in GeometricObject
+  @Override
   public String toString() {
     return ("Width: " + getWidth() + " Height: " + getHeight() + " Area: " + getArea());
   }

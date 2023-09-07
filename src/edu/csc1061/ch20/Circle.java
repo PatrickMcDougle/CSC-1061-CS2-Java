@@ -15,12 +15,12 @@ public class Circle extends GeometricObject {
   public Circle() {
   }
 
-  public Circle(double x, double y, double radius) {
-    super(x, y);
+  public Circle(double radius) {
     this.radius = radius;
   }
 
-  public Circle(double radius) {
+  public Circle(double x, double y, double radius) {
+    super(x, y);
     this.radius = radius;
   }
 
@@ -34,7 +34,8 @@ public class Circle extends GeometricObject {
     this.radius = radius;
   }
 
-  @Override /** Return area */
+  /** Return area */
+  @Override
   public double getArea() {
     return radius * radius * Math.PI;
   }
@@ -44,14 +45,30 @@ public class Circle extends GeometricObject {
     return 2 * radius;
   }
 
-  @Override /** Return perimeter */
+  /** Return perimeter */
+  @Override
   public double getPerimeter() {
     return 2 * radius * Math.PI;
   }
 
   /* Print the circle info */
   public void printCircle() {
-    System.out
-        .println("The circle is created " + getDateCreated() + " and the radius is " + radius);
+    System.out.println("The circle is created " + getDateCreated() + " and the radius is " + radius);
+  }
+
+  @Override
+  public boolean equals(Object o) {
+    if (o instanceof Circle) {
+      return radius == ((Circle) o).radius;
+    }
+    return false;
+  }
+
+  @Override
+  public int hashCode() {
+    int hash = 7;
+    int prime = 31;
+    hash = prime * hash + (int) radius;
+    return hash;
   }
 }

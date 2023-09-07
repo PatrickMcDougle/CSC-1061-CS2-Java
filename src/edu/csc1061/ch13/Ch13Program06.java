@@ -22,8 +22,7 @@ public class Ch13Program06 {
     java.util.Arrays.sort(rectangles);
 
     for (Rectangle rectangle : rectangles) {
-      System.out.print(rectangle + " ");
-      System.out.println();
+      System.out.println(rectangle);
     }
   }
 }

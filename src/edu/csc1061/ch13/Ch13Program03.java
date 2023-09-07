@@ -30,13 +30,10 @@ public class Ch13Program03 {
     System.out.println("DAY_OF_WEEK: " + calendar.get(Calendar.DAY_OF_WEEK));
     System.out.println("DAY_OF_MONTH: " + calendar.get(Calendar.DAY_OF_MONTH));
     System.out.println("DAY_OF_YEAR: " + calendar.get(Calendar.DAY_OF_YEAR));
-    System.out.println(
-        "WEEK_OF_MONTH: " + calendar.get(Calendar.WEEK_OF_MONTH));
+    System.out.println("WEEK_OF_MONTH: " + calendar.get(Calendar.WEEK_OF_MONTH));
     System.out.println("WEEK_OF_YEAR: " + calendar.get(Calendar.WEEK_OF_YEAR));
     System.out.println("AM_PM: " + calendar.get(Calendar.AM_PM));
 
-    // Construct a calendar for December 25, 1997
-    Calendar calendar1 = new GregorianCalendar(1997, 11, 25);
     String[] dayNameOfWeek = {
         "Sunday",
         "Monday",
@@ -46,8 +43,13 @@ public class Ch13Program03 {
         "Friday",
         "Saturday",
     };
-    System.out.println(
-        "December 25, 1997 is a " +
-            dayNameOfWeek[calendar1.get(Calendar.DAY_OF_WEEK) - 1]);
+
+    // Construct a calendar for March 8, 2005
+    Calendar cal01 = new GregorianCalendar(1997, 2, 8);
+    System.out.println("March 8, 2005 was on a " + dayNameOfWeek[cal01.get(Calendar.DAY_OF_WEEK) - 1]);
+
+    // Construct a calendar for February 14, 2014
+    Calendar cal02 = new GregorianCalendar(2014, 1, 14);
+    System.out.println("February 14, 2014 was on a " + dayNameOfWeek[cal02.get(Calendar.DAY_OF_WEEK) - 1]);
   }
 }

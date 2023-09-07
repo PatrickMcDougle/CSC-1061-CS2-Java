@@ -9,64 +9,108 @@
  */
 package edu.csc1061.ch13;
 
+import java.util.Date;
+
+/**
+ * The class GeometricObject is an abstract class that all geometric objects
+ * extend from. This class provides basic functionality for all classes that
+ * inherent from it.
+ *
+ * <img src="../doc-files/GeometricObject-1.png">
+ */
 public abstract class GeometricObject {
   private String color = "white";
   private boolean filled;
-  private java.util.Date dateCreated;
+  private Date dateCreated;
 
   /** Construct a default geometric object */
   protected GeometricObject() {
-    dateCreated = new java.util.Date();
+    dateCreated = new Date();
   }
 
-  /** Construct a geometric object with color and filled value */
+  /**
+   * Construct a geometric object with the specified color
+   * and filled value
+   *
+   * @param color  a string that represents the color of the object.
+   * @param filled a boolean value that tells the object if it is filled with the
+   *               color that is provided.
+   */
   protected GeometricObject(String color, boolean filled) {
-    dateCreated = new java.util.Date();
+    super();
     this.color = color;
     this.filled = filled;
   }
 
-  /** Return color */
+  /**
+   * This method returns the geometric object's color.
+   *
+   * @return a string that represents the color of this object.
+   */
   public String getColor() {
     return color;
   }
 
-  /** Set a new color */
+  /**
+   * Sets a new color
+   *
+   * @param color a string that represents the color of this object.
+   */
   public void setColor(String color) {
     this.color = color;
   }
 
   /**
-   * Return filled. Since filled is boolean,
-   * the get method is named isFilled
+   * Is the object filled with the color?
+   *
+   * @return a boolean value that represents if this geometric object is filled
+   *         with the color or not.
    */
   public boolean isFilled() {
     return filled;
   }
 
-  /** Set a new filled */
+  /**
+   * Sets if the object is filled or not.
+   *
+   * @param filled is a boolean value that represents if the object will be filled
+   *               with the color or not.
+   */
   public void setFilled(boolean filled) {
     this.filled = filled;
   }
 
-  /** Get dateCreated */
-  public java.util.Date getDateCreated() {
+  /**
+   * Gets the date of when this object was created
+   *
+   * @return a Date class that represents the creation time and date of this
+   *         object.
+   */
+  public Date getDateCreated() {
     return dateCreated;
   }
 
+  /**
+   * Returns a string representation of this object
+   *
+   * @return a string that represents the
+   */
   @Override
   public String toString() {
-    return ("created on " +
-        dateCreated +
-        "\ncolor: " +
-        color +
-        " and filled: " +
-        filled);
+    return ("[created: " + dateCreated + "] [color: " + color + "] [filled: " + filled + "]");
   }
 
-  /** Abstract method getArea */
+  /**
+   * An abstract method that gets the area of this object.
+   *
+   * @return a double value that represents this geometric object's area.
+   */
   public abstract double getArea();
 
-  /** Abstract method getPerimeter */
+  /**
+   * An abstract method that gets the perimeter of this object.
+   *
+   * @return a double value that represents this geometric object's perimeter.
+   */
   public abstract double getPerimeter();
 }
