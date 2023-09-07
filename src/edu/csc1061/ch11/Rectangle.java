@@ -13,10 +13,19 @@ public class Rectangle extends GeometricObject {
   private double width;
   private double height;
 
+  /**
+   * This Rectangle class extends from the {@link GeometricObject}
+   */
   public Rectangle() {
     super("RED", true);
   }
 
+  /**
+   * This Rectangle class extends from the {@link GeometricObject}
+   *
+   * @param width  this double value represents the width of the rectangle.
+   * @param height this double value represents the height of the rectangle.
+   */
   public Rectangle(double width, double height) {
     this.width = width;
     this.height = height;

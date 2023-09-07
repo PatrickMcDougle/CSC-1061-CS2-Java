@@ -9,6 +9,13 @@
  */
 package edu.csc1061.ch11;
 
+/**
+ * The class GeometricObject is an abstract class that all geometric objects
+ * extend from. This class provides basic functionality for all classes that
+ * inherent from it.
+ *
+ * <img src="../doc-files/GeometricObject-1.png">
+ */
 public class GeometricObject {
   private String color = "white";
   private boolean filled;
@@ -22,6 +29,10 @@ public class GeometricObject {
   /**
    * Construct a geometric object with the specified color
    * and filled value
+   *
+   * @param color  a string that represents the color of the object.
+   * @param filled a boolean value that tells the object if it is filled with the
+   *               color that is provided.
    */
   public GeometricObject(String color, boolean filled) {
     dateCreated = new java.util.Date();
@@ -29,35 +40,60 @@ public class GeometricObject {
     this.filled = filled;
   }
 
-  /** Return color */
+  /**
+   * This method returns the geometric object's color.
+   *
+   * @return a string that represents the color of this object.
+   */
   public String getColor() {
     return color;
   }
 
-  /** Set a new color */
+  /**
+   * Sets a new color
+   *
+   * @param color a string that represents the color of this object.
+   */
   public void setColor(String color) {
     this.color = color;
   }
 
   /**
-   * Return filled. Since filled is boolean,
-   * its get method is named isFilled
+   * Is the object filled with the color?
+   *
+   * @return a boolean value that represents if this geometric object is filled
+   *         with the color or not.
    */
   public boolean isFilled() {
     return filled;
   }
 
-  /** Set a new filled */
+  /**
+   * Sets if the object is filled or not.
+   *
+   * @param filled is a boolean value that represents if the object will be filled
+   *               with the color or not.
+   */
   public void setFilled(boolean filled) {
     this.filled = filled;
   }
 
-  /** Get dateCreated */
+  /**
+   * Gets the date of when this object was created
+   *
+   * @return a Date class that represents the creation time and date of this
+   *         object.
+   */
   public java.util.Date getDateCreated() {
     return dateCreated;
   }
 
-  /** Return a string representation of this object */
+  /**
+   * Returns a string representation of this object
+   *
+   * @return a string that represents the
+   */
+  @Override
   public String toString() {
     return ("[created: " + dateCreated + "] [color: " + color + "] [filled: " + filled + "]");
   }

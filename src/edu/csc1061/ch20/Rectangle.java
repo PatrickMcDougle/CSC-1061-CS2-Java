@@ -13,9 +13,18 @@ public class Rectangle extends GeometricObject {
   private double width;
   private double height;
 
+  /**
+   * This Rectangle class extends from the {@link GeometricObject}
+   */
   public Rectangle() {
   }
 
+  /**
+   * This Rectangle class extends from the {@link GeometricObject}
+   *
+   * @param width  this double value represents the width of the rectangle.
+   * @param height this double value represents the height of the rectangle.
+   */
   public Rectangle(double width, double height) {
     this.width = width;
     this.height = height;
@@ -41,13 +50,28 @@ public class Rectangle extends GeometricObject {
     this.height = height;
   }
 
-  @Override /** Return area */
+  /** Return area */
+  @Override
   public double getArea() {
     return width * height;
   }
 
-  @Override /** Return perimeter */
+  /** Return perimeter */
+  @Override
   public double getPerimeter() {
     return 2 * (width + height);
+  }
+
+  /** Override the toString method defined in GeometricObject */
+  @Override
+  public String toString() {
+    StringBuilder sb = new StringBuilder(super.toString());
+    sb.insert(0, "Rectangle: { ");
+    sb.append(" [dimensions: ");
+    sb.append(width);
+    sb.append(" x ");
+    sb.append(height);
+    sb.append("] }");
+    return sb.toString();
   }
 }
