@@ -20,7 +20,7 @@ public class JavaFx017Program extends Application {
   public void start(Stage primaryStage) {
     // Create a scene and place it in the stage
     Scene scene = new Scene(new MyEllipse(), 300, 200);
-    primaryStage.setTitle("ShowEllipse"); // Set the stage title
+    primaryStage.setTitle("Show My Ellipse"); // Set the stage title
     primaryStage.setScene(scene); // Place the scene in the stage
     primaryStage.show(); // Display the stage
   }

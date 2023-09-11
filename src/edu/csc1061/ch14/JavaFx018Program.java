@@ -22,23 +22,33 @@ import javafx.stage.Stage;
 // show arc
 public class JavaFx018Program extends Application {
 
+  public static final double ARC_CENTER_X = 150.0;
+  public static final double ARC_CENTER_Y = 100.0;
+
+  public static final double ARC_RADIUS_X = 80.0;
+  public static final double ARC_RADIUS_Y = 80.0;
+
+  public static final double ARC_START_ANGLE = 30.0;
+  public static final double ARC_LENGTH = 35.0;
+
   @Override // Override the start method in the Application class
   public void start(Stage primaryStage) {
-    Arc arc1 = new Arc(150, 100, 80, 80, 30, 35); // Create an arc
+    // Create an arc
+    Arc arc1 = new Arc(ARC_CENTER_X, ARC_CENTER_Y, ARC_RADIUS_X, ARC_RADIUS_Y, ARC_START_ANGLE, ARC_LENGTH);
     arc1.setFill(Color.RED); // Set fill color
     arc1.setType(ArcType.ROUND); // Set arc type
 
-    Arc arc2 = new Arc(150, 100, 80, 80, 30 + 90.0, 35);
+    Arc arc2 = new Arc(ARC_CENTER_X, ARC_CENTER_Y, ARC_RADIUS_X, ARC_RADIUS_Y, ARC_START_ANGLE + 90.0, ARC_LENGTH);
     arc2.setFill(Color.WHITE);
     arc2.setType(ArcType.OPEN);
     arc2.setStroke(Color.BLACK);
 
-    Arc arc3 = new Arc(150, 100, 80, 80, 30 + 180.0, 35);
+    Arc arc3 = new Arc(ARC_CENTER_X, ARC_CENTER_Y, ARC_RADIUS_X, ARC_RADIUS_Y, ARC_START_ANGLE + 180.0, ARC_LENGTH);
     arc3.setFill(Color.WHITE);
     arc3.setType(ArcType.CHORD);
     arc3.setStroke(Color.BLACK);
 
-    Arc arc4 = new Arc(150, 100, 80, 80, 30 + 270.0, 35);
+    Arc arc4 = new Arc(ARC_CENTER_X, ARC_CENTER_Y, ARC_RADIUS_X, ARC_RADIUS_Y, ARC_START_ANGLE + 270.0, ARC_LENGTH);
     arc4.setFill(Color.GREEN);
     arc4.setType(ArcType.CHORD);
     arc4.setStroke(Color.BLACK);
@@ -59,7 +69,7 @@ public class JavaFx018Program extends Application {
 
     // Create a scene and place it in the stage
     Scene scene = new Scene(new BorderPane(group), 300, 200);
-    primaryStage.setTitle("ShowArc"); // Set the stage title
+    primaryStage.setTitle("Show Arc"); // Set the stage title
     primaryStage.setScene(scene); // Place the scene in the stage
     primaryStage.show(); // Display the stage
   }

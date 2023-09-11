@@ -43,7 +43,7 @@ public class JavaFx009Program extends Application {
 
     // Create a scene and place it in the stage
     Scene scene = new Scene(pane);
-    primaryStage.setTitle("ShowImage"); // Set the stage title
+    primaryStage.setTitle("Show Image"); // Set the stage title
     primaryStage.setScene(scene); // Place the scene in the stage
     primaryStage.show(); // Display the stage
   }

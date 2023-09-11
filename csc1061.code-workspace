@@ -18,7 +18,7 @@
             "c:\\Program Files\\Java\\javafx-sdk-17.0.8\\lib\\javafx.web.jar",
             "c:\\Program Files\\Java\\javafx-sdk-17.0.8\\lib\\javafx-swt.jar"
         ],
-        "cSpell.words": ["Arapahoe"],
+        "cSpell.words": ["Arapahoe", "lightgray"],
         "java.format.settings.url": ".vscode/eclipse-java-google-style.xml"
     },
     "extensions": {

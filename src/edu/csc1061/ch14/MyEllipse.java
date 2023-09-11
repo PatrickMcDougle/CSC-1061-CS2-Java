@@ -20,13 +20,13 @@ class MyEllipse extends Pane {
     for (int i = 0; i < 16; i++) {
       // Create an ellipse and add it to pane
       Ellipse e1 = new Ellipse(
-          getWidth() / 2,
-          getHeight() / 2,
-          getWidth() / 2 - 50,
-          getHeight() / 2 - 50);
+          getWidth() / 2.0,
+          getHeight() / 2.0,
+          getWidth() / 2.0 - 50.0,
+          getHeight() / 2.0 - 50.0);
       e1.setStroke(Color.color(Math.random(), Math.random(), Math.random()));
       e1.setFill(Color.WHITE);
-      e1.setRotate(i * 180 / 16);
+      e1.setRotate(i * 180.0 / 16.0);
       getChildren().add(e1);
     }
   }

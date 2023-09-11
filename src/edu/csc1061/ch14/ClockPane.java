@@ -83,7 +83,7 @@ public class ClockPane extends Pane {
   /** Paint the clock */
   private void paintClock() {
     // Initialize clock parameters
-    double clockRadius = Math.min(getWidth(), getHeight()) * 0.8 * 0.5;
+    double clockRadius = Math.min(getWidth(), getHeight()) * 0.4;
     double centerX = getWidth() / 2;
     double centerY = getHeight() / 2;
 
@@ -112,12 +112,8 @@ public class ClockPane extends Pane {
 
     // Draw hour hand
     double hLength = clockRadius * 0.5;
-    double hourX = centerX +
-        hLength *
-            Math.sin((hour % 12 + minute / 60.0) * (2 * Math.PI / 12));
-    double hourY = centerY -
-        hLength *
-            Math.cos((hour % 12 + minute / 60.0) * (2 * Math.PI / 12));
+    double hourX = centerX + hLength * Math.sin((hour % 12 + minute / 60.0) * (2 * Math.PI / 12));
+    double hourY = centerY - hLength * Math.cos((hour % 12 + minute / 60.0) * (2 * Math.PI / 12));
     Line hLine = new Line(centerX, centerY, hourX, hourY);
     hLine.setStroke(Color.GREEN);
 

@@ -33,9 +33,9 @@ public class JavaFx010Program extends Application {
     pane
         .getChildren()
         .addAll(new Label("First Name:"), new TextField(), new Label("MI:"));
-    TextField tfMi = new TextField();
-    tfMi.setPrefColumnCount(1);
-    pane.getChildren().addAll(tfMi, new Label("Last Name:"), new TextField());
+    TextField textFieldMiddleInitial = new TextField();
+    textFieldMiddleInitial.setPrefColumnCount(1);
+    pane.getChildren().addAll(textFieldMiddleInitial, new Label("Last Name:"), new TextField());
 
     // Create a scene and place it in the stage
     Scene scene = new Scene(pane, 200, 250);

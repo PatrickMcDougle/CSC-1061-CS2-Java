@@ -36,13 +36,12 @@ public class JavaFx008Program extends Application {
     // Create a label and set its properties
     Label label = new Label("JavaFX");
 
-    label.setFont(
-        Font.font("Times New Roman", FontWeight.BOLD, FontPosture.ITALIC, 20));
+    label.setFont(Font.font("Times New Roman", FontWeight.BOLD, FontPosture.ITALIC, 20));
     pane.getChildren().add(label);
 
     // Create a scene and place it in the stage
     Scene scene = new Scene(pane);
-    primaryStage.setTitle("FontDemo"); // Set the stage title
+    primaryStage.setTitle("Font & Color Demo"); // Set the stage title
     primaryStage.setScene(scene); // Place the scene in the stage
     primaryStage.show(); // Display the stage
   }

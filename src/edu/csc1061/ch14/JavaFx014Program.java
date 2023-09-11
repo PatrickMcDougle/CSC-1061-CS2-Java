@@ -30,8 +30,7 @@ public class JavaFx014Program extends Application {
     pane.setPadding(new Insets(5, 5, 5, 5));
 
     Text text1 = new Text(20, 20, "Programming is fun");
-    text1.setFont(
-        Font.font("Courier", FontWeight.BOLD, FontPosture.ITALIC, 15));
+    text1.setFont(Font.font("Courier", FontWeight.BOLD, FontPosture.ITALIC, 15));
     pane.getChildren().add(text1);
 
     Text text2 = new Text(60, 60, "Programming is fun\nDisplay text");
