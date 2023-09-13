@@ -20,10 +20,15 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 
-// show grid pane
+/**
+ * show grid pane
+ */
 public class JavaFx011Program extends Application {
 
-  @Override // Override the start method in the Application class
+  /**
+   * Override the start method in the Application class
+   */
+  @Override
   public void start(Stage primaryStage) {
     // Create a pane and set its properties
     GridPane pane = new GridPane();

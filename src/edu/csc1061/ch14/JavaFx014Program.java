@@ -20,10 +20,15 @@ import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
-// show text
+/**
+ * show text
+ */
 public class JavaFx014Program extends Application {
 
-  @Override // Override the start method in the Application class
+  /**
+   * Override the start method in the Application class
+   */
+  @Override
   public void start(Stage primaryStage) {
     // Create a pane to hold the texts
     Pane pane = new Pane();

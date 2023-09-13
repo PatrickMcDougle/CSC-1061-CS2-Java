@@ -13,10 +13,15 @@ import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-// show ellipse
+/**
+ * show ellipse
+ */
 public class JavaFx017Program extends Application {
 
-  @Override // Override the start method in the Application class
+  /**
+   * Override the start method in the Application class
+   */
+  @Override
   public void start(Stage primaryStage) {
     // Create a scene and place it in the stage
     Scene scene = new Scene(new MyEllipse(), 300, 200);

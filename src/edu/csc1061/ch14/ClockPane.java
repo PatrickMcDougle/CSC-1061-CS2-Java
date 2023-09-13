@@ -22,52 +22,70 @@ public class ClockPane extends Pane {
   private int minute;
   private int second;
 
-  /** Construct a default clock with the current time */
+  /**
+   * Construct a default clock with the current time
+   */
   public ClockPane() {
     setCurrentTime();
   }
 
-  /** Construct a clock with specified hour, minute, and second */
+  /**
+   * Construct a clock with specified hour, minute, and second
+   */
   public ClockPane(int hour, int minute, int second) {
     this.hour = hour;
     this.minute = minute;
     this.second = second;
   }
 
-  /** Return hour */
+  /**
+   * Return hour
+   */
   public int getHour() {
     return hour;
   }
 
-  /** Set a new hour */
+  /**
+   * Set a new hour
+   */
   public void setHour(int hour) {
     this.hour = hour;
     paintClock();
   }
 
-  /** Return minute */
+  /**
+   * Return minute
+   */
   public int getMinute() {
     return minute;
   }
 
-  /** Set a new minute */
+  /**
+   * Set a new minute
+   */
   public void setMinute(int minute) {
     this.minute = minute;
     paintClock();
   }
 
-  /** Return second */
+  /**
+   * Return second
+   */
   public int getSecond() {
     return second;
   }
 
-  /** Set a new second */
+  /**
+   * Set a new second
+   */
   public void setSecond(int second) {
     this.second = second;
     paintClock();
   }
 
-  /* Set the current time for the clock */
+  /**
+   * Set the current time for the clock
+   */
   public void setCurrentTime() {
     // Construct a calendar for the current date and time
     Calendar calendar = new GregorianCalendar();
@@ -80,7 +98,9 @@ public class ClockPane extends Pane {
     paintClock(); // Repaint the clock
   }
 
-  /** Paint the clock */
+  /**
+   * Paint the clock
+   */
   private void paintClock() {
     // Initialize clock parameters
     double clockRadius = Math.min(getWidth(), getHeight()) * 0.4;

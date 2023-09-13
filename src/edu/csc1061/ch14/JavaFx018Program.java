@@ -19,7 +19,9 @@ import javafx.scene.shape.ArcType;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
-// show arc
+/**
+ * show arc
+ */
 public class JavaFx018Program extends Application {
 
   public static final double ARC_CENTER_X = 150.0;
@@ -31,7 +33,10 @@ public class JavaFx018Program extends Application {
   public static final double ARC_START_ANGLE = 30.0;
   public static final double ARC_LENGTH = 35.0;
 
-  @Override // Override the start method in the Application class
+  /**
+   * Override the start method in the Application class
+   */
+  @Override
   public void start(Stage primaryStage) {
     // Create an arc
     Arc arc1 = new Arc(ARC_CENTER_X, ARC_CENTER_Y, ARC_RADIUS_X, ARC_RADIUS_Y, ARC_START_ANGLE, ARC_LENGTH);

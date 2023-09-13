@@ -18,10 +18,15 @@ import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
-// show rectangle
+/**
+ * show rectangle
+ */
 public class JavaFx016Program extends Application {
 
-  @Override // Override the start method in the Application class
+  /**
+   * Override the start method in the Application class
+   */
+  @Override
   public void start(Stage primaryStage) {
     // Create rectangles
     Rectangle r1 = new Rectangle(25, 10, 60, 30);

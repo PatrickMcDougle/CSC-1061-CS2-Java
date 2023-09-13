@@ -13,10 +13,15 @@ import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-// show line example
+/**
+ * show line example
+ */
 public class JavaFx015Program extends Application {
 
-  @Override // Override the start method in the Application class
+  /**
+   * Override the start method in the Application class
+   */
+  @Override
   public void start(Stage primaryStage) {
     // Create a scene and place it in the stage
     Scene scene = new Scene(new LinePane(), 200, 200);

@@ -16,10 +16,15 @@ import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 import javafx.stage.Stage;
 
-// Show a Circle
+/**
+ * Show a Circle
+ */
 public class JavaFx004Program extends Application {
 
-  @Override // Override the start method in the Application class
+  /**
+   * Override the start method in the Application class
+   */
+  @Override
   public void start(Stage primaryStage) {
     // Create a circle and set its properties
     Circle circle = new Circle();

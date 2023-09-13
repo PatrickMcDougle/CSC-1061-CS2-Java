@@ -17,7 +17,10 @@ import javafx.stage.Stage;
 
 public class JavaFx007Program extends Application {
 
-  @Override // Override the start method in the Application class
+  /**
+   * Override the start method in the Application class
+   */
+  @Override
   public void start(Stage primaryStage) {
     // Create a scene and place a button in the scene
     StackPane pane = new StackPane();

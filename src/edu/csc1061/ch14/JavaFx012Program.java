@@ -14,10 +14,15 @@ import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
-// show border pane
+/**
+ * show border pane
+ */
 public class JavaFx012Program extends Application {
 
-  @Override // Override the start method in the Application class
+  /**
+   * Override the start method in the Application class
+   */
+  @Override
   public void start(Stage primaryStage) {
     // Create a border pane
     BorderPane pane = new BorderPane();

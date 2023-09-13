@@ -21,10 +21,15 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
-// show HBox and VBox panes
+/**
+ * show HBox and VBox panes
+ */
 public class JavaFx013Program extends Application {
 
-  @Override // Override the start method in the Application class
+  /**
+   * Override the start method in the Application class
+   */
+  @Override
   public void start(Stage primaryStage) {
     // Create a border pane
     BorderPane pane = new BorderPane();

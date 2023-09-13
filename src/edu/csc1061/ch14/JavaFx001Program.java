@@ -14,10 +14,15 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
 
-// First Basic JavaFX Application
+/**
+ * First Basic JavaFX Application
+ */
 public class JavaFx001Program extends Application {
 
-  @Override // Override the start method in the Application class
+  /**
+   * Override the start method in the Application class
+   */
+  @Override
   public void start(Stage primaryStage) {
     // Create a button and place it in the scene
     Button btOK = new Button("OK");

@@ -17,10 +17,15 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.FlowPane;
 import javafx.stage.Stage;
 
-// show flow pane
+/**
+ * show flow pane
+ */
 public class JavaFx010Program extends Application {
 
-  @Override // Override the start method in the Application class
+  /**
+   * Override the start method in the Application class
+   */
+  @Override
   public void start(Stage primaryStage) {
     // Create a pane and set its properties
     FlowPane pane = new FlowPane();

@@ -12,7 +12,9 @@ package edu.csc1061.ch14;
 import javafx.beans.property.DoubleProperty;
 import javafx.beans.property.SimpleDoubleProperty;
 
-// Binding Demo
+/**
+ * Binding Demo
+ */
 public class JavaFx006Program {
 
     public static void main(String[] args) {
