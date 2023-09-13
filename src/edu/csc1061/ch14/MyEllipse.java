@@ -1,7 +1,7 @@
 /**
  * Code for Class.
- * <p>
- * CSC 1061 - Computer Science II - Java
+ *
+ * <p>CSC 1061 - Computer Science II - Java
  *
  * @author Patrick McDougle
  * @version %I%, %G%
