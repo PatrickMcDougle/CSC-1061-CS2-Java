@@ -6,56 +6,8 @@
     "configurations": [
         {
             "type": "java",
-            "name": "Ch09MyDateProgram",
             "request": "launch",
-            "mainClass": "edu.csc1061.ch09.Ch09MyDateProgram",
-            "projectName": "CSC-1061-CS2-Java_e2b4a59b"
-        },
-        {
-            "type": "java",
-            "name": "Ch09MyCircle1Program",
-            "request": "launch",
-            "mainClass": "edu.csc1061.ch09.Ch09MyCircle1Program",
-            "projectName": "CSC-1061-CS2-Java_e2b4a59b"
-        },
-        {
-            "type": "java",
-            "name": "Ch25Program03",
-            "request": "launch",
-            "mainClass": "edu.csc1061.ch25.Ch25Program03",
-            "vmArgs": ["--module-path", "${env:PATH_TO_FX}", "--add-modules", "javafx.controls,javafx.fxml"]
-        },
-        {
-            "type": "java",
-            "name": "Ch25Program01",
-            "request": "launch",
-            "mainClass": "edu.csc1061.ch25.Ch25Program01",
-            "projectName": "CSC-1061-CS2-Java_e2b4a59b"
-        },
-        {
-            "type": "java",
-            "name": "Launch Program20_005",
-            "request": "launch",
-            "mainClass": "edu.csc1061.ch20.Program20_005",
-            "vmArgs": ["--module-path", "${env:PATH_TO_FX}", "--add-modules", "javafx.controls,javafx.fxml"]
-        },
-        {
-            "type": "java",
-            "name": "Launch Program18_009",
-            "request": "launch",
-            "mainClass": "edu.csc1061.ch18.Program18_009",
-            "vmArgs": ["--module-path", "${env:PATH_TO_FX}", "--add-modules", "javafx.controls,javafx.fxml"]
-        },
-        {
-            "type": "java",
-            "request": "launch",
-            "name": "Launch Current File Java",
-            "mainClass": "${file}"
-        },
-        {
-            "type": "java",
-            "request": "launch",
-            "name": "Launch Current File JavaFX",
+            "name": "Launch Current File with JavaFX",
             "mainClass": "${file}",
             "vmArgs": ["--module-path", "${env:PATH_TO_FX}", "--add-modules", "javafx.controls,javafx.fxml"]
         }
