@@ -3,9 +3,9 @@
  * <p>
  * CSC 1061 - Computer Science II - Java
  *
- * @author  Patrick McDougle
+ * @author Patrick McDougle
  * @version %I%, %G%
- * @since   1.0
+ * @since 1.0
  */
 package edu.csc1061.ch14;
 
@@ -35,12 +35,12 @@ public class JavaFx010Program extends Application {
     pane.setVgap(5);
 
     // Place nodes in the pane
-    pane
-        .getChildren()
-        .addAll(new Label("First Name:"), new TextField(), new Label("MI:"));
+    pane.getChildren().addAll(new Label("First Name:"), new TextField(),
+        new Label("MI:"));
     TextField textFieldMiddleInitial = new TextField();
     textFieldMiddleInitial.setPrefColumnCount(1);
-    pane.getChildren().addAll(textFieldMiddleInitial, new Label("Last Name:"), new TextField());
+    pane.getChildren().addAll(textFieldMiddleInitial, new Label("Last Name:"),
+        new TextField());
 
     // Create a scene and place it in the stage
     Scene scene = new Scene(pane, 200, 250);
@@ -50,8 +50,8 @@ public class JavaFx010Program extends Application {
   }
 
   /**
-   * The main method is only needed for the IDE with limited
-   * JavaFX support. Not needed for running from the command line.
+   * The main method is only needed for the IDE with limited JavaFX support. Not
+   * needed for running from the command line.
    */
   public static void main(String[] args) {
     launch(args);

@@ -3,9 +3,9 @@
  * <p>
  * CSC 1061 - Computer Science II - Java
  *
- * @author  Patrick McDougle
+ * @author Patrick McDougle
  * @version %I%, %G%
- * @since   1.0
+ * @since 1.0
  */
 package edu.csc1061.ch14;
 
@@ -35,7 +35,8 @@ public class JavaFx014Program extends Application {
     pane.setPadding(new Insets(5, 5, 5, 5));
 
     Text text1 = new Text(20, 20, "Programming is fun");
-    text1.setFont(Font.font("Courier", FontWeight.BOLD, FontPosture.ITALIC, 15));
+    text1
+        .setFont(Font.font("Courier", FontWeight.BOLD, FontPosture.ITALIC, 15));
     pane.getChildren().add(text1);
 
     Text text2 = new Text(60, 60, "Programming is fun\nDisplay text");
@@ -55,8 +56,8 @@ public class JavaFx014Program extends Application {
   }
 
   /**
-   * The main method is only needed for the IDE with limited
-   * JavaFX support. Not needed for running from the command line.
+   * The main method is only needed for the IDE with limited JavaFX support. Not
+   * needed for running from the command line.
    */
   public static void main(String[] args) {
     launch(args);

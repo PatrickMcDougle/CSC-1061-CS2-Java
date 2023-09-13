@@ -3,9 +3,9 @@
  * <p>
  * CSC 1061 - Computer Science II - Java
  *
- * @author  Patrick McDougle
+ * @author Patrick McDougle
  * @version %I%, %G%
- * @since   1.0
+ * @since 1.0
  */
 package edu.csc1061.ch14;
 
@@ -51,8 +51,8 @@ public class JavaFx013Program extends Application {
     hBox.setStyle("-fx-background-color: gold");
     hBox.getChildren().add(new Button("Computer Science"));
     hBox.getChildren().add(new Button("Chemistry"));
-    ImageView imageView = new ImageView(
-        new Image("file:resources/images/Space_Unicorn.gif"));
+    ImageView imageView =
+        new ImageView(new Image("file:resources/images/Space_Unicorn.gif"));
     hBox.getChildren().add(imageView);
     return hBox;
   }
@@ -66,8 +66,7 @@ public class JavaFx013Program extends Application {
         new Label("CSC 1060: Computer Science I"),
         new Label("CSC 1061: Computer Science II"),
         new Label("CSC 1026: Game Design and Development"),
-        new Label("CSCI 2000: Game Programming I"),
-    };
+        new Label("CSCI 2000: Game Programming I") };
 
     for (Label course : courses) {
       VBox.setMargin(course, new Insets(0, 0, 0, 15));
@@ -79,8 +78,7 @@ public class JavaFx013Program extends Application {
 
   /**
    * The main method is only needed for the IDE with limited JavaFX support. Not
-   * needed for
-   * running from the command line.
+   * needed for running from the command line.
    */
   public static void main(String[] args) {
     launch(args);

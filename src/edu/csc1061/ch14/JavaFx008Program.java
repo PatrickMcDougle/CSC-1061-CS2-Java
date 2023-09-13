@@ -3,9 +3,9 @@
  * <p>
  * CSC 1061 - Computer Science II - Java
  *
- * @author  Patrick McDougle
+ * @author Patrick McDougle
  * @version %I%, %G%
- * @since   1.0
+ * @since 1.0
  */
 package edu.csc1061.ch14;
 
@@ -39,7 +39,8 @@ public class JavaFx008Program extends Application {
     // Create a label and set its properties
     Label label = new Label("JavaFX");
 
-    label.setFont(Font.font("Times New Roman", FontWeight.BOLD, FontPosture.ITALIC, 20));
+    label.setFont(
+        Font.font("Times New Roman", FontWeight.BOLD, FontPosture.ITALIC, 20));
     pane.getChildren().add(label);
 
     // Create a scene and place it in the stage
@@ -50,8 +51,8 @@ public class JavaFx008Program extends Application {
   }
 
   /**
-   * The main method is only needed for the IDE with limited
-   * JavaFX support. Not needed for running from the command line.
+   * The main method is only needed for the IDE with limited JavaFX support. Not
+   * needed for running from the command line.
    */
   public static void main(String[] args) {
     launch(args);

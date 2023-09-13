@@ -3,9 +3,9 @@
  * <p>
  * CSC 1061 - Computer Science II - Java
  *
- * @author  Patrick McDougle
+ * @author Patrick McDougle
  * @version %I%, %G%
- * @since   1.0
+ * @since 1.0
  */
 package edu.csc1061.ch14;
 
@@ -15,18 +15,23 @@ import javafx.scene.shape.Ellipse;
 
 class MyEllipse extends Pane {
 
+  public static final int TOTAL_ELLIPSE = 16;
+
   private void paint() {
     getChildren().clear();
-    for (int i = 0; i < 16; i++) {
+    for (int i = 0; i < TOTAL_ELLIPSE; i++) {
+      double centerX = getWidth() / 2.0;
+      double centerY = getHeight() / 2.0;
+      double radiusX = getWidth() / 2.0 - 50.0;
+      double radiusY = getHeight() / 2.0 - 50.0;
+
       // Create an ellipse and add it to pane
-      Ellipse e1 = new Ellipse(
-          getWidth() / 2.0,
-          getHeight() / 2.0,
-          getWidth() / 2.0 - 50.0,
-          getHeight() / 2.0 - 50.0);
+      Ellipse e1 = new Ellipse(centerX, centerY, radiusX, radiusY);
+
       e1.setStroke(Color.color(Math.random(), Math.random(), Math.random()));
       e1.setFill(Color.WHITE);
-      e1.setRotate(i * 180.0 / 16.0);
+      e1.setRotate(i * 180.0 / TOTAL_ELLIPSE);
+
       getChildren().add(e1);
     }
   }

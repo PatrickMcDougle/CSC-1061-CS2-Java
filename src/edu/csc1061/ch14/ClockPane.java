@@ -3,9 +3,9 @@
  * <p>
  * CSC 1061 - Computer Science II - Java
  *
- * @author  Patrick McDougle
+ * @author Patrick McDougle
  * @version %I%, %G%
- * @since   1.0
+ * @since 1.0
  */
 package edu.csc1061.ch14;
 
@@ -21,6 +21,8 @@ public class ClockPane extends Pane {
   private int hour;
   private int minute;
   private int second;
+
+  private static final double TWO_PI = 2 * Math.PI;
 
   /**
    * Construct a default clock with the current time
@@ -106,6 +108,7 @@ public class ClockPane extends Pane {
     double clockRadius = Math.min(getWidth(), getHeight()) * 0.4;
     double centerX = getWidth() / 2;
     double centerY = getHeight() / 2;
+    double radians;
 
     // Draw circle
     Circle circle = new Circle(centerX, centerY, clockRadius);
@@ -118,22 +121,25 @@ public class ClockPane extends Pane {
 
     // Draw second hand
     double sLength = clockRadius * 0.8;
-    double secondX = centerX + sLength * Math.sin(second * (2 * Math.PI / 60));
-    double secondY = centerY - sLength * Math.cos(second * (2 * Math.PI / 60));
+    radians = second * (TWO_PI / 60);
+    double secondX = centerX + sLength * Math.sin(radians);
+    double secondY = centerY - sLength * Math.cos(radians);
     Line sLine = new Line(centerX, centerY, secondX, secondY);
     sLine.setStroke(Color.RED);
 
     // Draw minute hand
     double mLength = clockRadius * 0.65;
-    double xMinute = centerX + mLength * Math.sin(minute * (2 * Math.PI / 60));
-    double minuteY = centerY - mLength * Math.cos(minute * (2 * Math.PI / 60));
+    radians = minute * (TWO_PI / 60);
+    double xMinute = centerX + mLength * Math.sin(radians);
+    double minuteY = centerY - mLength * Math.cos(radians);
     Line mLine = new Line(centerX, centerY, xMinute, minuteY);
     mLine.setStroke(Color.BLUE);
 
     // Draw hour hand
     double hLength = clockRadius * 0.5;
-    double hourX = centerX + hLength * Math.sin((hour % 12 + minute / 60.0) * (2 * Math.PI / 12));
-    double hourY = centerY - hLength * Math.cos((hour % 12 + minute / 60.0) * (2 * Math.PI / 12));
+    radians = (hour % 12 + minute / 60.0) * (TWO_PI / 12);
+    double hourX = centerX + hLength * Math.sin(radians);
+    double hourY = centerY - hLength * Math.cos(radians);
     Line hLine = new Line(centerX, centerY, hourX, hourY);
     hLine.setStroke(Color.GREEN);
 

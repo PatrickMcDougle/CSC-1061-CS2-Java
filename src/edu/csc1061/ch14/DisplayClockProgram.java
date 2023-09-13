@@ -3,9 +3,9 @@
  * <p>
  * CSC 1061 - Computer Science II - Java
  *
- * @author  Patrick McDougle
+ * @author Patrick McDougle
  * @version %I%, %G%
- * @since   1.0
+ * @since 1.0
  */
 package edu.csc1061.ch14;
 
@@ -25,7 +25,8 @@ public class DisplayClockProgram extends Application {
   public void start(Stage primaryStage) {
     // Create a clock and a label
     ClockPane clock = new ClockPane();
-    String timeString = clock.getHour() + ":" + clock.getMinute() + ":" + clock.getSecond();
+    String timeString = String.format("%d:%d:%d", clock.getHour(),
+        clock.getMinute(), clock.getSecond());
     Label lblCurrentTime = new Label(timeString);
 
     // Place clock and label in border pane
@@ -42,8 +43,8 @@ public class DisplayClockProgram extends Application {
   }
 
   /**
-   * The main method is only needed for the IDE with limited
-   * JavaFX support. Not needed for running from the command line.
+   * The main method is only needed for the IDE with limited JavaFX support. Not
+   * needed for running from the command line.
    */
   public static void main(String[] args) {
     launch(args);

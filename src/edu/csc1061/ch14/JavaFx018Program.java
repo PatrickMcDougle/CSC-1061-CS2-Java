@@ -3,9 +3,9 @@
  * <p>
  * CSC 1061 - Computer Science II - Java
  *
- * @author  Patrick McDougle
+ * @author Patrick McDougle
  * @version %I%, %G%
- * @since   1.0
+ * @since 1.0
  */
 package edu.csc1061.ch14;
 
@@ -39,38 +39,40 @@ public class JavaFx018Program extends Application {
   @Override
   public void start(Stage primaryStage) {
     // Create an arc
-    Arc arc1 = new Arc(ARC_CENTER_X, ARC_CENTER_Y, ARC_RADIUS_X, ARC_RADIUS_Y, ARC_START_ANGLE, ARC_LENGTH);
+    Arc arc1 = new Arc(ARC_CENTER_X, ARC_CENTER_Y, ARC_RADIUS_X, ARC_RADIUS_Y,
+        ARC_START_ANGLE, ARC_LENGTH);
     arc1.setFill(Color.RED); // Set fill color
     arc1.setType(ArcType.ROUND); // Set arc type
 
-    Arc arc2 = new Arc(ARC_CENTER_X, ARC_CENTER_Y, ARC_RADIUS_X, ARC_RADIUS_Y, ARC_START_ANGLE + 90.0, ARC_LENGTH);
+    Arc arc2 = new Arc(ARC_CENTER_X, ARC_CENTER_Y, ARC_RADIUS_X, ARC_RADIUS_Y,
+        ARC_START_ANGLE + 90.0, ARC_LENGTH);
     arc2.setFill(Color.WHITE);
     arc2.setType(ArcType.OPEN);
     arc2.setStroke(Color.BLACK);
 
-    Arc arc3 = new Arc(ARC_CENTER_X, ARC_CENTER_Y, ARC_RADIUS_X, ARC_RADIUS_Y, ARC_START_ANGLE + 180.0, ARC_LENGTH);
+    Arc arc3 = new Arc(ARC_CENTER_X, ARC_CENTER_Y, ARC_RADIUS_X, ARC_RADIUS_Y,
+        ARC_START_ANGLE + 180.0, ARC_LENGTH);
     arc3.setFill(Color.WHITE);
     arc3.setType(ArcType.CHORD);
     arc3.setStroke(Color.BLACK);
 
-    Arc arc4 = new Arc(ARC_CENTER_X, ARC_CENTER_Y, ARC_RADIUS_X, ARC_RADIUS_Y, ARC_START_ANGLE + 270.0, ARC_LENGTH);
+    Arc arc4 = new Arc(ARC_CENTER_X, ARC_CENTER_Y, ARC_RADIUS_X, ARC_RADIUS_Y,
+        ARC_START_ANGLE + 270.0, ARC_LENGTH);
     arc4.setFill(Color.GREEN);
     arc4.setType(ArcType.CHORD);
     arc4.setStroke(Color.BLACK);
 
     // Create a group and add nodes to the group
     Group group = new Group();
-    group
-        .getChildren()
-        .addAll(
-            new Text(210, 40, "arc1: round"),
-            arc1,
-            new Text(20, 40, "arc2: open"),
-            arc2,
-            new Text(20, 170, "arc3: chord"),
-            arc3,
-            new Text(210, 170, "arc4: chord"),
-            arc4);
+    group.getChildren().addAll(
+        // Add Arc 1
+        new Text(210, 40, "arc1: round"), arc1,
+        // Add Arc 2
+        new Text(20, 40, "arc2: open"), arc2,
+        // Add Arc 3
+        new Text(20, 170, "arc3: chord"), arc3,
+        // Finally Add Arc 4.
+        new Text(210, 170, "arc4: chord"), arc4);
 
     // Create a scene and place it in the stage
     Scene scene = new Scene(new BorderPane(group), 300, 200);
@@ -80,8 +82,8 @@ public class JavaFx018Program extends Application {
   }
 
   /**
-   * The main method is only needed for the IDE with limited
-   * JavaFX support. Not needed for running from the command line.
+   * The main method is only needed for the IDE with limited JavaFX support. Not
+   * needed for running from the command line.
    */
   public static void main(String[] args) {
     launch(args);

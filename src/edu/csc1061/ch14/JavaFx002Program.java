@@ -3,9 +3,9 @@
  * <p>
  * CSC 1061 - Computer Science II - Java
  *
- * @author  Patrick McDougle
+ * @author Patrick McDougle
  * @version %I%, %G%
- * @since   1.0
+ * @since 1.0
  */
 package edu.csc1061.ch14;
 
@@ -27,21 +27,23 @@ public class JavaFx002Program extends Application {
     // Create a scene and place a button in the scene
     Scene scene = new Scene(new Button("First Stage"), 200, 250);
 
-    primaryStage.setTitle("JavaFx 002 Program - Primary Stage"); // Set the stage title
+    // Set the stage title
+    primaryStage.setTitle("JavaFx 002 Program - Primary Stage");
     primaryStage.setScene(scene); // Place the scene in the stage
     primaryStage.show(); // Display the stage
 
     Stage stage = new Stage(); // Create a new stage
 
-    stage.setTitle("JavaFx 002 Program - Second Stage"); // Set the stage title
+    // Set the stage title
+    stage.setTitle("JavaFx 002 Program - Second Stage");
     // Set a scene with a button in the stage
     stage.setScene(new Scene(new Button("Second New Stage"), 200, 250));
     stage.show(); // Display the stage
   }
 
   /**
-   * The main method is only needed for the IDE with limited
-   * JavaFX support. Not needed for running from the command line.
+   * The main method is only needed for the IDE with limited JavaFX support. Not
+   * needed for running from the command line.
    */
   public static void main(String[] args) {
     launch(args);
