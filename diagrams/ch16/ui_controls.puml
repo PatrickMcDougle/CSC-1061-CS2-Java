@@ -1,0 +1,48 @@
+@startuml
+
+abstract Node
+class ImageView
+abstract Parent
+abstract Control
+class ListView
+abstract ComboBoxBase
+abstract Labeled
+class Label
+abstract ButtonBase
+abstract TextInputControl
+class MediaView
+class ScollBar
+class Slider
+class Button
+class ToggleButton
+class RadioButtion
+class CheckBox
+class TextArea
+class TextField
+class PasswordField
+class ComboBox
+
+Node <|-- Parent
+Node <|-- ImageView
+Node <|-- MediaView
+Parent <|-- Control
+Control <|-- Labeled
+Control <|-- TextInputControl
+Control <|-- ComboBoxBase
+Control <|-- ScollBar
+Control <|-- Slider
+Control <|-- ListView
+Labeled <|-- ButtonBase
+Labeled <|-- Label
+TextInputControl <|-- TextArea
+TextInputControl <|-- TextField
+TextField <|-- PasswordField
+ComboBoxBase <|-- ComboBox
+ButtonBase <|-- Button
+ButtonBase <|-- CheckBox
+ButtonBase <|-- ToggleButton
+ToggleButton <|-- RadioButtion
+
+note left of ImageView : Covered in Chapter 14
+
+@enduml

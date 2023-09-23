@@ -1,11 +1,13 @@
 /**
  * Code for Class.
- * <p>
- * CSC 1061 - Computer Science II - Java
  *
- * @author  Patrick McDougle
+ * <p>CSC 1061 - Computer Science II - Java
+ *
+ * <p>********** DON'T FORGET TO add javafx.media to the VM Arguments **********
+ *
+ * @author Patrick McDougle
  * @version %I%, %G%
- * @since   1.0
+ * @since 1.0
  */
 package edu.csc1061.ch16;
 
@@ -32,6 +34,10 @@ import javafx.util.Duration;
 public class JavaFx010Program extends Application {
   private static final String MEDIA_URL_1 = "resources/videos/AirPlaneDemo.mp4";
 
+  private static final String MEDIA_BUTTON_PLAY_TEXT = ">";
+  private static final String MEDIA_BUTTON_PAUSE_TEXT = "||";
+  private static final String MEDIA_BUTTON_REWIND_TEXT = "<<";
+
   @Override // Override the start method in the Application class
   public void start(Stage primaryStage) throws MalformedURLException {
     File videoFile = new File(MEDIA_URL_1);
@@ -46,23 +52,23 @@ public class JavaFx010Program extends Application {
 
     mediaView.setFitHeight(400);
 
-    Button playButton = new Button(">");
+    Button playButton = new Button(MEDIA_BUTTON_PLAY_TEXT);
 
     // Lambda Expression:
     // parameter -> expression
     // https://www.w3schools.com/java/java_lambda.asp
     playButton.setOnAction(
         e -> {
-          if (playButton.getText().equals(">")) {
+          if (playButton.getText().equals(MEDIA_BUTTON_PLAY_TEXT)) {
             mediaPlayer.play();
-            playButton.setText("||");
+            playButton.setText(MEDIA_BUTTON_PAUSE_TEXT);
           } else {
             mediaPlayer.pause();
-            playButton.setText(">");
+            playButton.setText(MEDIA_BUTTON_PLAY_TEXT);
           }
         });
 
-    Button rewindButton = new Button("<<");
+    Button rewindButton = new Button(MEDIA_BUTTON_REWIND_TEXT);
     rewindButton.setOnAction(e -> mediaPlayer.seek(Duration.ZERO));
 
     Slider sliderVolume = new Slider();
@@ -74,9 +80,7 @@ public class JavaFx010Program extends Application {
 
     HBox hBox = new HBox(10);
     hBox.setAlignment(Pos.CENTER);
-    hBox
-        .getChildren()
-        .addAll(playButton, rewindButton, new Label("Volume"), sliderVolume);
+    hBox.getChildren().addAll(playButton, rewindButton, new Label("Volume"), sliderVolume);
 
     BorderPane pane = new BorderPane();
     pane.setCenter(mediaView);
@@ -90,9 +94,8 @@ public class JavaFx010Program extends Application {
   }
 
   /**
-   * The main method is only needed for the IDE with limited JavaFX support. Not
-   * needed for
-   * running from the command line.
+   * The main method is only needed for the IDE with limited JavaFX support. Not needed for running
+   * from the command line.
    */
   public static void main(String[] args) {
     launch(args);

@@ -1,11 +1,11 @@
 /**
  * Code for Class.
- * <p>
- * CSC 1061 - Computer Science II - Java
  *
- * @author  Patrick McDougle
+ * <p>CSC 1061 - Computer Science II - Java
+ *
+ * @author Patrick McDougle
  * @version %I%, %G%
- * @since   1.0
+ * @since 1.0
  */
 package edu.csc1061.ch16;
 
@@ -28,26 +28,10 @@ public class JavaFx003Program extends JavaFx002Program {
   protected BorderPane getPane() {
     BorderPane pane = super.getPane();
 
-    Font fontBoldItalic = Font.font(
-        FONT_NAME,
-        FontWeight.BOLD,
-        FontPosture.ITALIC,
-        20);
-    Font fontBold = Font.font(
-        FONT_NAME,
-        FontWeight.BOLD,
-        FontPosture.REGULAR,
-        20);
-    Font fontItalic = Font.font(
-        FONT_NAME,
-        FontWeight.NORMAL,
-        FontPosture.ITALIC,
-        20);
-    Font fontNormal = Font.font(
-        FONT_NAME,
-        FontWeight.NORMAL,
-        FontPosture.REGULAR,
-        20);
+    Font fontBoldItalic = Font.font(FONT_NAME, FontWeight.BOLD, FontPosture.ITALIC, 20);
+    Font fontBold = Font.font(FONT_NAME, FontWeight.BOLD, FontPosture.REGULAR, 20);
+    Font fontItalic = Font.font(FONT_NAME, FontWeight.NORMAL, FontPosture.ITALIC, 20);
+    Font fontNormal = Font.font(FONT_NAME, FontWeight.NORMAL, FontPosture.REGULAR, 20);
 
     text.setFont(fontNormal);
 
@@ -64,17 +48,18 @@ public class JavaFx003Program extends JavaFx002Program {
     // Lambda Expression:
     // parameter -> expression
     // https://www.w3schools.com/java/java_lambda.asp
-    EventHandler<ActionEvent> handler = e -> {
-      if (checkboxBold.isSelected() && checkboxItalic.isSelected()) {
-        text.setFont(fontBoldItalic); // Both check boxes checked
-      } else if (checkboxBold.isSelected()) {
-        text.setFont(fontBold); // The Bold check box checked
-      } else if (checkboxItalic.isSelected()) {
-        text.setFont(fontItalic); // The Italic check box checked
-      } else {
-        text.setFont(fontNormal); // Both check boxes unchecked
-      }
-    };
+    EventHandler<ActionEvent> handler =
+        e -> {
+          if (checkboxBold.isSelected() && checkboxItalic.isSelected()) {
+            text.setFont(fontBoldItalic); // Both check boxes checked
+          } else if (checkboxBold.isSelected()) {
+            text.setFont(fontBold); // The Bold check box checked
+          } else if (checkboxItalic.isSelected()) {
+            text.setFont(fontItalic); // The Italic check box checked
+          } else {
+            text.setFont(fontNormal); // Both check boxes unchecked
+          }
+        };
 
     checkboxBold.setOnAction(handler);
     checkboxItalic.setOnAction(handler);
@@ -89,8 +74,8 @@ public class JavaFx003Program extends JavaFx002Program {
   }
 
   /**
-   * The main method is only needed for the IDE with limited
-   * JavaFX support. Not needed for running from the command line.
+   * The main method is only needed for the IDE with limited JavaFX support. Not needed for running
+   * from the command line.
    */
   public static void main(String[] args) {
     launch(args);

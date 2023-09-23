@@ -1,11 +1,11 @@
 /**
  * Code for Class.
- * <p>
- * CSC 1061 - Computer Science II - Java
  *
- * @author  Patrick McDougle
+ * <p>CSC 1061 - Computer Science II - Java
+ *
+ * @author Patrick McDougle
  * @version %I%, %G%
- * @since   1.0
+ * @since 1.0
  */
 package edu.csc1061.ch16;
 
@@ -47,19 +47,21 @@ public class JavaFx009Program extends Application {
     scrollBarHorizontal
         .valueProperty()
         .addListener(
-            observable -> text.setX(
-                scrollBarHorizontal.getValue() *
-                    paneForText.getWidth() /
-                    scrollBarHorizontal.getMax()));
+            observable ->
+                text.setX(
+                    scrollBarHorizontal.getValue()
+                        * paneForText.getWidth()
+                        / scrollBarHorizontal.getMax()));
 
     // Listener for vertical scroll bar value change
     scrollBarVertical
         .valueProperty()
         .addListener(
-            observable -> text.setY(
-                scrollBarVertical.getValue() *
-                    paneForText.getHeight() /
-                    scrollBarVertical.getMax()));
+            observable ->
+                text.setY(
+                    scrollBarVertical.getValue()
+                        * paneForText.getHeight()
+                        / scrollBarVertical.getMax()));
 
     // Create a scene and place it in the stage
     Scene scene = new Scene(pane, 450, 170);
@@ -69,9 +71,8 @@ public class JavaFx009Program extends Application {
   }
 
   /**
-   * The main method is only needed for the IDE with limited JavaFX support. Not
-   * needed for
-   * running from the command line.
+   * The main method is only needed for the IDE with limited JavaFX support. Not needed for running
+   * from the command line.
    */
   public static void main(String[] args) {
     launch(args);

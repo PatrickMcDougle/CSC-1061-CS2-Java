@@ -1,11 +1,11 @@
 /**
  * Code for Class.
- * <p>
- * CSC 1061 - Computer Science II - Java
  *
- * @author  Patrick McDougle
+ * <p>CSC 1061 - Computer Science II - Java
+ *
+ * @author Patrick McDougle
  * @version %I%, %G%
- * @since   1.0
+ * @since 1.0
  */
 package edu.csc1061.ch16;
 
@@ -25,8 +25,7 @@ public class JavaFx004Program extends JavaFx003Program {
 
     VBox paneForRadioButtons = new VBox(20);
     paneForRadioButtons.setPadding(new Insets(5, 5, 5, 5));
-    paneForRadioButtons.setStyle(
-        "-fx-border-width: 2px; -fx-border-color: green");
+    paneForRadioButtons.setStyle("-fx-border-width: 2px; -fx-border-color: green");
 
     RadioButton radioButtonRed = new RadioButton("Red");
     RadioButton radioButtonGreen = new RadioButton("Green");
@@ -34,11 +33,7 @@ public class JavaFx004Program extends JavaFx003Program {
     RadioButton radioButtonBlack = new RadioButton("Black");
     paneForRadioButtons
         .getChildren()
-        .addAll(
-            radioButtonRed,
-            radioButtonGreen,
-            radioButtonBlue,
-            radioButtonBlack);
+        .addAll(radioButtonRed, radioButtonGreen, radioButtonBlue, radioButtonBlack);
     pane.setLeft(paneForRadioButtons);
 
     ToggleGroup toggleGroupColors = new ToggleGroup();
@@ -82,8 +77,8 @@ public class JavaFx004Program extends JavaFx003Program {
   }
 
   /**
-   * The main method is only needed for the IDE with limited
-   * JavaFX support. Not needed for running from the command line.
+   * The main method is only needed for the IDE with limited JavaFX support. Not needed for running
+   * from the command line.
    */
   public static void main(String[] args) {
     launch(args);

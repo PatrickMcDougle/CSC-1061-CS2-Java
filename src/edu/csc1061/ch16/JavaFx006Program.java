@@ -1,11 +1,11 @@
 /**
  * Code for Class.
- * <p>
- * CSC 1061 - Computer Science II - Java
  *
- * @author  Patrick McDougle
+ * <p>CSC 1061 - Computer Science II - Java
+ *
+ * @author Patrick McDougle
  * @version %I%, %G%
- * @since   1.0
+ * @since 1.0
  */
 package edu.csc1061.ch16;
 
@@ -36,8 +36,7 @@ public class JavaFx006Program extends Application {
   }
 
   /**
-   * The main method is only needed for the IDE with limited JavaFX support. Not
-   * needed for running
+   * The main method is only needed for the IDE with limited JavaFX support. Not needed for running
    * from the command line.
    */
   public static void main(String[] args) {

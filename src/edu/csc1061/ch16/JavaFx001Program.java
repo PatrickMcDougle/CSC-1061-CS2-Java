@@ -1,11 +1,11 @@
 /**
  * Code for Class.
- * <p>
- * CSC 1061 - Computer Science II - Java
  *
- * @author  Patrick McDougle
+ * <p>CSC 1061 - Computer Science II - Java
+ *
+ * @author Patrick McDougle
  * @version %I%, %G%
- * @since   1.0
+ * @since 1.0
  */
 package edu.csc1061.ch16;
 
@@ -28,8 +28,7 @@ public class JavaFx001Program extends Application {
 
   @Override // Override the start method in the Application class
   public void start(Stage primaryStage) {
-    ImageView usFlagImageView = new ImageView(
-        new Image("file:resources/images/flag1.gif"));
+    ImageView usFlagImageView = new ImageView(new Image("file:resources/images/flag1.gif"));
 
     usFlagImageView.setFitHeight(108);
     usFlagImageView.setFitWidth(206);
@@ -70,9 +69,8 @@ public class JavaFx001Program extends Application {
   }
 
   /**
-   * The main method is only needed for the IDE with limited JavaFX support. Not
-   * needed for
-   * running from the command line.
+   * The main method is only needed for the IDE with limited JavaFX support. Not needed for running
+   * from the command line.
    */
   public static void main(String[] args) {
     launch(args);
