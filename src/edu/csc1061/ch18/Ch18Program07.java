@@ -1,11 +1,11 @@
 /**
  * Code for Class.
- * <p>
- * CSC 1061 - Computer Science II - Java
  *
- * @author  Patrick McDougle
+ * <p>CSC 1061 - Computer Science II - Java
+ *
+ * @author Patrick McDougle
  * @version %I%, %G%
- * @since   1.0
+ * @since 1.0
  */
 package edu.csc1061.ch18;
 
@@ -13,7 +13,7 @@ import java.io.File;
 import java.util.Scanner;
 
 // example directory:
-// C:\Users\<username>\Documents
+// C:\Java
 // ./
 
 // Directory Size

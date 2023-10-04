@@ -1,11 +1,11 @@
 /**
  * Code for Class.
- * <p>
- * CSC 1061 - Computer Science II - Java
  *
- * @author  Patrick McDougle
+ * <p>CSC 1061 - Computer Science II - Java
+ *
+ * @author Patrick McDougle
  * @version %I%, %G%
- * @since   1.0
+ * @since 1.0
  */
 package edu.csc1061.ch18;
 
@@ -27,7 +27,7 @@ public class Ch18Program08 {
     }
 
     // for (int i = 0; i < 5; i++) {
-    // runTower(n + i);
+    //   runTower(n + i);
     // }
   }
 
@@ -51,8 +51,12 @@ public class Ch18Program08 {
   }
 
   /**
-   * The method for finding the solution to move n disks from fromTower to toTower
-   * with auxTower
+   * The method for finding the solution to move n disks from fromTower to toTower with auxTower.
+   *
+   * @param n the number of disks
+   * @param fromTower the tower position we are starting at
+   * @param toTower the tower position we are ending at
+   * @param auxTower the tower position of the tower that will help.
    */
   public static void moveDisks(int n, char fromTower, char toTower, char auxTower) {
     if (n == 1) {

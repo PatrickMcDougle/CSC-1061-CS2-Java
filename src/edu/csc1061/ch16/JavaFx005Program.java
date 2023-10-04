@@ -32,6 +32,9 @@ public class JavaFx005Program extends JavaFx004Program {
     paneForTextField.setCenter(textFieldWords);
     pane.setTop(paneForTextField);
 
+    // Lambda Expression:
+    // parameter -> expression
+    // https://www.w3schools.com/java/java_lambda.asp
     textFieldWords.setOnAction(e -> text.setText(textFieldWords.getText()));
 
     return pane;

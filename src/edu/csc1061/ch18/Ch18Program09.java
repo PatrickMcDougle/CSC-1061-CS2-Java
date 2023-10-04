@@ -1,14 +1,15 @@
 /**
  * Code for Class.
- * <p>
- * CSC 1061 - Computer Science II - Java
  *
- * @author  Patrick McDougle
+ * <p>CSC 1061 - Computer Science II - Java
+ *
+ * @author Patrick McDougle
  * @version %I%, %G%
- * @since   1.0
+ * @since 1.0
  */
 package edu.csc1061.ch18;
 
+import java.util.*;
 import javafx.application.Application;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
@@ -18,22 +19,32 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 
-/**
- * Sierpinski Triangle
- */
+/** Sierpinski Triangle */
 public class Ch18Program09 extends Application {
+
+  private static Random random = new Random();
 
   @Override // Override the start method in the Application class
   public void start(Stage primaryStage) {
     SierpinskiTrianglePane pane = new SierpinskiTrianglePane();
+
+    Label debugLabel = new Label("Debug Output");
+
     TextField textFieldOrder = new TextField();
-    textFieldOrder.setOnAction(e -> pane.setOrder(Integer.parseInt(textFieldOrder.getText())));
+    textFieldOrder.setOnAction(
+        e -> {
+          int level = Integer.parseInt(textFieldOrder.getText());
+          int something = random.nextInt(100);
+
+          pane.setOrder(level);
+          debugLabel.setText(String.format("Done [%d] : %d", level, something));
+        });
     textFieldOrder.setPrefColumnCount(4);
     textFieldOrder.setAlignment(Pos.BOTTOM_RIGHT);
 
     // Pane to hold label, text field, and a button
     HBox hBox = new HBox(10);
-    hBox.getChildren().addAll(new Label("Enter an order: "), textFieldOrder);
+    hBox.getChildren().addAll(new Label("Enter an order: "), textFieldOrder, debugLabel);
     hBox.setAlignment(Pos.CENTER);
 
     BorderPane borderPane = new BorderPane();
@@ -51,8 +62,7 @@ public class Ch18Program09 extends Application {
   }
 
   /**
-   * The main method is only needed for the IDE with limited JavaFX support. Not
-   * needed for running
+   * The main method is only needed for the IDE with limited JavaFX support. Not needed for running
    * from the command line.
    */
   public static void main(String[] args) {

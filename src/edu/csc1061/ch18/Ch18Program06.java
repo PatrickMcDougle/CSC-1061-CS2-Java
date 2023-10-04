@@ -1,11 +1,11 @@
 /**
  * Code for Class.
- * <p>
- * CSC 1061 - Computer Science II - Java
  *
- * @author  Patrick McDougle
+ * <p>CSC 1061 - Computer Science II - Java
+ *
+ * @author Patrick McDougle
  * @version %I%, %G%
- * @since   1.0
+ * @since 1.0
  */
 package edu.csc1061.ch18;
 
@@ -38,7 +38,7 @@ public class Ch18Program06 {
 
   /** Main method */
   public static void main(String[] args) {
-    int[] list = { 3, 5, 7, 8, 12, 17, 24, 29 };
+    int[] list = {3, 5, 7, 8, 12, 17, 24, 29};
     System.out.println(binarySearch(list, 7));
     System.out.println(binarySearch(list, 0));
     System.out.println(binarySearch(list, 6));

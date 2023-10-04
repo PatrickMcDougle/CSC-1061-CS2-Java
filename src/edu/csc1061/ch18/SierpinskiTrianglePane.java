@@ -1,11 +1,11 @@
 /**
  * Code for Class.
- * <p>
- * CSC 1061 - Computer Science II - Java
  *
- * @author  Patrick McDougle
+ * <p>CSC 1061 - Computer Science II - Java
+ *
+ * @author Patrick McDougle
  * @version %I%, %G%
- * @since   1.0
+ * @since 1.0
  */
 package edu.csc1061.ch18;
 
@@ -24,11 +24,8 @@ public class SierpinskiTrianglePane extends Pane {
     paint();
   }
 
-  /**
-   * Default no-arg constructor
-   */
-  SierpinskiTrianglePane() {
-  }
+  /** Default no-arg constructor */
+  SierpinskiTrianglePane() {}
 
   protected void paint() {
     // Select three points in proportion to the panel size

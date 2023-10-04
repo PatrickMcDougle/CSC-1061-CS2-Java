@@ -1,11 +1,11 @@
 /**
  * Code for Class.
- * <p>
- * CSC 1061 - Computer Science II - Java
  *
- * @author  Patrick McDougle
+ * <p>CSC 1061 - Computer Science II - Java
+ *
+ * @author Patrick McDougle
  * @version %I%, %G%
- * @since   1.0
+ * @since 1.0
  */
 package edu.csc1061.ch18;
 
@@ -40,7 +40,7 @@ public class Ch18Program05 {
 
   /** Main method */
   public static void main(String[] args) {
-    double[] list = { 2, 1, 3, 1, 2, 5, 2, -1, 0 };
+    double[] list = {2, 1, 3, 1, 2, 5, 2, -1, 0};
     sort(list);
     for (int i = 0; i < list.length; i++) {
       System.out.print(list[i] + " ");

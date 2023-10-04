@@ -1,0 +1,25 @@
+@startuml
+
+folder directory #LightYellow
+folder dir_1 #LightYellow
+folder dir_2 #LightYellow
+folder dir_n #LightYellow
+
+file file_1 #SpringGreen
+file file_2 #SpringGreen
+file file_m #SpringGreen
+
+directory -- file_1
+directory -- file_2
+directory -- file_m
+
+directory -- dir_1
+directory -- dir_2
+directory -- dir_n
+
+file_1 ~right~ file_2
+file_2 ~right~ file_m
+dir_1 ~right~ dir_2
+dir_2 ~right~ dir_n
+
+@enduml
