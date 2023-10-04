@@ -1,11 +1,11 @@
 /**
  * Code for Class.
- * <p>
- * CSC 1061 - Computer Science II - Java
  *
- * @author  Patrick McDougle
+ * <p>CSC 1061 - Computer Science II - Java
+ *
+ * @author Patrick McDougle
  * @version %I%, %G%
- * @since   1.0
+ * @since 1.0
  */
 package edu.csc1061.ch31;
 
@@ -90,8 +90,8 @@ public class Ch31JavaFX02 extends Application {
     Label label2 = new Label("Number 2:");
     Label label3 = new Label("Results:");
 
-    hBox.getChildren().addAll(label1, textFieldNumber1, label2, textFieldNumber2, label3,
-        textFieldResults);
+    hBox.getChildren()
+        .addAll(label1, textFieldNumber1, label2, textFieldNumber2, label3, textFieldResults);
     hBox.setAlignment(Pos.CENTER);
 
     return hBox;
@@ -115,8 +115,9 @@ public class Ch31JavaFX02 extends Application {
     MenuItem menuItemDivide = createMenuItem("Divide", '/', "Ctrl+D");
     MenuItem menuItemClose = new MenuItem("Close");
 
-    menuOperation.getItems().addAll(menuItemAdd, menuItemSubtract, menuItemMultiply,
-        menuItemDivide);
+    menuOperation
+        .getItems()
+        .addAll(menuItemAdd, menuItemSubtract, menuItemMultiply, menuItemDivide);
     menuExit.getItems().add(menuItemClose);
 
     // Handle menu actions
@@ -184,8 +185,7 @@ public class Ch31JavaFX02 extends Application {
   }
 
   /**
-   * The main method is only needed for the IDE with limited JavaFX support. Not
-   * needed for running
+   * The main method is only needed for the IDE with limited JavaFX support. Not needed for running
    * from the command line.
    */
   public static void main(String[] args) {
