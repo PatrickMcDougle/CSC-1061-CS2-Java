@@ -1,0 +1,16 @@
+@startuml
+
+skinparam groupInheritance 2
+skinparam ClassFontSize 18
+
+interface java.util.List<E>
+abstract java.util.AbstractList<E>
+
+class java.util.Vector<E>
+class java.util.Stack<E>
+
+java.util.List <|.. java.util.AbstractList
+java.util.AbstractList <|-- java.util.Vector
+java.util.Vector <|-- java.util.Stack
+
+@enduml

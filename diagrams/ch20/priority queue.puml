@@ -1,0 +1,16 @@
+@startuml
+
+skinparam groupInheritance 2
+skinparam ClassFontSize 18
+
+interface java.util.Queue<E>
+class java.util.PriorityQueue<E> {
+    +PriorityQueue()
+    +PriorityQueue(initialCapacity: int)
+    +PriorityQueue(c: Collection<? extends E>)
+    +PriorityQueue(initialCapacity: int, comarator: Comparator<? super E>)
+}
+
+java.util.Queue <|.. java.util.PriorityQueue
+
+@enduml

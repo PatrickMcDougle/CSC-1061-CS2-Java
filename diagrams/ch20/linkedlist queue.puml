@@ -1,0 +1,11 @@
+@startuml
+
+skinparam groupInheritance 2
+skinparam ClassFontSize 18
+
+interface java.util.Collection<E>
+interface java.util.Queue<E>
+
+java.util.Collection <|.. java.util.Queue
+
+@enduml

@@ -1,0 +1,32 @@
+@startuml
+
+skinparam groupInheritance 2
+skinparam ClassFontSize 18
+
+interface java.util.Collection<E>
+interface java.util.Iterator<E>
+
+interface java.util.List<E> {
+    +add(index: int, element: Object) : boolean
+    +addAll(index: int, c: Collection <? extends E>) : boolean
+    +get(index: int) : E
+    +indexOf(element: Object) : int
+    +lastIndexOf(element: Object) : int
+    +listIterator(startIndex: int) : ListIterator<E>
+    +remove(index: int): E
+    +set(index: int, element: Object) : Object
+    +subList(fromIndex: int, toIndex: int) : List<E>
+}
+interface java.util.ListIterator<E> {
+    +add(element: E)
+    +hasPrevious() : boolean
+    +nextIndex() : int
+    +previous() : E
+    +previousIndex() : int
+    +set(element: E)
+}
+
+java.util.Collection <|.. java.util.List
+java.util.Iterator <|.. java.util.ListIterator
+
+@enduml

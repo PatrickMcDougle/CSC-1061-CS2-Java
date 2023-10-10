@@ -1,0 +1,17 @@
+@startuml
+
+skinparam groupInheritance 2
+skinparam ClassFontSize 18
+
+interface java.util.Collection<E>
+interface java.util.List<E>
+
+class java.util.LinkedList<E>
+class java.util.ArrayList<E>
+
+java.util.Collection <|.. java.util.List
+
+java.util.List <|-- java.util.LinkedList
+java.util.List <|-- java.util.ArrayList
+
+@enduml

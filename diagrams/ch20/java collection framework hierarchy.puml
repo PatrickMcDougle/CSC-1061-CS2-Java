@@ -1,0 +1,55 @@
+@startuml
+
+skinparam groupInheritance 2
+skinparam backgroundColor transparent
+skinparam ClassFontSize 18
+
+interface Collection #Yellow
+interface Set #Yellow
+interface List #Yellow
+interface Queue #Yellow
+interface NavigableSet #Yellow
+interface SortedSet #Yellow
+interface Deque #Yellow
+abstract AbstractCollection #Orange
+abstract AbstractSet #Orange
+abstract AbstractList #Orange
+abstract AbstractSequentialList #Orange
+abstract AbstractQueue #Orange
+together {
+    class TreeSet #SpringGreen
+    class HashSet #SpringGreen
+    class LinkedHashSet #SpringGreen
+    class Vector #SpringGreen
+    class Stack #SpringGreen
+    class ArrayList #SpringGreen
+    class LinkedList #SpringGreen
+    class PriorityQueue #SpringGreen
+}
+
+Collection <|.. Set
+Collection <|.. List
+Collection <|.. Queue
+SortedSet <|.. NavigableSet
+Set <|.. SortedSet
+Queue <|.. Deque
+Collection <|.. AbstractCollection
+Set <|.. AbstractSet
+List <|.. AbstractList
+Queue <|.. AbstractQueue
+NavigableSet <|.. TreeSet
+Deque <|.. LinkedList
+
+AbstractCollection <|-- AbstractSet
+AbstractCollection <|-- AbstractList
+AbstractList <|-- AbstractSequentialList
+AbstractSet <|-- TreeSet
+AbstractSet <|-- HashSet
+HashSet <|-- LinkedHashSet
+AbstractList <|-- Vector
+Vector <|-- Stack
+AbstractList <|-- ArrayList
+AbstractSequentialList <|-- LinkedList
+AbstractQueue <|-down- PriorityQueue
+
+@enduml
