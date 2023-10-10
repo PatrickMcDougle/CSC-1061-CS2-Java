@@ -1,11 +1,11 @@
 /**
  * Code for Class.
- * <p>
- * CSC 1061 - Computer Science II - Java
  *
- * @author  Patrick McDougle
+ * <p>CSC 1061 - Computer Science II - Java
+ *
+ * @author Patrick McDougle
  * @version %I%, %G%
- * @since   1.0
+ * @since 1.0
  */
 package edu.csc1061.ch20;
 
@@ -13,6 +13,7 @@ import java.util.Stack;
 
 public class Ch20Program07 {
   private static final String EXPRESSION_IS = "Expression is: ";
+  private static final String DEFAULT_OPERATOR_MESSAGER = "An Invalid Operator was detected!";
 
   public static void main(String[] args) {
     try {
@@ -29,6 +30,12 @@ public class Ch20Program07 {
       expression = "(1 + 2 * 4) - 3";
       System.out.println(EXPRESSION_IS + expression);
       System.out.println(seven.evaluateExpression(expression));
+
+      // is the answer 1 or 9???
+      expression = "6/2(2+1)";
+      System.out.println(EXPRESSION_IS + expression);
+      System.out.println(EXPRESSION_IS + seven.insertBlanks(expression));
+      System.out.println(seven.evaluateExpression(expression));
     } catch (Exception ex) {
       System.out.println("Wrong expression!" + ex.getMessage());
     }
@@ -36,6 +43,10 @@ public class Ch20Program07 {
 
   /** Evaluate an expression */
   public int evaluateExpression(String expression) {
+
+    // In JDK 10 and later, you can declare local variables with non-null initializers with the var
+    // identifier, which can help you write code that’s easier to read.
+
     // Create operandStack to store operands
     var operandStack = new Stack<Integer>();
 
@@ -46,7 +57,7 @@ public class Ch20Program07 {
     expression = insertBlanks(expression);
 
     // Extract operands and operators
-    String[] tokens = expression.split(" ");
+    var tokens = expression.split(" ");
 
     // Phase 1: Scanning the expression
     // The program scans the expression from left to right to extract operands,
@@ -63,12 +74,16 @@ public class Ch20Program07 {
     // Phase 1: Scan tokens
     for (String token : tokens) {
       if (token.length() == 0) { // Blank space
-        continue; // Back to the while loop to extract the next token
-      } else if (token.charAt(0) == '+' || token.charAt(0) == '-') {
+        continue; // Back to the for loop to extract the next token
+      }
+
+      if (token.charAt(0) == '+' || token.charAt(0) == '-') {
         // Process all +, -, *, / in the top of the operator stack
         while (!operatorStack.isEmpty()
-            && (operatorStack.peek() == '+' || operatorStack.peek() == '-'
-                || operatorStack.peek() == '*' || operatorStack.peek() == '/')) {
+            && (operatorStack.peek() == '+'
+                || operatorStack.peek() == '-'
+                || operatorStack.peek() == '*'
+                || operatorStack.peek() == '/')) {
           processAnOperator(operandStack, operatorStack);
         }
 
@@ -112,22 +127,29 @@ public class Ch20Program07 {
   }
 
   /**
-   * Process one operator: Take an operator from operatorStack and apply it on the
-   * operands in the
+   * Process one operator: Take an operator from operatorStack and apply it on the operands in the
    * operandStack
    */
-  public void processAnOperator(Stack<Integer> operandStack, Stack<Character> operatorStack) {
-    char op = operatorStack.pop();
-    int op1 = operandStack.pop();
-    int op2 = operandStack.pop();
-    if (op == '+') {
-      operandStack.push(op2 + op1);
-    } else if (op == '-') {
-      operandStack.push(op2 - op1);
-    } else if (op == '*') {
-      operandStack.push(op2 * op1);
-    } else if (op == '/') {
-      operandStack.push(op2 / op1);
+  private void processAnOperator(Stack<Integer> operandStack, Stack<Character> operatorStack) {
+    char operator = operatorStack.pop();
+    int operand1 = operandStack.pop();
+    int operand2 = operandStack.pop();
+
+    switch (operator) {
+      case '+':
+        operandStack.push(operand2 + operand1);
+        break;
+      case '-':
+        operandStack.push(operand2 - operand1);
+        break;
+      case '*':
+        operandStack.push(operand2 * operand1);
+        break;
+      case '/':
+        operandStack.push(operand2 / operand1);
+        break;
+      default:
+        throw new IllegalArgumentException(DEFAULT_OPERATOR_MESSAGER);
     }
   }
 
@@ -135,9 +157,16 @@ public class Ch20Program07 {
     StringBuilder result = new StringBuilder();
 
     for (int i = 0; i < s.length(); i++) {
-      if (s.charAt(i) == '(' || s.charAt(i) == ')' || s.charAt(i) == '+' || s.charAt(i) == '-'
-          || s.charAt(i) == '*' || s.charAt(i) == '/') {
-        result.append(" " + s.charAt(i) + " ");
+      if (s.charAt(i) == '('
+          || s.charAt(i) == ')'
+          || s.charAt(i) == '+'
+          || s.charAt(i) == '-'
+          || s.charAt(i) == '*'
+          || s.charAt(i) == '/') {
+        result.append(' ');
+        result.append(s.charAt(i));
+        result.append(' ');
+
       } else if (s.charAt(i) == ' ') {
         // ignore original blanks.
       } else {

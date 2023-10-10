@@ -1,11 +1,11 @@
 /**
  * Code for Class.
- * <p>
- * CSC 1061 - Computer Science II - Java
  *
- * @author  Patrick McDougle
+ * <p>CSC 1061 - Computer Science II - Java
+ *
+ * @author Patrick McDougle
  * @version %I%, %G%
- * @since   1.0
+ * @since 1.0
  */
 package edu.csc1061.ch20;
 
@@ -15,14 +15,8 @@ public class Rectangle extends GeometricObject {
 
   /**
    * This Rectangle class extends from the {@link GeometricObject}
-   */
-  public Rectangle() {
-  }
-
-  /**
-   * This Rectangle class extends from the {@link GeometricObject}
    *
-   * @param width  this double value represents the width of the rectangle.
+   * @param width this double value represents the width of the rectangle.
    * @param height this double value represents the height of the rectangle.
    */
   public Rectangle(double width, double height) {
@@ -73,5 +67,22 @@ public class Rectangle extends GeometricObject {
     sb.append(height);
     sb.append("] }");
     return sb.toString();
+  }
+
+  @Override
+  public boolean equals(Object o) {
+    if (o instanceof Rectangle) {
+      Rectangle other = (Rectangle) o;
+      return width == other.width && height == other.height;
+    }
+    return false;
+  }
+
+  @Override
+  public int hashCode() {
+    int hash = 7;
+    int prime = 31;
+    hash = prime * hash + (int) width + (int) height;
+    return hash;
   }
 }

@@ -1,11 +1,11 @@
 /**
  * Code for Class.
- * <p>
- * CSC 1061 - Computer Science II - Java
  *
- * @author  Patrick McDougle
+ * <p>CSC 1061 - Computer Science II - Java
+ *
+ * @author Patrick McDougle
  * @version %I%, %G%
- * @since   1.0
+ * @since 1.0
  */
 package edu.csc1061.ch20;
 
@@ -76,6 +76,7 @@ public class Ch20Program01 {
     System.out.println(c1);
 
     // iterator example
+    // ////////// //////////
     System.out.print("\n| ");
     Iterator<String> iterator = citiesInColorado.iterator();
     while (iterator.hasNext()) {
@@ -90,7 +91,10 @@ public class Ch20Program01 {
     System.out.println();
 
     // foreach method loop
+    // ////////// //////////
     System.out.print("\n| ");
     citiesInColorado.forEach(e -> System.out.print(e.toUpperCase() + " | "));
+    System.out.print("\n| ");
+    citiesLivedIn.forEach(e -> System.out.print(e.toLowerCase() + " | "));
   }
 }

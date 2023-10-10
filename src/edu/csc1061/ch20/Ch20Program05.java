@@ -1,11 +1,11 @@
 /**
  * Code for Class.
- * <p>
- * CSC 1061 - Computer Science II - Java
  *
- * @author  Patrick McDougle
+ * <p>CSC 1061 - Computer Science II - Java
+ *
+ * @author Patrick McDougle
  * @version %I%, %G%
- * @since   1.0
+ * @since 1.0
  */
 package edu.csc1061.ch20;
 
@@ -52,14 +52,13 @@ public class Ch20Program05 extends Application {
 
     // Create a scene and place the pane in the stage
     Scene scene = new Scene(pane, 250, 150);
-    primaryStage.setTitle("MultipleBounceBall"); // Set the stage title
+    primaryStage.setTitle("Multiple Bounce Ball"); // Set the stage title
     primaryStage.setScene(scene); // Place the scene in the stage
     primaryStage.show(); // Display the stage
   }
 
   /**
-   * The main method is only needed for the IDE with limited JavaFX support. Not
-   * needed for running
+   * The main method is only needed for the IDE with limited JavaFX support. Not needed for running
    * from the command line.
    */
   public static void main(String[] args) {

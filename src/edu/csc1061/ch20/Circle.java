@@ -1,19 +1,16 @@
 /**
  * Code for Class.
- * <p>
- * CSC 1061 - Computer Science II - Java
  *
- * @author  Patrick McDougle
+ * <p>CSC 1061 - Computer Science II - Java
+ *
+ * @author Patrick McDougle
  * @version %I%, %G%
- * @since   1.0
+ * @since 1.0
  */
 package edu.csc1061.ch20;
 
 public class Circle extends GeometricObject {
   private double radius;
-
-  public Circle() {
-  }
 
   public Circle(double radius) {
     this.radius = radius;
@@ -53,7 +50,19 @@ public class Circle extends GeometricObject {
 
   /* Print the circle info */
   public void printCircle() {
-    System.out.println("The circle is created " + getDateCreated() + " and the radius is " + radius);
+    System.out.println(
+        "The circle is created " + getDateCreated() + " and the radius is " + radius);
+  }
+
+  /** Override the toString method defined in GeometricObject */
+  @Override
+  public String toString() {
+    StringBuilder sb = new StringBuilder(super.toString());
+    sb.insert(0, "Circle: { ");
+    sb.append(" [radius: ");
+    sb.append(radius);
+    sb.append("] }");
+    return sb.toString();
   }
 
   @Override

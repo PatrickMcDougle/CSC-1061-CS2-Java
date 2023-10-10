@@ -1,11 +1,11 @@
 /**
  * Code for Class.
- * <p>
- * CSC 1061 - Computer Science II - Java
  *
- * @author  Patrick McDougle
+ * <p>CSC 1061 - Computer Science II - Java
+ *
+ * @author Patrick McDougle
  * @version %I%, %G%
- * @since   1.0
+ * @since 1.0
  */
 package edu.csc1061.ch20;
 
@@ -23,8 +23,7 @@ public class Ch20Program04 {
   }
 
   public static void sortStringByLength() {
-    String[] cities = { "Las Cruces", "Orlando", "Keene", "Trona", "Sandy", "Littleton", "Greeley",
-        "Rockwall", "New Orleans", };
+    String[] cities = getCities();
 
     // using Comparator concrete class.
     Arrays.sort(cities, new LengthComparator());
@@ -34,11 +33,26 @@ public class Ch20Program04 {
     }
   }
 
-  private static void sortStringIgnoreCase() {
-    List<String> cities = Arrays.asList("Las Cruces", "Orlando", "Keene", "Trona", "Sandy",
-        "Littleton", "Greeley", "Rockwall", "New Orleans");
+  protected static String[] getCities() {
+    return new String[] {
+      "Las Cruces",
+      "Orlando",
+      "Keene",
+      "Trona",
+      "Sandy",
+      "Littleton",
+      "Greeley",
+      "Rockwall",
+      "New Orleans",
+    };
+  }
 
-    // using lambda function.
+  private static void sortStringIgnoreCase() {
+    List<String> cities = Arrays.asList(getCities());
+
+    // Lambda Expression:
+    // parameter -> expression
+    // https://www.w3schools.com/java/java_lambda.asp
     cities.sort((s1, s2) -> s1.compareToIgnoreCase(s2));
     // cities.sort(String::compareToIgnoreCase)
     // cities.sort(new LengthComparator())

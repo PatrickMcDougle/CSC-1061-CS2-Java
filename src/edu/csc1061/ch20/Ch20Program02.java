@@ -1,11 +1,11 @@
 /**
  * Code for Class.
- * <p>
- * CSC 1061 - Computer Science II - Java
  *
- * @author  Patrick McDougle
+ * <p>CSC 1061 - Computer Science II - Java
+ *
+ * @author Patrick McDougle
  * @version %I%, %G%
- * @since   1.0
+ * @since 1.0
  */
 package edu.csc1061.ch20;
 
@@ -63,6 +63,8 @@ public class Ch20Program02 {
     }
   }
 
+  // Lambda Expression:
+  // parameter -> expression
   // https://www.w3schools.com/java/java_lambda.asp
   private static void forEachVersion(List<Integer> arrayList) {
     System.out.print("A list of integers in the array list: ");
