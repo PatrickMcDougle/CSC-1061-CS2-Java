@@ -89,6 +89,8 @@ This project has all the code that I use for my course. I tweak it as I go and m
 -   [![Java SDK][java-badge]][java-sdk-url]
 -   [![JavaFX][javafx-badge]][javafx-url]
 
+Originally this code was developed with Java 8. The code is based on code from the book that we use for the course. The code has been updated to use Java 17. With Java 21 being the next LTS version, the class will use Java/JavaFX 21 for all assignments going forward.
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- GETTING STARTED -->
@@ -105,9 +107,9 @@ None at this time!
 
 Firstly we need to install software onto your computer.
 
--   [Java SDK][java-sdk-url] - Version 17+
--   [JavaFX][javafx-url] - 17.0.05+
--   [Visual Studio Code][vscode-url] - 1.73.1+
+-   [Java SDK][java-sdk-url] - Version 21+
+-   [JavaFX][javafx-url] - 21+
+-   [Visual Studio Code][vscode-url] - 1.83.0+
 
 ### Getting the Repository
 
@@ -152,10 +154,11 @@ Here are some online resources that will help get you started in using Visual St
 
 ## Folder Structure
 
-The workspace contains two folders of importance, where:
+The workspace contains several folders of importance, where:
 
--   `src`: the folder that contains the Java examples for each class/chapter
--   `resources`: the folder that contains resources needed for some of the examples
+-   `diagrams`: this folder contains diagrams PlantUML files that are used to make the diagrams for the PowerPoint presentations.
+-   `resources`: this folder contains resources needed for some of the code examples
+-   `src`: this folder contains the source code for the Java examples which are used in the class/chapter
 
 Meanwhile, the compiled output files will be generated in the `bin` folder by default.
 
@@ -191,7 +194,7 @@ Project Link: [https://github.com/PatrickMcDougle/CSC-1061-CS2-Java](https://git
 
 ## Acknowledgments
 
--   [TBD](https://github.com/PatrickMcDougle/CSC-1061-CS2-Java)
+-   [Patrick McDougle (ME!)](https://github.com/PatrickMcDougle/CSC-1061-CS2-Java)
 -   [TBD](https://github.com/PatrickMcDougle/CSC-1061-CS2-Java)
 -   [TBD](https://github.com/PatrickMcDougle/CSC-1061-CS2-Java)
 
@@ -212,7 +215,7 @@ Project Link: [https://github.com/PatrickMcDougle/CSC-1061-CS2-Java](https://git
 [license-url]: https://github.com/PatrickMcDougle/CSC-1061-CS2-Java/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/patrickmcdougle
-[product-screenshot]: resources/images/VSC_screen_shot.png
+[product-screenshot]: resources/images/VSC_screen_shot_002.png
 [java-badge]: https://img.shields.io/badge/Java-AD6907?style=for-the-badge&logoColor=white
 [java-sdk-url]: https://www.oracle.com/java/technologies/downloads/
 [javafx-badge]: https://img.shields.io/badge/JavaFX-0769AD?style=for-the-badge&logoColor=white
