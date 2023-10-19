@@ -32,7 +32,7 @@ public class Ch20Program07 {
       System.out.println(seven.evaluateExpression(expression));
 
       // is the answer 1 or 9???
-      expression = "6/2(2+1)";
+      expression = "6/2*(2+1)";
       System.out.println(EXPRESSION_IS + expression);
       System.out.println(EXPRESSION_IS + seven.insertBlanks(expression));
       System.out.println(seven.evaluateExpression(expression));

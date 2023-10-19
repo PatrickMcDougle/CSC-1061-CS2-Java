@@ -55,6 +55,7 @@ public class Ch20Program04 {
     // https://www.w3schools.com/java/java_lambda.asp
     cities.sort((s1, s2) -> s1.compareToIgnoreCase(s2));
     // cities.sort(String::compareToIgnoreCase)
+
     // cities.sort(new LengthComparator())
     // cities.sort((s1, s2) -> s1.length() - s2.length())
 
