@@ -1,11 +1,11 @@
 /**
  * Code for Class.
- * <p>
- * CSC 1061 - Computer Science II - Java
  *
- * @author  Patrick McDougle
+ * <p>CSC 1061 - Computer Science II - Java
+ *
+ * @author Patrick McDougle
  * @version %I%, %G%
- * @since   1.0
+ * @since 1.0
  */
 package edu.csc1061.ch21;
 
@@ -28,10 +28,8 @@ public class Ch21Program02 {
     // Use the methods in SortedSet interface
     System.out.println("first()               : " + treeSet.first());
     System.out.println("last()                : " + treeSet.last());
-    System.out.println(
-        "headSet(\"Castle Rock\"): " + treeSet.headSet("Castle Rock"));
-    System.out.println(
-        "tailSet(\"Castle Rock\"): " + treeSet.tailSet("Castle Rock"));
+    System.out.println("headSet(\"Castle Rock\"): " + treeSet.headSet("Castle Rock"));
+    System.out.println("tailSet(\"Castle Rock\"): " + treeSet.tailSet("Castle Rock"));
 
     // Use the methods in NavigableSet interface
     System.out.println("lower(\"F\")            : " + treeSet.lower("F"));

@@ -1,11 +1,11 @@
 /**
  * Code for Class.
- * <p>
- * CSC 1061 - Computer Science II - Java
  *
- * @author  Patrick McDougle
+ * <p>CSC 1061 - Computer Science II - Java
+ *
+ * @author Patrick McDougle
  * @version %I%, %G%
- * @since   1.0
+ * @since 1.0
  */
 package edu.csc1061.ch21;
 
@@ -80,9 +80,7 @@ public class Ch21Program06 {
    * @param two is a float value that is expected to be between 0 and 1.
    * @return a map of the world
    */
-  public Map<String, Integer> getLinkedHashMapOfPeoplesAges(
-      int one,
-      float two) {
+  public Map<String, Integer> getLinkedHashMapOfPeoplesAges(int one, float two) {
     // Create a HashMap
     Map<String, Integer> linkedHashMap = new LinkedHashMap<>();
 
