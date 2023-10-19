@@ -1,0 +1,32 @@
+@startuml
+
+' skinparam groupInheritance 2
+skinparam ClassFontSize 18
+
+interface java.util.Map<K,V> #Yellow
+interface java.util.SortedMap<K,V> #Yellow
+interface java.util.NavigableMap<K,V> #Yellow
+
+interface java.util.SortedMap<K,V> #Yellow
+interface java.util.NavigableMap<K,V> #Yellow
+
+abstract java.util.AbstractMap<K,V> #Orange
+
+class java.util.TreeMap<K,V> #SpringGreen
+class java.util.HashMap<K,V> #SpringGreen
+class java.util.LinkedHashMap<K,V> #SpringGreen
+
+java.util.Map <|.. java.util.SortedMap
+java.util.SortedMap <|.. java.util.NavigableMap
+java.util.NavigableMap <|.. java.util.TreeMap
+java.util.AbstractMap <|-- java.util.TreeMap
+java.util.Map <|.. java.util.AbstractMap
+
+
+java.util.AbstractMap <|-- java.util.HashMap
+java.util.HashMap <|-- java.util.LinkedHashMap
+
+
+
+
+@enduml

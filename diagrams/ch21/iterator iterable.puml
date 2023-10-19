@@ -1,0 +1,13 @@
+@startuml
+
+skinparam groupInheritance 2
+skinparam ClassFontSize 18
+
+interface java.util.Iterator<E> #Yellow
+interface java.util.Collection<E> #Yellow
+interface java.util.Iterable<E> #Yellow
+
+java.util.Iterable <|.. java.util.Collection
+java.util.Iterable *-- java.util.Iterator
+
+@enduml

@@ -1,0 +1,37 @@
+@startuml
+
+' skinparam groupInheritance 2
+skinparam ClassFontSize 18
+
+interface java.util.Iterator<E> #Yellow
+interface java.util.Collection<E> #Yellow
+interface java.util.Iterable<E> #Yellow
+
+interface java.util.Set<E> #Yellow
+interface java.util.SortedSet<E> #Yellow
+interface java.util.NavigableSet<E> #Yellow
+
+abstract java.util.AbstractSet<E> #Orange
+
+class java.util.TreeSet<E> #SpringGreen
+class java.util.HashSet<E> #SpringGreen
+class java.util.LinkedHashSet<E> #SpringGreen
+
+java.util.Iterable <|.. java.util.Collection
+java.util.Iterable *-- java.util.Iterator
+
+java.util.Collection <|.. java.util.Set
+java.util.Set <|.. java.util.SortedSet
+java.util.SortedSet <|.. java.util.NavigableSet
+
+java.util.Set <|.. java.util.AbstractSet
+java.util.NavigableSet <|.. java.util.TreeSet
+
+java.util.AbstractSet <|-- java.util.TreeSet
+java.util.AbstractSet <|-- java.util.HashSet
+java.util.HashSet <|-- java.util.LinkedHashSet
+
+
+
+
+@enduml

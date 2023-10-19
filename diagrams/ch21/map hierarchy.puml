@@ -1,0 +1,27 @@
+@startuml
+
+' skinparam groupInheritance 2
+skinparam backgroundColor transparent
+skinparam ClassFontSize 18
+
+interface Map #Yellow
+interface SortedMap #Yellow
+interface NavigableMap #Yellow
+
+abstract AbstractMap #Orange
+together {
+    class TreeMap #SpringGreen
+    class HashMap #SpringGreen
+    class LinkedHashMap #SpringGreen
+}
+
+SortedMap <|.. NavigableMap
+Map <|.. SortedMap
+Map <|.. AbstractMap
+NavigableMap <|.. TreeMap
+
+AbstractMap <|-- TreeMap
+AbstractMap <|-- HashMap
+HashMap <|-- LinkedHashMap
+
+@enduml
