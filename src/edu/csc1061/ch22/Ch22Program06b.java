@@ -9,10 +9,16 @@
  */
 package edu.csc1061.ch22;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
-// Prime Numbers
-public class Ch22Program04 {
+// Prime Numbers - inefficient
+// Stores values first into a list, than prints that list out.
+// run this with 9_999_999 as the value without the _ in the number.
+public class Ch22Program06b {
+
+  private static int primeCounter = 0;
 
   public static void main(String[] args) {
     int n = 0;
@@ -22,8 +28,9 @@ public class Ch22Program04 {
     }
 
     final int NUMBER_OF_PRIMES_PER_LINE = 20;
-    int count = 0; // Count the number of prime numbers
     int number = 2; // A number to be tested for primeness
+
+    List<Integer> primes = new ArrayList<>();
 
     System.out.println("The prime numbers are:");
 
@@ -42,20 +49,23 @@ public class Ch22Program04 {
 
       // Print the prime number and increase the count
       if (isPrime) {
-        count++; // Increase the count
-
-        if (count % NUMBER_OF_PRIMES_PER_LINE == 0) {
-          // Print the number and advance to the new line
-          System.out.printf("%7d%n", number);
-        } else {
-          System.out.printf("%7d", number);
-        }
+        primes.add(number);
       }
 
       // Check if the next number is prime
       number++;
     }
 
-    System.out.printf("%n%d prime(s) less than or equal to %d%n", count, n);
+    primes.forEach(
+        e -> {
+          if (++primeCounter % NUMBER_OF_PRIMES_PER_LINE == 0) {
+            // Print the number and advance to the new line
+            System.out.printf("%7d%n", e);
+          } else {
+            System.out.printf("%7d", e);
+          }
+        });
+
+    System.out.printf("%n%d prime(s) less than or equal to %d%n", primes.size(), n);
   }
 }

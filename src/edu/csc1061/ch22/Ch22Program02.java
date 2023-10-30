@@ -1,11 +1,11 @@
 /**
  * Code for Class.
- * <p>
- * CSC 1061 - Computer Science II - Java
  *
- * @author  Patrick McDougle
+ * <p>CSC 1061 - Computer Science II - Java
+ *
+ * @author Patrick McDougle
  * @version %I%, %G%
- * @since   1.0
+ * @since 1.0
  */
 package edu.csc1061.ch22;
 
@@ -21,12 +21,21 @@ public class Ch22Program02 {
       int index = input.nextInt();
 
       // Find and display the Fibonacci number
-      System.out.println(
-          "Fibonacci number at index " + index + " is " + fib(index));
+      System.out.println("Fibonacci number at index " + index + " is " + fib(index));
     }
   }
 
-  /** The method for finding the Fibonacci number */
+  /**
+   * A better method for finding the Fibonacci number.
+   *
+   * <p>The complexity of this new algorithm is???? This is a tremendous improvement over the
+   * recursive algorithm.
+   *
+   * <p>O(n)
+   *
+   * @param n the nth Fibonacci number to get.
+   * @return the fibonacci number.
+   */
   public static long fib(long n) {
     long f0 = 0; // For fib(0)
     long f1 = 1; // For fib(1)
@@ -50,10 +59,4 @@ public class Ch22Program02 {
 
     return f2;
   }
-
-  // Obviously, the complexity of this new algorithm is???? This is a tremendous
-  // improvement over the recursive algorithm.
-
-  // O(n)
-
 }

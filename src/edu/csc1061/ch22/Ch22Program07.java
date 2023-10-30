@@ -1,11 +1,11 @@
 /**
  * Code for Class.
- * <p>
- * CSC 1061 - Computer Science II - Java
  *
- * @author  Patrick McDougle
+ * <p>CSC 1061 - Computer Science II - Java
+ *
+ * @author Patrick McDougle
  * @version %I%, %G%
- * @since   1.0
+ * @since 1.0
  */
 package edu.csc1061.ch22;
 
@@ -24,9 +24,10 @@ public class Ch22Program07 extends Application {
   // queens are placed at (i, queens[i])
   // -1 indicates that no queen is currently placed in the ith row
   // Initially, place a queen at (0, 0) in the 0th row
-  private int[] queens = { -1, -1, -1, -1, -1, -1, -1, -1 };
+  private int[] queens = {1, -1, -1, -1, -1, -1, -1, -1};
 
-  @Override // Override the start method in the Application class
+  // Override the start method in the Application class
+  @Override
   public void start(Stage primaryStage) {
     search(); // Search for a solution
 
@@ -56,7 +57,11 @@ public class Ch22Program07 extends Application {
     primaryStage.show(); // Display the stage
   }
 
-  /** Search for a solution */
+  /**
+   * Search for a solution
+   *
+   * @return true is a solution is found, else false.
+   */
   private boolean search() {
     // k is the current row to be considered
     // We are looking for a position in the kth row to place a queen
@@ -79,6 +84,12 @@ public class Ch22Program07 extends Application {
     return k != -1;
   }
 
+  /**
+   * Find the next position for this queen.
+   *
+   * @param k is the queen that we are looking for a position for.
+   * @return the column location for the kth queen or -1 if not possible.
+   */
   public int findPosition(int k) {
     int start = queens[k] + 1; // Search for a new placement
 
@@ -91,23 +102,28 @@ public class Ch22Program07 extends Application {
     return -1;
   }
 
-  /** Return true if a queen can be placed at (row, column) */
+  /**
+   * Return true if a queen can be placed at (row, column)
+   *
+   * @param row The row to check if a queen can be placed here.
+   * @param column The column to check if a queen can be placed here.
+   * @return true if there is no conflict, or false if there is conflict.
+   */
   public boolean isValid(int row, int column) {
     for (int i = 1; i <= row; i++) {
-      if (queens[row - i] == column || // Check column
-          queens[row - i] == column - i || // Check up left diagonal
-          queens[row - i] == column + i // Check up right diagonal
-      )
+      // Check column
+      // Check up left diagonal
+      // Check up right diagonal
+      if (queens[row - i] == column
+          || queens[row - i] == column - i
+          || queens[row - i] == column + i) {
         return false; // There is a conflict
+      }
     }
     return true; // No conflict
   }
 
-  /**
-   * The main method is only needed for the IDE with limited JavaFX support. Not
-   * needed for
-   * running from the command line.
-   */
+  /** The main method just needs the JavaFX launch call. */
   public static void main(String[] args) {
     launch(args);
   }

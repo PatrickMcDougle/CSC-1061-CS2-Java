@@ -1,11 +1,11 @@
 /**
  * Code for Class.
- * <p>
- * CSC 1061 - Computer Science II - Java
  *
- * @author  Patrick McDougle
+ * <p>CSC 1061 - Computer Science II - Java
+ *
+ * @author Patrick McDougle
  * @version %I%, %G%
- * @since   1.0
+ * @since 1.0
  */
 package edu.csc1061.ch22;
 
@@ -30,6 +30,15 @@ public class Ch22Program01 {
       k = k + 5;
     }
     Timer.getTimer().finish();
-    System.out.println("Execution time for n = " + n + " is " + Timer.getTimer().getElapsedTime() + " milliseconds");
+
+    StringBuilder sb = new StringBuilder();
+    sb.append("Execution time for n = ");
+    sb.append(n);
+    sb.append(" is ");
+    sb.append(Timer.getTimer().getElapsedTime());
+    sb.append(" milliseconds");
+
+    System.out.println(sb.toString());
+    ;
   }
 }
