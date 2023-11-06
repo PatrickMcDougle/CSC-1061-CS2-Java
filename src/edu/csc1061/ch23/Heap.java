@@ -1,11 +1,11 @@
 /**
  * Code for Class.
- * <p>
- * CSC 1061 - Computer Science II - Java
  *
- * @author  Patrick McDougle
+ * <p>CSC 1061 - Computer Science II - Java
+ *
+ * @author Patrick McDougle
  * @version %I%, %G%
- * @since   1.0
+ * @since 1.0
  */
 package edu.csc1061.ch23;
 
@@ -17,15 +17,15 @@ public class Heap<E> {
   private ArrayList<E> list = new ArrayList<>();
   private Comparator<? super E> comparator;
 
-  /**
-   * Create a default heap using a natural order for comparison
-   */
+  /** Create a default heap using a natural order for comparison */
   public Heap() {
     this.comparator = (e1, e2) -> ((Comparable<E>) e1).compareTo(e2);
   }
 
   /**
    * Create a heap from an array of objects
+   *
+   * @param objects
    */
   public Heap(E[] objects) {
     this.comparator = (e1, e2) -> ((Comparable<E>) e1).compareTo(e2);
@@ -36,6 +36,8 @@ public class Heap<E> {
 
   /**
    * Create a heap with a specified comparator
+   *
+   * @param c
    */
   public Heap(Comparator<E> c) {
     this.comparator = c;
@@ -43,6 +45,8 @@ public class Heap<E> {
 
   /**
    * Add a new object into the heap
+   *
+   * @param newObject
    */
   public void add(E newObject) {
     list.add(newObject); // Append to the heap
@@ -65,6 +69,8 @@ public class Heap<E> {
 
   /**
    * Remove the root from the heap
+   *
+   * @return
    */
   public E remove() {
     if (list.isEmpty()) {
@@ -86,8 +92,8 @@ public class Heap<E> {
       }
 
       int maxIndex = leftChildIndex;
-      if (rightChildIndex < list.size() &&
-          comparator.compare(list.get(maxIndex), list.get(rightChildIndex)) < 0) {
+      if (rightChildIndex < list.size()
+          && comparator.compare(list.get(maxIndex), list.get(rightChildIndex)) < 0) {
         maxIndex = rightChildIndex;
       }
 
@@ -107,6 +113,8 @@ public class Heap<E> {
 
   /**
    * Get the number of nodes in the tree
+   *
+   * @return
    */
   public int getSize() {
     return list.size();
@@ -114,6 +122,8 @@ public class Heap<E> {
 
   /**
    * Return true if heap is empty
+   *
+   * @return
    */
   public boolean isEmpty() {
     return list.isEmpty();

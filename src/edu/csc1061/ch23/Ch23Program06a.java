@@ -1,11 +1,11 @@
 /**
  * Code for Class.
- * <p>
- * CSC 1061 - Computer Science II - Java
  *
- * @author  Patrick McDougle
+ * <p>CSC 1061 - Computer Science II - Java
+ *
+ * @author Patrick McDougle
  * @version %I%, %G%
- * @since   1.0
+ * @since 1.0
  */
 package edu.csc1061.ch23;
 
@@ -26,7 +26,8 @@ public class Ch23Program06a {
   public static final int NUMBER_MAX = 9_999_999;
 
   public static void main(String[] args) throws Exception {
-    try (DataOutputStream output = new DataOutputStream(new BufferedOutputStream(new FileOutputStream(FILE_NAME)))) {
+    try (DataOutputStream output =
+        new DataOutputStream(new BufferedOutputStream(new FileOutputStream(FILE_NAME)))) {
       Random random = new Random();
 
       for (int i = 0; i < NUMBERS_OF_NUMBERS; i++) {
@@ -35,7 +36,8 @@ public class Ch23Program06a {
     }
 
     // Display first 100 numbers
-    try (DataInputStream input = new DataInputStream(new BufferedInputStream(new FileInputStream(FILE_NAME)))) {
+    try (DataInputStream input =
+        new DataInputStream(new BufferedInputStream(new FileInputStream(FILE_NAME)))) {
       for (int i = 0; i < 100; i++) {
         System.out.print(input.readInt() + " ");
       }

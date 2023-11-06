@@ -1,24 +1,31 @@
 /**
  * Code for Class.
- * <p>
- * CSC 1061 - Computer Science II - Java
  *
- * @author  Patrick McDougle
+ * <p>CSC 1061 - Computer Science II - Java
+ *
+ * @author Patrick McDougle
  * @version %I%, %G%
- * @since   1.0
+ * @since 1.0
  */
 package edu.csc1061.ch23;
 
+import java.util.HashSet;
 import java.util.Random;
+import java.util.Set;
 
 // Merge Sort
 public class Ch23Program03 {
 
-  /** The method for sorting the numbers */
+  /**
+   * The method for sorting the numbers
+   *
+   * @param list is an array of integers.
+   */
   public static void mergeSort(int[] list) {
     if (list.length > 1) {
       System.out.print("  => ");
       printArray(list);
+      
       // Merge sort the first half
       int[] firstHalf = new int[list.length / 2];
       System.arraycopy(list, 0, firstHalf, 0, list.length / 2);
@@ -38,7 +45,13 @@ public class Ch23Program03 {
     }
   }
 
-  /** Merge two sorted lists */
+  /**
+   * Merge two sorted lists
+   *
+   * @param list1 is an array of integers.
+   * @param list2 is an array of integers.
+   * @param temp is an array of integers.
+   */
   public static void merge(int[] list1, int[] list2, int[] temp) {
     int current1 = 0; // Current index in list1
     int current2 = 0; // Current index in list2
@@ -60,6 +73,11 @@ public class Ch23Program03 {
     }
   }
 
+  /**
+   * This method will print the items in the array.
+   *
+   * @param list is an array of integers.
+   */
   public static void printArray(int[] list) {
     StringBuilder sb = new StringBuilder();
     for (int i = 0; i < list.length; i++) {
@@ -69,16 +87,22 @@ public class Ch23Program03 {
     System.out.println(sb.toString());
   }
 
-  /** A test method */
+  /**
+   * The main method for this application.
+   *
+   * @param args arguments from the command line. Not used.
+   */
   public static void main(String[] args) {
     Random random = new Random();
-    int numberOfValues = 16;
+    int numberOfValues = 4;
 
-    int[] list = new int[numberOfValues];
+    Set<Integer> randomList = new HashSet<>();
 
-    for (int i = 0; i < numberOfValues; ++i) {
-      list[i] = random.nextInt(10, 99);
+    while (randomList.size() < numberOfValues) {
+      randomList.add(random.nextInt(10, 99));
     }
+
+    int[] list = randomList.stream().mapToInt(Integer::intValue).toArray();
 
     printArray(list);
     System.out.println("=============================");

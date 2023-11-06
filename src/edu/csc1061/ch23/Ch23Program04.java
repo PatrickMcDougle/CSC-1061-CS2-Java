@@ -1,23 +1,33 @@
 /**
  * Code for Class.
- * <p>
- * CSC 1061 - Computer Science II - Java
  *
- * @author  Patrick McDougle
+ * <p>CSC 1061 - Computer Science II - Java
+ *
+ * @author Patrick McDougle
  * @version %I%, %G%
- * @since   1.0
+ * @since 1.0
  */
 package edu.csc1061.ch23;
 
+import java.util.HashSet;
 import java.util.Random;
+import java.util.Set;
 
 // Quick Sort
 public class Ch23Program04 {
 
+  /**
+   * @param list
+   */
   public static void quickSort(int[] list) {
     quickSort(list, 0, list.length - 1);
   }
 
+  /**
+   * @param list
+   * @param first
+   * @param last
+   */
   private static void quickSort(int[] list, int first, int last) {
     if (last > first) {
       int pivotIndex = partition(list, first, last);
@@ -26,7 +36,14 @@ public class Ch23Program04 {
     }
   }
 
-  /** Partition the array list[first..last] */
+  /**
+   * Partition the array list[first..last]
+   *
+   * @param list
+   * @param first
+   * @param last
+   * @return
+   */
   private static int partition(int[] list, int first, int last) {
     printArray(list);
     int pivot = list[first]; // Choose the first element as the pivot
@@ -66,6 +83,11 @@ public class Ch23Program04 {
     return first;
   }
 
+  /**
+   * This method will print the items in the array.
+   *
+   * @param list is an array of integers.
+   */
   public static void printArray(int[] list) {
     StringBuilder sb = new StringBuilder();
     for (int i = 0; i < list.length; i++) {
@@ -75,16 +97,22 @@ public class Ch23Program04 {
     System.out.println(sb.toString());
   }
 
-  /** A test method */
+  /**
+   * The main method for this application.
+   *
+   * @param args arguments from the command line. Not used.
+   */
   public static void main(String[] args) {
     Random random = new Random();
-    int numberOfValues = 16;
+    int numberOfValues = 20;
 
-    int[] list = new int[numberOfValues];
+    Set<Integer> randomList = new HashSet<>();
 
-    for (int i = 0; i < numberOfValues; ++i) {
-      list[i] = random.nextInt(10, 99);
+    while (randomList.size() < numberOfValues) {
+      randomList.add(random.nextInt(10, 99));
     }
+
+    int[] list = randomList.stream().mapToInt(Integer::intValue).toArray();
 
     printArray(list);
     System.out.println("=============================");
