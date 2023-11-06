@@ -14,5 +14,6 @@
 ## How to loss all the points for a particular problem
 
 -   Code is missing or not there. If you create a class file and all it has is the class with no other methods or code, no points.
--   submitting .class files instead of the .java files. The .java files are the text files that we read and code in. The .class files is the compiled code that is from the .java files. I am unable to read .class files and so, I am unable to grade the assignment.
+-   submitting .class files instead of the .java files. The .java files are the text files that we read and code in. The .class files is the compiled code that the computer reads, I can not read this file. I am unable to read .class files and so, I am unable to grade the assignment.
 -   Code does not compile
+-   Code is not in a project.
