@@ -94,3 +94,7 @@ nb-configuration.xml
 ##############################
 .DS_Store
 .vscode/launch-Skyfire-2208.json
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+replay_pid*
