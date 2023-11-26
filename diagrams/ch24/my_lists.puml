@@ -1,0 +1,18 @@
+@startuml
+
+
+class csc1061.ch24.MyArrayList #SpringGreen
+class csc1061.ch24.MyLinkedList #SpringGreen
+
+
+class csc1061.ch24.MyStackInheritance #SpringGreen
+class csc1061.ch24.MyQueueInheritance #SpringGreen
+class csc1061.ch24.MyStackComposition #SpringGreen
+class csc1061.ch24.MyQueueComposition #SpringGreen
+
+csc1061.ch24.MyArrayList <|-- csc1061.ch24.MyStackInheritance
+csc1061.ch24.MyLinkedList <|-- csc1061.ch24.MyQueueInheritance
+csc1061.ch24.MyArrayList o-- csc1061.ch24.MyStackComposition
+csc1061.ch24.MyLinkedList o-- csc1061.ch24.MyQueueComposition
+
+@enduml

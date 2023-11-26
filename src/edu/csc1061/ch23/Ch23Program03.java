@@ -25,7 +25,7 @@ public class Ch23Program03 {
     if (list.length > 1) {
       System.out.print("  => ");
       printArray(list);
-      
+
       // Merge sort the first half
       int[] firstHalf = new int[list.length / 2];
       System.arraycopy(list, 0, firstHalf, 0, list.length / 2);

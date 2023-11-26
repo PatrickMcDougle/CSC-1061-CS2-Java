@@ -1,11 +1,12 @@
 /**
  * Code for Class.
+ *
  * <p>
  * CSC 1061 - Computer Science II - Java
  *
- * @author  Patrick McDougle
+ * @author Patrick McDougle
  * @version %I%, %G%
- * @since   1.0
+ * @since 1.0
  */
 package edu.csc1061.ch24;
 
@@ -14,7 +15,7 @@ public class Ch24Program02 {
   /** Main method */
   public static void main(String[] args) {
     // Create a list for strings
-    MyLinkedList<String> list = new MyLinkedList<>();
+    MyList<String> list = new MyLinkedList<>();
 
     // Add elements to the list
     list.add("Denver");
@@ -65,7 +66,6 @@ public class Ch24Program02 {
     System.out.println();
 
     list.clear();
-    System.out.println(
-        "\nAfter clearing the list, the list size is " + list.size());
+    System.out.println("\nAfter clearing the list, the list size is " + list.size());
   }
 }

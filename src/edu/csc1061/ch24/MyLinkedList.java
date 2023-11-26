@@ -1,11 +1,11 @@
 /**
  * Code for Class.
- * <p>
- * CSC 1061 - Computer Science II - Java
  *
- * @author  Patrick McDougle
+ * <p>CSC 1061 - Computer Science II - Java
+ *
+ * @author Patrick McDougle
  * @version %I%, %G%
- * @since   1.0
+ * @since 1.0
  */
 package edu.csc1061.ch24;
 
@@ -14,14 +14,13 @@ public class MyLinkedList<E> extends MyList<E> {
   protected Node<E> tail;
   protected int size = 0; // Number of elements in the list
 
-  /**
-   * Create an empty list
-   */
-  public MyLinkedList() {
-  }
+  /** Create an empty list */
+  public MyLinkedList() {}
 
   /**
    * Create a list from an array of objects
+   *
+   * @param objects
    */
   public MyLinkedList(E[] objects) {
     for (int i = 0; i < objects.length; i++) {
@@ -31,6 +30,8 @@ public class MyLinkedList<E> extends MyList<E> {
 
   /**
    * Return the head element in the list
+   *
+   * @return
    */
   public E getFirst() {
     if (size == 0) {
@@ -41,6 +42,8 @@ public class MyLinkedList<E> extends MyList<E> {
 
   /**
    * Return the last element in the list
+   *
+   * @return
    */
   public E getLast() {
     if (size == 0) {
@@ -51,6 +54,8 @@ public class MyLinkedList<E> extends MyList<E> {
 
   /**
    * Add an element to the beginning of the list
+   *
+   * @param e
    */
   public void addFirst(E e) {
     Node<E> newNode = new Node<>(e); // Create a new node
@@ -65,6 +70,8 @@ public class MyLinkedList<E> extends MyList<E> {
 
   /**
    * Add an element to the end of the list
+   *
+   * @param e
    */
   public void addLast(E e) {
     Node<E> newNode = new Node<>(e); // Create a new for element e
@@ -79,10 +86,7 @@ public class MyLinkedList<E> extends MyList<E> {
     size++; // Increase size
   }
 
-  /**
-   * Add a new element at the specified index in this list. The index of the head
-   * element is 0
-   */
+  /** Add a new element at the specified index in this list. The index of the head element is 0 */
   @Override
   public void add(int index, E e) {
     if (index == 0) {
@@ -102,8 +106,9 @@ public class MyLinkedList<E> extends MyList<E> {
   }
 
   /**
-   * Remove the head node and return the object that is contained in the removed
-   * node.
+   * Remove the head node and return the object that is contained in the removed node.
+   *
+   * @return
    */
   public E removeFirst() {
     if (size == 0) {
@@ -120,8 +125,9 @@ public class MyLinkedList<E> extends MyList<E> {
   }
 
   /**
-   * Remove the last node and return the object that is contained in the removed
-   * node.
+   * Remove the last node and return the object that is contained in the removed node.
+   *
+   * @return
    */
   public E removeLast() {
     if (size == 0) {
@@ -148,10 +154,6 @@ public class MyLinkedList<E> extends MyList<E> {
     return temp;
   }
 
-  /**
-   * Remove the element at the specified position in this list. Return the element
-   * that was removed from the list.
-   */
   @Override
   public E remove(int index) {
     if (index < 0 || index >= size) {
@@ -197,38 +199,24 @@ public class MyLinkedList<E> extends MyList<E> {
     return sb.toString();
   }
 
-  /**
-   * Clear the list
-   */
   @Override
   public void clear() {
     size = 0;
     head = tail = null;
   }
 
-  /**
-   * Override iterator() defined in Iterable
-   */
   @Override
   public java.util.Iterator<E> iterator() {
     return new LinkedListIterator<>(head);
   }
 
-  /**
-   * Return the number of elements in this list
-   */
   @Override
   public int size() {
     return size;
   }
 
-  /**
-   * HOMEWORK SECTION
-   */
+  ///// HOMEWORK SECTION /////
 
-  /**
-   * Return true if this list contains the element e
-   */
   @Override
   public boolean contains(Object e) {
     // Left out for HOMEWORK
@@ -236,9 +224,6 @@ public class MyLinkedList<E> extends MyList<E> {
     return false;
   }
 
-  /**
-   * Return the element at the specified index
-   */
   @Override
   public E get(int index) {
     // Left out for HOMEWORK
@@ -246,10 +231,6 @@ public class MyLinkedList<E> extends MyList<E> {
     return null;
   }
 
-  /**
-   * Return the index of the first matching element in this list. Return -1 if no
-   * match.
-   */
   @Override
   public int indexOf(Object e) {
     // Left out for HOMEWORK
@@ -257,10 +238,6 @@ public class MyLinkedList<E> extends MyList<E> {
     return 0;
   }
 
-  /**
-   * Return the index of the last matching element in this list. Return -1 if no
-   * match.
-   */
   @Override
   public int lastIndexOf(E e) {
     // Left out for HOMEWORK
@@ -268,10 +245,6 @@ public class MyLinkedList<E> extends MyList<E> {
     return 0;
   }
 
-  /**
-   * Replace the element at the specified position in this list with the specified
-   * element.
-   */
   @Override
   public E set(int index, E e) {
     // Left out for HOMEWORK

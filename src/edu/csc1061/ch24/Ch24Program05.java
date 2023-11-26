@@ -1,11 +1,11 @@
 /**
  * Code for Class.
- * <p>
- * CSC 1061 - Computer Science II - Java
  *
- * @author  Patrick McDougle
+ * <p>CSC 1061 - Computer Science II - Java
+ *
+ * @author Patrick McDougle
  * @version %I%, %G%
- * @since   1.0
+ * @since 1.0
  */
 package edu.csc1061.ch24;
 
@@ -17,6 +17,7 @@ public class Ch24Program05 {
     program05.usePriorityQueue();
   }
 
+  /** This method uses the priority queue class that we created. */
   public void usePriorityQueue() {
     Patient patient1 = new Patient("John", 2);
     Patient patient2 = new Patient("Jim", 1);
@@ -32,8 +33,11 @@ public class Ch24Program05 {
     printQueue(priorityQueue);
   }
 
-  // takes in a priority queue and prints out the contents as it dequeues
-  // everything in the list.
+  /**
+   * Takes in a priority queue and prints out the contents as it dequeues everything in the list.
+   *
+   * @param priorityQueue
+   */
   private void printQueue(MyPriorityQueue<Patient> priorityQueue) {
     while (priorityQueue.getSize() > 0) {
       System.out.print("| " + priorityQueue.dequeue() + " |");

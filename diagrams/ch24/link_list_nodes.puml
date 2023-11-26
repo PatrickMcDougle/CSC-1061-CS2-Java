@@ -1,0 +1,27 @@
+@startuml
+
+skinparam backgroundColor transparent
+skinparam ClassFontSize 18
+
+object head
+
+object Node1
+object Node2
+object NodeN
+object tail
+
+Node1 : element
+Node1 : next
+Node2 : element
+Node2 : next
+NodeN : element
+NodeN : next
+
+head --> Node1
+Node1::next --> Node2
+Node2::next ..> NodeN
+NodeN::next --> tail
+
+
+
+@enduml

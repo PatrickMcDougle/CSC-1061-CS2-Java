@@ -1,0 +1,18 @@
+@startuml
+
+skinparam ClassFontSize 18
+
+interface java.util.Iterable<E> #Yellow
+interface java.util.Collection<E> #Yellow
+
+abstract csc1061.ch24.MyList #Orange
+
+class csc1061.ch24.MyArrayList #SpringGreen
+class csc1061.ch24.MyLinkedList #SpringGreen
+
+java.util.Iterable <|.. java.util.Collection
+java.util.Collection <|.. csc1061.ch24.MyList
+csc1061.ch24.MyList <|-- csc1061.ch24.MyArrayList
+csc1061.ch24.MyList <|-- csc1061.ch24.MyLinkedList
+
+@enduml

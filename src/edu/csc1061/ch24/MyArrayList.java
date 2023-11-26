@@ -1,11 +1,11 @@
 /**
  * Code for Class.
- * <p>
- * CSC 1061 - Computer Science II - Java
  *
- * @author  Patrick McDougle
+ * <p>CSC 1061 - Computer Science II - Java
+ *
+ * @author Patrick McDougle
  * @version %I%, %G%
- * @since   1.0
+ * @since 1.0
  */
 package edu.csc1061.ch24;
 
@@ -15,14 +15,13 @@ public class MyArrayList<E> extends MyList<E> {
   private E[] data = (E[]) new Object[INITIAL_CAPACITY];
   private int size = 0; // Number of elements in the list
 
-  /**
-   * Create an empty list
-   */
-  public MyArrayList() {
-  }
+  /** Create an empty list */
+  public MyArrayList() {}
 
   /**
    * Create a list from an array of objects
+   *
+   * @param objects
    */
   public MyArrayList(E[] objects) {
     for (int i = 0; i < objects.length; i++) {
@@ -30,9 +29,6 @@ public class MyArrayList<E> extends MyList<E> {
     }
   }
 
-  /**
-   * Add a new element at the specified index
-   */
   @Override
   public void add(int index, E e) {
     // Ensure the index is in the right range
@@ -54,9 +50,7 @@ public class MyArrayList<E> extends MyList<E> {
     size++;
   } // See https://liveexample.pearsoncmg.com/dsanimation/Figure24_4.html
 
-  /**
-   * Create a new larger array, double the current size + 1
-   */
+  /** Create a new larger array, double the current size + 1 */
   private void ensureCapacity() {
     if (size >= data.length) {
       E[] newData = (E[]) (new Object[size * 2 + 1]);
@@ -65,18 +59,12 @@ public class MyArrayList<E> extends MyList<E> {
     }
   }
 
-  /**
-   * Clear the list
-   */
   @Override
   public void clear() {
     data = (E[]) new Object[INITIAL_CAPACITY];
     size = 0;
   }
 
-  /**
-   * Return true if this list contains the element
-   */
   @Override
   public boolean contains(Object e) {
     for (int i = 0; i < size; i++) {
@@ -87,25 +75,21 @@ public class MyArrayList<E> extends MyList<E> {
     return false;
   }
 
-  /**
-   * Return the element at the specified index
-   */
   @Override
   public E get(int index) {
     checkIndex(index);
     return data[index];
   }
 
+  /**
+   * @param index
+   */
   private void checkIndex(int index) {
     if (index < 0 || index >= size) {
       throw new IndexOutOfBoundsException("Index: " + index + ", Size: " + size);
     }
   }
 
-  /**
-   * Return the index of the first matching element in this list. Return -1 if no
-   * match.
-   */
   @Override
   public int indexOf(Object e) {
     for (int i = 0; i < size; i++) {
@@ -116,10 +100,6 @@ public class MyArrayList<E> extends MyList<E> {
     return -1;
   }
 
-  /**
-   * Return the index of the last matching element in this list. Return -1 if no
-   * match.
-   */
   @Override
   public int lastIndexOf(E e) {
     for (int i = size - 1; i >= 0; i--) {
@@ -130,11 +110,6 @@ public class MyArrayList<E> extends MyList<E> {
     return -1;
   }
 
-  /**
-   * Remove the element at the specified position in this list. Shift any
-   * subsequent
-   * elements to the left. Return the element that was removed from the list.
-   */
   @Override
   public E remove(int index) {
     checkIndex(index);
@@ -154,10 +129,6 @@ public class MyArrayList<E> extends MyList<E> {
     return e;
   } // See https://liveexample.pearsoncmg.com/dsanimation/Figure24_5.html
 
-  /**
-   * Replace the element at the specified position in this list with the specified
-   * element.
-   */
   @Override
   public E set(int index, E e) {
     checkIndex(index);
@@ -180,9 +151,7 @@ public class MyArrayList<E> extends MyList<E> {
     return result.toString() + "]";
   }
 
-  /**
-   * Trims the capacity to current size
-   */
+  /** Trims the capacity to current size */
   public void trimToSize() {
     if (size != data.length) {
       E[] newData = (E[]) (new Object[size]);
@@ -191,9 +160,6 @@ public class MyArrayList<E> extends MyList<E> {
     } // If size == capacity, no need to trim
   }
 
-  /**
-   * Override iterator() defined in Iterable
-   */
   @Override
   public java.util.Iterator<E> iterator() {
     return new ArrayListIterator();
@@ -212,7 +178,7 @@ public class MyArrayList<E> extends MyList<E> {
       return data[current++];
     }
 
-    @Override // Remove the element returned by the last next()
+    @Override
     public void remove() {
       if (current == 0) {
         throw new IllegalStateException(); // next() has not been called yet
@@ -221,9 +187,6 @@ public class MyArrayList<E> extends MyList<E> {
     }
   }
 
-  /**
-   * Return the number of elements in this list
-   */
   @Override
   public int size() {
     return size;

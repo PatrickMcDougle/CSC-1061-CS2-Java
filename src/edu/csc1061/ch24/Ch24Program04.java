@@ -1,11 +1,11 @@
 /**
  * Code for Class.
- * <p>
- * CSC 1061 - Computer Science II - Java
  *
- * @author  Patrick McDougle
+ * <p>CSC 1061 - Computer Science II - Java
+ *
+ * @author Patrick McDougle
  * @version %I%, %G%
- * @since   1.0
+ * @since 1.0
  */
 package edu.csc1061.ch24;
 
@@ -21,6 +21,7 @@ public class Ch24Program04 extends Ch24Program03 {
     System.out.println("\n ========== ========== ========== \n");
   }
 
+  /** This method shows off and tests the queue class that we created. */
   public void testingQueue() {
     // Create a queue
     MyQueue<String> queue = new MyQueue<>();

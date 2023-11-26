@@ -1,0 +1,25 @@
+@startuml
+
+skinparam groupInheritance 2
+skinparam ClassFontSize 18
+skinparam classAttributeIconSize 0
+
+class csc1061.ch24.MyStack #SpringGreen {
+  -java.util.ArrayList<E> : list
+  +MyStack()
+  +getSize() : int
+  +peek() : E
+  +pop() : E
+  +push(o : E)
+  +isEmpty() : boolean
+}
+class csc1061.ch24.MyQueue #SpringGreen {
+  -java.util.LinkedList<E> : list
+  +MyQueue()
+  +getSize() : int
+  +enqueue(e : E)
+  +dequeue() : E
+}
+
+
+@enduml
