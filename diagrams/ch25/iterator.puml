@@ -1,0 +1,25 @@
+@startuml
+
+interface java.util.Iterator<E> #Yellow {
+    + hasNext() : boolean
+    + next() : E
+    + remove() : void
+}
+
+note left of java.util.Iterator::hasNext
+    Returns true if the
+    iterator has more elements
+end note
+
+note left of java.util.Iterator::next
+    Returns the next
+    element in the iterator
+end note
+
+note right of java.util.Iterator::remove
+    Removes from the underlying container
+    the last element returned by the
+    iterator (optional operation)
+end note
+
+@enduml

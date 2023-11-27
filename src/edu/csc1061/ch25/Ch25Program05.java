@@ -1,17 +1,16 @@
 /**
  * Code for Class.
- * <p>
- * CSC 1061 - Computer Science II - Java
  *
- * @author  Patrick McDougle
+ * <p>CSC 1061 - Computer Science II - Java
+ *
+ * @author Patrick McDougle
  * @version %I%, %G%
- * @since   1.0
+ * @since 1.0
  */
 package edu.csc1061.ch25;
 
-import java.util.Scanner;
-
 import edu.csc1061.ch23.Heap;
+import java.util.Scanner;
 
 // HuffmanCode
 public class Ch25Program05 {
@@ -24,6 +23,9 @@ public class Ch25Program05 {
       System.out.print("Enter a text: ");
       // example: Pneumonoultramicroscopicsilicovolcanoconiosis
       // example: supercalifragilisticexpialidocious
+      // example: The quick brown fox jumps over the lazy dog
+      // example: Glib jocks quiz nymph to vex dwarf
+
       text = input.nextLine();
     }
 
@@ -32,29 +34,21 @@ public class Ch25Program05 {
     HuffmanTree tree = getHuffmanTree(counts); // Create a Huffman tree
     String[] codes = getCode(tree.getRoot()); // Get codes
 
-    System.out.printf(
-        "%-15s%-15s%-15s%-15s%n",
-        "ASCII Code",
-        "Character",
-        "Frequency",
-        "Code");
+    System.out.printf("%-15s%-15s%-15s%-15s%n", "ASCII Code", "Character", "Frequency", "Code");
 
     for (int i = 0; i < codes.length; i++) {
       if (counts[i] != 0) {
         // (char)i is not in text if counts[i] is 0
-        System.out.printf(
-            "%-15d%-15s%-15d%-15s%n",
-            i,
-            (char) i + "",
-            counts[i],
-            codes[i]);
+        System.out.printf("%-15d%-15s%-15d%-15s%n", i, (char) i + "", counts[i], codes[i]);
       }
     }
   }
 
   /**
-   * Get Huffman codes for the characters
-   * This method is called once after a Huffman tree is built
+   * Get Huffman codes for the characters This method is called once after a Huffman tree is built
+   *
+   * @param root
+   * @return
    */
   public static String[] getCode(TreeNode<HuffmanElement> root) {
     if (root == null) {
@@ -66,7 +60,12 @@ public class Ch25Program05 {
     return codes;
   }
 
-  /* Recursively get codes to the leaf node */
+  /**
+   * Recursively get codes to the leaf node
+   *
+   * @param root
+   * @param codes
+   */
   private static void assignCode(TreeNode<HuffmanElement> root, String[] codes) {
     if (root.getLeft() != null) {
       root.getLeft().getElement().setCode(root.getElement().getCode() + "0");
@@ -79,7 +78,12 @@ public class Ch25Program05 {
     }
   }
 
-  /** Get a Huffman tree from the codes */
+  /**
+   * Get a Huffman tree from the codes
+   *
+   * @param counts
+   * @return
+   */
   public static HuffmanTree getHuffmanTree(int[] counts) {
     // Create a heap to hold trees
     Heap<HuffmanTree> heap = new Heap<>(); // Defined in Listing 24.10
@@ -98,7 +102,12 @@ public class Ch25Program05 {
     return heap.remove(); // The final tree
   }
 
-  /** Get the frequency of the characters */
+  /**
+   * Get the frequency of the characters
+   *
+   * @param text
+   * @return
+   */
   public static int[] getCharacterFrequency(String text) {
     int[] counts = new int[ASCII_ARRAY_SIZE]; // ASCII_ARRAY_SIZE ASCII characters
 

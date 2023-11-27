@@ -1,0 +1,62 @@
+@startuml
+
+object 60 {
+    + left
+    + right
+}
+
+object 55 {
+    + left
+    + right
+}
+
+object 100 {
+    + left
+    + right
+}
+
+object 45 {
+    + left
+    + right
+}
+
+object 57 {
+    + left
+    + right
+}
+
+object 67 {
+    + left
+    + right
+}
+
+object 107 {
+    + left
+    + right
+}
+
+
+object 101 {
+    + left
+    + right
+}
+
+
+object 59 #palegreen
+59 :    + left
+59 :    + right
+
+
+
+
+
+60::left -- 55
+60::right -- 100
+55::left -- 45
+55::right -- 57
+100::left -- 67
+100::right -- 107
+107::left -- 101
+57::left -- 59
+
+@enduml

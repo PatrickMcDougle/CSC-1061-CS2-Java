@@ -1,11 +1,11 @@
 /**
  * Code for Class.
- * <p>
- * CSC 1061 - Computer Science II - Java
  *
- * @author  Patrick McDougle
+ * <p>CSC 1061 - Computer Science II - Java
+ *
+ * @author Patrick McDougle
  * @version %I%, %G%
- * @since   1.0
+ * @since 1.0
  */
 package edu.csc1061.ch25;
 
@@ -18,9 +18,7 @@ public class HuffmanElement {
   // Constructor
   // ////////// ////////// //
 
-  /**
-   * Create a node with the specified weight and character
-   */
+  /** Create a node with the specified weight and character */
   public HuffmanElement(int weight, char element) {
     this.weightValue = weight;
     this.leafValue = element;
@@ -45,5 +43,4 @@ public class HuffmanElement {
   public void setCode(String code) {
     this.code = code;
   }
-
 }

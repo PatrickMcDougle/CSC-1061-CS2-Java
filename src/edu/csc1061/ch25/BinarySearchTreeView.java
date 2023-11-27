@@ -1,11 +1,11 @@
 /**
  * Code for Class.
- * <p>
- * CSC 1061 - Computer Science II - Java
  *
- * @author  Patrick McDougle
+ * <p>CSC 1061 - Computer Science II - Java
+ *
+ * @author Patrick McDougle
  * @version %I%, %G%
- * @since   1.0
+ * @since 1.0
  */
 package edu.csc1061.ch25;
 
@@ -33,9 +33,7 @@ public class BinarySearchTreeView extends Pane {
   // Public Methods
   // ////////// ////////// //
 
-  /**
-   * Clears the tree view and updates it based on the BinarySearchTree.
-   */
+  /** Clears the tree view and updates it based on the BinarySearchTree. */
   public void displayTree() {
     this.getChildren().clear(); // Clear the pane
     if (treeModel.getRoot() != null) {
@@ -52,9 +50,7 @@ public class BinarySearchTreeView extends Pane {
   // Private Methods
   // ////////// ////////// //
 
-  /**
-   * Display a subtree rooted at position (x, y)
-   */
+  /** Display a subtree rooted at position (x, y) */
   private void displayTree(TreeNode<Integer> root, double x, double y, double hGap) {
     if (root.getLeft() != null) {
       // Draw a line to the left node
@@ -77,7 +73,6 @@ public class BinarySearchTreeView extends Pane {
     String textString = root.getElement().toString();
     double textX = x - (textString.length() * 3.25);
     double textY = y + 4.0;
-    getChildren()
-        .addAll(circle, new Text(textX, textY, textString));
+    getChildren().addAll(circle, new Text(textX, textY, textString));
   }
 }

@@ -1,17 +1,18 @@
 /**
  * Code for Class.
- * <p>
- * CSC 1061 - Computer Science II - Java
  *
- * @author  Patrick McDougle
+ * <p>CSC 1061 - Computer Science II - Java
+ *
+ * @author Patrick McDougle
  * @version %I%, %G%
- * @since   1.0
+ * @since 1.0
  */
 package edu.csc1061.ch25;
 
 /**
- * This inner class is static, because it does not access
- * any instance members defined in its outer class
+ * This was an inner class of BinarySearchTree. It was removed from the BinarySearchTree file to
+ * make it a little easier to read. It was also removed because it will also be used in the Huffman
+ * Tree.
  */
 public class TreeNode<E> {
   private E element;

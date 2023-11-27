@@ -1,0 +1,46 @@
+@startuml
+
+interface edu.csc1061.ch25.ITree<E> #Yellow
+
+
+class edu.csc1061.ch25.BinarySearchTree<E extends Comparable<E>> {
+    # root : TreeNode<E>
+    # size : int
+
+    + BinarySearchTree()
+    + BinarySearchTree(object : E[])
+    + path(e : E) : java.util.List<TreeNode<E>>
+}
+
+class edu.csc1061.ch25.TreeNode<E> #SpringGreen {
+    # element : E
+    # left : TreeNode<E>
+    # right : TreeNode<E>
+}
+
+edu.csc1061.ch25.ITree <|.. edu.csc1061.ch25.BinarySearchTree
+edu.csc1061.ch25.BinarySearchTree "0" o-- "m" edu.csc1061.ch25.TreeNode
+edu.csc1061.ch25.TreeNode "1" -- edu.csc1061.ch25.TreeNode : Link
+
+
+
+note left of edu.csc1061.ch25.BinarySearchTree::root
+    The root of the tree
+end note
+note left of edu.csc1061.ch25.BinarySearchTree::size
+    The number of nodes in the tree
+end note
+note right of edu.csc1061.ch25.BinarySearchTree::BinarySearchTree
+    Creates a default Binary Search Tree
+end note
+note right of edu.csc1061.ch25.BinarySearchTree::BinarySearchTree(object
+    Creates a Binary Search Tree from
+    an array of elements
+end note
+note left of edu.csc1061.ch25.BinarySearchTree::path
+    Returns the path of nodes from the root leading to the
+    node from the specified element.  The element may not
+    be in the tree.
+end note
+
+@enduml

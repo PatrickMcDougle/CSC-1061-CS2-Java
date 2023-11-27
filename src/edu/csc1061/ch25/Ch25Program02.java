@@ -1,11 +1,11 @@
 /**
  * Code for Class.
- * <p>
- * CSC 1061 - Computer Science II - Java
  *
- * @author  Patrick McDougle
+ * <p>CSC 1061 - Computer Science II - Java
+ *
+ * @author Patrick McDougle
  * @version %I%, %G%
- * @since   1.0
+ * @since 1.0
  */
 package edu.csc1061.ch25;
 
@@ -41,14 +41,14 @@ public class Ch25Program02 {
   }
 
   public static void printTree(BinarySearchTree<String> tree) {
-    // Traverse tree
-    System.out.println("The number of nodes is " + tree.getSize());
     System.out.println();
+    System.out.println("The number of nodes is " + tree.getSize());
 
     // Traverse tree
     System.out.println("InOrder (sorted): " + tree.inOrder());
     System.out.println("PostOrder       : " + tree.postOrder());
     System.out.println("PreOrder        : " + tree.preOrder());
     System.out.println();
+    System.out.println(tree.printAsciiTree());
   }
 }

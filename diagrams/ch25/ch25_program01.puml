@@ -1,0 +1,12 @@
+@startwbs
+
+* Liam
+**< Emma
+***< Charlotte
+****< Amelia
+****> Elijah
+**> Olivia
+***< Noah
+****> Oliver
+
+@endwbs

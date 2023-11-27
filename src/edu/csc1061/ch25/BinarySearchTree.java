@@ -1,11 +1,11 @@
 /**
  * Code for Class.
- * <p>
- * CSC 1061 - Computer Science II - Java
  *
- * @author  Patrick McDougle
+ * <p>CSC 1061 - Computer Science II - Java
+ *
+ * @author Patrick McDougle
  * @version %I%, %G%
- * @since   1.0
+ * @since 1.0
  */
 package edu.csc1061.ch25;
 
@@ -23,15 +23,15 @@ public class BinarySearchTree<E> implements ITree<E> {
   // Constructors
   // ////////// ////////// //
 
-  /**
-   * Create a default BinarySearchTree with a natural order comparator
-   */
+  /** Create a default BinarySearchTree with a natural order comparator */
   public BinarySearchTree() {
     this.comparator = (e1, e2) -> ((Comparable<E>) e1).compareTo(e2);
   }
 
   /**
    * Create a BinarySearchTree with a specified comparator
+   *
+   * @param c
    */
   public BinarySearchTree(Comparator<E> c) {
     this.comparator = c;
@@ -39,6 +39,8 @@ public class BinarySearchTree<E> implements ITree<E> {
 
   /**
    * Create a binary tree from an array of objects
+   *
+   * @param objects
    */
   public BinarySearchTree(E[] objects) {
     this.comparator = (e1, e2) -> ((Comparable<E>) e1).compareTo(e2);
@@ -52,8 +54,69 @@ public class BinarySearchTree<E> implements ITree<E> {
   // ////////// ////////// //
 
   /**
-   * Remove all elements from the tree
+   * Returns the root of the tree
+   *
+   * @return
    */
+  public TreeNode<E> getRoot() {
+    return root;
+  }
+
+  /**
+   * In-order traversal from the root
+   *
+   * @return
+   */
+  public String inOrder() {
+    return inOrder(root);
+  }
+
+  /**
+   * Returns a path from the root leading to the specified element
+   *
+   * @param e
+   * @return
+   */
+  public List<TreeNode<E>> path(E e) {
+    ArrayList<TreeNode<E>> list = new ArrayList<>();
+    TreeNode<E> current = root; // Start from the root
+
+    while (current != null) {
+      list.add(current); // Add the node to the list
+      if (comparator.compare(e, current.getElement()) < 0) {
+        current = current.getLeft();
+      } else if (comparator.compare(e, current.getElement()) > 0) {
+        current = current.getRight();
+      } else {
+        break;
+      }
+    }
+
+    return list; // Return an array list of nodes
+  }
+
+  /**
+   * Post-order traversal from the root
+   *
+   * @return
+   */
+  public String postOrder() {
+    return postOrder(root);
+  }
+
+  /**
+   * Pre-order traversal from the root
+   *
+   * @return
+   */
+  public String preOrder() {
+    return preOrder(root);
+  }
+
+  // ////////// ////////// //
+  // Override Methods
+  // ////////// ////////// //
+
   @Override
   public void clear() {
     root = null;
@@ -62,8 +125,9 @@ public class BinarySearchTree<E> implements ITree<E> {
 
   /**
    * Delete an element from the binary tree.
-   * Return true if the element is deleted successfully
-   * Return false if the element is not in the tree
+   *
+   * @param e the element to delete from the tree
+   * @return true if the element is deleted successfully, false if the element is not in the tree
    */
   @Override
   public boolean delete(E e) {
@@ -127,32 +191,11 @@ public class BinarySearchTree<E> implements ITree<E> {
     return true; // Element deleted successfully
   }
 
-  /**
-   * Returns the root of the tree
-   */
-  public TreeNode<E> getRoot() {
-    return root;
-  }
-
-  /**
-   * Get the number of nodes in the tree
-   */
   @Override
   public int getSize() {
     return size;
   }
 
-  /**
-   * In-order traversal from the root
-   */
-  public String inOrder() {
-    return inOrder(root);
-  }
-
-  /**
-   * Insert element e into the binary tree
-   * Return true if the element is inserted successfully
-   */
   @Override
   public boolean insert(E e) {
     if (root == null) {
@@ -184,52 +227,11 @@ public class BinarySearchTree<E> implements ITree<E> {
     return true; // Element inserted successfully
   }
 
-  /**
-   * Returns a path from the root leading to the specified element
-   */
-  public List<TreeNode<E>> path(E e) {
-    ArrayList<TreeNode<E>> list = new ArrayList<>();
-    TreeNode<E> current = root; // Start from the root
-
-    while (current != null) {
-      list.add(current); // Add the node to the list
-      if (comparator.compare(e, current.getElement()) < 0) {
-        current = current.getLeft();
-      } else if (comparator.compare(e, current.getElement()) > 0) {
-        current = current.getRight();
-      } else {
-        break;
-      }
-    }
-
-    return list; // Return an array list of nodes
-  }
-
-  /**
-   * Obtain an iterator. Use in-order.
-   */
   @Override
   public java.util.Iterator<E> iterator() {
     return new InOrderIterator<>(this);
   }
 
-  /**
-   * Post-order traversal from the root
-   */
-  public String postOrder() {
-    return postOrder(root);
-  }
-
-  /**
-   * Pre-order traversal from the root
-   */
-  public String preOrder() {
-    return preOrder(root);
-  }
-
-  /**
-   * Returns true if the element is in the tree
-   */
   @Override
   public boolean search(E e) {
     TreeNode<E> current = root; // Start from the root
@@ -257,6 +259,9 @@ public class BinarySearchTree<E> implements ITree<E> {
 
   /**
    * In-order traversal from a subtree
+   *
+   * @param root
+   * @return
    */
   private String inOrder(TreeNode<E> root) {
     if (root == null) {
@@ -272,6 +277,9 @@ public class BinarySearchTree<E> implements ITree<E> {
 
   /**
    * Post-order traversal from a subtree
+   *
+   * @param root
+   * @return
    */
   private String postOrder(TreeNode<E> root) {
     if (root == null) {
@@ -280,22 +288,67 @@ public class BinarySearchTree<E> implements ITree<E> {
     StringBuilder sb = new StringBuilder();
     sb.append(inOrder(root.getLeft()));
     sb.append(inOrder(root.getRight()));
-    sb.append(root.getElement() + " ");
+    sb.append(root.getElement());
+    sb.append(" ");
 
     return sb.toString();
   }
 
   /**
    * Pre-order traversal from a subtree
+   *
+   * @param subtree
+   * @return
    */
-  private String preOrder(TreeNode<E> root) {
-    if (root == null) {
+  private String preOrder(TreeNode<E> subtree) {
+    if (subtree == null) {
       return "";
     }
     StringBuilder sb = new StringBuilder();
-    sb.append(root.getElement() + " ");
-    sb.append(inOrder(root.getLeft()));
-    sb.append(inOrder(root.getRight()));
+    sb.append(subtree.getElement());
+    sb.append(" ");
+    sb.append(inOrder(subtree.getLeft()));
+    sb.append(inOrder(subtree.getRight()));
+
+    return sb.toString();
+  }
+
+  // ////////// ////////// //
+  // Print Methods
+  // ////////// ////////// //
+
+  public String printAsciiTree() {
+    if (root == null) {
+      return "";
+    }
+
+    StringBuilder sb = new StringBuilder();
+    sb.append("* ");
+    sb.append(root.getElement());
+    sb.append('\n');
+    sb.append(printAsciiTree(root.getLeft(), 1, true));
+    sb.append(printAsciiTree(root.getRight(), 1, false));
+
+    return sb.toString();
+  }
+
+  private String printAsciiTree(TreeNode<E> subtree, int depth, boolean leftSide) {
+    if (subtree == null) {
+      return "";
+    }
+
+    int newDepth = depth + 1;
+
+    StringBuilder sb = new StringBuilder();
+    for (int i = 0; i < newDepth; i++) {
+      sb.append('*');
+    }
+    sb.append(leftSide ? "<" : ">");
+    sb.append(' ');
+    sb.append(subtree.getElement());
+    sb.append('\n');
+    sb.append(printAsciiTree(subtree.getLeft(), newDepth, true));
+    sb.append(printAsciiTree(subtree.getRight(), newDepth, false));
 
     return sb.toString();
   }

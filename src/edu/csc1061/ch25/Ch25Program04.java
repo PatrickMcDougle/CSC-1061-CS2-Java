@@ -1,11 +1,11 @@
 /**
  * Code for Class.
- * <p>
- * CSC 1061 - Computer Science II - Java
  *
- * @author  Patrick McDougle
+ * <p>CSC 1061 - Computer Science II - Java
+ *
+ * @author Patrick McDougle
  * @version %I%, %G%
- * @since   1.0
+ * @since 1.0
  */
 package edu.csc1061.ch25;
 
@@ -25,20 +25,26 @@ public class Ch25Program04 {
     tree.insert("Elijah");
     tree.insert("Amelia");
 
-    System.out.println("\n ===== Upper Case =====");
+    // for loop example
+    System.out.println("\n     ===== For Loop (toUpperCase) =====");
     for (String name : tree) {
       System.out.print(name.toUpperCase() + " ");
     }
 
-    System.out.println("\n ===== Lower Case =====");
+    // for each lambda example
+    System.out.println("\n     ===== ForEach Lambda Loop (toLowerCase) =====");
+    tree.forEach(name -> System.out.print(name.toLowerCase() + " "));
 
-    for (String name : tree) {
-      System.out.print(name.toLowerCase() + " ");
+    // using the iterator
+    System.out.println("\n     ===== While Iterator Loop (just name) =====");
+    Iterator<String> iterator = tree.iterator();
+    while (iterator.hasNext()) {
+      String name = iterator.next();
+      System.out.print(name + " ");
     }
 
-    System.out.println("\n ===== Delete Third Name =====");
-
-    Iterator<String> iterator = tree.iterator();
+    System.out.println("\n\n     ===== Delete the Third Name =====");
+    iterator = tree.iterator();
     // print the first three items.
     for (int i = 0; i < 3; i++) {
       String name = iterator.next();
@@ -52,13 +58,10 @@ public class Ch25Program04 {
       System.out.print(name + " ");
     }
 
-    System.out.println("\n ===== After Delete =====");
-
     // print out the names of the list after the third item was deleted.
-    for (String name : tree) {
-      System.out.print(name + " ");
-    }
+    System.out.println("\n     ===== After Delete =====");
+    tree.forEach(name -> System.out.print(name + " "));
 
-    System.out.println("\n ===== Done =====\n");
+    System.out.println("\n\n     ===== Done =====\n");
   }
 }

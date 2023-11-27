@@ -1,11 +1,11 @@
 /**
  * Code for Class.
- * <p>
- * CSC 1061 - Computer Science II - Java
  *
- * @author  Patrick McDougle
+ * <p>CSC 1061 - Computer Science II - Java
+ *
+ * @author Patrick McDougle
  * @version %I%, %G%
- * @since   1.0
+ * @since 1.0
  */
 package edu.csc1061.ch25;
 
@@ -30,17 +30,11 @@ public class InOrderIterator<E> implements java.util.Iterator<E> {
   // Public Override Methods
   // ////////// ////////// //
 
-  /**
-   * More elements for traversing?
-   */
   @Override
   public boolean hasNext() {
     return (currentIndex < list.size());
   }
 
-  /**
-   * Get the current element and move to the next
-   */
   @Override
   public E next() {
     try {
@@ -50,9 +44,6 @@ public class InOrderIterator<E> implements java.util.Iterator<E> {
     }
   }
 
-  /**
-   * Remove the element returned by the last next()
-   */
   @Override
   public void remove() {
     if (currentIndex == 0) { // next() has not been called yet
@@ -68,22 +59,18 @@ public class InOrderIterator<E> implements java.util.Iterator<E> {
   // Private Methods
   // ////////// ////////// //
 
-  /**
-   * In-order traversal from the root
-   */
+  /** In-order traversal from the root */
   private void inOrder() {
     inOrder(binarySearchTree.getRoot());
   }
 
-  /**
-   * In-order traversal from a subtree
-   */
-  private void inOrder(TreeNode<E> root) {
-    if (root == null) {
+  /** In-order traversal from a subtree */
+  private void inOrder(TreeNode<E> subtree) {
+    if (subtree == null) {
       return;
     }
-    inOrder(root.getLeft());
-    list.add(root.getElement());
-    inOrder(root.getRight());
+    inOrder(subtree.getLeft());
+    list.add(subtree.getElement());
+    inOrder(subtree.getRight());
   }
 }

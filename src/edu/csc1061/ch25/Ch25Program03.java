@@ -1,14 +1,15 @@
 /**
  * Code for Class.
- * <p>
- * CSC 1061 - Computer Science II - Java
  *
- * @author  Patrick McDougle
+ * <p>CSC 1061 - Computer Science II - Java
+ *
+ * @author Patrick McDougle
  * @version %I%, %G%
- * @since   1.0
+ * @since 1.0
  */
 package edu.csc1061.ch25;
 
+import java.util.Random;
 import javafx.application.Application;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
@@ -20,6 +21,8 @@ import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 
 public class Ch25Program03 extends Application {
+
+  private static final int MAX_RANDOM_NUMBER_BOUND = 1000;
 
   // Override the start method in the Application class
   @Override
@@ -35,10 +38,14 @@ public class Ch25Program03 extends Application {
     textFieldKey.setAlignment(Pos.BASELINE_RIGHT);
     Button buttonInsert = new Button("Insert");
     Button buttonDelete = new Button("Delete");
+    Button buttonRandom = new Button("Random");
+    Button buttonClear = new Button("Clear");
+
+    Label labelEnter = new Label("Enter a key: ");
+
     HBox hBox = new HBox(5);
-    hBox
-        .getChildren()
-        .addAll(new Label("Enter a key: "), textFieldKey, buttonInsert, buttonDelete);
+    hBox.getChildren()
+        .addAll(labelEnter, textFieldKey, buttonInsert, buttonDelete, buttonRandom, buttonClear);
     hBox.setAlignment(Pos.CENTER);
     pane.setBottom(hBox);
 
@@ -68,6 +75,27 @@ public class Ch25Program03 extends Application {
           }
         });
 
+    buttonRandom.setOnAction(
+        e -> {
+          int key = nextRandomNumber();
+          while (treeModel.search(key) && treeModel.size() < MAX_RANDOM_NUMBER_BOUND) {
+            key = nextRandomNumber();
+          }
+          treeModel.insert(key); // Insert the new key
+          treeView.displayTree();
+          StringBuilder sb = new StringBuilder();
+          sb.append(key);
+          sb.append(" is inserted. Total Nodes: ");
+          sb.append(treeModel.size());
+          treeView.setStatus(sb.toString());
+        });
+
+    buttonClear.setOnAction(
+        e -> {
+          treeModel.clear();
+          treeView.displayTree();
+        });
+
     // Create a scene and place the pane in the stage
     Scene scene = new Scene(pane, 450, 250);
     primaryStage.setTitle("BSTAnimation"); // Set the stage title
@@ -75,9 +103,15 @@ public class Ch25Program03 extends Application {
     primaryStage.show(); // Display the stage
   }
 
+  private static Random random = new Random();
+
+  private static int nextRandomNumber() {
+    return random.nextInt(MAX_RANDOM_NUMBER_BOUND);
+  }
+
   /**
-   * The main method is only needed for the IDE with limited JavaFX support. Not
-   * needed for running from the command line.
+   * The main method is only needed for the IDE with limited JavaFX support. Not needed for running
+   * from the command line.
    */
   public static void main(String[] args) {
     launch(args);

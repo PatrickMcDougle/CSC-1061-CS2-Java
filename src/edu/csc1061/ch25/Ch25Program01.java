@@ -1,11 +1,11 @@
 /**
  * Code for Class.
- * <p>
- * CSC 1061 - Computer Science II - Java
  *
- * @author  Patrick McDougle
+ * <p>CSC 1061 - Computer Science II - Java
+ *
+ * @author Patrick McDougle
  * @version %I%, %G%
- * @since   1.0
+ * @since 1.0
  */
 package edu.csc1061.ch25;
 
@@ -17,6 +17,7 @@ public class Ch25Program01 {
   public static void main(String[] args) {
     // Create a BST
     BinarySearchTree<String> tree = new BinarySearchTree<>();
+    tree.insert("Amelia");
     tree.insert("Liam");
     tree.insert("Olivia");
     tree.insert("Noah");
@@ -24,7 +25,6 @@ public class Ch25Program01 {
     tree.insert("Oliver");
     tree.insert(NAME_CHARLOTTE);
     tree.insert("Elijah");
-    tree.insert("Amelia");
 
     System.out.println("The number of nodes is " + tree.getSize());
     System.out.println();
@@ -48,8 +48,10 @@ public class Ch25Program01 {
     }
     System.out.println("\n");
 
-    Integer[] numbers = { 2, 4, 3, 1, 8, 5, 6, 7 };
+    Integer[] numbers = {2, 4, 3, 1, 8, 5, 6, 7};
     BinarySearchTree<Integer> intTree = new BinarySearchTree<>(numbers);
     System.out.println("InOrder (sorted): " + intTree.inOrder());
+
+    System.out.println(tree.printAsciiTree());
   }
 }

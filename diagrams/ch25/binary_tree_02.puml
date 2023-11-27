@@ -1,0 +1,10 @@
+@startwbs
+
+* G
+** F
+***< S
+** R
+***< M
+***> T
+
+@endwbs

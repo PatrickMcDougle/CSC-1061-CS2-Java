@@ -1,0 +1,50 @@
+@startuml
+
+
+interface java.lang.Collection<E> #Yellow
+
+interface edu.csc1061.ch25.ITree<E> #Yellow {
+    + search(e : E) : boolean
+    + insert(e : E) : boolean
+    + delete(e : E) : boolean
+
+    + inOrder() : void
+    + preOrder() : void
+    + postOrder() : void
+    + getSize() : int
+    + isEmpty() : boolean
+    + clear() : void
+}
+
+java.lang.Collection <|.. edu.csc1061.ch25.ITree
+
+
+note right of edu.csc1061.ch25.ITree::search
+    Returns true if the specified element is in the tree
+end note
+note right of edu.csc1061.ch25.ITree::insert
+    Returns true if the element is added successfully.
+end note
+note right of edu.csc1061.ch25.ITree::delete
+    Returns true if the element is removed from the tree successfully.
+end note
+note right of edu.csc1061.ch25.ITree::inOrder
+    Prints the nodes in inOrder traversal.
+end note
+note right of edu.csc1061.ch25.ITree::preOrder
+    Prints the nodes in preOrder traversal.
+end note
+note right of edu.csc1061.ch25.ITree::postOrder
+    Prints the nodes in postOrder traversal.
+end note
+note right of edu.csc1061.ch25.ITree::getSize
+    Returns the number of elements in the tree.
+end note
+note right of edu.csc1061.ch25.ITree::isEmpty
+    Returns true if the tree is empty.
+end note
+note right of edu.csc1061.ch25.ITree::clear
+    Removes all elements from the tree.
+end note
+
+@enduml

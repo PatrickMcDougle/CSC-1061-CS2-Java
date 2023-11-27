@@ -1,11 +1,11 @@
 /**
  * Code for Class.
- * <p>
- * CSC 1061 - Computer Science II - Java
  *
- * @author  Patrick McDougle
+ * <p>CSC 1061 - Computer Science II - Java
+ *
+ * @author Patrick McDougle
  * @version %I%, %G%
- * @since   1.0
+ * @since 1.0
  */
 package edu.csc1061.ch25;
 
@@ -20,33 +20,54 @@ public interface ITree<E> extends Collection<E> {
   // Public Interface Methods
   // ////////// ////////// //
 
+  /** Clear all the elements from the tree. */
   public void clear();
 
   /**
-   * Delete the specified element from the tree Return true if the element is
-   * deleted successfully
+   * Delete the specified element from the tree Return true if the element is deleted successfully
+   *
+   * @param e
+   * @return
    */
   public boolean delete(E e);
 
+  /**
+   * Print the nodes in inOrder traversal.
+   *
+   * @return a string with the nodes in the correct order.
+   */
   public String inOrder();
 
   /**
-   * Insert element e into the binary tree Return true if the element is inserted
-   * successfully
+   * Insert element e into the binary tree Return true if the element is inserted successfully
+   *
+   * @param e
+   * @return
    */
   public boolean insert(E e);
 
-  /**
-   * Get the number of elements in the tree
-   */
+  /** Get the number of elements in the tree */
   public int getSize();
 
+  /**
+   * Print the nodes in postOrder traversal.
+   *
+   * @return a string with the nodes in the correct order.
+   */
   public String postOrder();
 
+  /**
+   * Print the nodes in preOrder traversal.
+   *
+   * @return a string with the nodes in the correct order.
+   */
   public String preOrder();
 
   /**
    * Return true if the element is in the tree
+   *
+   * @param e
+   * @return
    */
   public boolean search(E e);
 
