@@ -1,7 +1,8 @@
 /**
  * Code for Class.
  *
- * <p>CSC 1061 - Computer Science II - Java
+ * <p>
+ * CSC 1061 - Computer Science II - Java
  *
  * @author Patrick McDougle
  * @version %I%, %G%
@@ -25,16 +26,16 @@ public class Ch25Program02 {
 
     printTree(tree);
 
-    System.out.println("After delete Noah:");
     tree.delete("Noah");
+    System.out.println("After delete Noah:");
     printTree(tree);
 
-    System.out.println("After delete Emma:");
     tree.delete("Emma");
+    System.out.println("After delete Emma:");
     printTree(tree);
 
-    System.out.println("After delete Amelia:");
     tree.delete("Amelia");
+    System.out.println("After delete Amelia:");
     printTree(tree);
 
     System.out.println();

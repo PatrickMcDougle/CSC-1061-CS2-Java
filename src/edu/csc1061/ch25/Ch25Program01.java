@@ -1,7 +1,8 @@
 /**
  * Code for Class.
  *
- * <p>CSC 1061 - Computer Science II - Java
+ * <p>
+ * CSC 1061 - Computer Science II - Java
  *
  * @author Patrick McDougle
  * @version %I%, %G%
@@ -40,7 +41,7 @@ public class Ch25Program01 {
     System.out.println("Is Charlotte in the tree? " + tree.search(NAME_CHARLOTTE));
     System.out.println();
 
-    // Get a path from the root to Peter
+    // Get a path from the root to Charlotte
     System.out.print("A path from the root to Charlotte is: ");
     List<TreeNode<String>> path = tree.path(NAME_CHARLOTTE);
     for (int i = 0; path != null && i < path.size(); i++) {

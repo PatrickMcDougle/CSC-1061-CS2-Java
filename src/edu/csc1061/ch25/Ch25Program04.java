@@ -1,7 +1,8 @@
 /**
  * Code for Class.
  *
- * <p>CSC 1061 - Computer Science II - Java
+ * <p>
+ * CSC 1061 - Computer Science II - Java
  *
  * @author Patrick McDougle
  * @version %I%, %G%
@@ -50,8 +51,11 @@ public class Ch25Program04 {
       String name = iterator.next();
       System.out.print(name + " ");
     }
+
+    System.out.print("|");
     // remove/delete the third item.
     iterator.remove();
+
     // print the rest of the items.
     while (iterator.hasNext()) {
       String name = iterator.next();
