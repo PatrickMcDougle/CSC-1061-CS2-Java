@@ -3,7 +3,7 @@
 ## How to loss 1 point per file per issue
 
 -   Header comment block missing - need to provide your name, date, class, and a short description. Optional items can be the assignment text block
--   Class comment block missing - Every public class in the code needs to have a comment block takling about what the class does. What is the class' job.
+-   Class comment block missing - Every public class in the code needs to have a comment block talking about what the class does. What is the class' job.
 -   Non-private method comment block missing - Every non-public method in the code needs to have a comment block that has a short description of what the method does, what are the inputs/parameters, what does the method return, and what exceptions it might throw.
 -   Failure to submit a project. In other words, only the code was passed in.
 

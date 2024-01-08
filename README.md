@@ -14,8 +14,9 @@
 <!--
 *** I'm using markdown "reference style" links for readability.
 *** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
-*** See the bottom of this document for the declaration of the reference variables
-*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
+*** See the bottom of this document for the declaration of the reference
+*** variables for contributors-url, forks-url, etc. This is an optional, concise
+*** syntax you may use.
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
 
@@ -36,15 +37,23 @@
   <h3 align="center">CSC 1061 - Computer Science 2 - Java</h3>
 
   <p align="center">
-    This repository of code is the code I use for my Arapahoe Community College's CSC 1061 course.  This course uses Java to teach teh concepts that are covered in the course.
+    This repository of code is the code I use for my Arapahoe Community
+    College's CSC 1061 course.  This course uses Java to teach teh concepts that
+    are covered in the course.
     <br />
-    <a href="https://github.com/PatrickMcDougle/CSC-1061-CS2-Java"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/PatrickMcDougle/CSC-1061-CS2-Java">
+      <strong>Explore the docs »</strong>
+    </a>
   </p>
 
   <p align="center">
-    <a href="https://github.com/PatrickMcDougle/CSC-1061-CS2-Java">View Demo</a> ·
-    <a href="https://github.com/PatrickMcDougle/CSC-1061-CS2-Java/issues">Report Bug</a> ·
-    <a href="https://github.com/PatrickMcDougle/CSC-1061-CS2-Java/issues">Request Feature</a>
+    <a href="https://github.com/PatrickMcDougle/CSC-1061-CS2-Java">View Demo</a>·
+    <a href="https://github.com/PatrickMcDougle/CSC-1061-CS2-Java/issues">
+      Report Bug
+    </a>·
+    <a href="https://github.com/PatrickMcDougle/CSC-1061-CS2-Java/issues">
+      Request Feature
+    </a>
   </p>
 </div>
 
@@ -80,7 +89,8 @@
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-This project has all the code that I use for my course. I tweak it as I go and make updates where I see fit.
+This project has all the code that I use for my course. I tweak it as I go and
+make updates where I see fit.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -89,7 +99,10 @@ This project has all the code that I use for my course. I tweak it as I go and m
 -   [![Java SDK][java-badge]][java-sdk-url]
 -   [![JavaFX][javafx-badge]][javafx-url]
 
-Originally this code was developed with Java 8. The code is based on code from the book that we use for the course. The code has been updated to use Java 17. With Java 21 being the next LTS version, the class will use Java/JavaFX 21 for all assignments going forward.
+Originally this code was developed with Java 8. The code is based on code from
+the book that we use for the course. The code has been updated to use Java 17.
+With Java 21 being the next LTS version, the class will use Java/JavaFX 21 for
+all assignments going forward.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -119,7 +132,8 @@ Firstly we need to install software onto your computer.
     git clone https://github.com/PatrickMcDougle/CSC-1061-CS2-Java.git
     ```
 
-    If you are taking my course, cloning the repository will allow you to get updates to the code as the semester goes on.
+    If you are taking my course, cloning the repository will allow you to get
+    updates to the code as the semester goes on.
 
 -   Download the repo
 
@@ -128,7 +142,9 @@ Firstly we need to install software onto your computer.
     Download ZIP
     ```
 
-    Download the repository by clicking on the green "<> Code" button at the top of this page and selecting "Download ZIP". This will download the whole repository for you.
+    Download the repository by clicking on the green "<> Code" button at the top
+    of this page and selecting "Download ZIP". This will download the whole
+    repository for you.
 
     Or just click this link!
 
@@ -140,7 +156,8 @@ Firstly we need to install software onto your computer.
 
 ## Usage
 
-Here are some online resources that will help get you started in using Visual Studion Code, Java, JavaFX, and style guides.
+Here are some online resources that will help get you started in using Visual
+Studio Code, Java, JavaFX, and style guides.
 
 -   [Getting Started with JavaFX](https://openjfx.io/openjfx-docs/)
 -   [Install Java](https://openjfx.io/openjfx-docs/#install-java)
@@ -156,19 +173,23 @@ Here are some online resources that will help get you started in using Visual St
 
 The workspace contains several folders of importance, where:
 
--   `diagrams`: this folder contains diagrams PlantUML files that are used to make the diagrams for the PowerPoint presentations.
+-   `diagrams`: this folder contains diagrams PlantUML files that are used to
+    make the diagrams for the PowerPoint presentations.
 -   `resources`: this folder contains resources needed for some of the code examples
--   `src`: this folder contains the source code for the Java examples which are used in the class/chapter
+-   `src`: this folder contains the source code for the Java examples which are
+    used in the class/chapter
 
 Meanwhile, the compiled output files will be generated in the `bin` folder by default.
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+> If you want to customize the folder structure, open `.vscode/settings.json`
+> and update the related settings there.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Dependency Management
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+The `JAVA PROJECTS` view allows you to manage your dependencies. More details
+can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -184,7 +205,8 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 ## Contact
 
-Your Name - [@ClandestineMan](https://twitter.com/clandestineman) - Patrick.McDougle@gmail.com
+Your Name - [@ClandestineMan](https://twitter.com/clandestineman) -
+Patrick.McDougle@gmail.com
 
 Project Link: [https://github.com/PatrickMcDougle/CSC-1061-CS2-Java](https://github.com/PatrickMcDougle/CSC-1061-CS2-Java)
 
