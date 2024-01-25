@@ -1,11 +1,11 @@
 /**
  * Code for Class.
- * <p>
- * CSC 1061 - Computer Science II - Java
  *
- * @author  Patrick McDougle
+ * <p>CSC 1061 - Computer Science II - Java
+ *
+ * @author Patrick McDougle
  * @version %I%, %G%
- * @since   1.0
+ * @since 1.0
  */
 package edu.csc1061.ch10;
 
@@ -32,5 +32,7 @@ public class Ch10Program03 {
     System.out.print("Number of students in course2: " + course2.getNumberOfStudents());
 
     course1.dropStudent("Brian Smith");
+    System.out.println();
+    System.out.print("Number of students in course1: " + course1.getNumberOfStudents());
   }
 }

@@ -8,7 +8,7 @@
     "settings": {
         "java.project.sourcePaths": ["src"],
         "java.project.outputPath": "bin",
-        "java.project.referencedLibraries": ["c:\\Java\\javafx-sdk-17.0.8\\lib\\*.jar"],
+        "java.project.referencedLibraries": ["c:\\Java\\javafx-sdk-21.0.1\\lib\\*.jar"],
         "cSpell.words": ["Arapahoe", "lightgray"],
         "java.debug.settings.onBuildFailureProceed": true
     }
