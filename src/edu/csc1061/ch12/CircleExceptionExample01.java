@@ -1,11 +1,11 @@
 /**
  * Code for Class.
- * <p>
- * CSC 1061 - Computer Science II - Java
  *
- * @author  Patrick McDougle
+ * <p>CSC 1061 - Computer Science II - Java
+ *
+ * @author Patrick McDougle
  * @version %I%, %G%
- * @since   1.0
+ * @since 1.0
  */
 package edu.csc1061.ch12;
 
@@ -32,7 +32,14 @@ public class CircleExceptionExample01 {
     return radius;
   }
 
-  /** Set a new radius */
+  /**
+   * Set a new radius
+   *
+   * @param newRadius is a positive floating point value that represents the new or changed radius
+   *     value of the circle.
+   * @throws IllegalArgumentException is thrown when the new floating point radius value is not
+   *     positive.
+   */
   public void setRadius(double newRadius) throws IllegalArgumentException {
     if (newRadius >= 0) {
       radius = newRadius;

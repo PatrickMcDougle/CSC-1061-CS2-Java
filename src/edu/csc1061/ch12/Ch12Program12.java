@@ -1,11 +1,11 @@
 /**
  * Code for Class.
- * <p>
- * CSC 1061 - Computer Science II - Java
  *
- * @author  Patrick McDougle
+ * <p>CSC 1061 - Computer Science II - Java
+ *
+ * @author Patrick McDougle
  * @version %I%, %G%
- * @since   1.0
+ * @since 1.0
  */
 package edu.csc1061.ch12;
 
@@ -13,10 +13,8 @@ import java.io.File;
 import java.io.PrintWriter;
 import java.util.Scanner;
 
-/**
- * Replace text in a file
- */
-public class Ch12Program12Rt {
+/** Replace text in a file */
+public class Ch12Program12 {
 
   public static void main(String[] args) throws Exception {
     // Check command line parameter usage
@@ -40,9 +38,9 @@ public class Ch12Program12Rt {
     }
 
     try (
-        // Create input and output files
-        Scanner input = new Scanner(sourceFile);
-        PrintWriter output = new PrintWriter(targetFile);) {
+    // Create input and output files
+    Scanner input = new Scanner(sourceFile);
+        PrintWriter output = new PrintWriter(targetFile); ) {
       while (input.hasNext()) {
         String s1 = input.nextLine();
         String s2 = s1.replaceAll(args[2], args[3]);

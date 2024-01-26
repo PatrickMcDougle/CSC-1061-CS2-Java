@@ -1,21 +1,19 @@
 /**
  * Code for Class.
- * <p>
- * CSC 1061 - Computer Science II - Java
  *
- * @author  Patrick McDougle
+ * <p>CSC 1061 - Computer Science II - Java
+ *
+ * @author Patrick McDougle
  * @version %I%, %G%
- * @since   1.0
+ * @since 1.0
  */
 package edu.csc1061.ch12;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-/**
- * Input Mismatch Exception
- */
-public class Ch12Program05Ime {
+/** Handling an input mismatch exception. */
+public class Ch12Program05 {
 
   public static void main(String[] args) {
     Scanner input = new Scanner(System.in);

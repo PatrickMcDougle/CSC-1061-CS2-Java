@@ -1,21 +1,22 @@
 /**
  * Code for Class.
- * <p>
- * CSC 1061 - Computer Science II - Java
  *
- * @author  Patrick McDougle
+ * <p>CSC 1061 - Computer Science II - Java
+ *
+ * @author Patrick McDougle
  * @version %I%, %G%
- * @since   1.0
+ * @since 1.0
  */
 package edu.csc1061.ch12;
 
 import java.util.Scanner;
 
 /**
- * Divide By Zero will crash the program
- * This program will check if the denominator is zero.
+ * By providing a value of 0 (zero) for the denominator, this presents a Divide By Zero issue which
+ * will crash the program. This program will check if the denominator is zero before trying to use
+ * it.
  */
-public class Ch12DividedByZero02IfFix {
+public class Ch12DividedByZero02 {
 
   public static void main(String[] args) {
     Scanner input = new Scanner(System.in);
