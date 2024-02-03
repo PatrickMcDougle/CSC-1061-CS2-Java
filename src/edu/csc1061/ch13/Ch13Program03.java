@@ -45,7 +45,7 @@ public class Ch13Program03 {
     };
 
     // Construct a calendar for March 8, 2005
-    Calendar cal01 = new GregorianCalendar(1997, 2, 8);
+    Calendar cal01 = new GregorianCalendar(2005, 2, 8);
     System.out.println("March 8, 2005 was on a " + dayNameOfWeek[cal01.get(Calendar.DAY_OF_WEEK) - 1]);
 
     // Construct a calendar for February 14, 2014
