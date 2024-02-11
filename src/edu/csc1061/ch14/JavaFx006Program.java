@@ -29,10 +29,8 @@ public class JavaFx006Program {
     System.out.println(String.format("1 | %4.1f | %4.1f |", d1.getValue(), d2.getValue()));
     d2.setValue(70.2);
     System.out.println(String.format("2 | %4.1f | %4.1f |", d1.getValue(), d2.getValue()));
-    // d1.setValue(50.1)
-    // System.out.println(String.format("3 | %4.1f | %4.1f |",
-    // d1.getValue(),
-    // d2.getValue()))
+    // d1.setValue(50.1);
+    // System.out.println(String.format("3 | %4.1f | %4.1f |", d1.getValue(), d2.getValue()));
     // Can not setValue on d1. Exception will be thrown.
 
     // Bidirectional Binding

@@ -28,9 +28,9 @@ public class MyPolygon extends Pane {
     double radius = Math.min(getWidth(), getHeight()) * 0.4;
 
     // Add points to the polygon list
-    for (int i = 0; i < 6; i++) {
-      list.add(centerX + radius * Math.cos(2 * i * Math.PI / 6));
-      list.add(centerY - radius * Math.sin(2 * i * Math.PI / 6));
+    for (int i = 0; i < 8; i++) {
+      list.add(centerX + radius * Math.cos(2 * i * Math.PI / 8));
+      list.add(centerY - radius * Math.sin(2 * i * Math.PI / 8));
     }
 
     getChildren().clear(); // Clear pane
