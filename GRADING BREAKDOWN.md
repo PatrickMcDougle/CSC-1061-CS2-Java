@@ -1,19 +1,19 @@
 # Grading
 
-## How to loss 1 point per file per issue
+## How to lose 1 point per file per issue
 
--   Header comment block missing - need to provide your name, date, class, and a short description. Optional items can be the assignment text block
--   Class comment block missing - Every public class in the code needs to have a comment block talking about what the class does. What is the class' job.
--   Non-private method comment block missing - Every non-public method in the code needs to have a comment block that has a short description of what the method does, what are the inputs/parameters, what does the method return, and what exceptions it might throw.
--   Failure to submit a project. In other words, only the code was passed in.
+- **The header comment block is missing** - You must provide your name, date, course, and a short description. Optional items can be listed in the assignment.
+- **Class comment block missing** - Every public class in the code needs a comment block discussing what the class does. What is the class' job?
+- **Non-private method comment block missing** - Every non-public method in the code needs a comment block with a short description of what the method does, what the inputs/parameters are, what the method returns, and what exceptions it might throw.
 
-## How to loss partial points for a particular problem
+## How to lose partial points for a particular problem
 
--   The code crashes during run time. Except when the assignment is to do so.
+- **The code crashes during run time** -  Ensure the code is tested and does not throw an exception (i.e., crashes). Except when the assignment is to do so.
+- **Failure to submit a project** - In other words, only the code was passed in.
 
-## How to loss all the points for a particular problem
+## How to lose all the points for a particular problem
 
--   Code is missing or not there. If you create a class file and all it has is the class with no other methods or code, no points.
--   submitting .class files instead of the .java files. The .java files are the text files that we read and code in. The .class files is the compiled code that the computer reads, I can not read this file. I am unable to read .class files and so, I am unable to grade the assignment.
--   Code does not compile
--   Code is not in a project.
+- **Code is missing or not there** - If you create a class file that only has a class with no other methods or code, no points.
+- **Submitting *.class* files instead of the *.java* files** - The *.java* files are the text files that we read and code in. The *.class* files are the compiled bit code that the computer reads. I cannot read *.class* files so I cannot grade the assignment.
+- **Code does not compile** - What is submitted should compile.  No matter how much work is put into the assignment, if it does not compile, I cannot test the program's functionality.
+
