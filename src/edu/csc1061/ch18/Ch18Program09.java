@@ -1,7 +1,8 @@
 /**
  * Code for Class.
  *
- * <p>CSC 1061 - Computer Science II - Java
+ * <p>
+ * CSC 1061 - Computer Science II - Java
  *
  * @author Patrick McDougle
  * @version %I%, %G%
@@ -31,14 +32,13 @@ public class Ch18Program09 extends Application {
     Label debugLabel = new Label("Debug Output");
 
     TextField textFieldOrder = new TextField();
-    textFieldOrder.setOnAction(
-        e -> {
-          int level = Integer.parseInt(textFieldOrder.getText());
-          int something = random.nextInt(100);
+    textFieldOrder.setOnAction(e -> {
+      int level = Integer.parseInt(textFieldOrder.getText());
+      int something = random.nextInt(100);
 
-          pane.setOrder(level);
-          debugLabel.setText(String.format("Done [%d] : %d", level, something));
-        });
+      pane.setOrder(level);
+      debugLabel.setText(String.format("Done [%d] : %d", level, something));
+    });
     textFieldOrder.setPrefColumnCount(4);
     textFieldOrder.setAlignment(Pos.BOTTOM_RIGHT);
 
@@ -62,8 +62,11 @@ public class Ch18Program09 extends Application {
   }
 
   /**
-   * The main method is only needed for the IDE with limited JavaFX support. Not needed for running
-   * from the command line.
+   * The main method should always be present so that the code is compilable and runnable on
+   * different computers. Make sure you have the main method in the application so others can
+   * compile the code.
+   *
+   * @param args
    */
   public static void main(String[] args) {
     launch(args);

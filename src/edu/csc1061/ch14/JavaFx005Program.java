@@ -43,8 +43,11 @@ public class JavaFx005Program extends Application {
   }
 
   /**
-   * The main method is only needed for the IDE with limited JavaFX support. Not needed for running
-   * from the command line.
+   * The main method should always be present so that the code is compilable and runnable on
+   * different computers. Make sure you have the main method in the application so others can
+   * compile the code.
+   *
+   * @param args
    */
   public static void main(String[] args) {
     launch(args);

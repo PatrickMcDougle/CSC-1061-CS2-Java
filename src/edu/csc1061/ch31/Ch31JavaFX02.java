@@ -1,7 +1,8 @@
 /**
  * Code for Class.
  *
- * <p>CSC 1061 - Computer Science II - Java
+ * <p>
+ * CSC 1061 - Computer Science II - Java
  *
  * @author Patrick McDougle
  * @version %I%, %G%
@@ -90,8 +91,8 @@ public class Ch31JavaFX02 extends Application {
     Label label2 = new Label("Number 2:");
     Label label3 = new Label("Results:");
 
-    hBox.getChildren()
-        .addAll(label1, textFieldNumber1, label2, textFieldNumber2, label3, textFieldResults);
+    hBox.getChildren().addAll(label1, textFieldNumber1, label2, textFieldNumber2, label3,
+        textFieldResults);
     hBox.setAlignment(Pos.CENTER);
 
     return hBox;
@@ -115,9 +116,8 @@ public class Ch31JavaFX02 extends Application {
     MenuItem menuItemDivide = createMenuItem("Divide", '/', "Ctrl+D");
     MenuItem menuItemClose = new MenuItem("Close");
 
-    menuOperation
-        .getItems()
-        .addAll(menuItemAdd, menuItemSubtract, menuItemMultiply, menuItemDivide);
+    menuOperation.getItems().addAll(menuItemAdd, menuItemSubtract, menuItemMultiply,
+        menuItemDivide);
     menuExit.getItems().add(menuItemClose);
 
     // Handle menu actions
@@ -185,8 +185,11 @@ public class Ch31JavaFX02 extends Application {
   }
 
   /**
-   * The main method is only needed for the IDE with limited JavaFX support. Not needed for running
-   * from the command line.
+   * The main method should always be present so that the code is compilable and runnable on
+   * different computers. Make sure you have the main method in the application so others can
+   * compile the code.
+   *
+   * @param args
    */
   public static void main(String[] args) {
     launch(args);
