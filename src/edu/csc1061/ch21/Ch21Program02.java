@@ -25,6 +25,7 @@ public class Ch21Program02 {
 
     TreeSet<String> treeSet = new TreeSet<>(set);
 
+    System.out.println("Original set          : " + set);
     System.out.println("Sorted tree set       : " + treeSet);
 
     // Use the methods in SortedSet interface
