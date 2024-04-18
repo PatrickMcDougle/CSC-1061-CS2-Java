@@ -1,7 +1,8 @@
 /**
  * Code for Class.
  *
- * <p>CSC 1061 - Computer Science II - Java
+ * <p>
+ * CSC 1061 - Computer Science II - Java
  *
  * @author Patrick McDougle
  * @version %I%, %G%
@@ -94,7 +95,7 @@ public class Ch23Program03 {
    */
   public static void main(String[] args) {
     Random random = new Random();
-    int numberOfValues = 4;
+    int numberOfValues = 8;
 
     Set<Integer> randomList = new HashSet<>();
 

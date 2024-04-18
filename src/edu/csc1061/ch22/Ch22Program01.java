@@ -1,7 +1,8 @@
 /**
  * Code for Class.
  *
- * <p>CSC 1061 - Computer Science II - Java
+ * <p>
+ * CSC 1061 - Computer Science II - Java
  *
  * @author Patrick McDougle
  * @version %I%, %G%
@@ -39,6 +40,6 @@ public class Ch22Program01 {
     sb.append(" milliseconds");
 
     System.out.println(sb.toString());
-    ;
+
   }
 }

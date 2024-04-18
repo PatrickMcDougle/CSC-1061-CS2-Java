@@ -1,7 +1,8 @@
 /**
  * Code for Class.
  *
- * <p>CSC 1061 - Computer Science II - Java
+ * <p>
+ * CSC 1061 - Computer Science II - Java
  *
  * @author Patrick McDougle
  * @version %I%, %G%
@@ -24,7 +25,7 @@ public class Ch22Program07 extends Application {
   // queens are placed at (i, queens[i])
   // -1 indicates that no queen is currently placed in the ith row
   // Initially, place a queen at (0, 0) in the 0th row
-  private int[] queens = {1, -1, -1, -1, -1, -1, -1, -1};
+  private int[] queens = {3, -1, -1, -1, -1, -1, -1, -1};
 
   // Override the start method in the Application class
   @Override
@@ -114,8 +115,7 @@ public class Ch22Program07 extends Application {
       // Check column
       // Check up left diagonal
       // Check up right diagonal
-      if (queens[row - i] == column
-          || queens[row - i] == column - i
+      if (queens[row - i] == column || queens[row - i] == column - i
           || queens[row - i] == column + i) {
         return false; // There is a conflict
       }
