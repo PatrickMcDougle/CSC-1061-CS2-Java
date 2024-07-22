@@ -18,7 +18,6 @@ public class Ch25Program01 {
   public static void main(String[] args) {
     // Create a BST
     BinarySearchTree<String> tree = new BinarySearchTree<>();
-    tree.insert("Amelia");
     tree.insert("Liam");
     tree.insert("Olivia");
     tree.insert("Noah");
@@ -26,6 +25,7 @@ public class Ch25Program01 {
     tree.insert("Oliver");
     tree.insert(NAME_CHARLOTTE);
     tree.insert("Elijah");
+    tree.insert("Amelia");
 
     System.out.println("The number of nodes is " + tree.getSize());
     System.out.println();

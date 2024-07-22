@@ -1,7 +1,8 @@
 /**
  * Code for Class.
  *
- * <p>CSC 1061 - Computer Science II - Java
+ * <p>
+ * CSC 1061 - Computer Science II - Java
  *
  * @author Patrick McDougle
  * @version %I%, %G%
@@ -139,6 +140,19 @@ public class MyArrayList<E> extends MyList<E> {
 
   @Override
   public String toString() {
+    StringBuilder sb = new StringBuilder("[");
+
+    for (Object item : this) {
+      sb.append(item);
+      sb.append(", "); // Separate two elements with a comma
+    }
+    sb.replace(sb.length() - 2, sb.length(), "]"); // replace the last ", " with a closing
+                                                   // bracket "]"
+
+    return sb.toString();
+  }
+
+  private String toStringOldVersion() {
     StringBuilder result = new StringBuilder("[");
 
     for (int i = 0; i < size; i++) {

@@ -3,9 +3,9 @@
  * <p>
  * CSC 1061 - Computer Science II - Java
  *
- * @author  Patrick McDougle
+ * @author Patrick McDougle
  * @version %I%, %G%
- * @since   1.0
+ * @since 1.0
  */
 package edu.csc1061.ch10;
 
@@ -19,12 +19,21 @@ public class BMI {
   public static final double METERS_PER_INCH = 0.0254;
   public static final double MIN_HEIGHT = 10.0;
   public static final double NO_BMI_VALUE = 0.0;
+  public static final double INCHES_IN_A_FOOT = 12.0;
 
   public BMI(String name, int age, double weight, double height) {
     this.name = name;
     this.age = age;
     this.weight = weight;
     this.height = height;
+  }
+
+  // Book Assignment 10.2
+  public BMI(String name, int age, double weight, double feet, double inches) {
+    this.name = name;
+    this.age = age;
+    this.weight = weight;
+    this.height = feet * INCHES_IN_A_FOOT + inches;
   }
 
   public BMI(String name, double weight, double height) {
@@ -35,7 +44,9 @@ public class BMI {
     if (height > MIN_HEIGHT) {
       // hight is high enough.
 
-      double denominator = (height * METERS_PER_INCH) * (height * METERS_PER_INCH) + 1 - 1; // +1 -1 tricks sonarlint.
+      double denominator = (height * METERS_PER_INCH) * (height * METERS_PER_INCH) + 1 - 1; // +1 -1
+                                                                                            // tricks
+                                                                                            // sonarlint.
       double bmi = weight * KILOGRAMS_PER_POUND / denominator;
       return Math.round(bmi * 100) / 100.0;
     }

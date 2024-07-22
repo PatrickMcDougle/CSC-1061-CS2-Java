@@ -1,7 +1,8 @@
 /**
  * Code for Class.
  *
- * <p>CSC 1061 - Computer Science II - Java
+ * <p>
+ * CSC 1061 - Computer Science II - Java
  *
  * @author Patrick McDougle
  * @version %I%, %G%
@@ -25,6 +26,9 @@ public class Ch25Program05 {
       // example: supercalifragilisticexpialidocious
       // example: The quick brown fox jumps over the lazy dog
       // example: Glib jocks quiz nymph to vex dwarf
+      // example: glib jocks quiz nymph to vex dwarf GLIB JOCKS QUIZ NYMPH TO VEX DWARF
+      // example: glib jocks quiz nymph to vex dwarf GLIB JOCKS QUIZ NYMPH TO VEX DWARF 0123456789
+      // !@#$%^&*()-=_+[]\{}|;':",./<>?`~
 
       text = input.nextLine();
     }

@@ -1,7 +1,8 @@
 /**
  * Code for Class.
  *
- * <p>CSC 1061 - Computer Science II - Java
+ * <p>
+ * CSC 1061 - Computer Science II - Java
  *
  * @author Patrick McDougle
  * @version %I%, %G%
@@ -25,7 +26,7 @@ public class Ch23Program05 {
    * @param list is an array of something
    */
   public static <E> void heapSort(E[] list) {
-    // Create a Heap of integers
+    // Call other method for heapSort and pass in the comparison method.
     heapSort(list, (e1, e2) -> ((Comparable<E>) e1).compareTo(e2));
   }
 
@@ -37,7 +38,7 @@ public class Ch23Program05 {
    * @param c how to sort things
    */
   public static <E> void heapSort(E[] list, Comparator<E> c) {
-    // Create a Heap of integers
+    // Create a Heap of elements
     Heap<E> heap = new Heap<>(c);
 
     printArray(list);
@@ -59,7 +60,7 @@ public class Ch23Program05 {
    * This method will print the items in the array.
    *
    * @param <E>
-   * @param list is an array of integers.
+   * @param list is an array of elements to be printed/displayed.
    */
   public static <E> void printArray(E[] list) {
     StringBuilder sb = new StringBuilder();

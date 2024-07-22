@@ -1,7 +1,8 @@
 /**
  * Code for Class.
  *
- * <p>CSC 1061 - Computer Science II - Java
+ * <p>
+ * CSC 1061 - Computer Science II - Java
  *
  * @author Patrick McDougle
  * @version %I%, %G%
@@ -81,31 +82,30 @@ public class Heap<E> {
     list.set(0, list.get(list.size() - 1));
     list.remove(list.size() - 1);
 
-    int currentIndex = 0;
-    while (currentIndex < list.size()) {
-      int leftChildIndex = 2 * currentIndex + 1;
-      int rightChildIndex = 2 * currentIndex + 2;
 
-      // Find the maximum between two children
-      if (leftChildIndex >= list.size()) {
-        break; // The tree is a heap
-      }
+    int currentIndex = 0;
+    int leftChildIndex = 2 * currentIndex + 1;
+    int rightChildIndex = 2 * currentIndex + 2;
+    while (currentIndex < list.size() && leftChildIndex < list.size()) {
 
       int maxIndex = leftChildIndex;
+
       if (rightChildIndex < list.size()
           && comparator.compare(list.get(maxIndex), list.get(rightChildIndex)) < 0) {
         maxIndex = rightChildIndex;
       }
 
-      // Swap if the current node is less than the maximum
-      if (comparator.compare(list.get(currentIndex), list.get(maxIndex)) < 0) {
-        E temp = list.get(maxIndex);
-        list.set(maxIndex, list.get(currentIndex));
-        list.set(currentIndex, temp);
-        currentIndex = maxIndex;
-      } else {
+      if (comparator.compare(list.get(currentIndex), list.get(maxIndex)) >= 0) {
         break; // The tree is a heap
       }
+
+      // Swap if the current node is less than the maximum
+      E temp = list.get(maxIndex);
+      list.set(maxIndex, list.get(currentIndex));
+      list.set(currentIndex, temp);
+      currentIndex = maxIndex;
+      leftChildIndex = 2 * currentIndex + 1;
+      rightChildIndex = 2 * currentIndex + 2;
     }
 
     return removedObject;

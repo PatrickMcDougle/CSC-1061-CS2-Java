@@ -52,7 +52,7 @@ public class Ch25Program04 {
       System.out.print(name + " ");
     }
 
-    System.out.print("|");
+    System.out.print("| ");
     // remove/delete the third item.
     iterator.remove();
 
