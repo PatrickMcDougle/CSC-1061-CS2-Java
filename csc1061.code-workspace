@@ -17,6 +17,8 @@
             "other": "on",
             "comments": "on",
             "strings": "on"
-        }
+        },
+        "prettier.tabWidth": 4,
+        "editor.detectIndentation": false
     }
 }

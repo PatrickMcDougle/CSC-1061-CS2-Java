@@ -9,7 +9,7 @@
  */
 package edu.csc1061.ch09;
 
-public class Ch09MyCircle1Program {
+public class Ch09Program01 {
 
     // Main method
     public static void main(String[] args) {

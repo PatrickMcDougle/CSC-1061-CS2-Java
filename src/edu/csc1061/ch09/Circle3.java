@@ -9,18 +9,29 @@
  */
 package edu.csc1061.ch09;
 
-public class Ch09Circle1 {
+public class Circle3 {
     // the radius of this circle
-    public double radius;
+    private double radius; // instance variable
+
+    // static variables are shared by all the instances of the class.
+    // the number of objects created
+    private static int numberOfObjects = 0;
 
     // Construct a circle with radius 1
-    public Ch09Circle1() {
+    public Circle3() {
         radius = 1;
+        numberOfObjects++;
     }
 
     // Construct a circle with a specified radius
-    public Ch09Circle1(double newRadius) {
+    public Circle3(double newRadius) {
         radius = newRadius;
+        numberOfObjects++;
+    }
+
+    // Return numberOfObjects
+    static int getNumberOfObjects() {
+        return numberOfObjects;
     }
 
     // Return the radius of the circle

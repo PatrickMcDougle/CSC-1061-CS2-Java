@@ -39,6 +39,7 @@
     what is expected, or the inputs or outputs are different.
 -   **Failing to follow assignment or problem instructions**
 -   **Poor Coding**
+-   **No GUI code** - missing GUI code for assignments that asked for it.
 -   **Missing the point of the assignment**
 -   **My Opinion** - Again a catch all.
 
