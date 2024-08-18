@@ -44,10 +44,7 @@ public class BMI {
         if (height > MIN_HEIGHT) {
             // hight is high enough.
 
-            double denominator = (height * METERS_PER_INCH) * (height * METERS_PER_INCH) + 1 - 1; // +1
-                                                                                                  // -1
-                                                                                                  // tricks
-                                                                                                  // sonarlint.
+            double denominator = (height * METERS_PER_INCH) * (height * METERS_PER_INCH);
             double bmi = weight * KILOGRAMS_PER_POUND / denominator;
             return Math.round(bmi * 100) / 100.0;
         }
