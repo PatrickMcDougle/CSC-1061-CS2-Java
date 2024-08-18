@@ -62,7 +62,8 @@ public class Loan {
 
     /** Find monthly payment */
     public double getMonthlyPayment() {
-        double monthlyInterestRate = annualInterestRate / 1200;
+        double monthlyInterestRate = annualInterestRate / 1200; // divide by 12 months and divide by
+                                                                // 100 to get %
         double monthlyPayment = loanAmount * monthlyInterestRate
                 / (1 - (1 / Math.pow(1 + monthlyInterestRate, numberOfYears * 12)));
         return monthlyPayment;
