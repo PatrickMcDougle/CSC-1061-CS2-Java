@@ -1,7 +1,8 @@
 /**
  * Code for Class.
  *
- * <p>CSC 1061 - Computer Science II - Java
+ * <p>
+ * CSC 1061 - Computer Science II - Java
  *
  * @author Patrick McDougle
  * @version %I%, %G%
@@ -22,49 +23,49 @@ import javafx.stage.Stage;
 
 // button demo
 public class JavaFx002Program extends Application {
-  protected Text text = new Text(50, 50, "JavaFX Programming - CSC 1061");
+    protected Text text = new Text(50, 50, "JavaFX Programming - CSC 1061");
 
-  protected BorderPane getPane() {
-    HBox paneForButtons = new HBox(20);
-    Button buttonLeft = new Button("Left", new ImageView("file:resources/images/left.gif"));
-    Button buttonRight = new Button("Right", new ImageView("file:resources/images/right.gif"));
-    paneForButtons.getChildren().addAll(buttonLeft, buttonRight);
-    paneForButtons.setAlignment(Pos.CENTER);
-    paneForButtons.setStyle("-fx-border-color: green");
+    protected BorderPane getPane() {
+        HBox paneForButtons = new HBox(20);
+        Button buttonLeft = new Button("Left", new ImageView("file:resources/images/left.gif"));
+        Button buttonRight = new Button("Right", new ImageView("file:resources/images/right.gif"));
+        paneForButtons.getChildren().addAll(buttonLeft, buttonRight);
+        paneForButtons.setAlignment(Pos.CENTER);
+        paneForButtons.setStyle("-fx-border-color: green");
 
-    BorderPane pane = new BorderPane();
-    pane.setBottom(paneForButtons);
+        BorderPane pane = new BorderPane();
+        pane.setBottom(paneForButtons);
 
-    Pane paneForText = new Pane();
-    paneForText.getChildren().add(text);
-    pane.setCenter(paneForText);
+        Pane paneForText = new Pane();
+        paneForText.getChildren().add(text);
+        pane.setCenter(paneForText);
 
-    // Lambda Expression:
-    // parameter -> expression
-    // https://www.w3schools.com/java/java_lambda.asp
-    buttonLeft.setOnAction(e -> text.setX(text.getX() - 10));
-    buttonRight.setOnAction(e -> text.setX(text.getX() + 10));
+        // Lambda Expression:
+        // parameter -> expression
+        // https://www.w3schools.com/java/java_lambda.asp
+        buttonLeft.setOnAction(e -> text.setX(text.getX() - 10));
+        buttonRight.setOnAction(e -> text.setX(text.getX() + 10));
 
-    return pane;
-  }
+        return pane;
+    }
 
-  @Override // Override the start method in the Application class
-  public void start(Stage primaryStage) {
-    // Create a scene and place it in the stage
-    Scene scene = new Scene(getPane(), 500, 300);
-    primaryStage.setTitle("JavaFx 002 Program - ButtonDemo"); // Set the stage title
-    primaryStage.setScene(scene); // Place the scene in the stage
-    primaryStage.show(); // Display the stage
-  }
+    @Override // Override the start method in the Application class
+    public void start(Stage primaryStage) {
+        // Create a scene and place it in the stage
+        Scene scene = new Scene(getPane(), 500, 300);
+        primaryStage.setTitle("JavaFx 002 Program - ButtonDemo"); // Set the stage title
+        primaryStage.setScene(scene); // Place the scene in the stage
+        primaryStage.show(); // Display the stage
+    }
 
-  /**
-   * The main method should always be present so that the code is compilable and runnable on
-   * different computers. Make sure you have the main method in the application so others can
-   * compile the code.
-   *
-   * @param args
-   */
-  public static void main(String[] args) {
-    launch(args);
-  }
+    /**
+     * The main method should always be present so that the code is compilable and runnable on
+     * different computers. Make sure you have the main method in the application so others can
+     * compile the code.
+     *
+     * @param args
+     */
+    public static void main(String[] args) {
+        launch(args);
+    }
 }

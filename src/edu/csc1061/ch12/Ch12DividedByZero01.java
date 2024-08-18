@@ -1,7 +1,8 @@
 /**
  * Code for Class.
  *
- * <p>CSC 1061 - Computer Science II - Java
+ * <p>
+ * CSC 1061 - Computer Science II - Java
  *
  * @author Patrick McDougle
  * @version %I%, %G%
@@ -17,16 +18,16 @@ import java.util.Scanner;
  */
 public class Ch12DividedByZero01 {
 
-  public static void main(String[] args) {
-    Scanner input = new Scanner(System.in);
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
 
-    // Prompt the user to enter two integers
-    System.out.print("Enter two integers: ");
-    int numerator = input.nextInt();
-    int denominator = input.nextInt();
+        // Prompt the user to enter two integers
+        System.out.print("Enter two integers: ");
+        int numerator = input.nextInt();
+        int denominator = input.nextInt();
 
-    input.close();
+        input.close();
 
-    System.out.println(numerator + " / " + denominator + " is " + (numerator / denominator));
-  }
+        System.out.println(numerator + " / " + denominator + " is " + (numerator / denominator));
+    }
 }

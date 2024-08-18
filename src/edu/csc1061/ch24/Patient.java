@@ -1,7 +1,8 @@
 /**
  * Code for Class.
  *
- * <p>CSC 1061 - Computer Science II - Java
+ * <p>
+ * CSC 1061 - Computer Science II - Java
  *
  * @author Patrick McDougle
  * @version %I%, %G%
@@ -13,38 +14,38 @@ import java.util.Objects;
 
 public class Patient implements Comparable<Patient> {
 
-  private String name;
-  private int priority;
+    private String name;
+    private int priority;
 
-  public Patient(String name, int priority) {
-    this.name = name;
-    this.priority = priority;
-  }
-
-  @Override
-  public String toString() {
-    return name + "(priority:" + priority + ")";
-  }
-
-  @Override
-  public int compareTo(Patient o) {
-    return this.priority - o.priority;
-  }
-
-  @Override
-  public int hashCode() {
-    return Objects.hash(name, priority);
-  }
-
-  @Override
-  public boolean equals(Object obj) {
-    if (this == obj) {
-      return true;
+    public Patient(String name, int priority) {
+        this.name = name;
+        this.priority = priority;
     }
-    if (!(obj instanceof Patient)) {
-      return false;
+
+    @Override
+    public String toString() {
+        return name + "(priority:" + priority + ")";
     }
-    Patient that = (Patient) obj;
-    return Objects.equals(name, that.name) && priority == that.priority;
-  }
+
+    @Override
+    public int compareTo(Patient o) {
+        return this.priority - o.priority;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, priority);
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (!(obj instanceof Patient)) {
+            return false;
+        }
+        Patient that = (Patient) obj;
+        return Objects.equals(name, that.name) && priority == that.priority;
+    }
 }

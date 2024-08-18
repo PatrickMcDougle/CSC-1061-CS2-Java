@@ -1,7 +1,8 @@
 /**
  * Code for Class.
  *
- * <p>CSC 1061 - Computer Science II - Java
+ * <p>
+ * CSC 1061 - Computer Science II - Java
  *
  * @author Patrick McDougle
  * @version %I%, %G%
@@ -22,65 +23,64 @@ import javafx.stage.Stage;
 
 // checkbox example
 public class JavaFx003Program extends JavaFx002Program {
-  private static final String FONT_NAME = "Times New Roman";
+    private static final String FONT_NAME = "Times New Roman";
 
-  @Override // Override the getPane() method in the super class
-  protected BorderPane getPane() {
-    BorderPane pane = super.getPane();
+    @Override // Override the getPane() method in the super class
+    protected BorderPane getPane() {
+        BorderPane pane = super.getPane();
 
-    Font fontBoldItalic = Font.font(FONT_NAME, FontWeight.BOLD, FontPosture.ITALIC, 20);
-    Font fontBold = Font.font(FONT_NAME, FontWeight.BOLD, FontPosture.REGULAR, 20);
-    Font fontItalic = Font.font(FONT_NAME, FontWeight.NORMAL, FontPosture.ITALIC, 20);
-    Font fontNormal = Font.font(FONT_NAME, FontWeight.NORMAL, FontPosture.REGULAR, 20);
+        Font fontBoldItalic = Font.font(FONT_NAME, FontWeight.BOLD, FontPosture.ITALIC, 20);
+        Font fontBold = Font.font(FONT_NAME, FontWeight.BOLD, FontPosture.REGULAR, 20);
+        Font fontItalic = Font.font(FONT_NAME, FontWeight.NORMAL, FontPosture.ITALIC, 20);
+        Font fontNormal = Font.font(FONT_NAME, FontWeight.NORMAL, FontPosture.REGULAR, 20);
 
-    text.setFont(fontNormal);
+        text.setFont(fontNormal);
 
-    VBox paneForCheckBoxes = new VBox(20);
-    paneForCheckBoxes.setPadding(new Insets(5, 5, 5, 5));
-    paneForCheckBoxes.setStyle("-fx-border-color: green");
+        VBox paneForCheckBoxes = new VBox(20);
+        paneForCheckBoxes.setPadding(new Insets(5, 5, 5, 5));
+        paneForCheckBoxes.setStyle("-fx-border-color: green");
 
-    CheckBox checkboxBold = new CheckBox("Bold");
-    CheckBox checkboxItalic = new CheckBox("Italic");
+        CheckBox checkboxBold = new CheckBox("Bold");
+        CheckBox checkboxItalic = new CheckBox("Italic");
 
-    paneForCheckBoxes.getChildren().addAll(checkboxBold, checkboxItalic);
-    pane.setRight(paneForCheckBoxes);
+        paneForCheckBoxes.getChildren().addAll(checkboxBold, checkboxItalic);
+        pane.setRight(paneForCheckBoxes);
 
-    // Lambda Expression:
-    // parameter -> expression
-    // https://www.w3schools.com/java/java_lambda.asp
-    EventHandler<ActionEvent> handler =
-        e -> {
-          if (checkboxBold.isSelected() && checkboxItalic.isSelected()) {
-            text.setFont(fontBoldItalic); // Both check boxes checked
-          } else if (checkboxBold.isSelected()) {
-            text.setFont(fontBold); // The Bold check box checked
-          } else if (checkboxItalic.isSelected()) {
-            text.setFont(fontItalic); // The Italic check box checked
-          } else {
-            text.setFont(fontNormal); // Both check boxes unchecked
-          }
+        // Lambda Expression:
+        // parameter -> expression
+        // https://www.w3schools.com/java/java_lambda.asp
+        EventHandler<ActionEvent> handler = e -> {
+            if (checkboxBold.isSelected() && checkboxItalic.isSelected()) {
+                text.setFont(fontBoldItalic); // Both check boxes checked
+            } else if (checkboxBold.isSelected()) {
+                text.setFont(fontBold); // The Bold check box checked
+            } else if (checkboxItalic.isSelected()) {
+                text.setFont(fontItalic); // The Italic check box checked
+            } else {
+                text.setFont(fontNormal); // Both check boxes unchecked
+            }
         };
 
-    checkboxBold.setOnAction(handler);
-    checkboxItalic.setOnAction(handler);
+        checkboxBold.setOnAction(handler);
+        checkboxItalic.setOnAction(handler);
 
-    return pane; // Return a new pane
-  }
+        return pane; // Return a new pane
+    }
 
-  @Override // Override the start method in the Application class
-  public void start(Stage primaryStage) {
-    super.start(primaryStage);
-    primaryStage.setTitle("CheckBoxDemo"); // Set the stage title
-  }
+    @Override // Override the start method in the Application class
+    public void start(Stage primaryStage) {
+        super.start(primaryStage);
+        primaryStage.setTitle("CheckBoxDemo"); // Set the stage title
+    }
 
-  /**
-   * The main method should always be present so that the code is compilable and runnable on
-   * different computers. Make sure you have the main method in the application so others can
-   * compile the code.
-   *
-   * @param args
-   */
-  public static void main(String[] args) {
-    launch(args);
-  }
+    /**
+     * The main method should always be present so that the code is compilable and runnable on
+     * different computers. Make sure you have the main method in the application so others can
+     * compile the code.
+     *
+     * @param args
+     */
+    public static void main(String[] args) {
+        launch(args);
+    }
 }

@@ -3,145 +3,141 @@
  * <p>
  * CSC 1061 - Computer Science II - Java
  *
- * @author  Patrick McDougle
+ * @author Patrick McDougle
  * @version %I%, %G%
- * @since   1.0
+ * @since 1.0
  */
 package edu.csc1061.ch13;
 
 public class Rational extends Number implements Comparable<Rational> {
-  /**
-   * Auto Generated serial version id.
-   */
-  private static final long serialVersionUID = -1357141487023024397L;
+    /**
+     * Auto Generated serial version id.
+     */
+    private static final long serialVersionUID = -1357141487023024397L;
 
-  // Data fields for numerator and denominator
-  private long numerator = 0;
-  private long denominator = 1;
+    // Data fields for numerator and denominator
+    private long numerator = 0;
+    private long denominator = 1;
 
-  /** Construct a rational with default properties */
-  public Rational() {
-    this(0, 1);
-  }
-
-  /** Construct a rational with specified numerator and denominator */
-  public Rational(long numerator, long denominator) {
-    long gcd = gcd(numerator, denominator);
-    this.numerator = (denominator > 0 ? 1 : -1) * numerator / gcd;
-    this.denominator = Math.abs(denominator) / gcd;
-  }
-
-  /** Find GCD of two numbers */
-  private static long gcd(long n, long d) {
-    long n1 = Math.abs(n);
-    long n2 = Math.abs(d);
-    int gcd = 1;
-
-    for (int k = 1; k <= n1 && k <= n2; k++) {
-      if (n1 % k == 0 && n2 % k == 0) {
-        gcd = k;
-      }
+    /** Construct a rational with default properties */
+    public Rational() {
+        this(0, 1);
     }
 
-    return gcd;
-  }
-
-  /** Return numerator */
-  public long getNumerator() {
-    return numerator;
-  }
-
-  /** Return denominator */
-  public long getDenominator() {
-    return denominator;
-  }
-
-  /** Add a rational number to this rational */
-  public Rational add(Rational secondRational) {
-    long n = numerator *
-        secondRational.getDenominator() +
-        denominator *
-            secondRational.getNumerator();
-    long d = denominator * secondRational.getDenominator();
-    return new Rational(n, d);
-  }
-
-  /** Subtract a rational number from this rational */
-  public Rational subtract(Rational secondRational) {
-    long n = numerator *
-        secondRational.getDenominator() -
-        denominator *
-            secondRational.getNumerator();
-    long d = denominator * secondRational.getDenominator();
-    return new Rational(n, d);
-  }
-
-  /** Multiply a rational number to this rational */
-  public Rational multiply(Rational secondRational) {
-    long n = numerator * secondRational.getNumerator();
-    long d = denominator * secondRational.getDenominator();
-    return new Rational(n, d);
-  }
-
-  /** Divide a rational number from this rational */
-  public Rational divide(Rational secondRational) {
-    long n = numerator * secondRational.getDenominator();
-    long d = denominator * secondRational.numerator;
-    return new Rational(n, d);
-  }
-
-  @Override // Override toString()
-  public String toString() {
-    if (denominator == 1) {
-      return numerator + "";
+    /** Construct a rational with specified numerator and denominator */
+    public Rational(long numerator, long denominator) {
+        long gcd = gcd(numerator, denominator);
+        this.numerator = (denominator > 0 ? 1 : -1) * numerator / gcd;
+        this.denominator = Math.abs(denominator) / gcd;
     }
 
-    return numerator + "/" + denominator;
-  }
+    /** Find GCD of two numbers */
+    private static long gcd(long n, long d) {
+        long n1 = Math.abs(n);
+        long n2 = Math.abs(d);
+        int gcd = 1;
 
-  @Override // Override the equals method in the Object class
-  public boolean equals(Object other) {
-    return (this.subtract((Rational) (other))).getNumerator() == 0;
-  }
+        for (int k = 1; k <= n1 && k <= n2; k++) {
+            if (n1 % k == 0 && n2 % k == 0) {
+                gcd = k;
+            }
+        }
 
-  @Override // Implement the abstract intValue method in Number
-  public int intValue() {
-    return (int) doubleValue();
-  }
-
-  @Override // Implement the abstract floatValue method in Number
-  public float floatValue() {
-    return (float) doubleValue();
-  }
-
-  @Override // Implement the doubleValue method in Number
-  public double doubleValue() {
-    return numerator * 1.0 / denominator;
-  }
-
-  @Override // Implement the abstract longValue method in Number
-  public long longValue() {
-    return (long) doubleValue();
-  }
-
-  @Override // Implement the compareTo method in Comparable
-  public int compareTo(Rational o) {
-    if (this.subtract(o).getNumerator() > 0) {
-      return 1;
+        return gcd;
     }
 
-    if (this.subtract(o).getNumerator() < 0) {
-      return -1;
+    /** Return numerator */
+    public long getNumerator() {
+        return numerator;
     }
 
-    return 0;
-  }
+    /** Return denominator */
+    public long getDenominator() {
+        return denominator;
+    }
 
-  @Override
-  public int hashCode() {
-    int hash = 7;
-    int prime = 31;
-    hash = prime * hash + (int) numerator + (int) denominator;
-    return hash;
-  }
+    /** Add a rational number to this rational */
+    public Rational add(Rational secondRational) {
+        long n = numerator * secondRational.getDenominator()
+                + denominator * secondRational.getNumerator();
+        long d = denominator * secondRational.getDenominator();
+        return new Rational(n, d);
+    }
+
+    /** Subtract a rational number from this rational */
+    public Rational subtract(Rational secondRational) {
+        long n = numerator * secondRational.getDenominator()
+                - denominator * secondRational.getNumerator();
+        long d = denominator * secondRational.getDenominator();
+        return new Rational(n, d);
+    }
+
+    /** Multiply a rational number to this rational */
+    public Rational multiply(Rational secondRational) {
+        long n = numerator * secondRational.getNumerator();
+        long d = denominator * secondRational.getDenominator();
+        return new Rational(n, d);
+    }
+
+    /** Divide a rational number from this rational */
+    public Rational divide(Rational secondRational) {
+        long n = numerator * secondRational.getDenominator();
+        long d = denominator * secondRational.numerator;
+        return new Rational(n, d);
+    }
+
+    @Override // Override toString()
+    public String toString() {
+        if (denominator == 1) {
+            return numerator + "";
+        }
+
+        return numerator + "/" + denominator;
+    }
+
+    @Override // Override the equals method in the Object class
+    public boolean equals(Object other) {
+        return (this.subtract((Rational) (other))).getNumerator() == 0;
+    }
+
+    @Override // Implement the abstract intValue method in Number
+    public int intValue() {
+        return (int) doubleValue();
+    }
+
+    @Override // Implement the abstract floatValue method in Number
+    public float floatValue() {
+        return (float) doubleValue();
+    }
+
+    @Override // Implement the doubleValue method in Number
+    public double doubleValue() {
+        return numerator * 1.0 / denominator;
+    }
+
+    @Override // Implement the abstract longValue method in Number
+    public long longValue() {
+        return (long) doubleValue();
+    }
+
+    @Override // Implement the compareTo method in Comparable
+    public int compareTo(Rational o) {
+        if (this.subtract(o).getNumerator() > 0) {
+            return 1;
+        }
+
+        if (this.subtract(o).getNumerator() < 0) {
+            return -1;
+        }
+
+        return 0;
+    }
+
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        int prime = 31;
+        hash = prime * hash + (int) numerator + (int) denominator;
+        return hash;
+    }
 }

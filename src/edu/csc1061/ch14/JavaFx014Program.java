@@ -1,7 +1,8 @@
 /**
  * Code for Class.
  *
- * <p>CSC 1061 - Computer Science II - Java
+ * <p>
+ * CSC 1061 - Computer Science II - Java
  *
  * @author Patrick McDougle
  * @version %I%, %G%
@@ -23,41 +24,41 @@ import javafx.stage.Stage;
 /** show text */
 public class JavaFx014Program extends Application {
 
-  /** Override the start method in the Application class */
-  @Override
-  public void start(Stage primaryStage) {
-    // Create a pane to hold the texts
-    Pane pane = new Pane();
-    pane.setPadding(new Insets(5, 5, 5, 5));
+    /** Override the start method in the Application class */
+    @Override
+    public void start(Stage primaryStage) {
+        // Create a pane to hold the texts
+        Pane pane = new Pane();
+        pane.setPadding(new Insets(5, 5, 5, 5));
 
-    Text text1 = new Text(20, 20, "Programming is fun");
-    text1.setFont(Font.font("Courier", FontWeight.BOLD, FontPosture.ITALIC, 15));
-    pane.getChildren().add(text1);
+        Text text1 = new Text(20, 20, "Programming is fun");
+        text1.setFont(Font.font("Courier", FontWeight.BOLD, FontPosture.ITALIC, 15));
+        pane.getChildren().add(text1);
 
-    Text text2 = new Text(60, 60, "Programming is fun\nDisplay text");
-    pane.getChildren().add(text2);
+        Text text2 = new Text(60, 60, "Programming is fun\nDisplay text");
+        pane.getChildren().add(text2);
 
-    Text text3 = new Text(10, 100, "Programming is fun\nDisplay text");
-    text3.setFill(Color.RED);
-    text3.setUnderline(true); // Underline for text3
-    text3.setStrikethrough(true); // Strike through for text3
-    pane.getChildren().add(text3);
+        Text text3 = new Text(10, 100, "Programming is fun\nDisplay text");
+        text3.setFill(Color.RED);
+        text3.setUnderline(true); // Underline for text3
+        text3.setStrikethrough(true); // Strike through for text3
+        pane.getChildren().add(text3);
 
-    // Create a scene and place it in the stage
-    Scene scene = new Scene(pane);
-    primaryStage.setTitle("ShowText"); // Set the stage title
-    primaryStage.setScene(scene); // Place the scene in the stage
-    primaryStage.show(); // Display the stage
-  }
+        // Create a scene and place it in the stage
+        Scene scene = new Scene(pane);
+        primaryStage.setTitle("ShowText"); // Set the stage title
+        primaryStage.setScene(scene); // Place the scene in the stage
+        primaryStage.show(); // Display the stage
+    }
 
-  /**
-   * The main method should always be present so that the code is compilable and runnable on
-   * different computers. Make sure you have the main method in the application so others can
-   * compile the code.
-   *
-   * @param args
-   */
-  public static void main(String[] args) {
-    launch(args);
-  }
+    /**
+     * The main method should always be present so that the code is compilable and runnable on
+     * different computers. Make sure you have the main method in the application so others can
+     * compile the code.
+     *
+     * @param args
+     */
+    public static void main(String[] args) {
+        launch(args);
+    }
 }

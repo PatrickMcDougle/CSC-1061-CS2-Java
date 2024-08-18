@@ -1,7 +1,8 @@
 /**
  * Code for Class.
  *
- * <p>CSC 1061 - Computer Science II - Java
+ * <p>
+ * CSC 1061 - Computer Science II - Java
  *
  * @author Patrick McDougle
  * @version %I%, %G%
@@ -18,48 +19,48 @@ import javafx.stage.Stage;
 
 public class Ch31JavaFX01 extends Application {
 
-  @Override // Override the start method in the Application class
-  public void start(Stage primaryStage) {
-    HBox hBox = new HBox(5);
-    Scene scene = new Scene(hBox, 300, 250);
+    @Override // Override the start method in the Application class
+    public void start(Stage primaryStage) {
+        HBox hBox = new HBox(5);
+        Scene scene = new Scene(hBox, 300, 250);
 
-    // Load the stylesheet
-    // scene.getStylesheets().add("Ch31JavaFX01.css")
-    scene.getStylesheets().add(getClass().getResource("Ch31JavaFX01.css").toExternalForm());
+        // Load the stylesheet
+        // scene.getStylesheets().add("Ch31JavaFX01.css")
+        scene.getStylesheets().add(getClass().getResource("Ch31JavaFX01.css").toExternalForm());
 
-    Pane pane1 = new Pane();
-    Circle circle1 = new Circle(50, 50, 30);
-    Circle circle2 = new Circle(150, 50, 30);
-    Circle circle3 = new Circle(100, 100, 30);
-    pane1.getChildren().addAll(circle1, circle2, circle3);
-    pane1.getStyleClass().add("border");
+        Pane pane1 = new Pane();
+        Circle circle1 = new Circle(50, 50, 30);
+        Circle circle2 = new Circle(150, 50, 30);
+        Circle circle3 = new Circle(100, 100, 30);
+        pane1.getChildren().addAll(circle1, circle2, circle3);
+        pane1.getStyleClass().add("border");
 
-    circle1.getStyleClass().add("circle-plain"); // Add a style class
-    circle2.getStyleClass().add("circle-plain"); // Add a style class
-    circle3.setId("circle-red"); // Add a style id
+        circle1.getStyleClass().add("circle-plain"); // Add a style class
+        circle2.getStyleClass().add("circle-plain"); // Add a style class
+        circle3.setId("circle-red"); // Add a style id
 
-    Pane pane2 = new Pane();
-    Circle circle4 = new Circle(100, 100, 30);
-    circle4.getStyleClass().addAll("circle-border", "circle-plain");
-    circle4.setId("circle-green"); // Add a style class
-    pane2.getChildren().add(circle4);
-    pane2.getStyleClass().add("border");
+        Pane pane2 = new Pane();
+        Circle circle4 = new Circle(100, 100, 30);
+        circle4.getStyleClass().addAll("circle-border", "circle-plain");
+        circle4.setId("circle-green"); // Add a style class
+        pane2.getChildren().add(circle4);
+        pane2.getStyleClass().add("border");
 
-    hBox.getChildren().addAll(pane1, pane2);
+        hBox.getChildren().addAll(pane1, pane2);
 
-    primaryStage.setTitle("CSS Demo"); // Set the window title
-    primaryStage.setScene(scene); // Place the scene in the window
-    primaryStage.show(); // Display the window
-  }
+        primaryStage.setTitle("CSS Demo"); // Set the window title
+        primaryStage.setScene(scene); // Place the scene in the window
+        primaryStage.show(); // Display the window
+    }
 
-  /**
-   * The main method should always be present so that the code is compilable and runnable on
-   * different computers. Make sure you have the main method in the application so others can
-   * compile the code.
-   *
-   * @param args
-   */
-  public static void main(String[] args) {
-    launch(args);
-  }
+    /**
+     * The main method should always be present so that the code is compilable and runnable on
+     * different computers. Make sure you have the main method in the application so others can
+     * compile the code.
+     *
+     * @param args
+     */
+    public static void main(String[] args) {
+        launch(args);
+    }
 }

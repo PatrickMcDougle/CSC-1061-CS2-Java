@@ -1,7 +1,8 @@
 /**
  * Code for Class.
  *
- * <p>CSC 1061 - Computer Science II - Java
+ * <p>
+ * CSC 1061 - Computer Science II - Java
  *
  * @author Patrick McDougle
  * @version %I%, %G%
@@ -20,41 +21,41 @@ import javafx.stage.Stage;
 
 public class JavaFx008Program extends Application {
 
-  /** Override the start method in the Application class */
-  @Override
-  public void start(Stage primaryStage) {
-    // Create a pane to hold the circle
-    Pane pane = new StackPane();
+    /** Override the start method in the Application class */
+    @Override
+    public void start(Stage primaryStage) {
+        // Create a pane to hold the circle
+        Pane pane = new StackPane();
 
-    // Create a circle and set its properties
-    Circle circle = new Circle();
+        // Create a circle and set its properties
+        Circle circle = new Circle();
 
-    circle.setRadius(50);
-    circle.setStroke(Color.BLACK);
-    circle.setFill(new Color(0.5, 0.5, 0.5, 0.1));
-    pane.getChildren().add(circle); // Add circle to the pane
+        circle.setRadius(50);
+        circle.setStroke(Color.BLACK);
+        circle.setFill(new Color(0.5, 0.5, 0.5, 0.1));
+        pane.getChildren().add(circle); // Add circle to the pane
 
-    // Create a label and set its properties
-    Label label = new Label("JavaFX");
+        // Create a label and set its properties
+        Label label = new Label("JavaFX");
 
-    label.setFont(Font.font("Times New Roman", FontWeight.BOLD, FontPosture.ITALIC, 20));
-    pane.getChildren().add(label);
+        label.setFont(Font.font("Times New Roman", FontWeight.BOLD, FontPosture.ITALIC, 20));
+        pane.getChildren().add(label);
 
-    // Create a scene and place it in the stage
-    Scene scene = new Scene(pane);
-    primaryStage.setTitle("Font & Color Demo"); // Set the stage title
-    primaryStage.setScene(scene); // Place the scene in the stage
-    primaryStage.show(); // Display the stage
-  }
+        // Create a scene and place it in the stage
+        Scene scene = new Scene(pane);
+        primaryStage.setTitle("Font & Color Demo"); // Set the stage title
+        primaryStage.setScene(scene); // Place the scene in the stage
+        primaryStage.show(); // Display the stage
+    }
 
-  /**
-   * The main method should always be present so that the code is compilable and runnable on
-   * different computers. Make sure you have the main method in the application so others can
-   * compile the code.
-   *
-   * @param args
-   */
-  public static void main(String[] args) {
-    launch(args);
-  }
+    /**
+     * The main method should always be present so that the code is compilable and runnable on
+     * different computers. Make sure you have the main method in the application so others can
+     * compile the code.
+     *
+     * @param args
+     */
+    public static void main(String[] args) {
+        launch(args);
+    }
 }

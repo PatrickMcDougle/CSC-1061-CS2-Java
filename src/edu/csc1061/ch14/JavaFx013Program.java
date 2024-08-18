@@ -1,7 +1,8 @@
 /**
  * Code for Class.
  *
- * <p>CSC 1061 - Computer Science II - Java
+ * <p>
+ * CSC 1061 - Computer Science II - Java
  *
  * @author Patrick McDougle
  * @version %I%, %G%
@@ -24,62 +25,60 @@ import javafx.stage.Stage;
 /** show HBox and VBox panes */
 public class JavaFx013Program extends Application {
 
-  /** Override the start method in the Application class */
-  @Override
-  public void start(Stage primaryStage) {
-    // Create a border pane
-    BorderPane pane = new BorderPane();
+    /** Override the start method in the Application class */
+    @Override
+    public void start(Stage primaryStage) {
+        // Create a border pane
+        BorderPane pane = new BorderPane();
 
-    // Place nodes in the pane
-    pane.setTop(getHBox());
-    pane.setLeft(getVBox());
+        // Place nodes in the pane
+        pane.setTop(getHBox());
+        pane.setLeft(getVBox());
 
-    // Create a scene and place it in the stage
-    Scene scene = new Scene(pane);
-    primaryStage.setTitle("ShowHBoxVBox"); // Set the stage title
-    primaryStage.setScene(scene); // Place the scene in the stage
-    primaryStage.show(); // Display the stage
-  }
-
-  private HBox getHBox() {
-    HBox hBox = new HBox(15); // Create an HBox with 15px spacing
-    hBox.setPadding(new Insets(15, 15, 15, 15));
-    hBox.setStyle("-fx-background-color: gold");
-    hBox.getChildren().add(new Button("Computer Science"));
-    hBox.getChildren().add(new Button("Chemistry"));
-    ImageView imageView = new ImageView(new Image("file:resources/images/Space_Unicorn.gif"));
-    hBox.getChildren().add(imageView);
-    return hBox;
-  }
-
-  private VBox getVBox() {
-    VBox vBox = new VBox(15); // Create a VBox with 15px spacing
-    vBox.setPadding(new Insets(15, 5, 5, 5));
-    vBox.getChildren().add(new Label("Courses"));
-
-    Label[] courses = {
-      new Label("CSC 1060: Computer Science I"),
-      new Label("CSC 1061: Computer Science II"),
-      new Label("CSC 1026: Game Design and Development"),
-      new Label("CSCI 2000: Game Programming I")
-    };
-
-    for (Label course : courses) {
-      VBox.setMargin(course, new Insets(0, 0, 0, 15));
-      vBox.getChildren().add(course);
+        // Create a scene and place it in the stage
+        Scene scene = new Scene(pane);
+        primaryStage.setTitle("ShowHBoxVBox"); // Set the stage title
+        primaryStage.setScene(scene); // Place the scene in the stage
+        primaryStage.show(); // Display the stage
     }
 
-    return vBox;
-  }
+    private HBox getHBox() {
+        HBox hBox = new HBox(15); // Create an HBox with 15px spacing
+        hBox.setPadding(new Insets(15, 15, 15, 15));
+        hBox.setStyle("-fx-background-color: gold");
+        hBox.getChildren().add(new Button("Computer Science"));
+        hBox.getChildren().add(new Button("Chemistry"));
+        ImageView imageView = new ImageView(new Image("file:resources/images/Space_Unicorn.gif"));
+        hBox.getChildren().add(imageView);
+        return hBox;
+    }
 
-  /**
-   * The main method should always be present so that the code is compilable and runnable on
-   * different computers. Make sure you have the main method in the application so others can
-   * compile the code.
-   *
-   * @param args
-   */
-  public static void main(String[] args) {
-    launch(args);
-  }
+    private VBox getVBox() {
+        VBox vBox = new VBox(15); // Create a VBox with 15px spacing
+        vBox.setPadding(new Insets(15, 5, 5, 5));
+        vBox.getChildren().add(new Label("Courses"));
+
+        Label[] courses = {new Label("CSC 1060: Computer Science I"),
+                new Label("CSC 1061: Computer Science II"),
+                new Label("CSC 1026: Game Design and Development"),
+                new Label("CSCI 2000: Game Programming I")};
+
+        for (Label course : courses) {
+            VBox.setMargin(course, new Insets(0, 0, 0, 15));
+            vBox.getChildren().add(course);
+        }
+
+        return vBox;
+    }
+
+    /**
+     * The main method should always be present so that the code is compilable and runnable on
+     * different computers. Make sure you have the main method in the application so others can
+     * compile the code.
+     *
+     * @param args
+     */
+    public static void main(String[] args) {
+        launch(args);
+    }
 }

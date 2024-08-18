@@ -1,7 +1,8 @@
 /**
  * Code for Class.
  *
- * <p>CSC 1061 - Computer Science II - Java
+ * <p>
+ * CSC 1061 - Computer Science II - Java
  *
  * @author Patrick McDougle
  * @version %I%, %G%
@@ -10,10 +11,10 @@
 package edu.csc1061.ch24;
 
 public class Node<E> {
-  E element;
-  Node<E> next;
+    E element;
+    Node<E> next;
 
-  public Node(E element) {
-    this.element = element;
-  }
+    public Node(E element) {
+        this.element = element;
+    }
 }
