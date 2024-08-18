@@ -1,7 +1,8 @@
 /**
  * Code for Class.
  *
- * <p>CSC 1061 - Computer Science II - Java
+ * <p>
+ * CSC 1061 - Computer Science II - Java
  *
  * @author Patrick McDougle
  * @version %I%, %G%
@@ -16,166 +17,166 @@ import java.util.Iterator;
 @SuppressWarnings("unchecked")
 public interface ITree<E> extends Collection<E> {
 
-  // ////////// ////////// //
-  // Public Interface Methods
-  // ////////// ////////// //
+    // ////////// ////////// //
+    // Public Interface Methods
+    // ////////// ////////// //
 
-  /** Clear all the elements from the tree. */
-  public void clear();
+    /** Clear all the elements from the tree. */
+    public void clear();
 
-  /**
-   * Delete the specified element from the tree Return true if the element is deleted successfully
-   *
-   * @param e
-   * @return
-   */
-  public boolean delete(E e);
+    /**
+     * Delete the specified element from the tree Return true if the element is deleted successfully
+     *
+     * @param e
+     * @return
+     */
+    public boolean delete(E e);
 
-  /**
-   * Print the nodes in inOrder traversal.
-   *
-   * @return a string with the nodes in the correct order.
-   */
-  public String inOrder();
+    /**
+     * Print the nodes in inOrder traversal.
+     *
+     * @return a string with the nodes in the correct order.
+     */
+    public String inOrder();
 
-  /**
-   * Insert element e into the binary tree Return true if the element is inserted successfully
-   *
-   * @param e
-   * @return
-   */
-  public boolean insert(E e);
+    /**
+     * Insert element e into the binary tree Return true if the element is inserted successfully
+     *
+     * @param e
+     * @return
+     */
+    public boolean insert(E e);
 
-  /** Get the number of elements in the tree */
-  public int getSize();
+    /** Get the number of elements in the tree */
+    public int getSize();
 
-  /**
-   * Print the nodes in postOrder traversal.
-   *
-   * @return a string with the nodes in the correct order.
-   */
-  public String postOrder();
+    /**
+     * Print the nodes in postOrder traversal.
+     *
+     * @return a string with the nodes in the correct order.
+     */
+    public String postOrder();
 
-  /**
-   * Print the nodes in preOrder traversal.
-   *
-   * @return a string with the nodes in the correct order.
-   */
-  public String preOrder();
+    /**
+     * Print the nodes in preOrder traversal.
+     *
+     * @return a string with the nodes in the correct order.
+     */
+    public String preOrder();
 
-  /**
-   * Return true if the element is in the tree
-   *
-   * @param e
-   * @return
-   */
-  public boolean search(E e);
+    /**
+     * Return true if the element is in the tree
+     *
+     * @param e
+     * @return
+     */
+    public boolean search(E e);
 
-  // ////////// ////////// //
-  // Public Override Methods
-  // ////////// ////////// //
+    // ////////// ////////// //
+    // Public Override Methods
+    // ////////// ////////// //
 
-  @Override
-  public default boolean add(E e) {
-    return insert(e);
-  }
-
-  @Override
-  public default boolean addAll(Collection<? extends E> c) {
-    if (c == null) {
-      return false;
-    }
-    c.forEach(this::insert);
-    return true;
-  }
-
-  @Override
-  public default boolean contains(Object e) {
-    return search((E) e);
-  }
-
-  @Override
-  public default boolean containsAll(Collection<?> c) {
-    if (c == null) {
-      return false;
+    @Override
+    public default boolean add(E e) {
+        return insert(e);
     }
 
-    boolean foundAll = true;
-    Iterator<?> iterator = c.iterator();
-    while (iterator.hasNext() && foundAll) {
-      foundAll &= search((E) iterator.next());
+    @Override
+    public default boolean addAll(Collection<? extends E> c) {
+        if (c == null) {
+            return false;
+        }
+        c.forEach(this::insert);
+        return true;
     }
 
-    return foundAll;
-  }
-
-  @Override
-  public default boolean isEmpty() {
-    return getSize() == 0;
-  }
-
-  @Override
-  public default boolean remove(Object e) {
-    return delete((E) e);
-  }
-
-  @Override
-  public default boolean removeAll(Collection<?> c) {
-    if (c == null) {
-      return false;
+    @Override
+    public default boolean contains(Object e) {
+        return search((E) e);
     }
 
-    Iterator<?> iterator = c.iterator();
-    while (iterator.hasNext()) {
-      delete((E) iterator.next());
+    @Override
+    public default boolean containsAll(Collection<?> c) {
+        if (c == null) {
+            return false;
+        }
+
+        boolean foundAll = true;
+        Iterator<?> iterator = c.iterator();
+        while (iterator.hasNext() && foundAll) {
+            foundAll &= search((E) iterator.next());
+        }
+
+        return foundAll;
     }
 
-    return true;
-  }
-
-  @Override
-  public default boolean retainAll(Collection<?> c) {
-    // remove everything else.
-
-    if (c == null) {
-      return false;
+    @Override
+    public default boolean isEmpty() {
+        return getSize() == 0;
     }
 
-    Iterator<E> iterator = iterator();
-    while (iterator.hasNext()) {
-      if (!c.contains(iterator.next())) {
-        iterator.remove();
-      }
-    }
-    return true;
-  }
-
-  @Override
-  public default int size() {
-    return getSize();
-  }
-
-  @Override
-  public default Object[] toArray() {
-    Iterator<E> iterator = iterator();
-    ArrayList<E> list = new ArrayList<>();
-
-    while (iterator.hasNext()) {
-      list.add(iterator.next());
+    @Override
+    public default boolean remove(Object e) {
+        return delete((E) e);
     }
 
-    return list.toArray();
-  }
+    @Override
+    public default boolean removeAll(Collection<?> c) {
+        if (c == null) {
+            return false;
+        }
 
-  @Override
-  public default <T> T[] toArray(T[] array) {
-    Iterator<E> iterator = iterator();
-    ArrayList<E> list = new ArrayList<>();
+        Iterator<?> iterator = c.iterator();
+        while (iterator.hasNext()) {
+            delete((E) iterator.next());
+        }
 
-    while (iterator.hasNext()) {
-      list.add(iterator.next());
+        return true;
     }
 
-    return list.toArray(array);
-  }
+    @Override
+    public default boolean retainAll(Collection<?> c) {
+        // remove everything else.
+
+        if (c == null) {
+            return false;
+        }
+
+        Iterator<E> iterator = iterator();
+        while (iterator.hasNext()) {
+            if (!c.contains(iterator.next())) {
+                iterator.remove();
+            }
+        }
+        return true;
+    }
+
+    @Override
+    public default int size() {
+        return getSize();
+    }
+
+    @Override
+    public default Object[] toArray() {
+        Iterator<E> iterator = iterator();
+        ArrayList<E> list = new ArrayList<>();
+
+        while (iterator.hasNext()) {
+            list.add(iterator.next());
+        }
+
+        return list.toArray();
+    }
+
+    @Override
+    public default <T> T[] toArray(T[] array) {
+        Iterator<E> iterator = iterator();
+        ArrayList<E> list = new ArrayList<>();
+
+        while (iterator.hasNext()) {
+            list.add(iterator.next());
+        }
+
+        return list.toArray(array);
+    }
 }

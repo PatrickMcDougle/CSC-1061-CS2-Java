@@ -3,12 +3,12 @@
  * <p>
  * CSC 1061 - Computer Science II - Java
  * <p>
- * HOMEWORK FILE -
- * This file is part of the homework.  Use this file to test your TwoWayLinkedList class.
+ * HOMEWORK FILE - This file is part of the homework. Use this file to test your TwoWayLinkedList
+ * class.
  *
- * @author  Patrick McDougle
+ * @author Patrick McDougle
  * @version %I%, %G%
- * @since   1.0
+ * @since 1.0
  */
 package edu.csc1061.ch24;
 

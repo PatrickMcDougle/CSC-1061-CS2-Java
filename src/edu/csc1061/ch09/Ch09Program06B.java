@@ -3,22 +3,22 @@
  * <p>
  * CSC 1061 - Computer Science II - Java
  *
- * @author  Patrick McDougle
+ * @author Patrick McDougle
  * @version %I%, %G%
- * @since   1.0
+ * @since 1.0
  */
 package edu.csc1061.ch09;
 
-public class Ch09MyCircle3Program {
+public class Ch09Program06B {
 
     // Main method
     public static void main(String[] args) {
         System.out.println("Before creating objects");
-        System.out.println("The number of Circle objects is " + Ch09Circle2.numberOfObjects + " or "
-                + Ch09Circle2.getNumberOfObjects());
+        System.out.println("The number of Circle objects is " + Circle2.numberOfObjects + " or "
+                + Circle2.getNumberOfObjects());
 
         // Create c1
-        Ch09Circle2 c1 = new Ch09Circle2();
+        Circle2 c1 = new Circle2();
 
         // Display c1 BEFORE c2 is created
         System.out.println("\nAfter creating c1");
@@ -26,7 +26,7 @@ public class Ch09MyCircle3Program {
         System.out.println("c1: # of Circle objects (" + c1.getNumberOfObjects() + ")");
 
         // Create c2
-        Ch09Circle2 c2 = new Ch09Circle2(5);
+        Circle2 c2 = new Circle2(5);
 
         // Modify c1
         c1.radius = 9;

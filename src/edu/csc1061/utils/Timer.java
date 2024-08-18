@@ -1,7 +1,8 @@
 /**
  * Code for Class.
  *
- * <p>CSC 1061 - Computer Science II - Java
+ * <p>
+ * CSC 1061 - Computer Science II - Java
  *
  * @author Patrick McDougle
  * @version %I%, %G%
@@ -10,38 +11,38 @@
 package edu.csc1061.utils;
 
 public class Timer {
-  private Timer() {
-    // Don't allow others to create the timer.
-  }
-
-  private static Timer instance;
-
-  public static Timer getTimer() {
-    if (instance == null) {
-      // timer does not exist so create it.
-      instance = new Timer();
+    private Timer() {
+        // Don't allow others to create the timer.
     }
-    return instance;
-  }
 
-  private long startTime;
-  private long finishTime;
+    private static Timer instance;
 
-  public void start() {
-    startTime = System.currentTimeMillis();
-    finishTime = startTime;
-  }
+    public static Timer getTimer() {
+        if (instance == null) {
+            // timer does not exist so create it.
+            instance = new Timer();
+        }
+        return instance;
+    }
 
-  public void finish() {
-    finishTime = System.currentTimeMillis();
-  }
+    private long startTime;
+    private long finishTime;
 
-  public int getElapsedTime() {
-    Long d = Long.valueOf(finishTime - startTime);
-    return d.intValue();
-  }
+    public void start() {
+        startTime = System.currentTimeMillis();
+        finishTime = startTime;
+    }
 
-  public long getElapsedTimeLong() {
-    return finishTime - startTime;
-  }
+    public void finish() {
+        finishTime = System.currentTimeMillis();
+    }
+
+    public int getElapsedTime() {
+        Long d = Long.valueOf(finishTime - startTime);
+        return d.intValue();
+    }
+
+    public long getElapsedTimeLong() {
+        return finishTime - startTime;
+    }
 }

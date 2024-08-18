@@ -1,7 +1,8 @@
 /**
  * Code for Class.
  *
- * <p>CSC 1061 - Computer Science II - Java
+ * <p>
+ * CSC 1061 - Computer Science II - Java
  *
  * @author Patrick McDougle
  * @version %I%, %G%
@@ -18,33 +19,36 @@ import javafx.scene.layout.BorderPane;
 // show textfield
 public class JavaFx005Program extends JavaFx004Program {
 
-  @Override // Override the getPane() method in the super class
-  protected BorderPane getPane() {
-    BorderPane pane = super.getPane();
+    @Override // Override the getPane() method in the super class
+    protected BorderPane getPane() {
+        BorderPane pane = super.getPane();
 
-    BorderPane paneForTextField = new BorderPane();
-    paneForTextField.setPadding(new Insets(5, 5, 5, 5));
-    paneForTextField.setStyle("-fx-border-color: green");
-    paneForTextField.setLeft(new Label("Enter a new message: "));
+        BorderPane paneForTextField = new BorderPane();
+        paneForTextField.setPadding(new Insets(5, 5, 5, 5));
+        paneForTextField.setStyle("-fx-border-color: green");
+        paneForTextField.setLeft(new Label("Enter a new message: "));
 
-    TextField textFieldWords = new TextField();
-    textFieldWords.setAlignment(Pos.BOTTOM_RIGHT);
-    paneForTextField.setCenter(textFieldWords);
-    pane.setTop(paneForTextField);
+        TextField textFieldWords = new TextField();
+        textFieldWords.setAlignment(Pos.BOTTOM_RIGHT);
+        paneForTextField.setCenter(textFieldWords);
+        pane.setTop(paneForTextField);
 
-    // Lambda Expression:
-    // parameter -> expression
-    // https://www.w3schools.com/java/java_lambda.asp
-    textFieldWords.setOnAction(e -> text.setText(textFieldWords.getText()));
+        // Lambda Expression:
+        // parameter -> expression
+        // https://www.w3schools.com/java/java_lambda.asp
+        textFieldWords.setOnAction(e -> text.setText(textFieldWords.getText()));
 
-    return pane;
-  }
+        return pane;
+    }
 
-  /**
-   * The main method is only needed for the IDE with limited JavaFX support. Not needed for running
-   * from the command line.
-   */
-  public static void main(String[] args) {
-    launch(args);
-  }
+    /**
+     * The main method should always be present so that the code is compilable and runnable on
+     * different computers. Make sure you have the main method in the application so others can
+     * compile the code.
+     *
+     * @param args
+     */
+    public static void main(String[] args) {
+        launch(args);
+    }
 }

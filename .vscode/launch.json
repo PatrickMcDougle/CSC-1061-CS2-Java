@@ -10,6 +10,15 @@
             "name": "Launch Current File with JavaFX",
             "mainClass": "${file}",
             "vmArgs": ["--module-path", "${env:PATH_TO_FX}", "--add-modules", "javafx.controls,javafx.fxml"]
+        },
+        {
+            "type": "java",
+            "request": "launch",
+            "name": "Launch Current File with JavaFX",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "${file}",
+            "modulePaths": ["${env:PATH_TO_FX}"],
+            "vmArgs": ["--add-modules", "javafx.controls,javafx.fxml,javafx.media"]
         }
     ]
 }

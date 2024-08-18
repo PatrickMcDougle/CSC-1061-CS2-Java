@@ -1,7 +1,8 @@
 /**
  * Code for Class.
  *
- * <p>CSC 1061 - Computer Science II - Java
+ * <p>
+ * CSC 1061 - Computer Science II - Java
  *
  * @author Patrick McDougle
  * @version %I%, %G%
@@ -15,44 +16,44 @@ package edu.csc1061.ch25;
  * Tree.
  */
 public class TreeNode<E> {
-  private E element;
+    private E element;
 
-  private TreeNode<E> left;
-  private TreeNode<E> right;
+    private TreeNode<E> left;
+    private TreeNode<E> right;
 
-  // ////////// ////////// //
-  // Constructor
-  // ////////// ////////// //
+    // ////////// ////////// //
+    // Constructor
+    // ////////// ////////// //
 
-  public TreeNode(E e) {
-    element = e;
-  }
+    public TreeNode(E e) {
+        element = e;
+    }
 
-  // ////////// ////////// //
-  // Public Methods
-  // ////////// ////////// //
+    // ////////// ////////// //
+    // Public Methods
+    // ////////// ////////// //
 
-  public E getElement() {
-    return element;
-  }
+    public E getElement() {
+        return element;
+    }
 
-  public TreeNode<E> getLeft() {
-    return left;
-  }
+    public TreeNode<E> getLeft() {
+        return left;
+    }
 
-  public TreeNode<E> getRight() {
-    return right;
-  }
+    public TreeNode<E> getRight() {
+        return right;
+    }
 
-  public void setElement(E e) {
-    element = e;
-  }
+    public void setElement(E e) {
+        element = e;
+    }
 
-  public void setLeft(TreeNode<E> treeNode) {
-    left = treeNode;
-  }
+    public void setLeft(TreeNode<E> treeNode) {
+        left = treeNode;
+    }
 
-  public void setRight(TreeNode<E> treeNode) {
-    right = treeNode;
-  }
+    public void setRight(TreeNode<E> treeNode) {
+        right = treeNode;
+    }
 }

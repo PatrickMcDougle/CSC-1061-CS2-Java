@@ -1,7 +1,8 @@
 /**
  * Code for Class.
  *
- * <p>CSC 1061 - Computer Science II - Java
+ * <p>
+ * CSC 1061 - Computer Science II - Java
  *
  * @author Patrick McDougle
  * @version %I%, %G%
@@ -20,48 +21,51 @@ import javafx.stage.Stage;
 
 public class Ch20Program05 extends Application {
 
-  @Override // Override the start method in the Application class
-  public void start(Stage primaryStage) {
-    MultipleBallPane ballPane = new MultipleBallPane();
-    ballPane.setStyle("-fx-border-color: yellow");
+    @Override // Override the start method in the Application class
+    public void start(Stage primaryStage) {
+        MultipleBallPane ballPane = new MultipleBallPane();
+        ballPane.setStyle("-fx-border-color: yellow");
 
-    Button btAdd = new Button("+");
-    Button btSubtract = new Button("-");
-    HBox hBox = new HBox(10);
-    hBox.getChildren().addAll(btAdd, btSubtract);
-    hBox.setAlignment(Pos.CENTER);
+        Button btAdd = new Button("+");
+        Button btSubtract = new Button("-");
+        HBox hBox = new HBox(10);
+        hBox.getChildren().addAll(btAdd, btSubtract);
+        hBox.setAlignment(Pos.CENTER);
 
-    // Add or remove a ball
-    btAdd.setOnAction(e -> ballPane.add());
-    btSubtract.setOnAction(e -> ballPane.subtract());
+        // Add or remove a ball
+        btAdd.setOnAction(e -> ballPane.add());
+        btSubtract.setOnAction(e -> ballPane.subtract());
 
-    // Pause and resume animation
-    ballPane.setOnMousePressed(e -> ballPane.pause());
-    ballPane.setOnMouseReleased(e -> ballPane.play());
+        // Pause and resume animation
+        ballPane.setOnMousePressed(e -> ballPane.pause());
+        ballPane.setOnMouseReleased(e -> ballPane.play());
 
-    // Use a scroll bar to control animation speed
-    ScrollBar sbSpeed = new ScrollBar();
-    sbSpeed.setMax(20);
-    sbSpeed.setValue(10);
-    ballPane.rateProperty().bind(sbSpeed.valueProperty());
+        // Use a scroll bar to control animation speed
+        ScrollBar sbSpeed = new ScrollBar();
+        sbSpeed.setMax(20);
+        sbSpeed.setValue(10);
+        ballPane.rateProperty().bind(sbSpeed.valueProperty());
 
-    BorderPane pane = new BorderPane();
-    pane.setCenter(ballPane);
-    pane.setTop(sbSpeed);
-    pane.setBottom(hBox);
+        BorderPane pane = new BorderPane();
+        pane.setCenter(ballPane);
+        pane.setTop(sbSpeed);
+        pane.setBottom(hBox);
 
-    // Create a scene and place the pane in the stage
-    Scene scene = new Scene(pane, 250, 150);
-    primaryStage.setTitle("Multiple Bounce Ball"); // Set the stage title
-    primaryStage.setScene(scene); // Place the scene in the stage
-    primaryStage.show(); // Display the stage
-  }
+        // Create a scene and place the pane in the stage
+        Scene scene = new Scene(pane, 250, 150);
+        primaryStage.setTitle("Multiple Bounce Ball"); // Set the stage title
+        primaryStage.setScene(scene); // Place the scene in the stage
+        primaryStage.show(); // Display the stage
+    }
 
-  /**
-   * The main method is only needed for the IDE with limited JavaFX support. Not needed for running
-   * from the command line.
-   */
-  public static void main(String[] args) {
-    launch(args);
-  }
+    /**
+     * The main method should always be present so that the code is compilable and runnable on
+     * different computers. Make sure you have the main method in the application so others can
+     * compile the code.
+     *
+     * @param args
+     */
+    public static void main(String[] args) {
+        launch(args);
+    }
 }
