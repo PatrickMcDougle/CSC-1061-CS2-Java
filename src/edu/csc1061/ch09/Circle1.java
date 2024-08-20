@@ -9,17 +9,17 @@
  */
 package edu.csc1061.ch09;
 
-public class Ch09Circle1 {
+public class Circle1 {
     // the radius of this circle
     public double radius;
 
     // Construct a circle with radius 1
-    public Ch09Circle1() {
+    public Circle1() {
         radius = 1;
     }
 
     // Construct a circle with a specified radius
-    public Ch09Circle1(double newRadius) {
+    public Circle1(double newRadius) {
         radius = newRadius;
     }
 
