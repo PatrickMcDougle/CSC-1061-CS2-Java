@@ -8,7 +8,7 @@
     "settings": {
         "java.project.sourcePaths": ["src"],
         "java.project.outputPath": "bin",
-        "java.project.referencedLibraries": ["c:\\Java\\javafx-sdk-21.0.1\\lib\\*.jar"],
+        "java.project.referencedLibraries": ["c:\\Java\\javafx-sdk-21.0.4\\lib\\*.jar"],
         "cSpell.words": ["Arapahoe", "lightgray"],
         "java.debug.settings.onBuildFailureProceed": true,
         "java.jdt.ls.vmargs": "-XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx2G -Xms100m",

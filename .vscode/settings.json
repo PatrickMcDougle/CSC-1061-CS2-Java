@@ -1,8 +1,8 @@
 {
     "java.project.sourcePaths": ["src"],
     "java.project.outputPath": "bin",
-    "java.project.referencedLibraries": ["c:\\Java\\javafx-sdk-21.0.1\\lib\\*.jar"],
-    "java.debug.settings.vmArgs": "--module-path C:\\Java\\javafx-sdk-21.0.1\\lib --add-modules javafx.controls,javafx.fxml,javafx.media",
+    "java.project.referencedLibraries": ["c:\\Java\\javafx-sdk-21.0.4\\lib\\*.jar"],
+    "java.debug.settings.vmArgs": "--module-path C:\\Java\\javafx-sdk-21.0.4\\lib --add-modules javafx.controls,javafx.fxml,javafx.media",
     "prettier.tabWidth": 4,
     "editor.detectIndentation": false
 }
