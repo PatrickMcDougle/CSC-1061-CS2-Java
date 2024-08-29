@@ -23,6 +23,7 @@ public class Ch11Program03 {
         // Display circle and rectangle
         displayObject(object1);
         displayObject(object2);
+        displayObject(new Object());
     }
 
     /** A method for displaying an object */
@@ -34,6 +35,8 @@ public class Ch11Program03 {
         } else if (object instanceof Rectangle) {
             Rectangle r = (Rectangle) object;
             System.out.println("The rectangle area is " + r.getArea());
+        } else {
+            System.err.println("What is this object?");
         }
     }
 }

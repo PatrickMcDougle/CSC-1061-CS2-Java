@@ -2,26 +2,26 @@
  * Style based on class start with a .
  */
 .circle-plain {
-    -fx-fill: white;
-    -fx-stroke: black;
+	-fx-fill: white;
+	-fx-stroke: black;
 }
 .circle-border {
-    -fx-stroke-width: 5;
-    -fx-stroke-dash-array: 12 2 4 2;
+	-fx-stroke-width: 5;
+	-fx-stroke-dash-array: 12 2 4 2;
 }
 .border {
-    -fx-border-color: black;
-    -fx-border-width: 5;
+	-fx-border-color: black;
+	-fx-border-width: 5;
 }
 
 /*
  * Style based on ID start with a #
  */
 #circle-red {
-    -fx-fill: red;
-    -fx-stroke: red;
+	-fx-fill: red;
+	-fx-stroke: red;
 }
 #circle-green {
-    -fx-fill: green;
-    -fx-stroke: green;
+	-fx-fill: green;
+	-fx-stroke: green;
 }

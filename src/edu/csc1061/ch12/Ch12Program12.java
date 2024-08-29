@@ -20,7 +20,11 @@ public class Ch12Program12 {
     public static void main(String[] args) throws Exception {
         // Check command line parameter usage
         if (args.length != 4) {
-            System.out.println("Usage: java ReplaceText sourceFile targetFile oldStr newStr");
+            System.out.println(
+                    "Usage: java edu.csc1061.ch12.Ch12Program12 <sourceFile> <targetFile> <oldStr> <newStr>");
+            // Example of what should be used to execute this:
+            // java edu.csc1061.ch12.Ch12Program12 ../scores.no.track.txt
+            // ../scores-updated.no.track.txt John Patrick
             System.exit(1);
         }
 
@@ -39,9 +43,11 @@ public class Ch12Program12 {
         }
 
         try (
-                // Create input and output files
+                // Create input and output files both in the try statement!!!
                 Scanner input = new Scanner(sourceFile);
                 PrintWriter output = new PrintWriter(targetFile);) {
+
+            // once the files are created, do the work.
             while (input.hasNext()) {
                 String s1 = input.nextLine();
                 String s2 = s1.replaceAll(args[2], args[3]);

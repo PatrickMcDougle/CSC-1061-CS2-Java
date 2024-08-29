@@ -1,5 +1,6 @@
 /**
  * Code for Class.
+ *
  * <p>
  * CSC 1061 - Computer Science II - Java
  *
@@ -11,9 +12,7 @@ package edu.csc1061.ch11;
 
 import java.math.BigInteger;
 
-/**
- * My Stack
- */
+/** My Stack */
 public class Ch11Program06 {
 
     public static void main(String[] args) {

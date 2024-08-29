@@ -1,24 +1,26 @@
 {
-    "folders": [
-        {
-            "name": "CSC1061 Class Examples",
-            "path": "."
-        }
-    ],
-    "settings": {
-        "java.project.sourcePaths": ["src"],
-        "java.project.outputPath": "bin",
-        "java.project.referencedLibraries": ["c:\\Java\\javafx-sdk-21.0.4\\lib\\*.jar"],
-        "cSpell.words": ["Arapahoe", "lightgray"],
-        "java.debug.settings.onBuildFailureProceed": true,
-        "java.jdt.ls.vmargs": "-XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx2G -Xms100m",
-        "editor.hover.enabled": false,
-        "editor.quickSuggestions": {
-            "other": "on",
-            "comments": "on",
-            "strings": "on"
-        },
-        "prettier.tabWidth": 4,
-        "editor.detectIndentation": false
-    }
+	"folders": [
+		{
+			"name": "CSC1061 Class Examples",
+			"path": "."
+		}
+	],
+	"settings": {
+		"java.project.sourcePaths": ["src"],
+		"java.project.outputPath": "bin",
+		"java.project.referencedLibraries": ["c:\\Java\\javafx-sdk-21.0.4\\lib\\*.jar"],
+		"cSpell.words": ["Arapahoe", "lightgray"],
+		"java.debug.settings.onBuildFailureProceed": true,
+		"java.jdt.ls.vmargs": "-XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx2G -Xms100m",
+		"editor.hover.enabled": false,
+		"editor.quickSuggestions": {
+			"other": "on",
+			"comments": "on",
+			"strings": "on"
+		},
+		"prettier.tabWidth": 4,
+		"editor.tabSize": 4,
+		"editor.detectIndentation": false,
+		"prettier.useTabs": true
+	}
 }
