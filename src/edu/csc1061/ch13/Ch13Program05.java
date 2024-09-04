@@ -23,8 +23,8 @@ public class Ch13Program05 {
         }
         System.out.println();
 
-        BigInteger[] hugeNumbers = {BigInteger.valueOf(2323231092923992L),
-                BigInteger.valueOf(432232323239292L), BigInteger.valueOf(54623239292L),};
+        BigInteger[] hugeNumbers = {BigInteger.valueOf(2_323_231_092_923_992L),
+                BigInteger.valueOf(432_232_323_239_292L), BigInteger.valueOf(54_623_239_292L),};
 
         Arrays.sort(hugeNumbers);
         for (BigInteger number : hugeNumbers) {

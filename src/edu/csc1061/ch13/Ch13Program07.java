@@ -9,8 +9,6 @@
  */
 package edu.csc1061.ch13;
 
-// Bond, James Bond!
-
 public class Ch13Program07 {
 
     /** Main method */
