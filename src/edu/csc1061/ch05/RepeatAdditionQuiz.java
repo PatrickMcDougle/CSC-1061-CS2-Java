@@ -17,8 +17,8 @@ public class RepeatAdditionQuiz {
     public static void main(String[] args) {
         Random random = new Random();
 
-        int number1 = random.nextInt() * 10;
-        int number2 = random.nextInt() * 10;
+        int number1 = random.nextInt(10);
+        int number2 = random.nextInt(10);
 
         // Create a Scanner
         Scanner input = new Scanner(System.in);
