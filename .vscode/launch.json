@@ -1,24 +1,1015 @@
 {
-    // Use IntelliSense to learn about possible attributes.
-    // Hover to view descriptions of existing attributes.
-    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
-    "version": "0.2.0",
-    "configurations": [
-        {
-            "type": "java",
-            "request": "launch",
-            "name": "Launch Current File with JavaFX",
-            "mainClass": "${file}",
-            "vmArgs": ["--module-path", "${env:PATH_TO_FX}", "--add-modules", "javafx.controls,javafx.fxml"]
-        },
-        {
-            "type": "java",
-            "request": "launch",
-            "name": "Launch Current File with JavaFX",
-            "cwd": "${workspaceFolder}",
-            "mainClass": "${file}",
-            "modulePaths": ["${env:PATH_TO_FX}"],
-            "vmArgs": ["--add-modules", "javafx.controls,javafx.fxml,javafx.media"]
-        }
-    ]
+	// Use IntelliSense to learn about possible attributes.
+	// Hover to view descriptions of existing attributes.
+	// For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"type": "java",
+			"name": "Current File",
+			"request": "launch",
+			"cwd": "${workspaceFolder}",
+			"mainClass": "${file}",
+			"modulePaths": ["${env:PATH_TO_FX}"],
+			"vmArgs": ["--add-modules", "javafx.controls,javafx.fxml,javafx.media"]
+		},
+		{
+			"type": "java",
+			"name": "RepeatAdditionQuiz",
+			"request": "launch",
+			"mainClass": "edu.csc1061.ch05.RepeatAdditionQuiz",
+			"projectName": "CSC-1061-CS2-Java_cc08c430"
+		},
+		{
+			"type": "java",
+			"name": "Calculator",
+			"request": "launch",
+			"mainClass": "edu.csc1061.ch07.Calculator",
+			"projectName": "CSC-1061-CS2-Java_cc08c430"
+		},
+		{
+			"type": "java",
+			"name": "Ch07Listing7BinarySearch",
+			"request": "launch",
+			"mainClass": "edu.csc1061.ch07.Ch07Listing7BinarySearch",
+			"projectName": "CSC-1061-CS2-Java_cc08c430"
+		},
+		{
+			"type": "java",
+			"name": "Ch07Listing8SelectionSort",
+			"request": "launch",
+			"mainClass": "edu.csc1061.ch07.Ch07Listing8SelectionSort",
+			"projectName": "CSC-1061-CS2-Java_cc08c430"
+		},
+		{
+			"type": "java",
+			"name": "Ch09Program01",
+			"request": "launch",
+			"mainClass": "edu.csc1061.ch09.Ch09Program01",
+			"modulePaths": ["${env:PATH_TO_FX}"],
+			"vmArgs": ["--add-modules", "javafx.controls,javafx.fxml,javafx.media"]
+		},
+		{
+			"type": "java",
+			"name": "Ch09Program02",
+			"request": "launch",
+			"mainClass": "edu.csc1061.ch09.Ch09Program02",
+			"projectName": "CSC-1061-CS2-Java_cc08c430"
+		},
+		{
+			"type": "java",
+			"name": "Ch09Program03",
+			"request": "launch",
+			"mainClass": "edu.csc1061.ch09.Ch09Program03",
+			"projectName": "CSC-1061-CS2-Java_cc08c430"
+		},
+		{
+			"type": "java",
+			"name": "Ch09Program04",
+			"request": "launch",
+			"mainClass": "edu.csc1061.ch09.Ch09Program04",
+			"projectName": "CSC-1061-CS2-Java_cc08c430"
+		},
+		{
+			"type": "java",
+			"name": "Ch09Program05",
+			"request": "launch",
+			"mainClass": "edu.csc1061.ch09.Ch09Program05",
+			"projectName": "CSC-1061-CS2-Java_cc08c430"
+		},
+		{
+			"type": "java",
+			"name": "Ch09Program06A",
+			"request": "launch",
+			"mainClass": "edu.csc1061.ch09.Ch09Program06A",
+			"projectName": "CSC-1061-CS2-Java_cc08c430"
+		},
+		{
+			"type": "java",
+			"name": "Ch09Program06B",
+			"request": "launch",
+			"mainClass": "edu.csc1061.ch09.Ch09Program06B",
+			"projectName": "CSC-1061-CS2-Java_cc08c430"
+		},
+		{
+			"type": "java",
+			"name": "Ch09Program06C",
+			"request": "launch",
+			"mainClass": "edu.csc1061.ch09.Ch09Program06C",
+			"projectName": "CSC-1061-CS2-Java_cc08c430"
+		},
+		{
+			"type": "java",
+			"name": "Ch09Program07",
+			"request": "launch",
+			"mainClass": "edu.csc1061.ch09.Ch09Program07",
+			"projectName": "CSC-1061-CS2-Java_cc08c430"
+		},
+		{
+			"type": "java",
+			"name": "TelevisionTest",
+			"request": "launch",
+			"mainClass": "edu.csc1061.ch09.TelevisionTest",
+			"projectName": "CSC-1061-CS2-Java_cc08c430"
+		},
+		{
+			"type": "java",
+			"name": "Ch10Program01",
+			"request": "launch",
+			"mainClass": "edu.csc1061.ch10.Ch10Program01",
+			"projectName": "CSC-1061-CS2-Java_cc08c430"
+		},
+		{
+			"type": "java",
+			"name": "Ch10Program02",
+			"request": "launch",
+			"mainClass": "edu.csc1061.ch10.Ch10Program02",
+			"projectName": "CSC-1061-CS2-Java_cc08c430"
+		},
+		{
+			"type": "java",
+			"name": "Ch10Program03",
+			"request": "launch",
+			"mainClass": "edu.csc1061.ch10.Ch10Program03",
+			"projectName": "CSC-1061-CS2-Java_cc08c430"
+		},
+		{
+			"type": "java",
+			"name": "Ch10Program04",
+			"request": "launch",
+			"mainClass": "edu.csc1061.ch10.Ch10Program04",
+			"projectName": "CSC-1061-CS2-Java_cc08c430"
+		},
+		{
+			"type": "java",
+			"name": "Ch10Program10LargeFactorial",
+			"request": "launch",
+			"mainClass": "edu.csc1061.ch10.Ch10Program10LargeFactorial",
+			"projectName": "CSC-1061-CS2-Java_cc08c430"
+		},
+		{
+			"type": "java",
+			"name": "Ch10Program11PalindromeIgnoreNonAlphanumeric",
+			"request": "launch",
+			"mainClass": "edu.csc1061.ch10.Ch10Program11PalindromeIgnoreNonAlphanumeric",
+			"projectName": "CSC-1061-CS2-Java_cc08c430"
+		},
+		{
+			"type": "java",
+			"name": "Ch10Program12RegularExpression",
+			"request": "launch",
+			"mainClass": "edu.csc1061.ch10.Ch10Program12RegularExpression",
+			"projectName": "CSC-1061-CS2-Java_cc08c430"
+		},
+		{
+			"type": "java",
+			"name": "Ch10Program13StringBuilder",
+			"request": "launch",
+			"mainClass": "edu.csc1061.ch10.Ch10Program13StringBuilder",
+			"projectName": "CSC-1061-CS2-Java_cc08c430"
+		},
+		{
+			"type": "java",
+			"name": "Ch11Program01",
+			"request": "launch",
+			"mainClass": "edu.csc1061.ch11.Ch11Program01",
+			"projectName": "CSC-1061-CS2-Java_cc08c430"
+		},
+		{
+			"type": "java",
+			"name": "Ch11Program02",
+			"request": "launch",
+			"mainClass": "edu.csc1061.ch11.Ch11Program02",
+			"projectName": "CSC-1061-CS2-Java_cc08c430"
+		},
+		{
+			"type": "java",
+			"name": "Ch11Program03",
+			"request": "launch",
+			"mainClass": "edu.csc1061.ch11.Ch11Program03",
+			"projectName": "CSC-1061-CS2-Java_cc08c430"
+		},
+		{
+			"type": "java",
+			"name": "Ch11Program04",
+			"request": "launch",
+			"mainClass": "edu.csc1061.ch11.Ch11Program04",
+			"projectName": "CSC-1061-CS2-Java_cc08c430"
+		},
+		{
+			"type": "java",
+			"name": "Ch11Program05",
+			"request": "launch",
+			"mainClass": "edu.csc1061.ch11.Ch11Program05",
+			"projectName": "CSC-1061-CS2-Java_cc08c430"
+		},
+		{
+			"type": "java",
+			"name": "Ch11Program06",
+			"request": "launch",
+			"mainClass": "edu.csc1061.ch11.Ch11Program06",
+			"projectName": "CSC-1061-CS2-Java_cc08c430"
+		},
+		{
+			"type": "java",
+			"name": "Ch12DividedByZero01",
+			"request": "launch",
+			"mainClass": "edu.csc1061.ch12.Ch12DividedByZero01",
+			"projectName": "CSC-1061-CS2-Java_cc08c430"
+		},
+		{
+			"type": "java",
+			"name": "Ch12DividedByZero02",
+			"request": "launch",
+			"mainClass": "edu.csc1061.ch12.Ch12DividedByZero02",
+			"projectName": "CSC-1061-CS2-Java_cc08c430"
+		},
+		{
+			"type": "java",
+			"name": "Ch12DividedByZero03",
+			"request": "launch",
+			"mainClass": "edu.csc1061.ch12.Ch12DividedByZero03",
+			"projectName": "CSC-1061-CS2-Java_cc08c430"
+		},
+		{
+			"type": "java",
+			"name": "Ch12DividedByZero04",
+			"request": "launch",
+			"mainClass": "edu.csc1061.ch12.Ch12DividedByZero04",
+			"projectName": "CSC-1061-CS2-Java_cc08c430"
+		},
+		{
+			"type": "java",
+			"name": "Ch12Program05",
+			"request": "launch",
+			"mainClass": "edu.csc1061.ch12.Ch12Program05",
+			"projectName": "CSC-1061-CS2-Java_cc08c430"
+		},
+		{
+			"type": "java",
+			"name": "Ch12Program06",
+			"request": "launch",
+			"mainClass": "edu.csc1061.ch12.Ch12Program06",
+			"projectName": "CSC-1061-CS2-Java_cc08c430"
+		},
+		{
+			"type": "java",
+			"name": "Ch12Program07",
+			"request": "launch",
+			"mainClass": "edu.csc1061.ch12.Ch12Program07",
+			"projectName": "CSC-1061-CS2-Java_cc08c430"
+		},
+		{
+			"type": "java",
+			"name": "Ch12Program08",
+			"request": "launch",
+			"mainClass": "edu.csc1061.ch12.Ch12Program08",
+			"projectName": "CSC-1061-CS2-Java_cc08c430"
+		},
+		{
+			"type": "java",
+			"name": "Ch12Program09",
+			"request": "launch",
+			"mainClass": "edu.csc1061.ch12.Ch12Program09",
+			"projectName": "CSC-1061-CS2-Java_cc08c430"
+		},
+		{
+			"type": "java",
+			"name": "Ch12Program10",
+			"request": "launch",
+			"mainClass": "edu.csc1061.ch12.Ch12Program10",
+			"projectName": "CSC-1061-CS2-Java_cc08c430"
+		},
+		{
+			"type": "java",
+			"name": "Ch12Program11",
+			"request": "launch",
+			"mainClass": "edu.csc1061.ch12.Ch12Program11",
+			"projectName": "CSC-1061-CS2-Java_cc08c430"
+		},
+		{
+			"type": "java",
+			"name": "Ch12Program12",
+			"request": "launch",
+			"mainClass": "edu.csc1061.ch12.Ch12Program12",
+			"projectName": "CSC-1061-CS2-Java_cc08c430"
+		},
+		{
+			"type": "java",
+			"name": "Ch12Program13",
+			"request": "launch",
+			"mainClass": "edu.csc1061.ch12.Ch12Program13",
+			"projectName": "CSC-1061-CS2-Java_cc08c430"
+		},
+		{
+			"type": "java",
+			"name": "WebCrawlerProgram",
+			"request": "launch",
+			"mainClass": "edu.csc1061.ch12.WebCrawlerProgram",
+			"projectName": "CSC-1061-CS2-Java_cc08c430"
+		},
+		{
+			"type": "java",
+			"name": "Ch13Program01",
+			"request": "launch",
+			"mainClass": "edu.csc1061.ch13.Ch13Program01",
+			"projectName": "CSC-1061-CS2-Java_cc08c430"
+		},
+		{
+			"type": "java",
+			"name": "Ch13Program02",
+			"request": "launch",
+			"mainClass": "edu.csc1061.ch13.Ch13Program02",
+			"projectName": "CSC-1061-CS2-Java_cc08c430"
+		},
+		{
+			"type": "java",
+			"name": "Ch13Program03",
+			"request": "launch",
+			"mainClass": "edu.csc1061.ch13.Ch13Program03",
+			"projectName": "CSC-1061-CS2-Java_cc08c430"
+		},
+		{
+			"type": "java",
+			"name": "Ch13Program04",
+			"request": "launch",
+			"mainClass": "edu.csc1061.ch13.Ch13Program04",
+			"projectName": "CSC-1061-CS2-Java_cc08c430"
+		},
+		{
+			"type": "java",
+			"name": "Ch13Program05",
+			"request": "launch",
+			"mainClass": "edu.csc1061.ch13.Ch13Program05",
+			"projectName": "CSC-1061-CS2-Java_cc08c430"
+		},
+		{
+			"type": "java",
+			"name": "Ch13Program06",
+			"request": "launch",
+			"mainClass": "edu.csc1061.ch13.Ch13Program06",
+			"projectName": "CSC-1061-CS2-Java_cc08c430"
+		},
+		{
+			"type": "java",
+			"name": "Ch13Program07",
+			"request": "launch",
+			"mainClass": "edu.csc1061.ch13.Ch13Program07",
+			"projectName": "CSC-1061-CS2-Java_cc08c430"
+		},
+		{
+			"type": "java",
+			"name": "DisplayClockProgram",
+			"request": "launch",
+			"mainClass": "edu.csc1061.ch14.DisplayClockProgram",
+			"modulePaths": ["${env:PATH_TO_FX}"],
+			"vmArgs": ["--add-modules", "javafx.controls,javafx.fxml,javafx.media"]
+		},
+		{
+			"type": "java",
+			"name": "JavaFx001Program",
+			"request": "launch",
+			"mainClass": "edu.csc1061.ch14.JavaFx001Program",
+			"modulePaths": ["${env:PATH_TO_FX}"],
+			"vmArgs": ["--add-modules", "javafx.controls,javafx.fxml,javafx.media"]
+		},
+		{
+			"type": "java",
+			"name": "JavaFx002Program",
+			"request": "launch",
+			"mainClass": "edu.csc1061.ch14.JavaFx002Program",
+			"modulePaths": ["${env:PATH_TO_FX}"],
+			"vmArgs": ["--add-modules", "javafx.controls,javafx.fxml,javafx.media"]
+		},
+		{
+			"type": "java",
+			"name": "JavaFx003Program",
+			"request": "launch",
+			"mainClass": "edu.csc1061.ch14.JavaFx003Program",
+			"modulePaths": ["${env:PATH_TO_FX}"],
+			"vmArgs": ["--add-modules", "javafx.controls,javafx.fxml,javafx.media"]
+		},
+		{
+			"type": "java",
+			"name": "JavaFx004Program",
+			"request": "launch",
+			"mainClass": "edu.csc1061.ch14.JavaFx004Program",
+			"modulePaths": ["${env:PATH_TO_FX}"],
+			"vmArgs": ["--add-modules", "javafx.controls,javafx.fxml,javafx.media"]
+		},
+		{
+			"type": "java",
+			"name": "JavaFx005Program",
+			"request": "launch",
+			"mainClass": "edu.csc1061.ch14.JavaFx005Program",
+			"modulePaths": ["${env:PATH_TO_FX}"],
+			"vmArgs": ["--add-modules", "javafx.controls,javafx.fxml,javafx.media"]
+		},
+		{
+			"type": "java",
+			"name": "JavaFx006Program",
+			"request": "launch",
+			"mainClass": "edu.csc1061.ch14.JavaFx006Program",
+			"modulePaths": ["${env:PATH_TO_FX}"],
+			"vmArgs": ["--add-modules", "javafx.controls,javafx.fxml,javafx.media"]
+		},
+		{
+			"type": "java",
+			"name": "JavaFx007Program",
+			"request": "launch",
+			"mainClass": "edu.csc1061.ch14.JavaFx007Program",
+			"modulePaths": ["${env:PATH_TO_FX}"],
+			"vmArgs": ["--add-modules", "javafx.controls,javafx.fxml,javafx.media"]
+		},
+		{
+			"type": "java",
+			"name": "JavaFx008Program",
+			"request": "launch",
+			"mainClass": "edu.csc1061.ch14.JavaFx008Program",
+			"modulePaths": ["${env:PATH_TO_FX}"],
+			"vmArgs": ["--add-modules", "javafx.controls,javafx.fxml,javafx.media"]
+		},
+		{
+			"type": "java",
+			"name": "JavaFx009Program",
+			"request": "launch",
+			"mainClass": "edu.csc1061.ch14.JavaFx009Program",
+			"modulePaths": ["${env:PATH_TO_FX}"],
+			"vmArgs": ["--add-modules", "javafx.controls,javafx.fxml,javafx.media"]
+		},
+		{
+			"type": "java",
+			"name": "JavaFx010Program",
+			"request": "launch",
+			"mainClass": "edu.csc1061.ch14.JavaFx010Program",
+			"modulePaths": ["${env:PATH_TO_FX}"],
+			"vmArgs": ["--add-modules", "javafx.controls,javafx.fxml,javafx.media"]
+		},
+		{
+			"type": "java",
+			"name": "JavaFx011Program",
+			"request": "launch",
+			"mainClass": "edu.csc1061.ch14.JavaFx011Program",
+			"modulePaths": ["${env:PATH_TO_FX}"],
+			"vmArgs": ["--add-modules", "javafx.controls,javafx.fxml,javafx.media"]
+		},
+		{
+			"type": "java",
+			"name": "JavaFx012Program",
+			"request": "launch",
+			"mainClass": "edu.csc1061.ch14.JavaFx012Program",
+			"modulePaths": ["${env:PATH_TO_FX}"],
+			"vmArgs": ["--add-modules", "javafx.controls,javafx.fxml,javafx.media"]
+		},
+		{
+			"type": "java",
+			"name": "JavaFx013Program",
+			"request": "launch",
+			"mainClass": "edu.csc1061.ch14.JavaFx013Program",
+			"modulePaths": ["${env:PATH_TO_FX}"],
+			"vmArgs": ["--add-modules", "javafx.controls,javafx.fxml,javafx.media"]
+		},
+		{
+			"type": "java",
+			"name": "JavaFx014Program",
+			"request": "launch",
+			"mainClass": "edu.csc1061.ch14.JavaFx014Program",
+			"modulePaths": ["${env:PATH_TO_FX}"],
+			"vmArgs": ["--add-modules", "javafx.controls,javafx.fxml,javafx.media"]
+		},
+		{
+			"type": "java",
+			"name": "JavaFx015Program",
+			"request": "launch",
+			"mainClass": "edu.csc1061.ch14.JavaFx015Program",
+			"modulePaths": ["${env:PATH_TO_FX}"],
+			"vmArgs": ["--add-modules", "javafx.controls,javafx.fxml,javafx.media"]
+		},
+		{
+			"type": "java",
+			"name": "JavaFx016Program",
+			"request": "launch",
+			"mainClass": "edu.csc1061.ch14.JavaFx016Program",
+			"modulePaths": ["${env:PATH_TO_FX}"],
+			"vmArgs": ["--add-modules", "javafx.controls,javafx.fxml,javafx.media"]
+		},
+		{
+			"type": "java",
+			"name": "JavaFx017Program",
+			"request": "launch",
+			"mainClass": "edu.csc1061.ch14.JavaFx017Program",
+			"modulePaths": ["${env:PATH_TO_FX}"],
+			"vmArgs": ["--add-modules", "javafx.controls,javafx.fxml,javafx.media"]
+		},
+		{
+			"type": "java",
+			"name": "JavaFx018Program",
+			"request": "launch",
+			"mainClass": "edu.csc1061.ch14.JavaFx018Program",
+			"modulePaths": ["${env:PATH_TO_FX}"],
+			"vmArgs": ["--add-modules", "javafx.controls,javafx.fxml,javafx.media"]
+		},
+		{
+			"type": "java",
+			"name": "JavaFx019Program",
+			"request": "launch",
+			"mainClass": "edu.csc1061.ch14.JavaFx019Program",
+			"modulePaths": ["${env:PATH_TO_FX}"],
+			"vmArgs": ["--add-modules", "javafx.controls,javafx.fxml,javafx.media"]
+		},
+		{
+			"type": "java",
+			"name": "JavaFx001Program(1)",
+			"request": "launch",
+			"mainClass": "edu.csc1061.ch16.JavaFx001Program",
+			"modulePaths": ["${env:PATH_TO_FX}"],
+			"vmArgs": ["--add-modules", "javafx.controls,javafx.fxml,javafx.media"]
+		},
+		{
+			"type": "java",
+			"name": "JavaFx002Program(1)",
+			"request": "launch",
+			"mainClass": "edu.csc1061.ch16.JavaFx002Program",
+			"modulePaths": ["${env:PATH_TO_FX}"],
+			"vmArgs": ["--add-modules", "javafx.controls,javafx.fxml,javafx.media"]
+		},
+		{
+			"type": "java",
+			"name": "JavaFx003Program(1)",
+			"request": "launch",
+			"mainClass": "edu.csc1061.ch16.JavaFx003Program",
+			"modulePaths": ["${env:PATH_TO_FX}"],
+			"vmArgs": ["--add-modules", "javafx.controls,javafx.fxml,javafx.media"]
+		},
+		{
+			"type": "java",
+			"name": "JavaFx004Program(1)",
+			"request": "launch",
+			"mainClass": "edu.csc1061.ch16.JavaFx004Program",
+			"modulePaths": ["${env:PATH_TO_FX}"],
+			"vmArgs": ["--add-modules", "javafx.controls,javafx.fxml,javafx.media"]
+		},
+		{
+			"type": "java",
+			"name": "JavaFx005Program(1)",
+			"request": "launch",
+			"mainClass": "edu.csc1061.ch16.JavaFx005Program",
+			"modulePaths": ["${env:PATH_TO_FX}"],
+			"vmArgs": ["--add-modules", "javafx.controls,javafx.fxml,javafx.media"]
+		},
+		{
+			"type": "java",
+			"name": "JavaFx006Program(1)",
+			"request": "launch",
+			"mainClass": "edu.csc1061.ch16.JavaFx006Program",
+			"modulePaths": ["${env:PATH_TO_FX}"],
+			"vmArgs": ["--add-modules", "javafx.controls,javafx.fxml,javafx.media"]
+		},
+		{
+			"type": "java",
+			"name": "JavaFx007Program(1)",
+			"request": "launch",
+			"mainClass": "edu.csc1061.ch16.JavaFx007Program",
+			"modulePaths": ["${env:PATH_TO_FX}"],
+			"vmArgs": ["--add-modules", "javafx.controls,javafx.fxml,javafx.media"]
+		},
+		{
+			"type": "java",
+			"name": "JavaFx008Program(1)",
+			"request": "launch",
+			"mainClass": "edu.csc1061.ch16.JavaFx008Program",
+			"modulePaths": ["${env:PATH_TO_FX}"],
+			"vmArgs": ["--add-modules", "javafx.controls,javafx.fxml,javafx.media"]
+		},
+		{
+			"type": "java",
+			"name": "JavaFx009Program(1)",
+			"request": "launch",
+			"mainClass": "edu.csc1061.ch16.JavaFx009Program",
+			"modulePaths": ["${env:PATH_TO_FX}"],
+			"vmArgs": ["--add-modules", "javafx.controls,javafx.fxml,javafx.media"]
+		},
+		{
+			"type": "java",
+			"name": "JavaFx010Program(1)",
+			"request": "launch",
+			"mainClass": "edu.csc1061.ch16.JavaFx010Program",
+			"modulePaths": ["${env:PATH_TO_FX}"],
+			"vmArgs": ["--add-modules", "javafx.controls,javafx.fxml,javafx.media"]
+		},
+		{
+			"type": "java",
+			"name": "Ch18Program01",
+			"request": "launch",
+			"mainClass": "edu.csc1061.ch18.Ch18Program01",
+			"projectName": "CSC-1061-CS2-Java_cc08c430"
+		},
+		{
+			"type": "java",
+			"name": "Ch18Program02",
+			"request": "launch",
+			"mainClass": "edu.csc1061.ch18.Ch18Program02",
+			"projectName": "CSC-1061-CS2-Java_cc08c430"
+		},
+		{
+			"type": "java",
+			"name": "Ch18Program03",
+			"request": "launch",
+			"mainClass": "edu.csc1061.ch18.Ch18Program03",
+			"projectName": "CSC-1061-CS2-Java_cc08c430"
+		},
+		{
+			"type": "java",
+			"name": "Ch18Program04",
+			"request": "launch",
+			"mainClass": "edu.csc1061.ch18.Ch18Program04",
+			"projectName": "CSC-1061-CS2-Java_cc08c430"
+		},
+		{
+			"type": "java",
+			"name": "Ch18Program05",
+			"request": "launch",
+			"mainClass": "edu.csc1061.ch18.Ch18Program05",
+			"projectName": "CSC-1061-CS2-Java_cc08c430"
+		},
+		{
+			"type": "java",
+			"name": "Ch18Program06",
+			"request": "launch",
+			"mainClass": "edu.csc1061.ch18.Ch18Program06",
+			"projectName": "CSC-1061-CS2-Java_cc08c430"
+		},
+		{
+			"type": "java",
+			"name": "Ch18Program07",
+			"request": "launch",
+			"mainClass": "edu.csc1061.ch18.Ch18Program07",
+			"projectName": "CSC-1061-CS2-Java_cc08c430"
+		},
+		{
+			"type": "java",
+			"name": "Ch18Program08",
+			"request": "launch",
+			"mainClass": "edu.csc1061.ch18.Ch18Program08",
+			"projectName": "CSC-1061-CS2-Java_cc08c430"
+		},
+		{
+			"type": "java",
+			"name": "Ch18Program09",
+			"request": "launch",
+			"mainClass": "edu.csc1061.ch18.Ch18Program09",
+			"modulePaths": ["${env:PATH_TO_FX}"],
+			"vmArgs": ["--add-modules", "javafx.controls,javafx.fxml,javafx.media"]
+		},
+		{
+			"type": "java",
+			"name": "Ch18Program10",
+			"request": "launch",
+			"mainClass": "edu.csc1061.ch18.Ch18Program10",
+			"projectName": "CSC-1061-CS2-Java_cc08c430"
+		},
+		{
+			"type": "java",
+			"name": "Ch20Program01",
+			"request": "launch",
+			"mainClass": "edu.csc1061.ch20.Ch20Program01",
+			"projectName": "CSC-1061-CS2-Java_cc08c430"
+		},
+		{
+			"type": "java",
+			"name": "Ch20Program02",
+			"request": "launch",
+			"mainClass": "edu.csc1061.ch20.Ch20Program02",
+			"projectName": "CSC-1061-CS2-Java_cc08c430"
+		},
+		{
+			"type": "java",
+			"name": "Ch20Program03",
+			"request": "launch",
+			"mainClass": "edu.csc1061.ch20.Ch20Program03",
+			"projectName": "CSC-1061-CS2-Java_cc08c430"
+		},
+		{
+			"type": "java",
+			"name": "Ch20Program04",
+			"request": "launch",
+			"mainClass": "edu.csc1061.ch20.Ch20Program04",
+			"projectName": "CSC-1061-CS2-Java_cc08c430"
+		},
+		{
+			"type": "java",
+			"name": "Ch20Program05",
+			"request": "launch",
+			"mainClass": "edu.csc1061.ch20.Ch20Program05",
+			"modulePaths": ["${env:PATH_TO_FX}"],
+			"vmArgs": ["--add-modules", "javafx.controls,javafx.fxml,javafx.media"]
+		},
+		{
+			"type": "java",
+			"name": "Ch20Program06",
+			"request": "launch",
+			"mainClass": "edu.csc1061.ch20.Ch20Program06",
+			"projectName": "CSC-1061-CS2-Java_cc08c430"
+		},
+		{
+			"type": "java",
+			"name": "Ch20Program07",
+			"request": "launch",
+			"mainClass": "edu.csc1061.ch20.Ch20Program07",
+			"projectName": "CSC-1061-CS2-Java_cc08c430"
+		},
+		{
+			"type": "java",
+			"name": "Ch21Program01",
+			"request": "launch",
+			"mainClass": "edu.csc1061.ch21.Ch21Program01",
+			"projectName": "CSC-1061-CS2-Java_cc08c430"
+		},
+		{
+			"type": "java",
+			"name": "Ch21Program02",
+			"request": "launch",
+			"mainClass": "edu.csc1061.ch21.Ch21Program02",
+			"projectName": "CSC-1061-CS2-Java_cc08c430"
+		},
+		{
+			"type": "java",
+			"name": "Ch21Program03",
+			"request": "launch",
+			"mainClass": "edu.csc1061.ch21.Ch21Program03",
+			"projectName": "CSC-1061-CS2-Java_cc08c430"
+		},
+		{
+			"type": "java",
+			"name": "Ch21Program04",
+			"request": "launch",
+			"mainClass": "edu.csc1061.ch21.Ch21Program04",
+			"projectName": "CSC-1061-CS2-Java_cc08c430"
+		},
+		{
+			"type": "java",
+			"name": "Ch21Program05",
+			"request": "launch",
+			"mainClass": "edu.csc1061.ch21.Ch21Program05",
+			"projectName": "CSC-1061-CS2-Java_cc08c430"
+		},
+		{
+			"type": "java",
+			"name": "Ch21Program06",
+			"request": "launch",
+			"mainClass": "edu.csc1061.ch21.Ch21Program06",
+			"projectName": "CSC-1061-CS2-Java_cc08c430"
+		},
+		{
+			"type": "java",
+			"name": "CountKeywords",
+			"request": "launch",
+			"mainClass": "edu.csc1061.ch21.CountKeywords",
+			"projectName": "CSC-1061-CS2-Java_cc08c430"
+		},
+		{
+			"type": "java",
+			"name": "Ch22Program01",
+			"request": "launch",
+			"mainClass": "edu.csc1061.ch22.Ch22Program01",
+			"projectName": "CSC-1061-CS2-Java_cc08c430"
+		},
+		{
+			"type": "java",
+			"name": "Ch22Program02",
+			"request": "launch",
+			"mainClass": "edu.csc1061.ch22.Ch22Program02",
+			"projectName": "CSC-1061-CS2-Java_cc08c430"
+		},
+		{
+			"type": "java",
+			"name": "Ch22Program03",
+			"request": "launch",
+			"mainClass": "edu.csc1061.ch22.Ch22Program03",
+			"projectName": "CSC-1061-CS2-Java_cc08c430"
+		},
+		{
+			"type": "java",
+			"name": "Ch22Program04",
+			"request": "launch",
+			"mainClass": "edu.csc1061.ch22.Ch22Program04",
+			"projectName": "CSC-1061-CS2-Java_cc08c430"
+		},
+		{
+			"type": "java",
+			"name": "Ch22Program05",
+			"request": "launch",
+			"mainClass": "edu.csc1061.ch22.Ch22Program05",
+			"projectName": "CSC-1061-CS2-Java_cc08c430"
+		},
+		{
+			"type": "java",
+			"name": "Ch22Program06",
+			"request": "launch",
+			"mainClass": "edu.csc1061.ch22.Ch22Program06",
+			"projectName": "CSC-1061-CS2-Java_cc08c430"
+		},
+		{
+			"type": "java",
+			"name": "Ch22Program06b",
+			"request": "launch",
+			"mainClass": "edu.csc1061.ch22.Ch22Program06b",
+			"projectName": "CSC-1061-CS2-Java_cc08c430"
+		},
+		{
+			"type": "java",
+			"name": "Ch22Program07",
+			"request": "launch",
+			"mainClass": "edu.csc1061.ch22.Ch22Program07",
+			"modulePaths": ["${env:PATH_TO_FX}"],
+			"vmArgs": ["--add-modules", "javafx.controls,javafx.fxml,javafx.media"]
+		},
+		{
+			"type": "java",
+			"name": "Ch22Program08",
+			"request": "launch",
+			"mainClass": "edu.csc1061.ch22.Ch22Program08",
+			"projectName": "CSC-1061-CS2-Java_cc08c430"
+		},
+		{
+			"type": "java",
+			"name": "StringMatchBoyerMoore",
+			"request": "launch",
+			"mainClass": "edu.csc1061.ch22.StringMatchBoyerMoore",
+			"projectName": "CSC-1061-CS2-Java_cc08c430"
+		},
+		{
+			"type": "java",
+			"name": "Ch23Program01",
+			"request": "launch",
+			"mainClass": "edu.csc1061.ch23.Ch23Program01",
+			"projectName": "CSC-1061-CS2-Java_cc08c430"
+		},
+		{
+			"type": "java",
+			"name": "Ch23Program02",
+			"request": "launch",
+			"mainClass": "edu.csc1061.ch23.Ch23Program02",
+			"projectName": "CSC-1061-CS2-Java_cc08c430"
+		},
+		{
+			"type": "java",
+			"name": "Ch23Program03",
+			"request": "launch",
+			"mainClass": "edu.csc1061.ch23.Ch23Program03",
+			"projectName": "CSC-1061-CS2-Java_cc08c430"
+		},
+		{
+			"type": "java",
+			"name": "Ch23Program04",
+			"request": "launch",
+			"mainClass": "edu.csc1061.ch23.Ch23Program04",
+			"projectName": "CSC-1061-CS2-Java_cc08c430"
+		},
+		{
+			"type": "java",
+			"name": "Ch23Program05",
+			"request": "launch",
+			"mainClass": "edu.csc1061.ch23.Ch23Program05",
+			"projectName": "CSC-1061-CS2-Java_cc08c430"
+		},
+		{
+			"type": "java",
+			"name": "Ch23Program06a",
+			"request": "launch",
+			"mainClass": "edu.csc1061.ch23.Ch23Program06a",
+			"projectName": "CSC-1061-CS2-Java_cc08c430"
+		},
+		{
+			"type": "java",
+			"name": "Ch23Program06b",
+			"request": "launch",
+			"mainClass": "edu.csc1061.ch23.Ch23Program06b",
+			"projectName": "CSC-1061-CS2-Java_cc08c430"
+		},
+		{
+			"type": "java",
+			"name": "Ch24Program01",
+			"request": "launch",
+			"mainClass": "edu.csc1061.ch24.Ch24Program01",
+			"projectName": "CSC-1061-CS2-Java_cc08c430"
+		},
+		{
+			"type": "java",
+			"name": "Ch24Program02",
+			"request": "launch",
+			"mainClass": "edu.csc1061.ch24.Ch24Program02",
+			"projectName": "CSC-1061-CS2-Java_cc08c430"
+		},
+		{
+			"type": "java",
+			"name": "Ch24Program03",
+			"request": "launch",
+			"mainClass": "edu.csc1061.ch24.Ch24Program03",
+			"projectName": "CSC-1061-CS2-Java_cc08c430"
+		},
+		{
+			"type": "java",
+			"name": "Ch24Program04",
+			"request": "launch",
+			"mainClass": "edu.csc1061.ch24.Ch24Program04",
+			"projectName": "CSC-1061-CS2-Java_cc08c430"
+		},
+		{
+			"type": "java",
+			"name": "Ch24Program05",
+			"request": "launch",
+			"mainClass": "edu.csc1061.ch24.Ch24Program05",
+			"projectName": "CSC-1061-CS2-Java_cc08c430"
+		},
+		{
+			"type": "java",
+			"name": "TestMyLinkedList",
+			"request": "launch",
+			"mainClass": "edu.csc1061.ch24.TestMyLinkedList",
+			"projectName": "CSC-1061-CS2-Java_cc08c430"
+		},
+		{
+			"type": "java",
+			"name": "TestMyList",
+			"request": "launch",
+			"mainClass": "edu.csc1061.ch24.TestMyList",
+			"projectName": "CSC-1061-CS2-Java_cc08c430"
+		},
+		{
+			"type": "java",
+			"name": "TestTwoWayLinkedList",
+			"request": "launch",
+			"mainClass": "edu.csc1061.ch24.TestTwoWayLinkedList",
+			"projectName": "CSC-1061-CS2-Java_cc08c430"
+		},
+		{
+			"type": "java",
+			"name": "Ch25Program01",
+			"request": "launch",
+			"mainClass": "edu.csc1061.ch25.Ch25Program01",
+			"projectName": "CSC-1061-CS2-Java_cc08c430"
+		},
+		{
+			"type": "java",
+			"name": "Ch25Program02",
+			"request": "launch",
+			"mainClass": "edu.csc1061.ch25.Ch25Program02",
+			"projectName": "CSC-1061-CS2-Java_cc08c430"
+		},
+		{
+			"type": "java",
+			"name": "Ch25Program03",
+			"request": "launch",
+			"mainClass": "edu.csc1061.ch25.Ch25Program03",
+			"modulePaths": ["${env:PATH_TO_FX}"],
+			"vmArgs": ["--add-modules", "javafx.controls,javafx.fxml,javafx.media"]
+		},
+		{
+			"type": "java",
+			"name": "Ch25Program04",
+			"request": "launch",
+			"mainClass": "edu.csc1061.ch25.Ch25Program04",
+			"projectName": "CSC-1061-CS2-Java_cc08c430"
+		},
+		{
+			"type": "java",
+			"name": "Ch25Program05",
+			"request": "launch",
+			"mainClass": "edu.csc1061.ch25.Ch25Program05",
+			"projectName": "CSC-1061-CS2-Java_cc08c430"
+		},
+		{
+			"type": "java",
+			"name": "Ch31JavaFX01",
+			"request": "launch",
+			"mainClass": "edu.csc1061.ch31.Ch31JavaFX01",
+			"modulePaths": ["${env:PATH_TO_FX}"],
+			"vmArgs": ["--add-modules", "javafx.controls,javafx.fxml,javafx.media"]
+		},
+		{
+			"type": "java",
+			"name": "Ch31JavaFX02",
+			"request": "launch",
+			"mainClass": "edu.csc1061.ch31.Ch31JavaFX02",
+			"modulePaths": ["${env:PATH_TO_FX}"],
+			"vmArgs": ["--add-modules", "javafx.controls,javafx.fxml,javafx.media"]
+		},
+		{
+			"type": "java",
+			"name": "Ch31JavaFX03",
+			"request": "launch",
+			"mainClass": "edu.csc1061.ch31.Ch31JavaFX03",
+			"modulePaths": ["${env:PATH_TO_FX}"],
+			"vmArgs": ["--add-modules", "javafx.controls,javafx.fxml,javafx.media"]
+		},
+		{
+			"type": "java",
+			"name": "Ch31JavaFX04",
+			"request": "launch",
+			"mainClass": "edu.csc1061.ch31.Ch31JavaFX04",
+			"modulePaths": ["${env:PATH_TO_FX}"],
+			"vmArgs": ["--add-modules", "javafx.controls,javafx.fxml,javafx.media"]
+		}
+	]
 }
