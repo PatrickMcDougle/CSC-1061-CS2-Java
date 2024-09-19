@@ -10,8 +10,7 @@
 			"request": "launch",
 			"cwd": "${workspaceFolder}",
 			"mainClass": "${file}",
-			"modulePaths": ["${env:PATH_TO_FX}"],
-			"vmArgs": ["--add-modules", "javafx.controls,javafx.fxml,javafx.media"]
+			"vmArgs": ["--module-path", "${env:PATH_TO_FX}", "--add-modules", "javafx.controls,javafx.fxml"]
 		},
 		{
 			"type": "java",
@@ -46,8 +45,7 @@
 			"name": "Ch09Program01",
 			"request": "launch",
 			"mainClass": "edu.csc1061.ch09.Ch09Program01",
-			"modulePaths": ["${env:PATH_TO_FX}"],
-			"vmArgs": ["--add-modules", "javafx.controls,javafx.fxml,javafx.media"]
+			"vmArgs": ["--module-path", "${env:PATH_TO_FX}", "--add-modules", "javafx.controls,javafx.fxml"]
 		},
 		{
 			"type": "java",
@@ -362,240 +360,210 @@
 			"name": "DisplayClockProgram",
 			"request": "launch",
 			"mainClass": "edu.csc1061.ch14.DisplayClockProgram",
-			"modulePaths": ["${env:PATH_TO_FX}"],
-			"vmArgs": ["--add-modules", "javafx.controls,javafx.fxml,javafx.media"]
+			"vmArgs": ["--module-path", "${env:PATH_TO_FX}", "--add-modules", "javafx.controls,javafx.fxml"]
 		},
 		{
 			"type": "java",
 			"name": "JavaFx001Program",
 			"request": "launch",
 			"mainClass": "edu.csc1061.ch14.JavaFx001Program",
-			"modulePaths": ["${env:PATH_TO_FX}"],
-			"vmArgs": ["--add-modules", "javafx.controls,javafx.fxml,javafx.media"]
+			"vmArgs": ["--module-path", "${env:PATH_TO_FX}", "--add-modules", "javafx.controls,javafx.fxml"]
 		},
 		{
 			"type": "java",
 			"name": "JavaFx002Program",
 			"request": "launch",
 			"mainClass": "edu.csc1061.ch14.JavaFx002Program",
-			"modulePaths": ["${env:PATH_TO_FX}"],
-			"vmArgs": ["--add-modules", "javafx.controls,javafx.fxml,javafx.media"]
+			"vmArgs": ["--module-path", "${env:PATH_TO_FX}", "--add-modules", "javafx.controls,javafx.fxml"]
 		},
 		{
 			"type": "java",
 			"name": "JavaFx003Program",
 			"request": "launch",
 			"mainClass": "edu.csc1061.ch14.JavaFx003Program",
-			"modulePaths": ["${env:PATH_TO_FX}"],
-			"vmArgs": ["--add-modules", "javafx.controls,javafx.fxml,javafx.media"]
+			"vmArgs": ["--module-path", "${env:PATH_TO_FX}", "--add-modules", "javafx.controls,javafx.fxml"]
 		},
 		{
 			"type": "java",
 			"name": "JavaFx004Program",
 			"request": "launch",
 			"mainClass": "edu.csc1061.ch14.JavaFx004Program",
-			"modulePaths": ["${env:PATH_TO_FX}"],
-			"vmArgs": ["--add-modules", "javafx.controls,javafx.fxml,javafx.media"]
+			"vmArgs": ["--module-path", "${env:PATH_TO_FX}", "--add-modules", "javafx.controls,javafx.fxml"]
 		},
 		{
 			"type": "java",
 			"name": "JavaFx005Program",
 			"request": "launch",
 			"mainClass": "edu.csc1061.ch14.JavaFx005Program",
-			"modulePaths": ["${env:PATH_TO_FX}"],
-			"vmArgs": ["--add-modules", "javafx.controls,javafx.fxml,javafx.media"]
+			"vmArgs": ["--module-path", "${env:PATH_TO_FX}", "--add-modules", "javafx.controls,javafx.fxml"]
 		},
 		{
 			"type": "java",
 			"name": "JavaFx006Program",
 			"request": "launch",
 			"mainClass": "edu.csc1061.ch14.JavaFx006Program",
-			"modulePaths": ["${env:PATH_TO_FX}"],
-			"vmArgs": ["--add-modules", "javafx.controls,javafx.fxml,javafx.media"]
+			"vmArgs": ["--module-path", "${env:PATH_TO_FX}", "--add-modules", "javafx.controls,javafx.fxml"]
 		},
 		{
 			"type": "java",
 			"name": "JavaFx007Program",
 			"request": "launch",
 			"mainClass": "edu.csc1061.ch14.JavaFx007Program",
-			"modulePaths": ["${env:PATH_TO_FX}"],
-			"vmArgs": ["--add-modules", "javafx.controls,javafx.fxml,javafx.media"]
+			"vmArgs": ["--module-path", "${env:PATH_TO_FX}", "--add-modules", "javafx.controls,javafx.fxml"]
 		},
 		{
 			"type": "java",
 			"name": "JavaFx008Program",
 			"request": "launch",
 			"mainClass": "edu.csc1061.ch14.JavaFx008Program",
-			"modulePaths": ["${env:PATH_TO_FX}"],
-			"vmArgs": ["--add-modules", "javafx.controls,javafx.fxml,javafx.media"]
+			"vmArgs": ["--module-path", "${env:PATH_TO_FX}", "--add-modules", "javafx.controls,javafx.fxml"]
 		},
 		{
 			"type": "java",
 			"name": "JavaFx009Program",
 			"request": "launch",
 			"mainClass": "edu.csc1061.ch14.JavaFx009Program",
-			"modulePaths": ["${env:PATH_TO_FX}"],
-			"vmArgs": ["--add-modules", "javafx.controls,javafx.fxml,javafx.media"]
+			"vmArgs": ["--module-path", "${env:PATH_TO_FX}", "--add-modules", "javafx.controls,javafx.fxml"]
 		},
 		{
 			"type": "java",
 			"name": "JavaFx010Program",
 			"request": "launch",
 			"mainClass": "edu.csc1061.ch14.JavaFx010Program",
-			"modulePaths": ["${env:PATH_TO_FX}"],
-			"vmArgs": ["--add-modules", "javafx.controls,javafx.fxml,javafx.media"]
+			"vmArgs": ["--module-path", "${env:PATH_TO_FX}", "--add-modules", "javafx.controls,javafx.fxml"]
 		},
 		{
 			"type": "java",
 			"name": "JavaFx011Program",
 			"request": "launch",
 			"mainClass": "edu.csc1061.ch14.JavaFx011Program",
-			"modulePaths": ["${env:PATH_TO_FX}"],
-			"vmArgs": ["--add-modules", "javafx.controls,javafx.fxml,javafx.media"]
+			"vmArgs": ["--module-path", "${env:PATH_TO_FX}", "--add-modules", "javafx.controls,javafx.fxml"]
 		},
 		{
 			"type": "java",
 			"name": "JavaFx012Program",
 			"request": "launch",
 			"mainClass": "edu.csc1061.ch14.JavaFx012Program",
-			"modulePaths": ["${env:PATH_TO_FX}"],
-			"vmArgs": ["--add-modules", "javafx.controls,javafx.fxml,javafx.media"]
+			"vmArgs": ["--module-path", "${env:PATH_TO_FX}", "--add-modules", "javafx.controls,javafx.fxml"]
 		},
 		{
 			"type": "java",
 			"name": "JavaFx013Program",
 			"request": "launch",
 			"mainClass": "edu.csc1061.ch14.JavaFx013Program",
-			"modulePaths": ["${env:PATH_TO_FX}"],
-			"vmArgs": ["--add-modules", "javafx.controls,javafx.fxml,javafx.media"]
+			"vmArgs": ["--module-path", "${env:PATH_TO_FX}", "--add-modules", "javafx.controls,javafx.fxml"]
 		},
 		{
 			"type": "java",
 			"name": "JavaFx014Program",
 			"request": "launch",
 			"mainClass": "edu.csc1061.ch14.JavaFx014Program",
-			"modulePaths": ["${env:PATH_TO_FX}"],
-			"vmArgs": ["--add-modules", "javafx.controls,javafx.fxml,javafx.media"]
+			"vmArgs": ["--module-path", "${env:PATH_TO_FX}", "--add-modules", "javafx.controls,javafx.fxml"]
 		},
 		{
 			"type": "java",
 			"name": "JavaFx015Program",
 			"request": "launch",
 			"mainClass": "edu.csc1061.ch14.JavaFx015Program",
-			"modulePaths": ["${env:PATH_TO_FX}"],
-			"vmArgs": ["--add-modules", "javafx.controls,javafx.fxml,javafx.media"]
+			"vmArgs": ["--module-path", "${env:PATH_TO_FX}", "--add-modules", "javafx.controls,javafx.fxml"]
 		},
 		{
 			"type": "java",
 			"name": "JavaFx016Program",
 			"request": "launch",
 			"mainClass": "edu.csc1061.ch14.JavaFx016Program",
-			"modulePaths": ["${env:PATH_TO_FX}"],
-			"vmArgs": ["--add-modules", "javafx.controls,javafx.fxml,javafx.media"]
+			"vmArgs": ["--module-path", "${env:PATH_TO_FX}", "--add-modules", "javafx.controls,javafx.fxml"]
 		},
 		{
 			"type": "java",
 			"name": "JavaFx017Program",
 			"request": "launch",
 			"mainClass": "edu.csc1061.ch14.JavaFx017Program",
-			"modulePaths": ["${env:PATH_TO_FX}"],
-			"vmArgs": ["--add-modules", "javafx.controls,javafx.fxml,javafx.media"]
+			"vmArgs": ["--module-path", "${env:PATH_TO_FX}", "--add-modules", "javafx.controls,javafx.fxml"]
 		},
 		{
 			"type": "java",
 			"name": "JavaFx018Program",
 			"request": "launch",
 			"mainClass": "edu.csc1061.ch14.JavaFx018Program",
-			"modulePaths": ["${env:PATH_TO_FX}"],
-			"vmArgs": ["--add-modules", "javafx.controls,javafx.fxml,javafx.media"]
+			"vmArgs": ["--module-path", "${env:PATH_TO_FX}", "--add-modules", "javafx.controls,javafx.fxml"]
 		},
 		{
 			"type": "java",
 			"name": "JavaFx019Program",
 			"request": "launch",
 			"mainClass": "edu.csc1061.ch14.JavaFx019Program",
-			"modulePaths": ["${env:PATH_TO_FX}"],
-			"vmArgs": ["--add-modules", "javafx.controls,javafx.fxml,javafx.media"]
+			"vmArgs": ["--module-path", "${env:PATH_TO_FX}", "--add-modules", "javafx.controls,javafx.fxml"]
 		},
 		{
 			"type": "java",
 			"name": "JavaFx001Program(1)",
 			"request": "launch",
 			"mainClass": "edu.csc1061.ch16.JavaFx001Program",
-			"modulePaths": ["${env:PATH_TO_FX}"],
-			"vmArgs": ["--add-modules", "javafx.controls,javafx.fxml,javafx.media"]
+			"vmArgs": ["--module-path", "${env:PATH_TO_FX}", "--add-modules", "javafx.controls,javafx.fxml"]
 		},
 		{
 			"type": "java",
 			"name": "JavaFx002Program(1)",
 			"request": "launch",
 			"mainClass": "edu.csc1061.ch16.JavaFx002Program",
-			"modulePaths": ["${env:PATH_TO_FX}"],
-			"vmArgs": ["--add-modules", "javafx.controls,javafx.fxml,javafx.media"]
+			"vmArgs": ["--module-path", "${env:PATH_TO_FX}", "--add-modules", "javafx.controls,javafx.fxml"]
 		},
 		{
 			"type": "java",
 			"name": "JavaFx003Program(1)",
 			"request": "launch",
 			"mainClass": "edu.csc1061.ch16.JavaFx003Program",
-			"modulePaths": ["${env:PATH_TO_FX}"],
-			"vmArgs": ["--add-modules", "javafx.controls,javafx.fxml,javafx.media"]
+			"vmArgs": ["--module-path", "${env:PATH_TO_FX}", "--add-modules", "javafx.controls,javafx.fxml"]
 		},
 		{
 			"type": "java",
 			"name": "JavaFx004Program(1)",
 			"request": "launch",
 			"mainClass": "edu.csc1061.ch16.JavaFx004Program",
-			"modulePaths": ["${env:PATH_TO_FX}"],
-			"vmArgs": ["--add-modules", "javafx.controls,javafx.fxml,javafx.media"]
+			"vmArgs": ["--module-path", "${env:PATH_TO_FX}", "--add-modules", "javafx.controls,javafx.fxml"]
 		},
 		{
 			"type": "java",
 			"name": "JavaFx005Program(1)",
 			"request": "launch",
 			"mainClass": "edu.csc1061.ch16.JavaFx005Program",
-			"modulePaths": ["${env:PATH_TO_FX}"],
-			"vmArgs": ["--add-modules", "javafx.controls,javafx.fxml,javafx.media"]
+			"vmArgs": ["--module-path", "${env:PATH_TO_FX}", "--add-modules", "javafx.controls,javafx.fxml"]
 		},
 		{
 			"type": "java",
 			"name": "JavaFx006Program(1)",
 			"request": "launch",
 			"mainClass": "edu.csc1061.ch16.JavaFx006Program",
-			"modulePaths": ["${env:PATH_TO_FX}"],
-			"vmArgs": ["--add-modules", "javafx.controls,javafx.fxml,javafx.media"]
+			"vmArgs": ["--module-path", "${env:PATH_TO_FX}", "--add-modules", "javafx.controls,javafx.fxml"]
 		},
 		{
 			"type": "java",
 			"name": "JavaFx007Program(1)",
 			"request": "launch",
 			"mainClass": "edu.csc1061.ch16.JavaFx007Program",
-			"modulePaths": ["${env:PATH_TO_FX}"],
-			"vmArgs": ["--add-modules", "javafx.controls,javafx.fxml,javafx.media"]
+			"vmArgs": ["--module-path", "${env:PATH_TO_FX}", "--add-modules", "javafx.controls,javafx.fxml"]
 		},
 		{
 			"type": "java",
 			"name": "JavaFx008Program(1)",
 			"request": "launch",
 			"mainClass": "edu.csc1061.ch16.JavaFx008Program",
-			"modulePaths": ["${env:PATH_TO_FX}"],
-			"vmArgs": ["--add-modules", "javafx.controls,javafx.fxml,javafx.media"]
+			"vmArgs": ["--module-path", "${env:PATH_TO_FX}", "--add-modules", "javafx.controls,javafx.fxml"]
 		},
 		{
 			"type": "java",
 			"name": "JavaFx009Program(1)",
 			"request": "launch",
 			"mainClass": "edu.csc1061.ch16.JavaFx009Program",
-			"modulePaths": ["${env:PATH_TO_FX}"],
-			"vmArgs": ["--add-modules", "javafx.controls,javafx.fxml,javafx.media"]
+			"vmArgs": ["--module-path", "${env:PATH_TO_FX}", "--add-modules", "javafx.controls,javafx.fxml"]
 		},
 		{
 			"type": "java",
 			"name": "JavaFx010Program(1)",
 			"request": "launch",
 			"mainClass": "edu.csc1061.ch16.JavaFx010Program",
-			"modulePaths": ["${env:PATH_TO_FX}"],
-			"vmArgs": ["--add-modules", "javafx.controls,javafx.fxml,javafx.media"]
+			"vmArgs": ["--module-path", "${env:PATH_TO_FX}", "--add-modules", "javafx.controls,javafx.fxml"]
 		},
 		{
 			"type": "java",
@@ -658,8 +626,7 @@
 			"name": "Ch18Program09",
 			"request": "launch",
 			"mainClass": "edu.csc1061.ch18.Ch18Program09",
-			"modulePaths": ["${env:PATH_TO_FX}"],
-			"vmArgs": ["--add-modules", "javafx.controls,javafx.fxml,javafx.media"]
+			"vmArgs": ["--module-path", "${env:PATH_TO_FX}", "--add-modules", "javafx.controls,javafx.fxml"]
 		},
 		{
 			"type": "java",
@@ -701,8 +668,7 @@
 			"name": "Ch20Program05",
 			"request": "launch",
 			"mainClass": "edu.csc1061.ch20.Ch20Program05",
-			"modulePaths": ["${env:PATH_TO_FX}"],
-			"vmArgs": ["--add-modules", "javafx.controls,javafx.fxml,javafx.media"]
+			"vmArgs": ["--module-path", "${env:PATH_TO_FX}", "--add-modules", "javafx.controls,javafx.fxml"]
 		},
 		{
 			"type": "java",
@@ -821,8 +787,7 @@
 			"name": "Ch22Program07",
 			"request": "launch",
 			"mainClass": "edu.csc1061.ch22.Ch22Program07",
-			"modulePaths": ["${env:PATH_TO_FX}"],
-			"vmArgs": ["--add-modules", "javafx.controls,javafx.fxml,javafx.media"]
+			"vmArgs": ["--module-path", "${env:PATH_TO_FX}", "--add-modules", "javafx.controls,javafx.fxml"]
 		},
 		{
 			"type": "java",
@@ -962,8 +927,7 @@
 			"name": "Ch25Program03",
 			"request": "launch",
 			"mainClass": "edu.csc1061.ch25.Ch25Program03",
-			"modulePaths": ["${env:PATH_TO_FX}"],
-			"vmArgs": ["--add-modules", "javafx.controls,javafx.fxml,javafx.media"]
+			"vmArgs": ["--module-path", "${env:PATH_TO_FX}", "--add-modules", "javafx.controls,javafx.fxml"]
 		},
 		{
 			"type": "java",
@@ -984,32 +948,28 @@
 			"name": "Ch31JavaFX01",
 			"request": "launch",
 			"mainClass": "edu.csc1061.ch31.Ch31JavaFX01",
-			"modulePaths": ["${env:PATH_TO_FX}"],
-			"vmArgs": ["--add-modules", "javafx.controls,javafx.fxml,javafx.media"]
+			"vmArgs": ["--module-path", "${env:PATH_TO_FX}", "--add-modules", "javafx.controls,javafx.fxml"]
 		},
 		{
 			"type": "java",
 			"name": "Ch31JavaFX02",
 			"request": "launch",
 			"mainClass": "edu.csc1061.ch31.Ch31JavaFX02",
-			"modulePaths": ["${env:PATH_TO_FX}"],
-			"vmArgs": ["--add-modules", "javafx.controls,javafx.fxml,javafx.media"]
+			"vmArgs": ["--module-path", "${env:PATH_TO_FX}", "--add-modules", "javafx.controls,javafx.fxml"]
 		},
 		{
 			"type": "java",
 			"name": "Ch31JavaFX03",
 			"request": "launch",
 			"mainClass": "edu.csc1061.ch31.Ch31JavaFX03",
-			"modulePaths": ["${env:PATH_TO_FX}"],
-			"vmArgs": ["--add-modules", "javafx.controls,javafx.fxml,javafx.media"]
+			"vmArgs": ["--module-path", "${env:PATH_TO_FX}", "--add-modules", "javafx.controls,javafx.fxml"]
 		},
 		{
 			"type": "java",
 			"name": "Ch31JavaFX04",
 			"request": "launch",
 			"mainClass": "edu.csc1061.ch31.Ch31JavaFX04",
-			"modulePaths": ["${env:PATH_TO_FX}"],
-			"vmArgs": ["--add-modules", "javafx.controls,javafx.fxml,javafx.media"]
+			"vmArgs": ["--module-path", "${env:PATH_TO_FX}", "--add-modules", "javafx.controls,javafx.fxml"]
 		}
 	]
 }
