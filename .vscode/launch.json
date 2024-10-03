@@ -563,7 +563,12 @@
 			"name": "JavaFx010Program(1)",
 			"request": "launch",
 			"mainClass": "edu.csc1061.ch16.JavaFx010Program",
-			"vmArgs": ["--module-path", "${env:PATH_TO_FX}", "--add-modules", "javafx.controls,javafx.fxml"]
+			"vmArgs": [
+				"--module-path",
+				"${env:PATH_TO_FX}",
+				"--add-modules",
+				"javafx.controls,javafx.fxml,javafx.media"
+			]
 		},
 		{
 			"type": "java",
