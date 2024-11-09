@@ -10,19 +10,38 @@
  */
 package edu.csc1061.ch22;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
 // Prime Number
 public class Ch22Program03 {
 
+    static final int NUMBER_OF_PRIMES_PER_LINE = 20;
+
     public static void main(String[] args) {
-        final int NUMBER_OF_PRIMES = 50_000; // Number of primes to display
-        final int NUMBER_OF_PRIMES_PER_LINE = 20;
-        int count = 0; // Count the number of prime numbers
+        int maxPrime = 0;
+        try (Scanner input = new Scanner(System.in)) {
+            System.out.print("Find all prime numbers <= n, enter n: ");
+            maxPrime = input.nextInt();
+        }
+
+        System.out.println("The prime numbers are:");
+
+        Ch22Program03 program03 = new Ch22Program03();
+        int[] primeList = program03.findPrimes(maxPrime);
+        program03.printPrimes(primeList);
+
+        System.out.printf("%n%d prime(s) less than or equal to %d%n", primeList.length, maxPrime);
+    }
+
+    public int[] findPrimes(int numberOfPrimes) {
         int number = 2; // A number to be tested for primeness
 
-        System.out.printf("Find the first %d prime numbers:%n", NUMBER_OF_PRIMES);
+        List<Integer> primeList = new ArrayList<>();
 
         // Repeatedly find prime numbers
-        while (count < NUMBER_OF_PRIMES) {
+        while (number < numberOfPrimes) {
             // Assume the number is prime
             boolean isPrime = true;
 
@@ -36,18 +55,24 @@ public class Ch22Program03 {
 
             // Print the prime number and increase the count
             if (isPrime) {
-                count++; // Increase the count
-
-                if (count % NUMBER_OF_PRIMES_PER_LINE == 0) {
-                    // Print the number and advance to the new line
-                    System.out.printf("%7d%n", number);
-                } else {
-                    System.out.printf("%7d", number);
-                }
+                primeList.add(number);
             }
 
             // Check if the next number is prime
             number++;
+        }
+
+        return primeList.stream().mapToInt(Integer::intValue).toArray();
+    }
+
+    public void printPrimes(int[] primeList) {
+        for (int i = 0; i < primeList.length; i++) {
+            if (i % NUMBER_OF_PRIMES_PER_LINE == 0) {
+                // Print the number and advance to the new line
+                System.out.printf("%7d%n", primeList[i]);
+            } else {
+                System.out.printf("%7d", primeList[i]);
+            }
         }
     }
 }

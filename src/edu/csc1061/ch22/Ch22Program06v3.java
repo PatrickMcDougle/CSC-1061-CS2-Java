@@ -14,10 +14,14 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-// Efficient Prime Number
-public class Ch22Program05 {
+// Prime Numbers - inefficient
+// Lets use some REGEX magic.
+// YouTube: https://youtu.be/5vbk0TwkokM?si=Myie0yCEja_wvHwN
+public class Ch22Program06v3 {
 
     static final int NUMBER_OF_PRIMES_PER_LINE = 20;
+
+    static final String THE_PRIME_REGEX = "^.?$|^(..+?)\\1+$";
 
     public static void main(String[] args) {
         int maxPrime = 0;
@@ -28,38 +32,24 @@ public class Ch22Program05 {
 
         System.out.println("The prime numbers are:");
 
-        Ch22Program05 program05 = new Ch22Program05();
-        int[] primeList = program05.findPrimes(maxPrime);
-        program05.printPrimes(primeList);
+        Ch22Program06v3 program06 = new Ch22Program06v3();
+        int[] primeList = program06.findPrimes(maxPrime);
+        program06.printPrimes(primeList);
 
         System.out.printf("%n%d prime(s) less than or equal to %d%n", primeList.length, maxPrime);
     }
 
     public int[] findPrimes(int numberOfPrimes) {
         int number = 2; // A number to be tested for primeness
-        int squareRoot = 1; // Check whether number <= squareRoot
 
         List<Integer> primeList = new ArrayList<>();
 
         // Repeatedly find prime numbers
         while (number <= numberOfPrimes) {
-            // Assume the number is prime
-            boolean isPrime = true;
+            String theNumber = "1".repeat(number);
 
-            // Poor mans smart way to calculate the square root for this number.
-            if (squareRoot * squareRoot < number) {
-                squareRoot++;
-            }
-
-            // Test whether number is prime
-            for (int k = 0; k < primeList.size() && primeList.get(k) <= squareRoot; k++) {
-                if (number % primeList.get(k) == 0) {
-                    isPrime = false;
-                    break;
-                }
-            }
-
-            if (isPrime) {
+            // Print the prime number and increase the count
+            if (!theNumber.matches(THE_PRIME_REGEX)) {
                 primeList.add(number);
             }
 
