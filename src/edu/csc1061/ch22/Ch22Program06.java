@@ -47,8 +47,8 @@ public class Ch22Program06 {
 
         for (int k = 2; k <= numberOfPrimes / k; k++) {
             if (primes[k]) {
-                for (int i = k; i <= numberOfPrimes / k; i++) {
-                    primes[k * i] = false; // k * i is not prime
+                for (int notPrime = k; notPrime <= numberOfPrimes; notPrime++) {
+                    primes[k * notPrime] = false; // k * i is not prime
                 }
             }
         }

@@ -45,24 +45,25 @@ public class Ch22Program06v2 {
             primes[i] = true;
         }
 
-        for (int k = 2; k <= numberOfPrimes / k; k++) {
+        for (int k = 2; k * k <= numberOfPrimes; ++k) {
             if (primes[k]) {
                 // for loop optimized to not use multiplication.
-                for (int i = k * k; i <= numberOfPrimes / k; i += k) {
-                    primes[i] = false; // i is not prime
+                for (int notPrime = k * k; notPrime <= numberOfPrimes; notPrime += k) {
+                    primes[notPrime] = false; // i is not prime
                 }
             }
         }
 
+        // Save prime numbers into a list so we can make an array our of it.
         List<Integer> primeList = new ArrayList<>();
 
-        // Print prime numbers
         for (int i = 2; i < primes.length; i++) {
             if (primes[i]) {
                 primeList.add(i);
             }
         }
 
+        // return the array of integers
         return primeList.stream().mapToInt(Integer::intValue).toArray();
     }
 
