@@ -11,10 +11,6 @@
     needs a comment block with a short description of what the method
     does, what the inputs/parameters are, what the method returns, and what
     exceptions it might throw.
--   **Using Swing or AWT** - Programs may require the use of a GUI. For that,
-    JavaFX is the preferred method of doing GUIs. The use of AWT and Swing is
-    discouraged for these are the old way of doing GUIs which comes with bugs
-    and issues.
 -   **My Opinion** - You may loose points on things that I feel you should loose
     points on. These tend to be the little random things I run into. This is a
     catch all statement for all those little things.
@@ -37,6 +33,10 @@
     make sure it works as you expect it to work.
 -   **Method signature elements are not correct** - If the method name is not
     what is expected, or the inputs or outputs are different.
+-   **Using Swing or AWT** - Programs may require the use of a GUI. For that,
+    JavaFX is the preferred method of doing GUIs. The use of AWT and Swing is
+    discouraged for these are the old way of doing GUIs which comes with bugs
+    and issues.
 -   **Failing to follow assignment or problem instructions**
 -   **Poor Coding**
 -   **No GUI code** - missing GUI code for assignments that asked for it.
